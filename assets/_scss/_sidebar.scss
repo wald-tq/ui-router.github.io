@@ -47,7 +47,7 @@
 .sidebar__right {
   margin-bottom: 1em;
 
-  @include breakpoint($large) {
+  @include breakpoint($small) {
     position: relative;
     float: right;
     width: $right-sidebar-width-narrow;

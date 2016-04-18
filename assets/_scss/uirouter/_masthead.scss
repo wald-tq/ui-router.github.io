@@ -1,0 +1,17 @@
+.masthead__menu-item--lg img.logo {
+  margin: -1em 1em -1em 0;
+  max-width: 60px;
+  max-height: 60px;
+}
+
+$masthead_height: 82px;
+$masthead_bgcolor: #d4e1fa;
+
+.masthead {
+  height: $masthead_height;
+  background-color: $masthead_bgcolor;
+
+  .masthead__menu nav {
+    background-color: $masthead_bgcolor;
+  }
+}

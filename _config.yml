@@ -7,18 +7,18 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Site Title"
+title                    : "UI-Router"
 title_separator          : "-"
-name                     : "Your Name"
-description              : "An amazing website."
+name                     : "UI-Router"
+description              : "State based routing for single-page web applications"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-gh_repo                  :
+gh_repo                  : # Link to both github repositories?
 teaser                   : # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 # breadcrumbs              : false # true, false (default)
 # words_per_minute         : 200
 comments:
-  provider               : # false (default), "disqus", "facebook", "google-plus", custom"
+  provider               : "disqus"
   disqus:
     shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   facebook:
@@ -61,10 +61,10 @@ google_ad_slot           :
 
 # Site Author
 author:
-  name             : "Your Name"
-  avatar           : "bio-photo.jpg"
-  bio              : "I am an amazing person."
-  location         : "Somewhere"
+  name             : # "UI-Router"
+  avatar           : "clear.gif"
+  bio              : #
+  location         : #
   email            :
   uri              :
   bitbucket        :
@@ -148,7 +148,7 @@ kramdown:
 # Outputting
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
-paginate_path: /page:num/
+paginate_path: /blog/page:num/
 timezone: # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
@@ -204,3 +204,15 @@ compress_html:
   clippings: all
   ignore:
     envs: development
+
+collections:
+  docs:
+    output: true
+    permalink: /docs/:path:output_ext
+
+defaults:
+  - scope:
+      path: ""
+      type: docs
+    values:
+      layout: docs

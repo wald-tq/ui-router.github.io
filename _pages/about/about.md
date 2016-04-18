@@ -1,0 +1,34 @@
+---
+title: "About"
+layout: single
+excerpt: "UI-Router is a routing framework for single page web applications"
+sitemap: true
+permalink: /about/
+---
+
+{% include toc icon="columns" title="About" %}
+
+UI-Router is a [client-side router](#client-side-routing) for [single page web applications](https://en.wikipedia.org/wiki/Single-page_application).
+
+Read about [UI-Router Features](/about/features)
+
+## Supported Frameworks
+
+UI-Router core is framework agnostic.  We currently provide adapters for Angular 1 and Angular 2.
+
+<div class="about_frameworks">
+  <div><a href="/start/ng1"><img src="/images/logos/angular1.png"><div>Angular 1</div></a></div>
+  <div><a href="/start/ng2"><img src="/images/logos/angular2.png"><div>Angular 2</div></a></div>
+</div>
+
+
+## Client-side routing
+
+A client-side router updates the browser URL as the user nagivates through the single page app.  
+Conversely, changes to the browser's URL can drive navigation of the app, enabling
+a user to create deep-links (i.e., bookmarks) to areas deep within the application.
+
+The simplest form of client-side routing maps a screen in the app to a url.  For instance, the Contacts
+screen might map to the url `/contacts`, while the Preferences screen might map to the url `/prefs`.
+
+![contacts feature has contacts url](/images/about/contacts-url.png)

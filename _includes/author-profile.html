@@ -4,6 +4,8 @@
   {% assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.author %}
 {% endif %}
 
+{% if author.name %}
+
 <div itemscope itemtype="http://schema.org/Person">
 
   <div class="author__avatar">
@@ -100,3 +102,5 @@
     </ul>
   </div>
 </div>
+
+{% endif %}
