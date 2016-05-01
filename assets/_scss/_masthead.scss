@@ -12,7 +12,7 @@
   &__inner-wrap {
     @include container;
     @include clearfix;
-    padding: 1em 2em 1em;
+    padding: .25em 2em .25em;
     font-family: $sans-serif-narrow;
     font-weight: 700;
     text-transform: uppercase;

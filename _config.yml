@@ -124,6 +124,7 @@ markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
 
 # Conversion
+#markdown: redcarpet
 markdown: kramdown
 highlighter: rouge
 lsi: false
@@ -204,6 +205,18 @@ compress_html:
     envs: development
 
 collections:
+  about:
+    output: true
+    permalink: /about/:path
+  tutorial_ng1:
+    output: true
+    permalink: /tutorial/ng1/:path
+  tutorial_ng2:
+    output: true
+    permalink: /tutorial/ng2/:path
+  guide:
+    output: true
+    permalink: /guide/:path
   docs:
     output: true
     permalink: /docs/:path:output_ext
@@ -211,6 +224,45 @@ collections:
 defaults:
   - scope:
       path: ""
+      type: about
+    values:
+      sitemap: true
+      layout: single
+      sidebar:
+        nav: "about"
+  - scope:
+      path: ""
+      type: tutorial_ng1
+    values:
+      sitemap: true
+      layout: single
+      sidebar:
+        nav: "tutorial_ng1"
+  - scope:
+      path: ""
+      type: tutorial_ng2
+    values:
+      sitemap: true
+      layout: single
+      sidebar:
+        nav: "tutorial_ng2"
+  - scope:
+      path: ""
+      type: guide
+    values:
+      sitemap: true
+      layout: single
+      sidebar:
+        nav: "guide"
+  - scope:
+      path: ""
       type: docs
     values:
+      sitemap: true
       layout: docs
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      author_profile: true

@@ -3,11 +3,51 @@ main:
   - title: "About"
     url: /about
 
-  - title: "Getting started"
-    url: /start
+  - title: "Tutorials"
+    url: /tutorials
+
+  - title: "Guide"
+    url: /guide
 
   - title: "Docs"
     url: /docs
 
   - title: "Blog"
     url: /blog
+
+about:
+  - title: "About UI-Router"
+    url: /about
+    children:
+      - title: "Feature set"
+        url: /about/features
+      - title: "About states"
+        url: /about/states
+  - title: "Get Started"
+    url: /guide
+
+tutorial_ng1:
+  - title: "Tutorial - Angular"
+    children:
+      - title: "1. Hello World!"
+        url: /tutorial/ng1/helloworld
+      - title: "2. Hello Solar System!"
+        url: /tutorial/ng1/hellosolarsystem
+      - title: "3. Hello Galaxy!"
+        url: /tutorial/ng1/hellogalaxy
+
+tutorial_ng2:
+  - title: "Tutorial - Angular 2"
+    children:
+      - title: "Hello World!"
+        url: /tutorial/ng2/helloworld
+      - title: "Hello Galaxy!"
+        url: /tutorial/ng2/hellogalaxy
+
+guide:
+  - title: "Guide"
+    children:
+      - title: "Registering States"
+        url: /guide/registration
+      - title: "Views"
+        url: /guide/views

@@ -2,7 +2,17 @@
 layout: compress
 ---
 
+{% assign paths = site.docs | map: "path" %}
+{% capture allpaths %}
+{% for path in paths %}
+{% assign pathel = path | split: "/" %}
+{{ pathel[1] }}
+{% endfor %}
+{% endcapture %}
+
 {% include base_path %}
+
+{% assign pagepath = page.path | split: "/" %}
 
 <!doctype html>
 <html lang="{{ site.locale | slice: 0,2 }}" class="no-js">
@@ -17,6 +27,42 @@ layout: compress
 {% include masthead.html %}
 
 {{ content }}
+
+<div class="docs__version_switcher">
+  <select id="docs__version_switcher" onchange="switchVersion(this)">
+    {% assign versions = allpaths | remove: "index.html" | strip | split: " " | uniq | sort | reverse %}
+    {% for version in versions %}
+    {% if version == pagepath[1] %}
+    <option SELECTED value="{{version}}">{{version}}</option>
+    {% else %}
+    <option value="{{version}}">{{version}}</option>
+    {% endif %}
+    {% endfor %}
+  </select>
+
+  <script>
+    function switchVersion(version) {
+      var current = /(\/docs)\/([^/]*)\/?(.*)/.exec("{{page.url}}");
+      document.location.pathname = current[1] + "/" + version.value + "/" + current[3];
+    }
+
+    let el = document.getElementById("docs__version_switcher");
+    el.parentElement.removeChild(el);
+
+    let tsdBreadcrumb = document.querySelectorAll(".tsd-page-title .tsd-breadcrumb")[0];
+    if (tsdBreadcrumb) {
+      let li = document.createElement("li");
+      li.appendChild(el);
+      if (tsdBreadcrumb.children.length) {
+        firstChild = tsdBreadcrumb.children[0];
+        tsdBreadcrumb.insertBefore(li, firstChild);
+      } else {
+        tsdBreadcrumb.appendChild(li);
+      }
+    }
+  </script>
+
+</div>
 
 <div class="page__footer">
   <footer>

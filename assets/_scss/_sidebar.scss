@@ -55,8 +55,18 @@
     z-index: 10;
   }
 
+  @include breakpoint($large) {
+    position: fixed;
+    top: 4em;
+
+    width: 300px;
+    max-width: calc(((100% - 1024px) / 2) + 8em);
+    left: calc(((100% - 1024px) / 2) + 46em);
+  }
+
   @include breakpoint($x-large) {
-    width: $right-sidebar-width;
+    max-width: calc(((100% - 1280px) / 2) + 10em);
+    left: calc(((100% - 1280px)/2) + 57em)
   }
 }
 

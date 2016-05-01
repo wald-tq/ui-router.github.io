@@ -6,3 +6,9 @@
     margin-bottom: 0;
   }
 }
+
+.docs__version_switcher {
+  position: absolute;
+  top: $masthead_height;
+  z-index: 300;
+}

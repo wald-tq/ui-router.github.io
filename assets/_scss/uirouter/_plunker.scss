@@ -1,0 +1,13 @@
+.page {
+  .plunker {
+    width: 100%;
+
+    @include breakpoint($medium) {
+      max-width: calc(100% - 200px - 1.5em);
+    }
+
+    @include breakpoint($large) {
+      max-width: 100%;
+    }
+  }
+}
