@@ -10,7 +10,7 @@ main:
     url: /guide
 
   - title: "Docs"
-    url: /docs
+    url: /docs/latest
 
   - title: "Blog"
     url: /blog
