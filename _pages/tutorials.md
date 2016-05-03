@@ -7,8 +7,7 @@ permalink: "/tutorials"
 
 We have tutorials for the following frameworks: 
 
-
-[Angular 1](/tutorial/ng1/)
+<div><a href="/tutorial/ng1"><img src="/images/logos/angular1.png"><div>Angular 1</div></a></div>
 
 # Coming Soon
 

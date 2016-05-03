@@ -1,14 +1,64 @@
 {% include base_path %}
 
-{% if page.previous or page.next %}
+{% assign navprev = null %}
+{% assign navnext = null %}
+
+{% if page.sidebar and page.sidebar.nav %}
+    {% assign ppnavigation = site.data.navigation[page.sidebar.nav] %}
+{% endif %}
+
+{% if ppnavigation %}
+    {% assign lastiteration = null %}
+    {% for nav in ppnavigation %}
+
+        {% if nav.url == page.url %}
+            {% assign navprev = lastiteration %}
+        {% endif %}
+
+        {% if lastiteration and lastiteration.url == page.url %}
+            {% assign navnext = nav %}
+        {% endif %}
+
+        {% assign lastiteration = nav %}
+
+        {% if nav.children != null %}
+            {% for child in nav.children %}
+
+            {% if child.url == page.url %}
+                {% assign navprev = lastiteration %}
+            {% endif %}
+
+            {% if lastiteration.url == page.url %}
+                {% assign navnext = child %}
+            {% endif %}
+
+            {% if child.url %}
+                {% assign lastiteration = child %}
+            {% endif %}
+
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+
+{% else %}
+
+    {% assign navprev = page.previous %}
+    {% assign navnext = page.next %}
+
+{% endif %}
+
+
+
+
+{% if navprev or navnext %}
   <nav class="pagination">
-    {% if page.previous %}
-      <a href="{{ base_path }}{{ page.previous.url }}" class="pagination--pager" title="{{ page.previous.title | markdownify | strip_html }}">{{ site.data.ui-text[site.locale].pagination_previous }}</a>
+    {% if navprev and navprev.url %}
+      <a href="{{ base_path }}{{ navprev.url }}" class="pagination--pager" title="{{ navprev.title | markdownify | strip_html }}">{{ site.data.ui-text[site.locale].pagination_previous }}</a>
     {% else %}
       <a href="#" class="pagination--pager disabled">{{ site.data.ui-text[site.locale].pagination_previous }}</a>
     {% endif %}
-    {% if page.next %}
-      <a href="{{ base_path }}{{ page.next.url }}" class="pagination--pager" title="{{ page.next.title | markdownify | strip_html }}">{{ site.data.ui-text[site.locale].pagination_next }}</a>
+    {% if navnext and navnext.url %}
+      <a href="{{ base_path }}{{ navnext.url }}" class="pagination--pager" title="{{ navnext.title | markdownify | strip_html }}">{{ site.data.ui-text[site.locale].pagination_next }}</a>
     {% else %}
       <a href="#" class="pagination--pager disabled">{{ site.data.ui-text[site.locale].pagination_next }}</a>
     {% endif %}
