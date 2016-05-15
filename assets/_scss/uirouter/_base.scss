@@ -1,0 +1,22 @@
+::selection {
+  color: #fff;
+  background: $Acolor1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #1A2980;
+}
+
+h1 {
+  padding-bottom: .5em;
+}
+
+.page__hero--overlay {
+  background: #1A2980; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #1A2980 , #26D0CE); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #1A2980 , #26D0CE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.page__content p, .page__content li, .page__content dl {
+  font-size: .88rem;
+}

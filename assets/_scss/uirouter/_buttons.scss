@@ -1,0 +1,10 @@
+.btn {
+  font-weight: normal;
+  text-transform: uppercase;
+  background-color: $Acolor1;
+  border-color: $Acolor1 !important;
+  &:hover {
+    background-color: $Acolor1;
+    border-color: $Acolor1 !important;
+  }
+}

@@ -1,0 +1,37 @@
+.greedy-nav {
+  .visible-links {
+    a {
+      font-weight: normal;
+      &:before {
+        height: 1px;
+        background: $Acolor5;
+      }
+    }
+  }
+  .hidden-links{
+    a {
+      color: inherit;
+      &:hover {
+        color: $Acolor5;
+      }
+   }
+  }
+
+}
+
+.toc {
+  text-transform: none;
+  letter-spacing: .5px;
+  color: $Acolor3;
+  .nav__title {
+    background-color: $Acolor4;
+  }
+}
+
+.nav__list .active {
+  background-color: $Acolor4;
+}
+
+.toc__menu a {
+  font-weight: normal;
+}
