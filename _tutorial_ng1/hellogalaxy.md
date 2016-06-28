@@ -17,7 +17,9 @@ As usual, let's first look at a live demo of the finished "Hello Galaxy" app.
 
 Click the "People" tab, then click on a person. 
 
-<iframe style="width: 100%; height: 350px;" src="http://embed.plnkr.co/jbZgIg/" frameborder="1" allowfullscren="allowfullscren"></iframe>
+<iframe style="width: 100%; height: 500px;" 
+  src="http://embed.plnkr.co/jbZgIg/?show=preview"
+  frameborder="1" allowfullscren="allowfullscren"></iframe>
 
 When you switch from one state to the another, it is called a Transition. 
 On the bottom of the plunker, the [UI-Router Transition Visualizer](https://github.com/ui-router/visualizer)

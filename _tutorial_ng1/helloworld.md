@@ -64,7 +64,9 @@ myApp.config(function($stateProvider) {
 A live demo of the finished app can be seen below, in the [Plunker](http://plnk.co/).  Navigate between the
 "Hello" and "About" links and watch the UI change.
 
-<iframe class="plunker" style="height: 150px" src="http://embed.plnkr.co/6eQV15/" frameborder="1" allowfullscren="allowfullsceen"></iframe>
+<iframe class="plunker" style="height: 350px" 
+  src="http://embed.plnkr.co/6eQV15/?show=preview" 
+  frameborder="1" allowfullscren="allowfullsceen"></iframe>
 <br>
 
 # Building Hello World

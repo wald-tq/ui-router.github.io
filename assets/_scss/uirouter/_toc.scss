@@ -1,0 +1,11 @@
+nav.toc {
+  /* Scroll spy; see js/plugins/scrollspy.js */
+  li a {
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+
+  li a.active {
+    color: black;
+    background-color: lighten($Acolor5, 40%);
+  }
+}

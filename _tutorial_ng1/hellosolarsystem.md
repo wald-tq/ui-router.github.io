@@ -29,7 +29,7 @@ As you navigate through the app, the [UI-Router State Visualizer](https://github
 the current state
 {: .notice--info}
 
-<iframe style="width: 100%; height: 250px;" src="http://embed.plnkr.co/2SSO4Y/" frameborder="1" allowfullscren="allowfullscren"></iframe>
+<iframe style="width: 100%; height: 350px;" src="http://embed.plnkr.co/2SSO4Y/?show=preview" frameborder="1" allowfullscren="allowfullscren"></iframe>
 
 <br>
 
