@@ -4,7 +4,7 @@ for index in `ls */index.html` ; do
   if grep -q ".title ng-bind-template=.UI Router: {{partialTitle}}..Docs..title." $index ; then
     echo "processing legacy docs: $index";
     mv "$index" `dirname $index`/index.htm;
-    cp legacy.frame.htm `dirname $index`/index.html;
+    cp ../assets/legacy.docs.frame.html `dirname $index`/index.html;
   fi
 done
 
