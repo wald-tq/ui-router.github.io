@@ -9,7 +9,7 @@ main:
   - title: "Guide"
     url: /guide
 
-  - title: "Docs"
+  - title: "API Docs"
     url: /docs/latest
 
   - title: "Blog"
