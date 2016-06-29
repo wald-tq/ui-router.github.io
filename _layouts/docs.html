@@ -32,28 +32,27 @@ layout: compress
   <select id="docs__version_switcher" onchange="switchVersion(this)">
     {% assign versions = allpaths | remove: "index.html" | strip | split: " " | uniq | sort | reverse %}
     {% for version in versions %}
-    {% if version == pagepath[1] %}
-    <option SELECTED value="{{version}}">{{version}}</option>
-    {% else %}
     <option value="{{version}}">{{version}}</option>
-    {% endif %}
     {% endfor %}
   </select>
 
   <script>
     var el = document.getElementById("docs__version_switcher");
     var options = Array.prototype.slice.call(el.children);
+    var uiRouterVersion = "{{ pagepath[1] }}";
+    console.log("ui-router " + uiRouterVersion + " docs");
 
+    function compareDigit(l, r) {
+      var ln = parseInt(l, 10), rn = parseInt(r, 10);
+      if (!isNaN(ln) && !isNaN(rn)) return ln - rn;
+      if (!isNaN(ln)) return -1;
+      if (!isNaN(rn)) return 1;
+      if (ln < rn) return -1;
+      if (ln > rn) return 1;
+      return 0;
+    }
 
     var compareVersions = function (left, right) {
-      function compareDigit(l, r) {
-        var ln = parseInt(l, 10), rn = parseInt(r, 10);
-        if (!isNaN(ln) && !isNaN(rn)) return ln - rn;
-        if (ln < rn) return -1;
-        if (ln > rn) return 1;
-        return 0;
-      }
-
       var a = left.value.split('.'), b = right.value.split('.');
       while (a.length && b.length) {
         var diff = compareDigit(a.shift(), b.shift());
@@ -61,7 +60,7 @@ layout: compress
       }
       if (a.length) return 1;
       if (b.length) return -1;
-        return 0;
+      return 0;
     };
 
     function reverse(compareFn) {
@@ -73,9 +72,8 @@ layout: compress
     options.forEach(function(option) { el.removeChild(option); });
     options.sort(reverse(compareVersions));
     options.forEach(function(option) { el.appendChild(option); });
-
-    console.log(options);
-    console.log(el.children);
+    var selected = options.filter(function(option) { return option.value == uiRouterVersion; });
+    if (selected.length) selected[0].selected = true;
 
     function switchVersion(version) {
       var current = /(\/docs)\/([^/]*)\/?(.*)/.exec("{{page.url}}");
@@ -110,7 +108,7 @@ layout: compress
       }
 
       if (++injectChecks < 5 && !tsdBreadcrumb && !ngDocMenu) {
-        setTimeout(injectVersionSwitcher, 1000);
+        setTimeout(injectVersionSwitcher, 250);
       }
     }
 
