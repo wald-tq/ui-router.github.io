@@ -11,3 +11,15 @@
   top: 75px ;
   z-index: 300;
 }
+
+.clear-navbar {
+  margin-top: 0 !important;
+}
+
+.row.clear-navbar+.row-fluid {
+  display: none;
+}
+
+.header .navbar .navbar-inner .container .brand:after {
+  content: ' (legacy)';
+}

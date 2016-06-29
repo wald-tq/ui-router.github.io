@@ -30,12 +30,12 @@
       addTag('link', {rel: 'stylesheet', href: 'css/font-awesome.css', type: 'text/css'});
       addTag('link', {rel: 'stylesheet', href: 'css/docs.css', type: 'text/css'});
       addTag('link', {rel: 'stylesheet', href: 'css/animations.css', type: 'text/css'});
-      
+
          addTag('link', {rel: 'stylesheet', href: 'css/uirouter-docs.css', type: 'text/css'}, sync);
-      
-      
+
+
         addTag('script', {src: 'js/angular.min.js'}, sync);
-      
+
       addTag('script', {src: 'js/angular-bootstrap.min.js'}, sync);
       addTag('script', {src: 'js/angular-bootstrap-prettify.min.js'}, sync);
       addTag('script', {src: 'js/docs-setup.js'}, sync);
@@ -70,13 +70,13 @@
 
 <body>
   <header class="header">
-    <div class="navbar navbar-fixed-top">
+    <div class="navbar">
       <div class="navbar-inner">
         <div class="container">
-          
-          
+
+
             <a  class="brand">UI Router</a>
-          
+
           <ul class="nav">
             <li ng-repeat="(url, name) in sections" ng-class="{active: isActivePath(url)}">
               <a ng-href="{{url}}"><i class="icon-book icon-white"></i> {{name}}</a>
@@ -120,10 +120,10 @@
     <div class="row-fluid">
       <div class="span3">
         <form class="form-search" ng-submit="submitForm()">
-          
+
           <input type="text" ng-model="search" placeholder="search the docs"
                  tabindex="1" accesskey="s" class="search-query">
-          
+
           <div class="spacer"></div>
 
           <ul class="nav nav-list well" ng-show="pages">
