@@ -1,4 +1,4 @@
-# [UI-Router web site](https://ui-router.github.io/)
+### [UI-Router web site](https://ui-router.github.io/) https://ui-router.github.io/
 
 This is the source code for the UI-Router web site.
 
