@@ -41,8 +41,41 @@ layout: compress
   </select>
 
   <script>
-    let el = document.getElementById("docs__version_switcher");
-//    console.log(el.children);
+    var el = document.getElementById("docs__version_switcher");
+    var options = Array.prototype.slice.call(el.children);
+
+
+    var compareVersions = function (left, right) {
+      function compareDigit(l, r) {
+        var ln = parseInt(l, 10), rn = parseInt(r, 10);
+        if (!isNaN(ln) && !isNaN(rn)) return ln - rn;
+        if (ln < rn) return -1;
+        if (ln > rn) return 1;
+        return 0;
+      }
+
+      var a = left.value.split('.'), b = right.value.split('.');
+      while (a.length && b.length) {
+        var diff = compareDigit(a.shift(), b.shift());
+        if (diff !== 0) return diff;
+      }
+      if (a.length) return 1;
+      if (b.length) return -1;
+        return 0;
+    };
+
+    function reverse(compareFn) {
+      return function(left, right) {
+        return compareFn(right, left);
+      }
+    }
+
+    options.forEach(function(option) { el.removeChild(option); });
+    options.sort(reverse(compareVersions));
+    options.forEach(function(option) { el.appendChild(option); });
+
+    console.log(options);
+    console.log(el.children);
 
     function switchVersion(version) {
       var current = /(\/docs)\/([^/]*)\/?(.*)/.exec("{{page.url}}");
