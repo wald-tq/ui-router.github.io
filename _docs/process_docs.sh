@@ -9,7 +9,7 @@ for file in `ls */index.html` ; do
       (echo "---"; \
        echo "---"; \
        echo "{% raw %}"; \
-       cat $file | sed -e 's/navbar-fixed-top//g' -e 's/class="brand">UI Router/ \
+       cat $file | sed -e 's/navbar-fixed-top//g' \
        echo "{% endraw %}"; \
       ) > $file.tmp &&  mv -f $file.tmp $file;
     fi
