@@ -1,13 +1,6 @@
 # [UI-Router web site](https://ui-router.github.io/)
 
----
-
-Minimal Mistakes is a flexible two-column Jekyll theme. Perfect for hosting your personal site, blog, or portfolio on GitHub or self-hosting on your own server. As the name implies --- styling is purposely minimalistic to be enhanced and customized by you :smile:.
-
-[![Minimal Mistakes live preview][2]][1]
-
-[1]: https://mmistakes.github.io/minimal-mistakes/
-[2]: https://cloud.githubusercontent.com/assets/1376749/14562643/d83b96c0-02eb-11e6-98d6-473fbfd3bff6.jpg (live preview)
+This is the source code for the UI-Router web site.
 
 This is a [jekyll](https://jekyllrb.com) web site based on the [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/) template by [Michael Rose](https://twitter.com/@mmistakes)
 
