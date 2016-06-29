@@ -1,0 +1,377 @@
+<h1><code ng:non-bindable="">$state</code>
+<span class="hint">(service in module <code ng:non-bindable="">ui.router.state</code>
+)</span>
+</h1>
+<div><h2 id="Description">Description</h2>
+<div class="description"><p><code>$state</code> service is responsible for representing states as well as transitioning
+between them. It also provides interfaces to ask for current state or even states
+you're coming from.</p></div>
+<h2 id="Dependencies">Dependencies</h2>
+<ul class="dependencies"><li><code ng:non-bindable=""><a href="#/api/ng.$rootScope">$rootScope</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/ng.$q">$q</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/ui.router.state.$view">$view</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/ng.$injector">$injector</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/ui.router.util.$resolve">$resolve</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/ui.router.state.$stateParams">$stateParams</a></code>
+</li>
+</ul>
+<div class="member method"><h2 id="Methods">Methods</h2>
+<ul class="methods"><li><h3 id="get">get(stateOrName)</h3>
+<div class="get"><p>Returns the state configuration object for any specific state or all states.</p><h4 id="Parameters">Parameters</h4>
+<ul class="parameters"><li><code ng:non-bindable="">stateOrName<i>(optional)</i> – {string|object=} – </code>
+<p>If provided, will only get the config for
+the requested state. If not provided, returns an array of ALL state configs.</p></li>
+</ul>
+<h4 id="Returns">Returns</h4>
+<div class="returns"><code ng:non-bindable="">{object|array}</code>
+– <p>State configuration object or array of all objects.</p></div>
+</div>
+</li>
+<li><h3 id="go">go(to, params, options)</h3>
+<div class="go"><p>Convenience method for transitioning to a new state. <code>$state.go</code> calls 
+<code>$state.transitionTo</code> internally but automatically sets options to 
+<code>{ location: true, inherit: true, relative: $state.$current, notify: true }</code>. 
+This allows you to easily use an absolute or relative to path and specify 
+only the parameters you'd like to update (while letting unspecified parameters 
+inherit from the currently active ancestor states).</p><h4 id="Parameters">Parameters</h4>
+<ul class="parameters"><li><code ng:non-bindable="">to – {string} – </code>
+<p>Absolute state name or relative state path. Some examples:</p>
+
+<ul>
+<li><code>$state.go('contact.detail')</code> - will go to the <code>contact.detail</code> state</li>
+<li><code>$state.go('^')</code> - will go to a parent state</li>
+<li><code>$state.go('^.sibling')</code> - will go to a sibling state</li>
+<li><code>$state.go('.child.grandchild')</code> - will go to grandchild state</li>
+</ul></li>
+<li><code ng:non-bindable="">params<i>(optional)</i> – {object=} – </code>
+<p>A map of the parameters that will be sent to the state, 
+will populate $stateParams. Any parameters that are not specified will be inherited from currently 
+defined parameters. This allows, for example, going to a sibling state that shares parameters
+specified in a parent state. Parameter inheritance only works between common ancestor states, I.e.
+transitioning to a sibling will get you the parameters for all parents, transitioning to a child
+will get you all current parameters, etc.</p></li>
+<li><code ng:non-bindable="">options<i>(optional)</i> – {object=} – </code>
+<p>Options object. The options are:</p>
+
+<ul>
+<li><strong><code>location</code></strong> - {boolean=true|string=} - If <code>true</code> will update the url in the location bar, if <code>false</code>
+will not. If string, must be <code>"replace"</code>, which will update url and also replace last history record.</li>
+<li><strong><code>inherit</code></strong> - {boolean=true}, If <code>true</code> will inherit url parameters from current url.</li>
+<li><strong><code>relative</code></strong> - {object=$state.$current}, When transitioning with relative path (e.g '^'), 
+defines which state to be relative from.</li>
+<li><strong><code>notify</code></strong> - {boolean=true}, If <code>true</code> will broadcast $stateChangeStart and $stateChangeSuccess events.</li>
+<li><strong><code>reload</code></strong> (v0.2.5) - {boolean=false}, If <code>true</code> will force transition even if the state or params 
+have not changed, aka a reload of the same state. It differs from reloadOnSearch because you'd
+use this when you want to force a reload when <em>everything</em> is the same, including search params.</li>
+</ul></li>
+</ul>
+<h4 id="Returns">Returns</h4>
+<div class="returns"><code ng:non-bindable="">{promise}</code>
+– <p>A promise representing the state of the new transition.</p>
+
+<p>Possible success values:</p>
+
+<ul>
+<li>$state.current</li>
+</ul>
+
+<p><br/>Possible rejection values:</p>
+
+<ul>
+<li>'transition superseded' - when a newer transition has been started after this one</li>
+<li>'transition prevented' - when <code>event.preventDefault()</code> has been called in a <code>$stateChangeStart</code> listener</li>
+<li>'transition aborted' - when <code>event.preventDefault()</code> has been called in a <code>$stateNotFound</code> listener or
+when a <code>$stateNotFound</code> <code>event.retry</code> promise errors.</li>
+<li>'transition failed' - when a state has been unsuccessfully found after 2 tries.</li>
+<li><em>resolve error</em> - when an error has occurred with a <code>resolve</code></li>
+</ul></div>
+<h4 id="Example">Example</h4>
+<div class="example"><pre class="prettyprint linenums">
+var app = angular.module('app', ['ui.router']);
+
+app.controller('ctrl', function ($scope, $state) {
+  $scope.changeState = function () {
+    $state.go('contact.detail');
+  };
+});
+</pre>
+<img src='../ngdoc_assets/StateGoExamples.png'/></p></div>
+</div>
+</li>
+<li><h3 id="href">href(stateOrName, params, options)</h3>
+<div class="href"><p>A url generation method that returns the compiled url for the given state populated with the given params.</p><h4 id="Parameters">Parameters</h4>
+<ul class="parameters"><li><code ng:non-bindable="">stateOrName – {string|object} – </code>
+<p>The state name or state object you'd like to generate a url from.</p></li>
+<li><code ng:non-bindable="">params<i>(optional)</i> – {object=} – </code>
+<p>An object of parameter values to fill the state's required parameters.</p></li>
+<li><code ng:non-bindable="">options<i>(optional)</i> – {object=} – </code>
+<p>Options object. The options are:</p>
+
+<ul>
+<li><strong><code>lossy</code></strong> - {boolean=true} -  If true, and if there is no url associated with the state provided in the
+first parameter, then the constructed href url will be built from the first navigable ancestor (aka
+ancestor with a valid url).</li>
+<li><strong><code>inherit</code></strong> - {boolean=false}, If <code>true</code> will inherit url parameters from current url.</li>
+<li><strong><code>relative</code></strong> - {object=$state.$current}, When transitioning with relative path (e.g '^'), 
+defines which state to be relative from.</li>
+<li><strong><code>absolute</code></strong> - {boolean=false},  If true will generate an absolute url, e.g. "http://www.example.com/fullurl".</li>
+</ul></li>
+</ul>
+<h4 id="Returns">Returns</h4>
+<div class="returns"><code ng:non-bindable="">{string}</code>
+– <p>compiled state url</p></div>
+<h4 id="Example">Example</h4>
+<div class="example"><pre class="prettyprint linenums">
+expect($state.href("about.person", { person: "bob" })).toEqual("/about/bob");
+</pre></div>
+</div>
+</li>
+<li><h3 id="includes">includes(stateOrName, params)</h3>
+<div class="includes"><p>Basic globing patterns will also work.</p><h4 id="Parameters">Parameters</h4>
+<ul class="parameters"><li><code ng:non-bindable="">stateOrName – {string} – </code>
+<p>A partial name to be searched for within the current state name.</p></li>
+<li><code ng:non-bindable="">params – {object} – </code>
+<p>A param object, e.g. <code>{sectionId: section.id}</code>, 
+that you'd like to test against the current active state.</p></li>
+</ul>
+<h4 id="Returns">Returns</h4>
+<div class="returns"><code ng:non-bindable="">{boolean}</code>
+– <p>Returns true if it does include the state</p></div>
+<h4 id="Example">Example</h4>
+<div class="example"><pre class="prettyprint linenums">
+$state.$current.name = 'contacts.details.item.url';
+
+$state.includes("*.details.*.*"); // returns true
+$state.includes("*.details.**"); // returns true
+$state.includes("**.item.**"); // returns true
+$state.includes("*.details.item.url"); // returns true
+$state.includes("*.details.*.url"); // returns true
+$state.includes("*.details.*"); // returns false
+$state.includes("item.**"); // returns false
+</pre></div>
+</div>
+</li>
+<li><h3 id="is">is(stateName, params)</h3>
+<div class="is"><p>Similar to <a href="#/api/ui.router.state.$state#methods_includes">$state.includes</a>,
+but only checks for the full state name. If params is supplied then it will be 
+tested for strict equality against the current active params object, so all params 
+must match with none missing and no extras.</p><h4 id="Parameters">Parameters</h4>
+<ul class="parameters"><li><code ng:non-bindable="">stateName – {string|object} – </code>
+<p>The state name or state object you'd like to check.</p></li>
+<li><code ng:non-bindable="">params<i>(optional)</i> – {object=} – </code>
+<p>A param object, e.g. <code>{sectionId: section.id}</code>, that you'd like 
+to test against the current active state.</p></li>
+</ul>
+<h4 id="Returns">Returns</h4>
+<div class="returns"><code ng:non-bindable="">{boolean}</code>
+– <p>Returns true if it is the state.</p></div>
+<h4 id="Example">Example</h4>
+<div class="example"><pre class="prettyprint linenums">
+$state.is('contact.details.item'); // returns true
+$state.is(contactDetailItemStateObject); // returns true
+
+// everything else would return false
+</pre></div>
+</div>
+</li>
+<li><h3 id="reload">reload()</h3>
+<div class="reload"><p>A method that force reloads the current state. All resolves are re-resolved, events are not re-fired, 
+and controllers reinstantiated (bug with controllers reinstantiating right now, fixing soon).</p><h4 id="Example">Example</h4>
+<div class="example"><pre class="prettyprint linenums">
+var app angular.module('app', ['ui.router']);
+
+app.controller('ctrl', function ($scope, $state) {
+  $scope.reload = function(){
+    $state.reload();
+  }
+});
+</pre>
+
+<p><code>reload()</code> is just an alias for:
+<pre class="prettyprint linenums">
+$state.transitionTo($state.current, $stateParams, { 
+  reload: true, inherit: false, notify: false 
+});
+</pre></div>
+</div>
+</li>
+<li><h3 id="transitionTo">transitionTo(to, toParams, options)</h3>
+<div class="transitionto"><p>Low-level method for transitioning to a new state. <a href="#/api/ui.router.state.$state#methods_go">$state.go</a>
+uses <code>transitionTo</code> internally. <code>$state.go</code> is recommended in most situations.</p><h4 id="Parameters">Parameters</h4>
+<ul class="parameters"><li><code ng:non-bindable="">to – {string} – </code>
+<p>State name.</p></li>
+<li><code ng:non-bindable="">toParams<i>(optional)</i> – {object=} – </code>
+<p>A map of the parameters that will be sent to the state,
+will populate $stateParams.</p></li>
+<li><code ng:non-bindable="">options<i>(optional)</i> – {object=} – </code>
+<p>Options object. The options are:</p>
+
+<ul>
+<li><strong><code>location</code></strong> - {boolean=true|string=} - If <code>true</code> will update the url in the location bar, if <code>false</code>
+will not. If string, must be <code>"replace"</code>, which will update url and also replace last history record.</li>
+<li><strong><code>inherit</code></strong> - {boolean=false}, If <code>true</code> will inherit url parameters from current url.</li>
+<li><strong><code>relative</code></strong> - {object=}, When transitioning with relative path (e.g '^'), 
+defines which state to be relative from.</li>
+<li><strong><code>notify</code></strong> - {boolean=true}, If <code>true</code> will broadcast $stateChangeStart and $stateChangeSuccess events.</li>
+<li><strong><code>reload</code></strong> (v0.2.5) - {boolean=false}, If <code>true</code> will force transition even if the state or params 
+have not changed, aka a reload of the same state. It differs from reloadOnSearch because you'd
+use this when you want to force a reload when <em>everything</em> is the same, including search params.</li>
+</ul></li>
+</ul>
+<h4 id="Returns">Returns</h4>
+<div class="returns"><code ng:non-bindable="">{promise}</code>
+– <p>A promise representing the state of the new transition. See
+<a href="#/api/ui.router.state.$state#methods_go">$state.go</a>.</p></div>
+<h4 id="Example">Example</h4>
+<div class="example"><pre class="prettyprint linenums">
+var app = angular.module('app', ['ui.router']);
+
+app.controller('ctrl', function ($scope, $state) {
+  $scope.changeState = function () {
+    $state.transitionTo('contact.detail');
+  };
+});
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="member property"><h2 id="Properties">Properties</h2>
+<ul class="properties"><li><h3 id="params">params</h3>
+<div class="params"><p>A param object, e.g. {sectionId: section.id)}, that 
+you'd like to test against the current active state.</p></div>
+</li>
+<li><h3 id="current">current</h3>
+<div class="current"><p>A reference to the state's config object. However 
+you passed it in. Useful for accessing custom data.</p></div>
+</li>
+<li><h3 id="transition">transition</h3>
+<div class="transition"><p>Currently pending transition. A promise that'll 
+resolve or reject.</p></div>
+</li>
+</ul>
+</div>
+<div class="member event"><h2 id="Events">Events</h2>
+<ul class="events"><li><h3 id="$stateChangeError">$stateChangeError</h3>
+<div class="$statechangeerror"><p>Fired when an <strong>error occurs</strong> during transition. It's important to note that if you
+have any errors in your resolve functions (javascript errors, non-existent services, etc)
+they will not throw traditionally. You must listen for this $stateChangeError event to
+catch <strong>ALL</strong> errors.</p><div class="inline"><h4 id="Type.">Type:</h4>
+<div class="type-">broadcast</div>
+</div>
+<div class="inline"><h4 id="Target.">Target:</h4>
+<div class="target-">root scope</div>
+</div>
+<h4 id="Parameters">Parameters</h4>
+<ul class="parameters"><li><code ng:non-bindable="">event – {Object} – </code>
+<p>Event object.</p></li>
+<li><code ng:non-bindable="">toState – {State} – </code>
+<p>The state being transitioned to.</p></li>
+<li><code ng:non-bindable="">toParams – {Object} – </code>
+<p>The params supplied to the <code>toState</code>.</p></li>
+<li><code ng:non-bindable="">fromState – {State} – </code>
+<p>The current state, pre-transition.</p></li>
+<li><code ng:non-bindable="">fromParams – {Object} – </code>
+<p>The params supplied to the <code>fromState</code>.</p></li>
+<li><code ng:non-bindable="">error – {Error} – </code>
+<p>The resolve error object.</p></li>
+</ul>
+</div>
+</li>
+<li><h3 id="$stateChangeStart">$stateChangeStart</h3>
+<div class="$statechangestart"><p>Fired when the state transition <strong>begins</strong>. You can use <code>event.preventDefault()</code>
+to prevent the transition from happening and then the transition promise will be
+rejected with a <code>'transition prevented'</code> value.</p><div class="inline"><h4 id="Type.">Type:</h4>
+<div class="type-">broadcast</div>
+</div>
+<div class="inline"><h4 id="Target.">Target:</h4>
+<div class="target-">root scope</div>
+</div>
+<h4 id="Parameters">Parameters</h4>
+<ul class="parameters"><li><code ng:non-bindable="">event – {Object} – </code>
+<p>Event object.</p></li>
+<li><code ng:non-bindable="">toState – {State} – </code>
+<p>The state being transitioned to.</p></li>
+<li><code ng:non-bindable="">toParams – {Object} – </code>
+<p>The params supplied to the <code>toState</code>.</p></li>
+<li><code ng:non-bindable="">fromState – {State} – </code>
+<p>The current state, pre-transition.</p></li>
+<li><code ng:non-bindable="">fromParams – {Object} – </code>
+<p>The params supplied to the <code>fromState</code>.</p></li>
+</ul>
+<h4 id="Example">Example</h4>
+<div class="example"><pre class="prettyprint linenums">
+$rootScope.$on('$stateChangeStart',
+function(event, toState, toParams, fromState, fromParams){
+    event.preventDefault();
+    // transitionTo() promise will be rejected with
+    // a 'transition prevented' error
+})
+</pre></div>
+</div>
+</li>
+<li><h3 id="$stateChangeSuccess">$stateChangeSuccess</h3>
+<div class="$statechangesuccess"><p>Fired once the state transition is <strong>complete</strong>.</p><div class="inline"><h4 id="Type.">Type:</h4>
+<div class="type-">broadcast</div>
+</div>
+<div class="inline"><h4 id="Target.">Target:</h4>
+<div class="target-">root scope</div>
+</div>
+<h4 id="Parameters">Parameters</h4>
+<ul class="parameters"><li><code ng:non-bindable="">event – {Object} – </code>
+<p>Event object.</p></li>
+<li><code ng:non-bindable="">toState – {State} – </code>
+<p>The state being transitioned to.</p></li>
+<li><code ng:non-bindable="">toParams – {Object} – </code>
+<p>The params supplied to the <code>toState</code>.</p></li>
+<li><code ng:non-bindable="">fromState – {State} – </code>
+<p>The current state, pre-transition.</p></li>
+<li><code ng:non-bindable="">fromParams – {Object} – </code>
+<p>The params supplied to the <code>fromState</code>.</p></li>
+</ul>
+</div>
+</li>
+<li><h3 id="$stateNotFound">$stateNotFound</h3>
+<div class="$statenotfound"><p>Fired when a requested state <strong>cannot be found</strong> using the provided state name during transition.
+The event is broadcast allowing any handlers a single chance to deal with the error (usually by
+lazy-loading the unfound state). A special <code>unfoundState</code> object is passed to the listener handler,
+you can see its three properties in the example. You can use <code>event.preventDefault()</code> to abort the
+transition and the promise returned from <code>go</code> will be rejected with a <code>'transition aborted'</code> value.</p><div class="inline"><h4 id="Type.">Type:</h4>
+<div class="type-">broadcast</div>
+</div>
+<div class="inline"><h4 id="Target.">Target:</h4>
+<div class="target-">root scope</div>
+</div>
+<h4 id="Parameters">Parameters</h4>
+<ul class="parameters"><li><code ng:non-bindable="">event – {Object} – </code>
+<p>Event object.</p></li>
+<li><code ng:non-bindable="">unfoundState – {Object} – </code>
+<p>Unfound State information. Contains: <code>to, toParams, options</code> properties.</p></li>
+<li><code ng:non-bindable="">fromState – {State} – </code>
+<p>Current state object.</p></li>
+<li><code ng:non-bindable="">fromParams – {Object} – </code>
+<p>Current state params.</p></li>
+</ul>
+<h4 id="Example">Example</h4>
+<div class="example"><pre class="prettyprint linenums">
+// somewhere, assume lazy.state has not been defined
+$state.go("lazy.state", {a:1, b:2}, {inherit:false});
+
+// somewhere else
+$scope.$on('$stateNotFound',
+function(event, unfoundState, fromState, fromParams){
+    console.log(unfoundState.to); // "lazy.state"
+    console.log(unfoundState.toParams); // {a:1, b:2}
+    console.log(unfoundState.options); // {inherit:false} + default options
+})
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
