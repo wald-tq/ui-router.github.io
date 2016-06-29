@@ -41,35 +41,47 @@ layout: compress
   </select>
 
   <script>
+    let el = document.getElementById("docs__version_switcher");
+//    console.log(el.children);
+
     function switchVersion(version) {
       var current = /(\/docs)\/([^/]*)\/?(.*)/.exec("{{page.url}}");
       document.location.pathname = current[1] + "/" + version.value + "/" + current[3];
     }
+    var injectChecks = 0;
 
-    let el = document.getElementById("docs__version_switcher");
-    el.parentElement.removeChild(el);
+    function injectVersionSwitcher() {
+      el.parentElement.removeChild(el);
 
-    let tsdBreadcrumb = document.querySelectorAll(".tsd-page-title .tsd-breadcrumb")[0];
-    if (tsdBreadcrumb) {
-      let li = document.createElement("li");
-      li.appendChild(el);
-      if (tsdBreadcrumb.children.length) {
-        firstChild = tsdBreadcrumb.children[0];
-        tsdBreadcrumb.insertBefore(li, firstChild);
-      } else {
-        tsdBreadcrumb.appendChild(li);
+      let tsdBreadcrumb = document.querySelectorAll(".tsd-page-title .tsd-breadcrumb")[0];
+      if (tsdBreadcrumb) {
+        let li = document.createElement("li");
+        li.appendChild(el);
+        if (tsdBreadcrumb.children.length) {
+          firstChild = tsdBreadcrumb.children[0];
+          tsdBreadcrumb.insertBefore(li, firstChild);
+        } else {
+          tsdBreadcrumb.appendChild(li);
+        }
+      }
+
+      let ngDocMenu = document.querySelectorAll("header.header .navbar-inner ul.nav")[0];
+      if (ngDocMenu) {
+        let li = document.createElement("li");
+        li.appendChild(el);
+        li.style.padding = 0;
+        li.style.paddingTop = "5px";
+        li.style.paddingLeft = "1em";
+        li.style.height = "40px";
+        ngDocMenu.appendChild(li);
+      }
+
+      if (++injectChecks < 5 && !tsdBreadcrumb && !ngDocMenu) {
+        setTimeout(injectVersionSwitcher, 1000);
       }
     }
 
-    let ngDocMenu = document.querySelectorAll("header.header .navbar-inner ul.nav")[0];
-    if (ngDocMenu) {
-      let li = document.createElement("li");
-      li.appendChild(el);
-      li.style.padding = 0;
-      li.style.paddingTop = "5px";
-      li.style.height = "40px";
-      ngDocMenu.appendChild(li);
-    }
+    injectVersionSwitcher();
   </script>
 
 </div>
