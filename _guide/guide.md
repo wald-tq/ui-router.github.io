@@ -6,6 +6,8 @@ sitemap: true
 permalink: /guide/
 ---
 
+## Coming soon...
+
 These tutorials will help you learn UI-Router concepts.  
 
 Follow the links on the left to get started.

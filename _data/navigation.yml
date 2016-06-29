@@ -16,15 +16,14 @@ main:
     url: /blog
 
 about:
-  - title: "About UI-Router"
-    url: /about
+  - title: "About"
     children:
-      - title: "Feature set"
+      - title: "UI-Router"
+        url: /about/
+      - title: "Features"
         url: /about/features
-      - title: "About states"
+      - title: "States"
         url: /about/states
-  - title: "Get Started"
-    url: /guide
 
 tutorial_ng1:
   - title: "Tutorial - Angular"
