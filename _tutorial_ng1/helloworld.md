@@ -94,7 +94,7 @@ Create a new script `helloworld.js` for the application code and add a script ta
 </head>
 ```
 
-It's important that Angular is loaded before UI-Router script (and the hello script) are loaded.
+It's important that `angular.js` is loaded before `angular-ui-router.js` (and the `helloworld.js` script).
 {: .notice--info}
 
 ## Create an Angular module
@@ -134,7 +134,8 @@ This simple state definition has three properties:
 
 ## Register states
 
-Create another state.  Register both states with `$stateProvider`.
+Create another state (`about`).
+Register both states with `$stateProvider` in a config block.
 
 ```js
 myApp.config(function($stateProvider) {
@@ -156,7 +157,8 @@ myApp.config(function($stateProvider) {
 ```
 
 Because `$stateProvider` is an [Angular Provider](https://docs.angularjs.org/guide/providers#provider-recipe),
-you must inject it into a [`.config()` block](https://docs.angularjs.org/guide/module#configuration-blocks).
+you must inject it into a [`.config()` block](https://docs.angularjs.org/guide/module#configuration-blocks)
+using [Angular 1 Dependency Injection](https://docs.angularjs.org/guide/di).
 {: .notice--info}
 
 
@@ -170,14 +172,14 @@ Add a `<ui-view>` tag (viewport) to your HTML.
 </body>
 ```
 
-<div class="notice--info" markdown="1">
-`<ui-view>` is a UI-Router's viewport. When one of your states is activated, the state's view (the `template:`)
-will fill in this `ui-view` viewport.
-</div>
+The `<ui-view>` tag is a UI-Router viewport.
+When a state is activated, the state's view (the `template:`) will be loaded into the viewport.
+{: .notice--info}
 
 ## Links
 
-Add some `ui-sref` links. These can be used to activate each state.
+Add some `ui-sref` links.
+When clicked, the links will activate a state.
 
 ```html
 <body ng-app="myApp">
@@ -188,15 +190,15 @@ Add some `ui-sref` links. These can be used to activate each state.
 </body>
 ```
 
-<div class="notice--info" markdown="1">
-- `ui-sref` is like `href`, but it references a *state*, not a *url*.
-- The `ui-sref` directive automatically builds a `href` attribute for you (`<a href=...></a>`)
-</div>
+A `ui-sref` is a directive, and behaves similar to an html `href`.
+Instead of referencing a *url* like an `href`, it references a *state*.
+The `ui-sref` directive automatically builds a `href` attribute for you (`<a href=...></a>`) based on your state's url.
+{: .notice--info}
 
 ## Active link
 
 Add `ui-sref-active="active"` to the `ui-sref` links.
-This will toggle the css class `active` when the link is active or inactive, in order to highlight the active link.
+This directive will add the `active` css class to the link when the target state is active.
 
 ```html
 <body>
@@ -207,7 +209,7 @@ This will toggle the css class `active` when the link is active or inactive, in 
 </body>
 ```
 
-Finally, add a style tag and the `.active` class to style the active link as red+bold.
+Finally, add the style tag and the `.active` class to style the active link as red and *bold*.
 
 ```html
 <head>
@@ -215,4 +217,8 @@ Finally, add a style tag and the `.active` class to style the active link as red
     <style>.active { color: red; font-weight: bolder; }</style>
 </head>
 ```
+
+Go back to the [live demo](#live-demo) and check it out!
+
+When you're finished, move on to the [Hello Solar System!](hellosolarsystem) tutorial.
 

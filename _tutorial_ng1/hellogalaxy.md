@@ -4,11 +4,12 @@ excerpt: "Learn about Nested States and Nested Views"
 ---
 {% include toc icon="columns" title="Hello Galaxy!" %}
 
-In the ["Hello Solar System" app](/tutorial/ng1/hellosolarsystem), we created a list/detail interface,
-showing a list of `people` and allowing the user to drill down to a single `person`'s details to be viewed.
-However, we implemented both `people` and `person` states as siblings (peers to each other).
+In the ["Hello Solar System!"](/tutorial/ng1/hellosolarsystem) app, we created a list/detail interface.
+We showed a list of `people` and allowed the user to drill down to view a single `person`'s details.
+We implemented both the `people` and `person` states as siblings (peers to each other).
+When `people` was active, `person` could not be active, and vice versa.
 
-In this section, we will create a parent-child state relationship by nesting the `person` state under `people`.
+In this section, we will create a parent-child state relationship by nesting the `person` state _inside_ the `people` state.
 We will also nest their views, showing `person` details inside the `people` component.
 
 ## Live demo
@@ -23,7 +24,7 @@ Click the "People" tab, then click on a person.
 
 When you switch from one state to the another, it is called a Transition. 
 On the bottom of the plunker, the [UI-Router Transition Visualizer](https://github.com/ui-router/visualizer)
-visually shows each transition, and provides transition details when hovered and/or clicked.
+shows each transition visually, and provides transition details when hovered and/or clicked.
 {: .notice--info}
 
 # Nesting States
@@ -169,3 +170,4 @@ Since the `ui-sref` was created in the `people` state's view and relatively targ
 
 # Transitions
 
+TODO
