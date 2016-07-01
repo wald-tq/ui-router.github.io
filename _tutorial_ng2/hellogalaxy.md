@@ -4,7 +4,7 @@ excerpt: "Learn about Nested States and Nested Views"
 ---
 {% include toc icon="columns" title="Hello Galaxy!" %}
 
-In the ["Hello Solar System!"](hellosolarsystem) app, we created a list/detail interface.
+In the ["Hello Solar System!"](/tutorial/ng1/hellosolarsystem) app, we created a list/detail interface.
 We showed a list of `people` and allowed the user to drill down to view a single `person`'s details.
 We implemented both the `people` and `person` states as siblings (peers to each other).
 When `people` was active, `person` could not be active, and vice versa.
