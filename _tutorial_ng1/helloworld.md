@@ -65,7 +65,7 @@ A live demo of the finished app can be seen below, in the [Plunker](http://plnk.
 "Hello" and "About" links and watch the UI change.
 
 <iframe class="plunker" style="height: 350px" 
-  src="http://embed.plnkr.co/6eQV15/?show=preview" 
+  src="//embed.plnkr.co/6eQV15/?show=preview" 
   frameborder="1" allowfullscren="allowfullsceen"></iframe>
 <br>
 
