@@ -1,10 +1,11 @@
-
+---
 title: "UI-Router for React"
 layout: single
 excerpt: "State based routing for React"
 sitemap: true
 permalink: /react/
 ---
+
 {% include toc icon="columns" title="React" %}
 
 <center>
