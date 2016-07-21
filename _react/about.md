@@ -33,8 +33,8 @@ Learn UI-Router by following our tutorials.
 
 To fix a UI-Router bug, or create an enhancement, follow these steps: 
 
-The Typescript source code for UI-Router for React can be found at https://github.com/ui-router/react
-The react code depends on the UI-Router Core code, found at https://github.com/angular-ui/ui-router
+The Typescript source code for UI-Router for React can be found at [https://github.com/ui-router/react]
+The react code depends on the UI-Router Core code, found at [https://github.com/angular-ui/ui-router]
 
 To get started you will need to clone the UI-Router Core and UI-Router React repositories.
 
