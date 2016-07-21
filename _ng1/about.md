@@ -31,13 +31,13 @@ Other examples:
   - Adding the latest prerelease to your project: `npm install --save angular-ui-router@next`
   - Adding a specific version to your project: `npm install --save angular-ui-router@1.0.0-beta.1`
   
-- From http://npmcdn.com via a `<script>` tag in your html: 
+- From <http://npmcdn.com> via a `<script>` tag in your html: 
   - Latest stable version: `<script src="//npmcdn.com/angular-ui-router/release/angular-ui-router.min.js">`
   - A specific version: `<script src="//npmcdn.com/angular-ui-router@0.3.1/release/angular-ui-router.js">`
   
 - From bower: `bower install angular-ui-router#0.3.1`
 
-Note: bower releases are considered 'legacy' and are managed at https://github.com/angular-ui/angular-ui-router-bower
+Note: bower releases are considered 'legacy' and are managed at <https://github.com/angular-ui/angular-ui-router-bower>
   
 ## Tutorials
 
@@ -51,7 +51,7 @@ Learn UI-Router by following our tutorials.
 
 To fix a UI-Router bug, or create an enhancement, follow these steps: 
 
-The Typescript source code for UI-Router for Angular 1 can be found in https://github.com/angular-ui/ui-router
+The Typescript source code for UI-Router for Angular 1 can be found in <https://github.com/angular-ui/ui-router>
 Note: This repository also hosts the code for UI-Router Core, and UI-Router for Angular 2. 
 
 To get started:

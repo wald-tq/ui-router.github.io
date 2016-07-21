@@ -24,7 +24,7 @@ npm install --save ui-router-ng2
 Other examples:
 
 - Adding a specific version to your project: `npm install --save ui-router-ng2@1.0.0-beta.1`
-- From http://npmcdn.com via a `<script>` tag in your html: 
+- From <http://npmcdn.com> via a `<script>` tag in your html: 
   - Latest stable version: `<script src="//npmcdn.com/ui-router-ng2/_bundles/ui-router-ng2.js">`
   - A specific version: `<script src="//npmcdn.com/ui-router-ng2@1.0.0-beta.1/_bundles/ui-router-ng2.js">`
 
@@ -40,7 +40,7 @@ Learn UI-Router by following our tutorials.
 
 To fix a UI-Router bug, or create an enhancement, follow these steps: 
 
-The Typescript source code for UI-Router for Angular 2 can be found in https://github.com/angular-ui/ui-router
+The Typescript source code for UI-Router for Angular 2 can be found in <https://github.com/angular-ui/ui-router>
 Note: This repository also hosts the code for UI-Router Core and UI-Router for Angular 1. 
 
 To get started:
