@@ -110,7 +110,7 @@ bootstrap(App, [
 
 # Live demo
 
-A live demo of the finished app can be seen below, in the [Plunker](http://plnk.co/).  Navigate between the
+A live demo of the finished app can be seen below, in the [Plunker](https://plnkr.co/).  Navigate between the
 "Hello" and "About" links and watch the UI change.
 
 <iframe class="plunker" style="height: 350px" 

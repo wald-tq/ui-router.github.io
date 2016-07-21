@@ -211,9 +211,9 @@ collections:
   ng1:
     output: true
     permalink: /ng1/:path
-  ng1:
+  ng2:
     output: true
-    permalink: /ng1/:path
+    permalink: /ng2/:path
   react:
     output: true
     permalink: /react/:path
