@@ -22,8 +22,6 @@ about:
         url: /about/
       - title: "Features"
         url: /about/features
-      - title: "States"
-        url: /about/states
 
 tutorial_ng1:
   - title: "Tutorial - Angular"
@@ -46,7 +44,13 @@ tutorial_ng2:
 guide:
   - title: "Guide"
     children:
-      - title: "Registering States"
-        url: /guide/registration
+      - title: "UI-Router States"
+        url: /guide/states
       - title: "Views"
         url: /guide/views
+  - title: "Angular 1"
+    children:
+      - title: "UI-Router 1.0 Migration"
+        url: /guide/ng1-migration-to-1.0-from-legacy
+      - title: "Views"
+        url: /guide/ng1-views
