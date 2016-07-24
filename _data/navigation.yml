@@ -51,6 +51,6 @@ guide:
   - title: "Angular 1"
     children:
       - title: "UI-Router 1.0 Migration"
-        url: /guide/ng1-migration-to-1.0-from-legacy
+        url: /guide/ng1/migrate-to-1.0
       - title: "Views"
-        url: /guide/ng1-views
+        url: /guide/ng1/views
