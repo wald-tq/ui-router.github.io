@@ -14,6 +14,7 @@ layout: default
   {% endunless %}
 {% endif %}
 
+
 <div id="main" role="main">
   {% include sidebar.html %}
 
@@ -74,3 +75,15 @@ layout: default
     </div>
   {% endif %}
 </div>
+
+<script>
+  window.addEventListener('DOMContentLoaded', function() {
+    function contentFn(node) {
+      return node.innerHTML + " <a href='#" + node.id + "' class='linkjuice'><i class='fa fa-link'></i></a>";
+    }
+
+    var selectors = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
+
+    linkjuice.init('.page__content', { contentFn: contentFn, selectors: selectors })
+  })
+</script>

@@ -7,11 +7,16 @@
   var topGutter = 85;
 
   // All list items
-  menuItems = $("nav.toc").find("a");
+  toc = $("#markdown-toc");
+  menuItems = toc.find("li");
+
+  menuItems.filter(function() {
+    return $(this).find("> ul li a").length;
+  }).addClass("has-children");
 
   // Anchors corresponding to menu items
   var scrollItems = menuItems.map(function () {
-    var item = $($(this).attr("href"));
+    var item = $($(this).find("a").attr("href"));
     if (item.length) {
       return item;
     }
@@ -34,14 +39,24 @@
 
     if (lastId !== id) {
       lastId = id;
-      // Set/remove active class
-      console.log(menuItems.length)
-      menuItems.removeClass("active")
-        .filter("[href='#" + id + "']")
-        .addClass("active");
-      // menuItems
-      //   .parent().removeClass("active")
-      //   .end().filter("[href='#" + id + "']").parent().addClass("active");
+
+      // Remove/set the active class
+      menuItems.removeClass("active");
+      menuItems.removeClass("child-active");
+      var activeItems = menuItems.filter(function() {
+        return $(this).find("> a[href='#" + id + "']").length;
+      });
+
+      activeItems.addClass("active");
+
+      var el = activeItems[0];
+      el = el && el.parentNode;
+      while (el && el.id !== 'markdown-toc') {
+        if (el.tagName === 'LI') {
+          el.className += " child-active";
+        }
+        el = el.parentNode;
+      }
     }
   });
 })();

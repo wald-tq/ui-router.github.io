@@ -1,10 +1,37 @@
+
+nav.toc.collapsible ul li.has-children {
+  &:before {
+    position: absolute;
+    left: 0.5em;
+    margin-top: 0.35em;
+    font-family: fontawesome;
+    content:"";
+  }
+
+  &.active:before { content:"" }
+  &.child-active:before { content:"" }
+}
+
+nav.toc.collapsible ul li ul li {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 350ms ease-out;
+}
+
+nav.toc.collapsible ul li.active ul li {
+  max-height: 3em;
+}
+nav.toc.collapsible ul li.child-active ul li {
+  max-height: 3em;
+}
+
 nav.toc {
   /* Scroll spy; see js/plugins/scrollspy.js */
   li a {
     transition: background-color 0.25s ease, color 0.25s ease;
   }
 
-  li a.active {
+  li.active > a {
     color: black;
     background-color: lighten($Acolor5, 40%);
   }
