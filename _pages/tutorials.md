@@ -2,8 +2,9 @@
 title: "Tutorials"
 excerpt: "Learn to use UI-Router"
 layout: "single"
-permalink: "/tutorials"
+permalink: "/tutorials/"
 ---
+
 
 We have tutorials for the following frameworks: 
 
