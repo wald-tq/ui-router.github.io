@@ -46,7 +46,7 @@ We will go over each part in more detail below.
 </html>
 ```
 
-## `helloworld.js`
+## `helloworld.ts`
 
 {% raw %}
 ```js
