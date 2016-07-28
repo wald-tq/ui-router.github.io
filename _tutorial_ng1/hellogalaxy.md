@@ -1,5 +1,5 @@
 ---
-title: "Hello Galaxy!"
+title: "UI-Router for Angular 1 - Hello Galaxy!"
 excerpt: "Learn about Nested States and Nested Views"
 ---
 {% include toc icon="columns" title="Hello Galaxy!" %}

@@ -1,5 +1,5 @@
 ---
-title: "Hello Solar System!"
+title: "UI-Router for Angular 1 - Hello Solar System!"
 excerpt: "Learn about components, resolve data, and parameters"
 ---
 {% include toc icon="columns" title="Hello Solar System!" %}
@@ -18,8 +18,11 @@ Additionally, we will switch our views from templates to Angular 1.5 components.
 At any time, the user can click "reload plunker", and the app will restart at the same URL.
 The URL contains the information necessary to restore the application's state.
 When the app is restarted, it will be in the same state as before.
+{: .notice--info}
+
+Plunker embeds can time out.
 If you get a "Not Found" response, your plunker embed has timed out.
-Click the "Refresh" button to get a new plunker, then experiment with the "reload plunker" button.
+Click the "Refresh" icon to get a new plunker, then try experimenting with the "reload plunker" button again.
 {: .notice--info}
 
 ## Live demo

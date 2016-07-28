@@ -1,14 +1,16 @@
 ---
-title: "Hello World!"
+title: "UI-Router for Angular 1 - Hello World!"
 layout: single
-excerpt: "Getting started with UI-Router"
+excerpt: "Getting started with UI-Router for Angular 1"
 sitemap: true
 ---
+
 {% include toc icon="columns" title="Hello World!" %}
 
-Let's build a Hello World UI-Router application.  It will have two "pages" (`hello` and `about`), each
-one having its own URL.  We can switch between pages by clicking on links.  The link for the active page
-will be highlighted.
+Let's build a UI-Router for Angular 1 Hello World application.
+It will have two "pages" (`hello` and `about`), each one having its own URL.
+We can switch between pages by clicking on links.
+The link for the active page will be highlighted.
 
 # Full Source Code
 

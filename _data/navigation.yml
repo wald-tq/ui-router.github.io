@@ -38,6 +38,8 @@ tutorial_ng2:
     children:
       - title: "Hello World!"
         url: /tutorial/ng2/helloworld
+      - title: "Hello Solar System!"
+        url: /tutorial/ng2/hellosolarsystem
       - title: "Hello Galaxy!"
         url: /tutorial/ng2/hellogalaxy
 

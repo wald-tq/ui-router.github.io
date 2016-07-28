@@ -1,9 +1,10 @@
 ---
-title: "Hello World!"
+title: "UI-Router for Angular 2 - Hello World!"
 layout: single
 excerpt: "Getting started with UI-Router for Angular 2"
 sitemap: true
 ---
+
 {% include toc icon="columns" title="Hello World!" %}
 
 Let's build a Hello World UI-Router application for Angular 2.

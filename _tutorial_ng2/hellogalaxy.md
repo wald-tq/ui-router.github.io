@@ -1,10 +1,10 @@
 ---
-title: "Hello Galaxy!"
+title: "UI-Router for Angular 2 - Hello Galaxy!"
 excerpt: "Learn about Nested States and Nested Views"
 ---
 {% include toc icon="columns" title="Hello Galaxy!" %}
 
-In the ["Hello Solar System!"](/tutorial/ng1/hellosolarsystem) app, we created a list/detail interface.
+In the ["Hello Solar System!"](hellosolarsystem) app, we created a list/detail interface.
 We showed a list of `people` and allowed the user to drill down to view a single `person`'s details.
 We implemented both the `people` and `person` states as siblings (peers to each other).
 When `people` was active, `person` could not be active, and vice versa.
@@ -19,7 +19,7 @@ As usual, let's first look at a live demo of the finished "Hello Galaxy" app.
 Click the "People" tab, then click on a person. 
 
 <iframe style="width: 100%; height: 500px;" 
-  src="http://embed.plnkr.co/jbZgIg/?show=preview"
+  src="//embed.plnkr.co/1wB5QZSPvvCJZXBWMLXU/?show=preview"
   frameborder="1" allowfullscren="allowfullscren"></iframe>
 
 When you switch from one state to the another, it is called a Transition. 
@@ -47,18 +47,19 @@ The `person` state is now a child of the `people` state.
 The new `person` state definition:
 
 ```js
-var personState = { 
-  name: 'people.person', 
-  url: '/{personId}', 
-  component: 'person',
-  resolve: {
-    person: function(people, $stateParams) {
-      return people.find(function(person) { 
-        return person.id === $stateParams.personId;
-      });
+export const personState = {
+  name: 'people.person',
+  url: '/:personId',
+  component: Person,
+  resolve: [
+    { 
+      token: 'person', 
+      deps: [Transition, PeopleService],
+      resolveFn: (trans, people) => 
+          people.find(person => person.id === trans.params().personId)
     }
-  }
-}
+  ]
+};
 ```
 
 
@@ -86,7 +87,7 @@ The child state's `url:` property is a url fragment (a partial url).
 The full url for a child state is built by appending the child state's url fragment to the parent state's url.
 
 The url for the parent state (`people`) is still `/people`.
-Appending `/{personId}` to `/people` results in `/people/{personId}`, which is the same as our original url.
+Appending `/{personId}` to `/people` results in `/people/{personId}` (which is the same as our previous `person` url).
 
 The router will map a browser url of `/people` to the `people` state.  
 It will map a browser url of `/people/123` to the `person` state, with a `peopleId` parameter value of "123".
@@ -111,29 +112,26 @@ A resolve function may inject the results of other resolves from ancestor states
 ## Views
 
 The view for `person` hasn't changed.
-It is still a component named `person`, which has an input binding named `person`.
-The resolve data named `person` is still provided to the input binding.
+It is still a component named `person`, which has an `@Input() person`.
+The resolve data named `person` is still fed into the `@Input()` binding.
 
 However, the parent state's `people` component has changed a bit.
 
 {% raw %}
 ```html
 <!-- outer container -->
-<div class="flex-h">  
+<div class="flex-h">
 
   <!-- inner container for people -->
   <div class="people">
-  
     <h3>Some people:</h3>
     <ul>
-      <li ng-repeat="person in $ctrl.people">
-        <a ui-sref-active="active" 
-           ui-sref="people.person({ personId: person.id })">
+      <li *ngFor="let person of people">
+        <a uiSref=".person" [uiParams]="{ personId: person.id }">
           {{person.name}}
         </a>
       </li>
     </ul>
-    
   </div>
   
   <!-- viewport for child view -->
@@ -143,7 +141,7 @@ However, the parent state's `people` component has changed a bit.
 {% endraw %}
 
 We've added some container `div`s for layout and embedded a nested `<ui-view></ui-view>` viewport.
-When a child of `people` is activated, its view is put into the viewport.
+When a child state of `people` is activated, its view is put into the viewport.
 We also added some styling to create a side by side layout, so the nested viewport appears on the right. 
 
 
@@ -160,12 +158,11 @@ That `<ui-view>` is filled with the `person` view when the `person` state is act
 
 We also changed the `ui-sref` links in the `people` state which drill down to a specific person.
 
-Previously, these links were `<a ui-sref="person({ personId: person.id })">`.
-Since the `person` state is now named `people.person`, we changed the links to `<a ui-sref="people.person({ personId: person.id })">`.
+Previously, these links were `<a uiSref="person" [uiParams]="{ personId: person.id }">`.
+Since the `person` state is now named `people.person`, we changed the links to `<a uiSref="people.person" [uiParams]="{ personId: person.id }">`.
 
-We could also have used relative addressing: `<a ui-sref=".person({ personId: person.id })">`.
-The target state for the `ui-sref` is to its view's state.
-Since the `ui-sref` was created in the `people` state's view and relatively targets `.person`, the final target state is `people.person`.
+We could also have used relative addressing: `<a uiSref=".person" [uiParams]="{ personId: person.id }">`.
+Since the `uiSref` was created in the `people` state's view and it relatively targets `.person`, the final target state is `people.person`.
 {: .notice--info}
 
 # Transitions
