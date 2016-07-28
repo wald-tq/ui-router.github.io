@@ -5,7 +5,7 @@ excerpt: "Getting started with UI-Router for Angular 2"
 sitemap: true
 ---
 
-{% include toc icon="columns" title="Hello World!" %}
+{% include toc classes="collapsible" icon="columns" title="Hello World!" %}
 
 Let's build a Hello World UI-Router application for Angular 2.
 It will have two "pages" (`hello` and `about`), each one having its own URL.
@@ -247,12 +247,12 @@ This is the component that we will bootstrap with Angular 2 as the root of our a
 class MyApp { }
 ```
 
-#### Viewport 
+*Viewport*
 
 The MyApp component contains a `<ui-view>` viewport.
 The `<ui-view>` viewport will be filled with the component from the currently active state.
 
-#### Links
+*Links*
 
 It also contains two anchor tags with `uiSref` directives.
 The `uiSref` directives are links, similar to an anchor tag's `href.
@@ -261,7 +261,7 @@ Instead of linking to a URL like an `href`, a `uiSref` links to a state.
 When clicked, the linked state is activated.
 The `uiSref` directive automatically builds a `href` attribute for you (`<a href=...></a>`) based on your state's url.
 
-#### Active Link
+*Active Link*
 
 The `uiSref` links also have `uiSrefActive='active'`, which is another directive. 
 The addition of `uiSrefActive='active'` adds the `active` css class to the link when the target state is active.
