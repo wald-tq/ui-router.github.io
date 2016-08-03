@@ -1,4 +1,5 @@
 ---
+title: "Sample App - UI-Router for Angular 1"
 permalink: /sample-app/
 ---
 
