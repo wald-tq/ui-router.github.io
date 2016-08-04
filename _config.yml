@@ -223,6 +223,9 @@ collections:
   tutorial_ng2:
     output: true
     permalink: /tutorial/ng2/:path
+  tutorial_react:
+    output: true
+    permalink: /tutorial/react/:path
   guide:
     output: true
     permalink: /guide/:path
@@ -279,6 +282,14 @@ defaults:
       layout: single
       sidebar:
         nav: "tutorial_ng2"
+  - scope:
+      path: ""
+      type: tutorial_react
+    values:
+      sitemap: true
+      layout: single
+      sidebar:
+        nav: "tutorial_react"
   - scope:
       path: ""
       type: guide
