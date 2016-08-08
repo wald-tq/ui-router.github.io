@@ -9,7 +9,7 @@ permalink: /react/
 {% include toc icon="columns" title="React" %}
 
 <center>
-<img src="/images/logos/react.png">
+<img src="/images/logos/react.png" width="150">
 </center>
 
 UI-Router provides extremely flexible, state based routing to the React ecosystem.
