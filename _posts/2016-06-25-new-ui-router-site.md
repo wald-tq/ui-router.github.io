@@ -1,5 +1,6 @@
 ---
-layout: single
+layout: post
+comments: true
 ---
 
 ### New UI-Router site
