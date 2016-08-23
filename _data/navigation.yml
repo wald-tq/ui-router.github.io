@@ -43,6 +43,16 @@ tutorial_ng2:
       - title: "Hello Galaxy!"
         url: /tutorial/ng2/hellogalaxy
 
+tutorial_react:
+  - title: "Tutorial - React"
+    children:
+      - title: "Hello World!"
+        url: /tutorial/react/helloworld
+      - title: "Hello Solar System!"
+        url: /tutorial/react/hellosolarsystem
+      - title: "Hello Galaxy!"
+        url: /tutorial/react/hellogalaxy
+
 guide:
   - title: "Guide"
     children:

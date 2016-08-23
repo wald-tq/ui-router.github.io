@@ -1,7 +1,7 @@
 ---
 title: "UI-Router for React - Hello World!"
-layout: single
 excerpt: "Getting started with UI-Router for React"
+layout: single
 sitemap: true
 ---
 
