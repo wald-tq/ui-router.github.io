@@ -36,6 +36,21 @@ Learn UI-Router by following our tutorials.
 - [Hello Solar System](/tutorial/ng2/hellosolarsystem)
 - [Hello Galaxy](/tutorial/ng2/hellogalaxy)
  
+## Quick Start
+ 
+The [UI-Router Ng2 QuickStart](https://github.com/ui-router/quickstart-ng2) is a minimalistic Angular 2 UI-Router app forked from 
+[the official Angular Quickstart](https://github.com/angular/quickstart).
+It demonstrates:
+
+- States and nested substates
+- Path, Query, and Hash parameters
+- Resolve data
+- Named Views
+
+## Sample application
+
+The [UI-Router Sample App](/resources/sampleapp) is a non-trivial UI-Router application.
+ 
 ## Development
 
 To fix a UI-Router bug, or create an enhancement, follow these steps: 

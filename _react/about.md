@@ -29,6 +29,10 @@ Learn UI-Router by following our tutorials.
 - [Hello World](/tutorial/react/helloworld)
 - [Hello Solar System](/tutorial/react/hellosolarsystem)
 - [Hello Galaxy](/tutorial/react/hellogalaxy)
+
+## Sample application
+
+The [UI-Router Sample App](/resources/sampleapp) is a non-trivial UI-Router application.
  
 ## Development
 

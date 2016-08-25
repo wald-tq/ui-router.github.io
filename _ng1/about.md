@@ -47,6 +47,11 @@ Learn UI-Router by following our tutorials.
 - [Hello Solar System](/tutorial/ng1/hellosolarsystem)
 - [Hello Galaxy](/tutorial/ng1/hellogalaxy)
  
+ 
+## Sample application
+
+The [UI-Router Sample App](/resources/sampleapp) is a non-trivial UI-Router application.
+ 
 ## Development
 
 To fix a UI-Router bug, or create an enhancement, follow these steps: 
