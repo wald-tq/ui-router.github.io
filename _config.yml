@@ -232,6 +232,9 @@ collections:
   docs:
     output: true
     permalink: /docs/:path:output_ext
+  resources:
+    output: true
+    permalink: /resources/:path:output_ext
 
 defaults:
   - scope:
@@ -304,6 +307,14 @@ defaults:
     values:
       sitemap: true
       layout: docs
+  - scope:
+      path: ""
+      type: resources
+    values:
+      sitemap: true
+      layout: single
+      sidebar:
+        nav: "resources"
   # _posts
   - scope:
       path: ""

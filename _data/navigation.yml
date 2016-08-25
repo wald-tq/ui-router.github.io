@@ -12,8 +12,8 @@ main:
   - title: "API Docs"
     url: /docs/latest
 
-  - title: "Sample App"
-    url: /sampleapp
+  - title: "Resources"
+    url: /resources
 
   - title: "Blog"
     url: /blog
@@ -69,3 +69,9 @@ guide:
         url: /guide/ng1/migrate-to-1_0
       - title: "Route to Component"
         url: /guide/ng1/route-to-component
+
+resources:
+  - title: ""
+    children:
+      - title: "Sample App"
+        url: /resources/sampleapp

@@ -2,7 +2,7 @@
 title: "UI-Router Sample App"
 excerpt: "A small, but non-trivial sample UI-Router application"
 layout: "single"
-permalink: "/sampleapp/"
+permalink: /resources/sampleapp
 ---
 Explore the Sample App for:
 
