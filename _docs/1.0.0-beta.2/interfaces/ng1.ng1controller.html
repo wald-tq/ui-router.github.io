@@ -150,21 +150,23 @@
 								</ul>
 								<dl class="tsd-comment-tags">
 									<dt>example</dt>
-									<dd><p>```js</p>
-										<p>app.component(&#39;myComponent&#39;, {
-											template: &#39;<input ng-model="$ctrl.data" type="text">&#39;,
-											bindings: { &#39;data&#39;: &#39;&lt;&#39; },
-										controller: function() {</p>
-										<pre><code><span class="hljs-keyword">this</span>.originalData = angular.copy(<span class="hljs-keyword">this</span>.<span class="hljs-keyword">data</span>);
+									<dd><pre><code class="lang-js">
+app.component(<span class="hljs-string">'myComponent'</span>, {
+  template: <span class="hljs-string">'&lt;input ng-model="$ctrl.data" type="text"&gt;'</span>,
+  bindings: { <span class="hljs-string">'data'</span>: <span class="hljs-string">'&lt;'</span> },
+  controller: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
 
-<span class="hljs-keyword">this</span>.uiCanExit = function() {
-  <span class="hljs-keyword">if</span> (!angular.equals(<span class="hljs-keyword">this</span>.<span class="hljs-keyword">data</span>, <span class="hljs-keyword">this</span>.originalData) {
-    <span class="hljs-comment">// <span class="hljs-doctag">Note:</span> This could also return a Promise and request async</span>
-    <span class="hljs-comment">// confirmation using something like ui-bootstrap $modal</span>
-    <span class="hljs-keyword">return</span> window.confirm(<span class="hljs-string">"Data has changed.  Exit anyway and lose changes?"</span>);
+    <span class="hljs-keyword">this</span>.originalData = angular.copy(<span class="hljs-keyword">this</span>.data);
+
+    <span class="hljs-keyword">this</span>.uiCanExit = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+      <span class="hljs-keyword">if</span> (!angular.equals(<span class="hljs-keyword">this</span>.data, <span class="hljs-keyword">this</span>.originalData) {
+        <span class="hljs-comment">// <span class="hljs-doctag">Note:</span> This could also return a Promise and request async</span>
+        <span class="hljs-comment">// confirmation using something like ui-bootstrap $modal</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-built_in">window</span>.confirm(<span class="hljs-string">"Data has changed.  Exit anyway and lose changes?"</span>);
+      }
+    }
   }
-}
-</code></pre><p>  }</p>
+</code></pre>
 									</dd>
 								</dl>
 							</div>
@@ -175,7 +177,7 @@
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/a68e367/src/ng1/interface.ts#L541">ng1/interface.ts:541</a></li>
+									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/4d86ca2/src/ng1/interface.ts#L542">ng1/interface.ts:542</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
@@ -241,7 +243,7 @@ angular.module(<span class="hljs-string">'foo'</span>).controller(<span class="h
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/a68e367/src/ng1/interface.ts#L493">ng1/interface.ts:493</a></li>
+									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/4d86ca2/src/ng1/interface.ts#L493">ng1/interface.ts:493</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
