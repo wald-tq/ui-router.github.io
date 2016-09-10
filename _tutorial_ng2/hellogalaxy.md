@@ -164,7 +164,3 @@ Since the `person` state is now named `people.person`, we changed the links to `
 We could also have used relative addressing: `<a uiSref=".person" [uiParams]="{ personId: person.id }">`.
 Since the `uiSref` was created in the `people` state's view and it relatively targets `.person`, the final target state is `people.person`.
 {: .notice--info}
-
-# Transitions
-
-TODO

@@ -25,10 +25,10 @@ We will go over each part in more detail below.
 ```html
 <html>
   <head>
-    <script src="https://npmcdn.com/zone.js@0.6.12/dist/zone.js"></script>
-    <script src="https://npmcdn.com/reflect-metadata@0.1.3/Reflect.js"></script>
-    <script src="https://npmcdn.com/systemjs@0.19.31/dist/system.js"></script>
-    <script src="https://npmcdn.com/typescript@1.8.10/lib/typescript.js"></script>
+    <script src="https://unpkg.com/zone.js@0.6.12/dist/zone.js"></script>
+    <script src="https://unpkg.com/reflect-metadata@0.1.3/Reflect.js"></script>
+    <script src="https://unpkg.com/systemjs@0.19.31/dist/system.js"></script>
+    <script src="https://unpkg.com/typescript@1.8.10/lib/typescript.js"></script>
     <script src="config.js"></script>
     <script>
       System.import('helloworld').catch(console.error.bind(console)); 
@@ -52,19 +52,15 @@ We will go over each part in more detail below.
 ```js
 /** imports */
 
-import {bootstrap} from '@angular/platform-browser-dynamic';
-import {LocationStrategy, HashLocationStrategy} from "@angular/common";
 import {Component} from '@angular/core';
-import {
-  UIROUTER_PROVIDERS, UIROUTER_DIRECTIVES, 
-  UIRouter, UIView, UIRouterConfig
-} from "ui-router-ng2";
+import {UIRouterModule, provideUIRouter} from "ui-router-ng2";
+import {BrowserModule} from "@angular/platform-browser";
+import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 
 /** Components */
 
 @Component({
   selector: 'my-app',
-  directives: [UIROUTER_DIRECTIVES]
   template: `
   <a uiSref="hello" uiSrefActive="active">Hello</a>
   <a uiSref="about" uiSrefActive="active">About</a>
@@ -90,22 +86,20 @@ class About { }
 let helloState = { name: 'hello', url: '/hello',  component: Hello }; 
 let aboutState = { name: 'about', url: '/about',  component: About };
 
-/** UIRouter Config */
+/** Root Application NgModule */
 
-class MyUIRouterConfig {
-  configure(router: UIRouter) {
-    router.stateRegistry.register(helloState));
-    router.stateRegistry.register(aboutState));
-  }
-}
+@UIRouterModule({
+  imports: [ BrowserModule ],
+  providers: [ provideUIRouter({ useHash: true }) ],
+  states: [ helloState, aboutState ],
+  declarations: [ App ],
+  bootstrap: [ App ]
+})
+class RootAppModule {}
 
 /** Angular 2 bootstrap */
 
-bootstrap(App, [
-    ...UIROUTER_PROVIDERS,
-    {  provide: UIRouterConfig, useClass: MyUIRouterConfig  },
-    {  provide: LocationStrategy, useClass: HashLocationStrategy }
-]).catch(err => console.error(err));
+platformBrowserDynamic().bootstrapModule(RootAppModule);
 ```
 {% endraw %}
 
@@ -132,16 +126,13 @@ npm install angular-ui-router
 ```
 
 You could alternatively refer to the 
-[copy distributed on npmcdn.com](https://npmcdn.com/ui-router-ng2@latest/_bundles/ui-router-ng2.js).
+[copy distributed on unpkg.com](https://unpkg.com/ui-router-ng2@latest/_bundles/ui-router-ng2.js).
 (This is how the live demo plunkers function)
 
 ## Configure your module loader
 
 Angular 2 development requires a module loader and is best with a bundler, such as webpack.
-There are many benefits to bundling, but one critical benefit for Angular 2 is tree shaking capabilities, which eliminates unused code from the bundle.
-
-For these tutorials, however, we're going to use SystemJS and the full UMD bundles.
-First, create an empty `helloworld.js` file.
+For these tutorials, however, we're going to use SystemJS and the individual UMD Angular 2 bundles.
 
 **SystemJS config.js**
 
@@ -154,28 +145,28 @@ Add a second second entry for `helloworld` which will get us the helloworld app 
 ```js
 ...
   map: {
-    '@angular': 'https://npmcdn.com/@angular',
-    'rxjs': 'https://npmcdn.com/rxjs@5.0.0-beta.6',
-    'ui-router-ng2': 'https://npmcdn.com/ui-router-ng2@1.0.0-beta.1/_bundles/ui-router-ng2',
-    helloworld: "./helloworld.ts"
+    // ... angular 2 stuff
+    'rxjs': 'https://unpkg.com/rxjs@5.0.0-beta.11',
+    'ui-router-ng2': 'https://unpkg.com/ui-router-ng2@1.0.0-beta.2/_bundles/ui-router-ng2.js',
+    'helloworld': "./helloworld.ts"
   },
 ...
 ```
 
-SystemJS is a large, nuanced topic, but this is as far as we're going to discuss for this tutorial.
+SystemJS is a complex, nuanced topic, but this is as far as we're going to discuss for this tutorial.
 
 ## Script tags
 
-The scripts loaded from npmcdn are prerequisites for Angular2 + Typescript running in a plunker.
+The scripts loaded from unpkg are prerequisites for Angular2 + Typescript running in a plunker.
 
 The `config.js` script is our SystemJS configuration.
 
 ```html
   <head>
-    <script src="https://npmcdn.com/zone.js@0.6.12/dist/zone.js"></script>
-    <script src="https://npmcdn.com/reflect-metadata@0.1.3/Reflect.js"></script>
-    <script src="https://npmcdn.com/systemjs@0.19.31/dist/system.js"></script>
-    <script src="https://npmcdn.com/typescript@1.8.10/lib/typescript.js"></script>
+    <script src="https://unpkg.com/zone.js@0.6.12/dist/zone.js"></script>
+    <script src="https://unpkg.com/reflect-metadata@0.1.3/Reflect.js"></script>
+    <script src="https://unpkg.com/systemjs@0.19.31/dist/system.js"></script>
+    <script src="https://unpkg.com/typescript@1.8.10/lib/typescript.js"></script>
     <script src="config.js"></script>
     ...
 ```
@@ -196,13 +187,10 @@ This script tells the module loader to load `helloworld`, which is our applicati
 In order to access the code required to bootstrap Angular 2 and UI-Router, we need to import a bunch of things.
 
 ```js
-import {bootstrap} from '@angular/platform-browser-dynamic';
-import {LocationStrategy, HashLocationStrategy} from "@angular/common";
 import {Component} from '@angular/core';
-import {
-  UIROUTER_PROVIDERS, UIROUTER_DIRECTIVES, 
-  UIRouter, UIView, UIRouterConfig
-} from "ui-router-ng2";
+import {UIRouterModule, provideUIRouter} from "ui-router-ng2";
+import {BrowserModule} from "@angular/platform-browser";
+import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 ```
 
 ## Creating the components
@@ -236,7 +224,6 @@ This is the component that we will bootstrap with Angular 2 as the root of our a
 ```js
 @Component({
   selector: 'my-app',
-  directives: [UIROUTER_DIRECTIVES]
   template: `
   <a uiSref="hello" uiSrefActive="active">Hello</a>
   <a uiSref="about" uiSrefActive="active">About</a>
@@ -299,49 +286,52 @@ This simple state definition has three properties:
 `component`
 :    The `component:` property value is the Angular 2 component class that will be loaded into the viewport when the state is active.  In this case, we will load the `Hello` component.
 
-Add the other about state:
+Add the 'about' state:
 
 ```js
 let helloState = { name: 'hello', url: '/hello',  component: Hello }; 
 let aboutState = { name: 'about', url: '/about',  component: About };
 ```
 
-## Create the UIRouter configuration
+## Create the root `NgModule`
 
-The `UIRouterConfig` object is used to configure UIRouter when Angular 2 is bootstrapped.
+Angular 2 requires that you define a `NgModule` to bootstrap your application.
 
 ```js
-class MyUIRouterConfig {
-  configure(router: UIRouter) {
-    router.stateRegistry.register(helloState));
-    router.stateRegistry.register(aboutState));
-  }
-}
+@UIRouterModule({
+  imports: [ BrowserModule ],
+  providers: [ provideUIRouter({ useHash: true }) ],
+  states: [ helloState, aboutState ],
+  declarations: [ App ],
+  bootstrap: [ App ]
+})
+class RootAppModule {}
 ```
 
-This `UIRouterConfig`'s `.configure()` method receives the router instance.
-It then registers the two states with the router's `stateRegistry`.
+`imports: [ BrowserModule ]`
+:   Allows your app's module to use code from another module.
+    In this case, the `BrowserModule` contains directives like `ngFor`.
+    
+`providers: [ provideUIRouter({ useHash: true }) ]`
+:   Provides the `UIRouter` code to Angular 2 and also enables "hashbang" url mode (for plunker) as opposed to HTML5 pushState.
+
+`states: [ helloState, aboutState ]`
+:   Lists the module's states we created above.
+    These listed states are registered when the app starts.
+    
+`declarations: [ App ]`
+:   Declares any (non-routed) components.
+
+`bootstrap: [ App ]`
+:   Tells Angular 2 to bootstrap the `App` component as the root of the application.
 
 ## Bootstrapping Angular 2
 
-Bootstrap Angular 2 with the MyApp root component and our Angular 2 Providers.
+Bootstrap Angular 2 with the `RootAppModule` NgModule.
 
 ```js
-bootstrap(MyApp, [
-    ...UIROUTER_PROVIDERS,
-    {  provide: UIRouterConfig, useClass: MyUIRouterConfig  },
-    {  provide: LocationStrategy, useClass: HashLocationStrategy }
-]).catch(err => console.error(err));
+platformBrowserDynamic().bootstrapModule(RootAppModule);
 ```
-
-We include `...UIROUTER_PROVIDERS` to add UI-Router to the Angular 2 application.
-The `...` at the beginning is ES6 destructuring.
-
-Second, with `{  provide: UIRouterConfig, useClass: MyUIRouterConfig  },` we tell Angular 2 to use `MyUIRouterConfig`
-whenever UI-Router requests the `UIRouterConfig`.
-
-Finally, we define the Angular 2 `LocationStrategy` to use, and set it to `HashLocationStrategy` (for plunker).
-The other option is `PathLocationStrategy`, which uses HTML5 push state.
 
 ---
 

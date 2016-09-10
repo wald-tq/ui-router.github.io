@@ -41,9 +41,48 @@ the current state
 
 This app introduces some new concepts and UI-Router features.
 
+- [UIRouterConfig](#uirouter-config)
 - [Resolve data](#resolve-data)
 - [State Parameters](#state-parameters)
 - [Linking with params](#linking-with-params)
+
+## UIRouter Config
+
+You can perform router configuration or run initialization code before the router starts.
+Supply a `configClass` to `provideUIRouter()`.
+
+```js
+import {MyUIRouterConfig} from "./config/router.config.js";
+...
+  providers: [
+    provideUIRouter({ configClass: MyUIRouterConfig, useHash: true }),
+    ...
+  ]
+```
+
+The class will be injected (like a Angular 2 Service) by the DI system.
+When UIRouter bootstraps, it will call the object's `configure()` function and pass the `UIRouter` object instance.
+
+```
+/** UIRouter Config  */
+@Injectable()
+export class MyUIRouterConfig {
+  constructor(@Inject(PeopleService) peopleService) {
+    // Plunker embeds can time out.  
+    // Pre-load the people list at startup.
+    peopleService.getAllPeople();
+  }
+  
+  configure(router: UIRouter) {
+    // If no URL matches, go to the `hello` state by default
+    router.urlRouterProvider.otherwise(() => router.stateService.go('hello'));
+    
+    // Use ui-router-visualizer to show the states as a tree
+    StateTree.create(router, document.getElementById('statetree'), { width: 200, height: 100 });
+  }
+}
+```
+
 
 ## Resolve data
 
