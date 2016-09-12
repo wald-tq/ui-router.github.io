@@ -3,6 +3,7 @@ title: "UI-Router for Angular 2 - Hello World!"
 layout: single
 excerpt: "Getting started with UI-Router for Angular 2"
 sitemap: true
+comments: true
 ---
 
 {% include toc classes="collapsible" icon="columns" title="Hello World!" %}

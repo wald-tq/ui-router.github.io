@@ -3,6 +3,7 @@ title: "UI-Router for React - Hello Galaxy!"
 excerpt: "Learn about Nested States and Nested Views"
 layout: single
 sitemap: true
+comments: true
 ---
 {% include toc icon="columns" title="Hello Galaxy!" %}
 
