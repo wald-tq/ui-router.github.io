@@ -2,7 +2,7 @@
 layout: post
 comments: true
 permalink: /blog/:title/
-redirect_from: /:title/
+redirect_from: /new-ui-router-site/
 ---
 
 ### New UI-Router site

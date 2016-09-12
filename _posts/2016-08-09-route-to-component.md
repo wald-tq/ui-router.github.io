@@ -3,7 +3,7 @@ layout: post
 excerpt: UI-Router 1.0 enables routing to components for Angular 1. Learn how to effectively route to components in Angular 1.
 comments: true
 permalink: /blog/:title/
-redirect_from: /:title/
+redirect_from: /route-to-component/
 ---
 
 ### New Guide: Route to components

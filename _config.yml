@@ -9,8 +9,8 @@ title                    : "UI-Router"
 title_separator          : "-"
 name                     : "UI-Router"
 description              : "State based routing for single-page web applications"
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : # the subpath of your site, e.g. "/blog"
+url                      : # "ASDFASFD"
+baseurl                  : "/"
 gh_repo                  : # Link to both github repositories?
 teaser                   : # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 # breadcrumbs              : false # true, false (default)
@@ -162,6 +162,7 @@ gems:
 
 # mimic GitHub Pages with --safe
 whitelist:
+  - jekyll-redirect-from
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
