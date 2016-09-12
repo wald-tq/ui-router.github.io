@@ -1,6 +1,8 @@
 ---
 layout: post
 comments: true
+permalink: /blog/:title/
+redirect_from: /:title/
 ---
 
 ### New UI-Router site
