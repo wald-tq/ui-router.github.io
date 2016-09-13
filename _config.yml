@@ -9,8 +9,8 @@ title                    : "UI-Router"
 title_separator          : "-"
 name                     : "UI-Router"
 description              : "State based routing for single-page web applications"
-url                      : "https://ui-router.github.io"
-baseurl                  : "/"
+url                      : # "https://ui-router.github.io"
+baseurl                  : # "/"
 gh_repo                  : # Link to both github repositories?
 teaser                   : # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 # breadcrumbs              : false # true, false (default)
