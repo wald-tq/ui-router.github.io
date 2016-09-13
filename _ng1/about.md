@@ -31,9 +31,9 @@ Other examples:
   - Adding the latest prerelease to your project: `npm install --save angular-ui-router@next`
   - Adding a specific version to your project: `npm install --save angular-ui-router@1.0.0-beta.1`
   
-- From <http://npmcdn.com> via a `<script>` tag in your html: 
-  - Latest stable version: `<script src="//npmcdn.com/angular-ui-router/release/angular-ui-router.min.js">`
-  - A specific version: `<script src="//npmcdn.com/angular-ui-router@0.3.1/release/angular-ui-router.js">`
+- From <http://unpkg.com> via a `<script>` tag in your html: 
+  - Latest stable version: `<script src="//unpkg.com/angular-ui-router/release/angular-ui-router.min.js">`
+  - A specific version: `<script src="//unpkg.com/angular-ui-router@0.3.1/release/angular-ui-router.js">`
   
 - From bower: `bower install angular-ui-router#0.3.1`
 

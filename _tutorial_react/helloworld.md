@@ -23,7 +23,7 @@ Start by looking over the complete source code (ignoring SystemJS `config.js`) f
 <html>
 
   <head>
-    <script src="//npmcdn.com/systemjs/dist/system.js"></script>
+    <script src="//unpkg.com/systemjs/dist/system.js"></script>
     <script src="systemjs.config.js"></script>
     <script>
       System.import("helloworld").catch(console.error.bind(console));
@@ -104,7 +104,7 @@ npm install ui-router-react
 ```
 
 You could alternatively refer to the
-[copy distributed on npmcdn.com](https://npmcdn.com/ui-router-react@latest/_bundles/ui-router-react.min.js).
+[copy distributed on unpkg.com](https://unpkg.com/ui-router-react@latest/_bundles/ui-router-react.min.js).
 (This is how the live demo plunkers function)
 
 ## Configure your module loader
@@ -126,9 +126,9 @@ Add a second second entry for `helloworld` which will get us the helloworld app 
 ```js
 ...
   map: {
-    "react": "//npmcdn.com/react@15/dist/react.js",
-    "react-dom": "//npmcdn.com/react-dom/dist/react-dom.js",
-    "ui-router-react": "//npmcdn.com/ui-router-react@latest/_bundles/ui-router-react.js",
+    "react": "//unpkg.com/react@15/dist/react.js",
+    "react-dom": "//unpkg.com/react-dom/dist/react-dom.js",
+    "ui-router-react": "//unpkg.com/ui-router-react@latest/_bundles/ui-router-react.js",
     "helloworld": "./"
   },
   packages: {
@@ -151,7 +151,7 @@ The `config.js` script is our SystemJS configuration.
 ~~~html
   <head>
     ...
-    <script src="//npmcdn.com/systemjs/dist/system.js"></script>
+    <script src="//unpkg.com/systemjs/dist/system.js"></script>
     <script src="systemjs.config.js"></script>
     ...
 ~~~

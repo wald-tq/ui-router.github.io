@@ -82,7 +82,7 @@ Get the UI-Router for Angular 1 code using your preferred mechanism:
 
   - Using npm: `npm install angular-ui-router`
   - Using bower: `bower install angular-ui-router`
-  - Download directly from [npmcdn](https://npmcdn.com/angular-ui-router@latest/release/angular-ui-router.js)
+  - Download directly from [npmcdn](https://unpkg.com/angular-ui-router@latest/release/angular-ui-router.js)
 
 ## Add script tags
 
