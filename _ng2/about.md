@@ -70,10 +70,11 @@ npm test
 All the code inside `src/` is relevant to angular 2, except for `ng1/`.
 Most of the UI-Router test harness is written in Angular 1.
 
-To create a UI-Router bundle to test a bug fix against your app, build it with the `package.sh` script.
+To create a UI-Router bundle to test a bug fix against your app, 
+build it with the `package.js` script.
 
 ```
-./scripts/package.sh ng2
+node scripts/package.js ng2
 ```
 
 A npm package directory structure will be built in `build_packages/ng2`.
