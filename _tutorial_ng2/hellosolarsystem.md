@@ -49,32 +49,34 @@ This app introduces some new concepts and UI-Router features.
 
 ## UIRouter Config
 
-You can perform router configuration or run initialization code before the router starts.
-Supply a `configClass` to `provideUIRouter()`.
+You can perform imperative router configuration or run initialization code before the router starts.
+Supply a `configClass` to `UIRouterModule.forRoot()`.
 
 ```js
 import {MyUIRouterConfig} from "./config/router.config.js";
 ...
-  providers: [
-    provideUIRouter({ configClass: MyUIRouterConfig, useHash: true }),
+  imports: [
     ...
+    UIRouterModule.forRoot({
+      states: INITIAL_STATES,
+      useHash: true,
+      configClass: MyUIRouterConfig
+    })
   ]
 ```
 
-The class will be injected (like a Angular 2 Service) by the DI system.
-When UIRouter bootstraps, it will call the object's `configure()` function and pass the `UIRouter` object instance.
+The class's constructor will be injected (as an Angular 2 Service) by the DI system.
+Inject `UIRouter` and do imperative configuration, and/or inject any other dependencies necessary.
 
 ```
 /** UIRouter Config  */
 @Injectable()
 export class MyUIRouterConfig {
-  constructor(@Inject(PeopleService) peopleService) {
+  constructor(@Inject(PeopleService) peopleService, router: UIRouter) {
     // Plunker embeds can time out.  
     // Pre-load the people list at startup.
     peopleService.getAllPeople();
-  }
-  
-  configure(router: UIRouter) {
+    
     // If no URL matches, go to the `hello` state by default
     router.urlRouterProvider.otherwise(() => router.stateService.go('hello'));
     
@@ -83,6 +85,10 @@ export class MyUIRouterConfig {
   }
 }
 ```
+
+`UIRouterModule.forChild()` can also be supplied with a `configClass`.
+You can perform feature module or lazy loaded module initialization. 
+{: .notice--info }
 
 
 ## Resolve data
