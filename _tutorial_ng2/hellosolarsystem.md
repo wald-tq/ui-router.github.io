@@ -65,10 +65,10 @@ import {MyUIRouterConfig} from "./config/router.config.js";
   ]
 ```
 
-The class's constructor will be injected (as an Angular 2 Service) by the DI system.
-Inject `UIRouter` and do imperative configuration, and/or inject any other dependencies necessary.
+The class's constructor will be injected by the DI system (as an Angular 2 Service).
+Inject `UIRouter` (and any other necessary dependencies) and do imperative UI-Router or module configuration.
 
-```
+```js
 /** UIRouter Config  */
 @Injectable()
 export class MyUIRouterConfig {
@@ -86,8 +86,8 @@ export class MyUIRouterConfig {
 }
 ```
 
-`UIRouterModule.forChild()` can also be supplied with a `configClass`.
-You can perform feature module or lazy loaded module initialization. 
+You can also supply `UIRouterModule.forChild()` with a `configClass`.
+You can perform configuration or initialization specific to your feature or lazy loaded module. 
 {: .notice--info }
 
 
