@@ -5,7 +5,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;../common/interface&quot; | UI-Router</title>
+	<title>trace | UI-Router</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -60,13 +60,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="ng1.html">ng1</a>
-				</li>
-				<li>
-					<a href="ng1.____common_interface_.html">&quot;../common/interface&quot;</a>
+					<a href="trace.html">trace</a>
 				</li>
 			</ul>
-			<h1>Module &quot;../common/interface&quot;</h1>
+			<h1>External module trace</h1>
 		</div>
 	</div>
 </header>
@@ -76,21 +73,87 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Adds the angular 1 <code>$injector</code> to the <code>UIInjector</code> interface</p>
+						<p>UI-Router Transition Tracing</p>
 					</div>
+					<p>Enable transition tracing to print transition information to the console, in order to help debug your application.
+					Tracing logs detailed information about each Transition to your console.</p>
+					<p>To enable tracing, import the <a href="trace.html#trace-2">trace</a> singleton and enable one or more categories.</p>
+					<p>ES6</p>
+					<pre><code>
+import {trace} from <span class="hljs-string">"ui-router-ng2"</span>; <span class="hljs-regexp">//</span> <span class="hljs-keyword">or</span> <span class="hljs-string">"angular-ui-router"</span>
+trace.enable(<span class="hljs-number">1</span>, <span class="hljs-number">5</span>); <span class="hljs-regexp">//</span> TRANSITION <span class="hljs-keyword">and</span> VIEWCONFIG
+</code></pre><p>CJS</p>
+					<pre><code>
+<span class="hljs-keyword">let</span> <span class="hljs-keyword">trace</span> = require(<span class="hljs-string">"angular-ui-router"</span>).<span class="hljs-keyword">trace</span>; <span class="hljs-comment">// or "ui-router-ng2"</span>
+<span class="hljs-keyword">trace</span>.<span class="hljs-keyword">enable</span>(<span class="hljs-string">"TRANSITION"</span>, <span class="hljs-string">"VIEWCONFIG"</span>);
+</code></pre><p>Globals</p>
+					<pre><code>
+<span class="hljs-keyword">let</span> <span class="hljs-keyword">trace</span> = <span class="hljs-built_in">window</span>[<span class="hljs-string">"angular-ui-router"</span>].<span class="hljs-keyword">trace</span>; <span class="hljs-comment">// or "ui-router-ng2"</span>
+<span class="hljs-keyword">trace</span>.<span class="hljs-keyword">enable</span>(); <span class="hljs-comment">// Trace everything (very verbose)</span>
+</code></pre>
+					<dl class="tsd-comment-tags">
+						<dt>module</dt>
+						<dd><p>trace</p>
+						</dd>
+					</dl>
 				</div>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
-						<section class="tsd-index-section tsd-is-not-exported">
-							<h3>Interfaces</h3>
+						<section class="tsd-index-section ">
+							<h3>Enumerations</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported"><a href="../interfaces/ng1.____common_interface_.uiinjector.html" class="tsd-kind-icon">UIInjector</a></li>
+								<li class="tsd-kind-enum tsd-parent-kind-external-module"><a href="../enums/trace.category.html" class="tsd-kind-icon">Category</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Classes</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-class tsd-parent-kind-external-module"><a href="../classes/trace.trace-1.html" class="tsd-kind-icon">Trace</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-not-exported">
+							<h3>Variables</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="trace.html#trace-2" class="tsd-kind-icon">trace</a></li>
 							</ul>
 						</section>
 					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
+				<h2>Variables</h2>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="trace-2" class="tsd-anchor"></a>
+					<!---->
+					<!--<h3>trace</h3>-->
+					<!---->
+					<div class="tsd-signature tsd-kind-icon">trace<span class="tsd-signature-symbol">:</span> <a href="../classes/trace.trace-1.html" class="tsd-signature-type">Trace</a>        <div class="tsd-header">
+							<p> The <a href="../classes/trace.trace-1.html">Trace</a> singleton </p>
+						</div>
+					</div>
+					<div class="tsd-declaration">
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>The <a href="../classes/trace.trace-1.html">Trace</a> singleton</p>
+							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="lang-js">
+<span class="hljs-keyword">import</span> {trace} <span class="hljs-keyword">from</span> <span class="hljs-string">"angular-ui-router"</span>;
+trace.enable(<span class="hljs-number">1</span>, <span class="hljs-number">5</span>);
+</code></pre>
+								</dd>
+							</dl>
+						</div>
+					</div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/common/trace.ts#L257">common/trace.ts:257</a></li>
+						</ul>
+					</aside>
 				</section>
 			</section>
 		</div>
@@ -121,13 +184,8 @@
 					<li class=" tsd-kind-external-module">
 						<a href="justjs.html">justjs</a>
 					</li>
-					<li class="current tsd-kind-external-module">
+					<li class=" tsd-kind-external-module">
 						<a href="ng1.html">ng1</a>
-						<ul>
-							<li class="current tsd-kind-module tsd-parent-kind-external-module tsd-is-not-exported">
-								<a href="ng1.____common_interface_.html">"../common/interface"</a>
-							</li>
-						</ul>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="ng1_directives.html">ng1_<wbr>directives</a>
@@ -153,7 +211,7 @@
 					<li class=" tsd-kind-external-module">
 						<a href="state.html">state</a>
 					</li>
-					<li class=" tsd-kind-external-module">
+					<li class="current tsd-kind-external-module">
 						<a href="trace.html">trace</a>
 					</li>
 					<li class=" tsd-kind-external-module">
@@ -169,8 +227,14 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
-						<a href="../interfaces/ng1.____common_interface_.uiinjector.html" class="tsd-kind-icon">UIInjector</a>
+					<li class=" tsd-kind-enum tsd-parent-kind-external-module">
+						<a href="../enums/trace.category.html" class="tsd-kind-icon">Category</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-external-module">
+						<a href="../classes/trace.trace-1.html" class="tsd-kind-icon">Trace</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="trace.html#trace-2" class="tsd-kind-icon">trace</a>
 					</li>
 				</ul>
 			</nav>

@@ -5,7 +5,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>UIRouterModuleMetadata | UI-Router</title>
+	<title>Ng2ViewConfig | UI-Router</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -63,31 +63,28 @@
 					<a href="../modules/ng2.html">ng2</a>
 				</li>
 				<li>
-					<a href="ng2.uiroutermodulemetadata.html">UIRouterModuleMetadata</a>
+					<a href="ng2.ng2viewconfig.html">Ng2ViewConfig</a>
 				</li>
 			</ul>
-			<h1>Interface UIRouterModuleMetadata</h1>
+			<h1>Class Ng2ViewConfig</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-comment">
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>A module declaration lteral, including UI-Router states.</p>
-					</div>
-					<p>This interface extends the NG2 <a href="https://angular.io/docs/ts/latest/api/core/index/NgModuleMetadataType-interface.html">NgModuleMetadataType</a>
-					by adding a <code>states</code> array.</p>
-				</div>
-			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="tsd-signature-type">NgModuleMetadataType</span>
+						<span class="target">Ng2ViewConfig</span>
 					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel">
+				<h3>Implements</h3>
+				<ul class="tsd-hierarchy">
+					<li><a href="../interfaces/view.viewconfig.html" class="tsd-signature-type">ViewConfig</a></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
@@ -95,141 +92,148 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
+							<h3>Constructors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="ng2.ng2viewconfig.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="ng2.uiroutermodulemetadata.html#bootstrap" class="tsd-kind-icon">bootstrap</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="ng2.uiroutermodulemetadata.html#declarations" class="tsd-kind-icon">declarations</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="ng2.uiroutermodulemetadata.html#entrycomponents" class="tsd-kind-icon">entry<wbr>Components</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="ng2.uiroutermodulemetadata.html#exports" class="tsd-kind-icon">exports</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="ng2.uiroutermodulemetadata.html#imports" class="tsd-kind-icon">imports</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="ng2.uiroutermodulemetadata.html#providers" class="tsd-kind-icon">providers</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="ng2.uiroutermodulemetadata.html#schemas" class="tsd-kind-icon">schemas</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="ng2.uiroutermodulemetadata.html#states" class="tsd-kind-icon">states</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="ng2.ng2viewconfig.html#_id" class="tsd-kind-icon">$id</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="ng2.ng2viewconfig.html#loaded" class="tsd-kind-icon">loaded</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="ng2.ng2viewconfig.html#path" class="tsd-kind-icon">path</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="ng2.ng2viewconfig.html#viewdecl" class="tsd-kind-icon">view<wbr>Decl</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="ng2.ng2viewconfig.html#load" class="tsd-kind-icon">load</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+					<a name="constructor" class="tsd-anchor"></a>
+					<!---->
+					<!--<h3>constructor</h3>-->
+					<!---->
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Ng2<wbr>View<wbr>Config<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><a href="path.pathnode.html" class="tsd-signature-type">PathNode</a><span class="tsd-signature-symbol">[]</span>, viewDecl<span class="tsd-signature-symbol">: </span><a href="../interfaces/ng2.ng2viewdeclaration.html" class="tsd-signature-type">Ng2ViewDeclaration</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ng2.ng2viewconfig.html" class="tsd-signature-type">Ng2ViewConfig</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>path: <a href="path.pathnode.html" class="tsd-signature-type">PathNode</a><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+								<li>
+									<h5>viewDecl: <a href="../interfaces/ng2.ng2viewdeclaration.html" class="tsd-signature-type">Ng2ViewDeclaration</a></h5>
+								</li>
+							</ul>
+							<div class="tsd-returns">
+								<h4 class="tsd-returns-title">Returns <a href="ng2.ng2viewconfig.html" class="tsd-signature-type">Ng2ViewConfig</a></h4>
+							</div>
+							<hr>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/ng2/statebuilders/views.ts#L43">ng2/statebuilders/views.ts:43</a></li>
+								</ul>
+						</aside>        </li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-					<a name="bootstrap" class="tsd-anchor"></a>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="_id" class="tsd-anchor"></a>
 					<!---->
-					<!--<h3><span class="tsd-flag ts-flagOptional">Optional</span> bootstrap</h3>-->
+					<!--<h3>$id</h3>-->
 					<!---->
-					<div class="tsd-signature tsd-kind-icon">bootstrap<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">$id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<div class="tsd-declaration">
 					</div>
 					<aside class="tsd-sources">
-						<p>Inherited from NgModuleMetadataType.bootstrap</p>
+						<p>Implementation of <a href="../interfaces/view.viewconfig.html">ViewConfig</a>.<a href="../interfaces/view.viewconfig.html#_id">$id</a></p>
 						<ul>
-							<li>Defined in /Users/christhielen/projects/ui-router/node_modules/@angular/core/src/metadata/ng_module.d.ts:52</li>
+							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/ng2/statebuilders/views.ts#L42">ng2/statebuilders/views.ts:42</a></li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-					<a name="declarations" class="tsd-anchor"></a>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="loaded" class="tsd-anchor"></a>
 					<!---->
-					<!--<h3><span class="tsd-flag ts-flagOptional">Optional</span> declarations</h3>-->
+					<!--<h3>loaded</h3>-->
 					<!---->
-					<div class="tsd-signature tsd-kind-icon">declarations<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">loaded<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<div class="tsd-declaration">
 					</div>
 					<aside class="tsd-sources">
-						<p>Inherited from NgModuleMetadataType.declarations</p>
+						<p>Implementation of <a href="../interfaces/view.viewconfig.html">ViewConfig</a>.<a href="../interfaces/view.viewconfig.html#loaded">loaded</a></p>
 						<ul>
-							<li>Defined in /Users/christhielen/projects/ui-router/node_modules/@angular/core/src/metadata/ng_module.d.ts:48</li>
+							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/ng2/statebuilders/views.ts#L43">ng2/statebuilders/views.ts:43</a></li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-					<a name="entrycomponents" class="tsd-anchor"></a>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="path" class="tsd-anchor"></a>
 					<!---->
-					<!--<h3><span class="tsd-flag ts-flagOptional">Optional</span> entry<wbr>Components</h3>-->
+					<!--<h3>path</h3>-->
 					<!---->
-					<div class="tsd-signature tsd-kind-icon">entry<wbr>Components<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">path<span class="tsd-signature-symbol">:</span> <a href="path.pathnode.html" class="tsd-signature-type">PathNode</a><span class="tsd-signature-symbol">[]</span></div>
 					<div class="tsd-declaration">
 					</div>
 					<aside class="tsd-sources">
-						<p>Inherited from NgModuleMetadataType.entryComponents</p>
+						<p>Implementation of <a href="../interfaces/view.viewconfig.html">ViewConfig</a>.<a href="../interfaces/view.viewconfig.html#path">path</a></p>
 						<ul>
-							<li>Defined in /Users/christhielen/projects/ui-router/node_modules/@angular/core/src/metadata/ng_module.d.ts:51</li>
+							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/ng2/statebuilders/views.ts#L45">ng2/statebuilders/views.ts:45</a></li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-					<a name="exports" class="tsd-anchor"></a>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="viewdecl" class="tsd-anchor"></a>
 					<!---->
-					<!--<h3><span class="tsd-flag ts-flagOptional">Optional</span> exports</h3>-->
+					<!--<h3>view<wbr>Decl</h3>-->
 					<!---->
-					<div class="tsd-signature tsd-kind-icon">exports<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">view<wbr>Decl<span class="tsd-signature-symbol">:</span> <a href="../interfaces/ng2.ng2viewdeclaration.html" class="tsd-signature-type">Ng2ViewDeclaration</a></div>
 					<div class="tsd-declaration">
 					</div>
 					<aside class="tsd-sources">
-						<p>Inherited from NgModuleMetadataType.exports</p>
+						<p>Implementation of <a href="../interfaces/view.viewconfig.html">ViewConfig</a>.<a href="../interfaces/view.viewconfig.html#viewdecl">viewDecl</a></p>
 						<ul>
-							<li>Defined in /Users/christhielen/projects/ui-router/node_modules/@angular/core/src/metadata/ng_module.d.ts:50</li>
+							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/ng2/statebuilders/views.ts#L45">ng2/statebuilders/views.ts:45</a></li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-					<a name="imports" class="tsd-anchor"></a>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="load" class="tsd-anchor"></a>
 					<!---->
-					<!--<h3><span class="tsd-flag ts-flagOptional">Optional</span> imports</h3>-->
+					<!--<h3>load</h3>-->
 					<!---->
-					<div class="tsd-signature tsd-kind-icon">imports<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ModuleWithProviders</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
-					<div class="tsd-declaration">
-					</div>
-					<aside class="tsd-sources">
-						<p>Inherited from NgModuleMetadataType.imports</p>
-						<ul>
-							<li>Defined in /Users/christhielen/projects/ui-router/node_modules/@angular/core/src/metadata/ng_module.d.ts:49</li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-					<a name="providers" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3><span class="tsd-flag ts-flagOptional">Optional</span> providers</h3>-->
-					<!---->
-					<div class="tsd-signature tsd-kind-icon">providers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Provider</span><span class="tsd-signature-symbol">[]</span></div>
-					<div class="tsd-declaration">
-					</div>
-					<aside class="tsd-sources">
-						<p>Inherited from NgModuleMetadataType.providers</p>
-						<ul>
-							<li>Defined in /Users/christhielen/projects/ui-router/node_modules/@angular/core/src/metadata/ng_module.d.ts:47</li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-					<a name="schemas" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3><span class="tsd-flag ts-flagOptional">Optional</span> schemas</h3>-->
-					<!---->
-					<div class="tsd-signature tsd-kind-icon">schemas<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">SchemaMetadata</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
-					<div class="tsd-declaration">
-					</div>
-					<aside class="tsd-sources">
-						<p>Inherited from NgModuleMetadataType.schemas</p>
-						<ul>
-							<li>Defined in /Users/christhielen/projects/ui-router/node_modules/@angular/core/src/metadata/ng_module.d.ts:53</li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="states" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3><span class="tsd-flag ts-flagOptional">Optional</span> states</h3>-->
-					<!---->
-					<div class="tsd-signature tsd-kind-icon">states<span class="tsd-signature-symbol">:</span> <a href="ng2.ng2statedeclaration.html" class="tsd-signature-type">Ng2StateDeclaration</a><span class="tsd-signature-symbol">[]</span></div>
-					<div class="tsd-declaration">
-					</div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/4d86ca2/src/ng2/uiRouterNgModule.ts#L24">ng2/uiRouterNgModule.ts:24</a></li>
-						</ul>
-					</aside>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">load<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">this</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<div class="tsd-returns">
+								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">this</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							</div>
+							<hr>
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/view.viewconfig.html">ViewConfig</a>.<a href="../interfaces/view.viewconfig.html#load">load</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/ng2/statebuilders/views.ts#L47">ng2/statebuilders/views.ts:47</a></li>
+								</ul>
+						</aside>        </li>
+					</ul>
 				</section>
 			</section>
 		</div>
@@ -309,82 +313,85 @@
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-class tsd-parent-kind-external-module">
-						<a href="../classes/ng2.mergeinjector.html" class="tsd-kind-icon">Merge<wbr>Injector</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-external-module">
-						<a href="../classes/ng2.ng2viewconfig.html" class="tsd-kind-icon">Ng2<wbr>View<wbr>Config</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-external-module">
-						<a href="../classes/ng2.uirouterconfig.html" class="tsd-kind-icon">UIRouter<wbr>Config</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-external-module">
-						<a href="../classes/ng2.uirouterlibrarymodule.html" class="tsd-kind-icon">UIRouter<wbr>Library<wbr>Module</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-external-module">
-						<a href="../classes/ng2.uirouterlocation.html" class="tsd-kind-icon">UIRouter<wbr>Location</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-external-module">
-						<a href="../classes/ng2.uirouterrx.html" class="tsd-kind-icon">UIRouter<wbr>Rx</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="ng2.ng2statedeclaration.html" class="tsd-kind-icon">Ng2<wbr>State<wbr>Declaration</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="ng2.ng2viewdeclaration.html" class="tsd-kind-icon">Ng2<wbr>View<wbr>Declaration</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="ng2.stateschangedevent.html" class="tsd-kind-icon">States<wbr>Changed<wbr>Event</a>
+						<a href="ng2.mergeinjector.html" class="tsd-kind-icon">Merge<wbr>Injector</a>
 					</li>
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="ng2.uiroutermodulemetadata.html" class="tsd-kind-icon">UIRouter<wbr>Module<wbr>Metadata</a>
+					<li class="current tsd-kind-class tsd-parent-kind-external-module">
+						<a href="ng2.ng2viewconfig.html" class="tsd-kind-icon">Ng2<wbr>View<wbr>Config</a>
 						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-								<a href="ng2.uiroutermodulemetadata.html#bootstrap" class="tsd-kind-icon">bootstrap</a>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+								<a href="ng2.ng2viewconfig.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-								<a href="ng2.uiroutermodulemetadata.html#declarations" class="tsd-kind-icon">declarations</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="ng2.ng2viewconfig.html#_id" class="tsd-kind-icon">$id</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-								<a href="ng2.uiroutermodulemetadata.html#entrycomponents" class="tsd-kind-icon">entry<wbr>Components</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="ng2.ng2viewconfig.html#loaded" class="tsd-kind-icon">loaded</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-								<a href="ng2.uiroutermodulemetadata.html#exports" class="tsd-kind-icon">exports</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="ng2.ng2viewconfig.html#path" class="tsd-kind-icon">path</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-								<a href="ng2.uiroutermodulemetadata.html#imports" class="tsd-kind-icon">imports</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="ng2.ng2viewconfig.html#viewdecl" class="tsd-kind-icon">view<wbr>Decl</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-								<a href="ng2.uiroutermodulemetadata.html#providers" class="tsd-kind-icon">providers</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-								<a href="ng2.uiroutermodulemetadata.html#schemas" class="tsd-kind-icon">schemas</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="ng2.uiroutermodulemetadata.html#states" class="tsd-kind-icon">states</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="ng2.ng2viewconfig.html#load" class="tsd-kind-icon">load</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-class tsd-parent-kind-external-module">
+						<a href="ng2.uirouterlocation.html" class="tsd-kind-icon">UIRouter<wbr>Location</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-external-module">
+						<a href="ng2.uiroutermodule.html" class="tsd-kind-icon">UIRouter<wbr>Module</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-external-module">
+						<a href="ng2.uirouterrx.html" class="tsd-kind-icon">UIRouter<wbr>Rx</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="../interfaces/ng2.ng2statedeclaration.html" class="tsd-kind-icon">Ng2<wbr>State<wbr>Declaration</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="../interfaces/ng2.ng2viewdeclaration.html" class="tsd-kind-icon">Ng2<wbr>View<wbr>Declaration</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="../interfaces/ng2.rootmodule.html" class="tsd-kind-icon">Root<wbr>Module</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="../interfaces/ng2.stateschangedevent.html" class="tsd-kind-icon">States<wbr>Changed<wbr>Event</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="../interfaces/ng2.statesmodule.html" class="tsd-kind-icon">States<wbr>Module</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
+						<a href="../modules/ng2.html#reflectorreader" class="tsd-kind-icon">Reflector<wbr>Reader</a>
+					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
 						<a href="../modules/ng2.html#ng2_injector_token" class="tsd-kind-icon">NG2_<wbr>INJECTOR_<wbr>TOKEN</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
+						<a href="../modules/ng2.html#uirouter_module_token" class="tsd-kind-icon">UIROUTER_<wbr>MODULE_<wbr>TOKEN</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
 						<a href="../modules/ng2.html#uirouter_providers" class="tsd-kind-icon">UIROUTER_<wbr>PROVIDERS</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
-						<a href="../modules/ng2.html#uirouter_states_token" class="tsd-kind-icon">UIROUTER_<wbr>STATES_<wbr>TOKEN</a>
+						<a href="../modules/ng2.html#uirouter_root_module" class="tsd-kind-icon">UIROUTER_<wbr>ROOT_<wbr>MODULE</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
 						<a href="../modules/ng2.html#_uirouter_instance_providers" class="tsd-kind-icon">_UIROUTER_<wbr>INSTANCE_<wbr>PROVIDERS</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
-						<a href="../modules/ng2.html#_uirouter_providers" class="tsd-kind-icon">_UIROUTER_<wbr>PROVIDERS</a>
+						<a href="../modules/ng2.html#_uirouter_service_providers" class="tsd-kind-icon">_UIROUTER_<wbr>SERVICE_<wbr>PROVIDERS</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../modules/ng2.html#id" class="tsd-kind-icon">id</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
+						<a href="../modules/ng2.html#reflector" class="tsd-kind-icon">reflector</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../modules/ng2.html#splitonequals" class="tsd-kind-icon">split<wbr>OnEquals</a>
@@ -396,19 +403,19 @@
 						<a href="../modules/ng2.html#splitonquestionmark" class="tsd-kind-icon">split<wbr>OnQuestion<wbr>Mark</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module">
-						<a href="../modules/ng2.html#uiroutermodule" class="tsd-kind-icon">UIRouter<wbr>Module</a>
+						<a href="../modules/ng2.html#applymoduleconfig" class="tsd-kind-icon">apply<wbr>Module<wbr>Config</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+						<a href="../modules/ng2.html#applyrootmoduleconfig" class="tsd-kind-icon">apply<wbr>Root<wbr>Module<wbr>Config</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module">
 						<a href="../modules/ng2.html#loadngmodule" class="tsd-kind-icon">load<wbr>NgModule</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+						<a href="../modules/ng2.html#makeproviders" class="tsd-kind-icon">make<wbr>Providers</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module">
 						<a href="../modules/ng2.html#ng2viewsbuilder" class="tsd-kind-icon">ng2<wbr>Views<wbr>Builder</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module">
-						<a href="../modules/ng2.html#ngmoduleresolvablesbuilder" class="tsd-kind-icon">ng<wbr>Module<wbr>Resolvables<wbr>Builder</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module">
-						<a href="../modules/ng2.html#provideuirouter" class="tsd-kind-icon">provideUIRouter</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../modules/ng2.html#uirouterfactory" class="tsd-kind-icon">ui<wbr>Router<wbr>Factory</a>

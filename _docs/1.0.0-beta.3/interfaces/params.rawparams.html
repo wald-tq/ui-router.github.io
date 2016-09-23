@@ -5,7 +5,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>UIRouterConfig | UI-Router</title>
+	<title>RawParams | UI-Router</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -60,13 +60,13 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/ng2.html">ng2</a>
+					<a href="../modules/params.html">params</a>
 				</li>
 				<li>
-					<a href="ng2.uirouterconfig.html">UIRouterConfig</a>
+					<a href="params.rawparams.html">RawParams</a>
 				</li>
 			</ul>
-			<h1>Class UIRouterConfig</h1>
+			<h1>Interface RawParams</h1>
 		</div>
 	</div>
 </header>
@@ -76,137 +76,28 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Configures UI-Router during application bootstrap.</p>
+						<p>Parameter values</p>
 					</div>
-					<p>UI-Router ng2 users should implement this class, and pass it to <a href="../modules/ng2.html#provideuirouter">provideUIRouter</a> in the root app <code>NgModule</code>.</p>
-					<dl class="tsd-comment-tags">
-						<dt>example</dt>
-						<dd><pre><code class="lang-js"><span class="hljs-keyword">import</span> {MyUIRouterConfig} <span class="hljs-keyword">from</span> <span class="hljs-string">"./app/router.config"</span>;
-<span class="hljs-keyword">import</span> {UIView} <span class="hljs-keyword">from</span> <span class="hljs-string">"ui-router-ng2"</span>;
-
-@ UIRouterModule({
-  providers: [provideUIRouter({ configClass: MyUIRouterConfig)]
-  states: [state1, state2],
-  bootstrap: [UIView]
-}) <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">RootAppModule</span> </span>{}
-</code></pre>
-							<p>Any global configuration (transition hooks, parameter types, etc) should be done here.</p>
-						</dd>
-						<dt>example</dt>
-						<dd><pre><code class="lang-js">
-<span class="hljs-comment">// router.config.ts</span>
-<span class="hljs-keyword">import</span> {registerAuthHook} <span class="hljs-keyword">from</span> <span class="hljs-string">"./hooks"</span>;
-<span class="hljs-keyword">import</span> {registerSlugType} <span class="hljs-keyword">from</span> <span class="hljs-string">"./paramtypes"</span>;
-
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyUIRouterConfig</span> </span>{
-  configure(uiRouter: UIRouter) {
-    registerAuthHook(uiRouter.transitionService);
-    registerSlugType(uiRouter.urlMatcherFactory);
-  }
-}
-
-<span class="hljs-comment">// hooks.ts</span>
-<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">registerAuthHook</span>(<span class="hljs-params">transitionService: TransitionService</span>) </span>{
-  <span class="hljs-keyword">const</span> requireAuthentication = (transition: Transition) =&gt; {
-    <span class="hljs-keyword">let</span> injector = transition.injector();
-    <span class="hljs-keyword">if</span> (!injector.get(AuthService).isAuthenticated()) {
-      <span class="hljs-keyword">return</span> injector.get(StateService).target(<span class="hljs-string">'login'</span>);
-    }
-  }
-
-  transitionService.onBefore({ to: (state) =&gt; state.requiresAuth }, requireAuthentication);
-}
-
-
-<span class="hljs-comment">// paramtypes.ts</span>
-<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">registerSlugType</span>(<span class="hljs-params">urlMatcherFactory: UrlMatcherFactory</span>) </span>{
-  <span class="hljs-keyword">let</span> builtInStringType = urlMatcherFactory.type(<span class="hljs-string">'string'</span>);
-  <span class="hljs-keyword">let</span> slugType = <span class="hljs-built_in">Object</span>.assign({}, builtInStringType, { encode: (str) =&gt; str, decode: (str) =&gt; str });
-  urlMatcherFactory.type(<span class="hljs-string">'slug'</span>, slugType);
-}
-</code></pre>
-							<p>Your configuration class can be injected, if necessary.
-							Decorate with <code>@Injectable</code> and add dependencies to the class constructor.</p>
-							<pre><code class="lang-js">@ Injectable()
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyConfig</span> </span>{
-  myService: MyService;
-
-  <span class="hljs-keyword">constructor</span>(myService: MyService) {
-    <span class="hljs-keyword">this</span>.myService = myService;
-  }
-
-  configure(router: UIRouter) {
-    <span class="hljs-comment">// ... use this.myService</span>
-  }
-}
-</code></pre>
-						</dd>
-					</dl>
+					<p>An object containing state parameter key/value pairs</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">UIRouterConfig</span>
+						<span class="target">RawParams</span>
 					</li>
 				</ul>
 			</section>
-			<section class="tsd-panel-group tsd-index-group">
-				<h2>Index</h2>
-				<section class="tsd-panel tsd-index-panel">
-					<div class="tsd-index-content">
-						<section class="tsd-index-section ">
-							<h3>Methods</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="ng2.uirouterconfig.html#configure" class="tsd-kind-icon">configure</a></li>
-							</ul>
-						</section>
+			<section class="tsd-panel tsd-kind-interface tsd-parent-kind-external-module">
+				<h3 class="tsd-before-signature">Indexable</h3>
+				<div class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">[</span>key: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">any</span></div>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Parameter values</p>
 					</div>
-				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="configure" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>configure</h3>-->
-					<!---->
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">configure<span class="tsd-signature-symbol">(</span>uiRouter<span class="tsd-signature-symbol">: </span><a href="core.uirouter.html" class="tsd-signature-type">UIRouter</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-						<li class="tsd-header">
-							<p> Configures UI-Router before bootstrap </p>
-						</li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Configures UI-Router before bootstrap</p>
-								</div>
-								<p>An app should perform UI-Router configuration here, such as registering the initial set of states,
-								parameter types, defining global hooks, etc.</p>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>uiRouter: <a href="core.uirouter.html" class="tsd-signature-type">UIRouter</a></h5>
-									:         <div class="tsd-comment tsd-typography">
-										<p>the uiRouter instance being configured</p>
-									</div>
-								</li>
-							</ul>
-							<div class="tsd-returns">
-								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-							</div>
-							<hr>
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/4d86ca2/src/ng2/uiRouterConfig.ts#L86">ng2/uiRouterConfig.ts:86</a></li>
-								</ul>
-						</aside>        </li>
-					</ul>
-				</section>
+					<p>An object containing state parameter key/value pairs</p>
+				</div>
 			</section>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -245,18 +136,13 @@
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/ng1_state_events.html">ng1_<wbr>state_<wbr>events</a>
 					</li>
-					<li class="current tsd-kind-external-module">
+					<li class=" tsd-kind-external-module">
 						<a href="../modules/ng2.html">ng2</a>
-						<ul>
-							<li class=" tsd-kind-module tsd-parent-kind-external-module tsd-is-not-exported">
-								<a href="../modules/ng2.____globals_.html">"../globals"</a>
-							</li>
-						</ul>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/ng2_directives.html">ng2_<wbr>directives</a>
 					</li>
-					<li class=" tsd-kind-external-module">
+					<li class="current tsd-kind-external-module">
 						<a href="../modules/params.html">params</a>
 					</li>
 					<li class=" tsd-kind-external-module">
@@ -284,89 +170,66 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-class tsd-parent-kind-external-module">
-						<a href="ng2.mergeinjector.html" class="tsd-kind-icon">Merge<wbr>Injector</a>
+					<li class=" tsd-kind-enum tsd-parent-kind-external-module">
+						<a href="../enums/params.deftype.html" class="tsd-kind-icon">Def<wbr>Type</a>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-external-module">
-						<a href="ng2.ng2viewconfig.html" class="tsd-kind-icon">Ng2<wbr>View<wbr>Config</a>
+						<a href="../classes/params.param.html" class="tsd-kind-icon">Param</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-external-module">
+						<a href="../classes/params.paramtype.html" class="tsd-kind-icon">Param<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-external-module">
+						<a href="../classes/params.paramtypes.html" class="tsd-kind-icon">Param<wbr>Types</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-external-module">
+						<a href="../classes/params.stateparams.html" class="tsd-kind-icon">State<wbr>Params</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="params.paramdeclaration.html" class="tsd-kind-icon">Param<wbr>Declaration</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="params.paramtypedefinition.html" class="tsd-kind-icon">Param<wbr>Type<wbr>Definition</a>
 					</li>
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-class tsd-parent-kind-external-module">
-						<a href="ng2.uirouterconfig.html" class="tsd-kind-icon">UIRouter<wbr>Config</a>
-						<ul>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="ng2.uirouterconfig.html#configure" class="tsd-kind-icon">configure</a>
-							</li>
-						</ul>
+					<li class="current tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="params.rawparams.html" class="tsd-kind-icon">Raw<wbr>Params</a>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-class tsd-parent-kind-external-module">
-						<a href="ng2.uirouterlibrarymodule.html" class="tsd-kind-icon">UIRouter<wbr>Library<wbr>Module</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-external-module">
-						<a href="ng2.uirouterlocation.html" class="tsd-kind-icon">UIRouter<wbr>Location</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-external-module">
-						<a href="ng2.uirouterrx.html" class="tsd-kind-icon">UIRouter<wbr>Rx</a>
-					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="../interfaces/ng2.ng2statedeclaration.html" class="tsd-kind-icon">Ng2<wbr>State<wbr>Declaration</a>
+						<a href="params.replace.html" class="tsd-kind-icon">Replace</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="../interfaces/ng2.ng2viewdeclaration.html" class="tsd-kind-icon">Ng2<wbr>View<wbr>Declaration</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="../interfaces/ng2.stateschangedevent.html" class="tsd-kind-icon">States<wbr>Changed<wbr>Event</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="../interfaces/ng2.uiroutermodulemetadata.html" class="tsd-kind-icon">UIRouter<wbr>Module<wbr>Metadata</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
-						<a href="../modules/ng2.html#ng2_injector_token" class="tsd-kind-icon">NG2_<wbr>INJECTOR_<wbr>TOKEN</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
-						<a href="../modules/ng2.html#uirouter_providers" class="tsd-kind-icon">UIROUTER_<wbr>PROVIDERS</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
-						<a href="../modules/ng2.html#uirouter_states_token" class="tsd-kind-icon">UIROUTER_<wbr>STATES_<wbr>TOKEN</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
-						<a href="../modules/ng2.html#_uirouter_instance_providers" class="tsd-kind-icon">_UIROUTER_<wbr>INSTANCE_<wbr>PROVIDERS</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
-						<a href="../modules/ng2.html#_uirouter_providers" class="tsd-kind-icon">_UIROUTER_<wbr>PROVIDERS</a>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
+						<a href="../modules/params.html#paramsorarray" class="tsd-kind-icon">Params<wbr>OrArray</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="../modules/ng2.html#id" class="tsd-kind-icon">id</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="../modules/ng2.html#splitonequals" class="tsd-kind-icon">split<wbr>OnEquals</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="../modules/ng2.html#splitonhash" class="tsd-kind-icon">split<wbr>OnHash</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="../modules/ng2.html#splitonquestionmark" class="tsd-kind-icon">split<wbr>OnQuestion<wbr>Mark</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module">
-						<a href="../modules/ng2.html#uiroutermodule" class="tsd-kind-icon">UIRouter<wbr>Module</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module">
-						<a href="../modules/ng2.html#loadngmodule" class="tsd-kind-icon">load<wbr>NgModule</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module">
-						<a href="../modules/ng2.html#ng2viewsbuilder" class="tsd-kind-icon">ng2<wbr>Views<wbr>Builder</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module">
-						<a href="../modules/ng2.html#ngmoduleresolvablesbuilder" class="tsd-kind-icon">ng<wbr>Module<wbr>Resolvables<wbr>Builder</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module">
-						<a href="../modules/ng2.html#provideuirouter" class="tsd-kind-icon">provideUIRouter</a>
+						<a href="../modules/params.html#hasown" class="tsd-kind-icon">has<wbr>Own</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="../modules/ng2.html#uirouterfactory" class="tsd-kind-icon">ui<wbr>Router<wbr>Factory</a>
+						<a href="../modules/params.html#arraytype" class="tsd-kind-icon">Array<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../modules/params.html#getreplace" class="tsd-kind-icon">get<wbr>Replace</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../modules/params.html#getsquashpolicy" class="tsd-kind-icon">get<wbr>Squash<wbr>Policy</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../modules/params.html#gettype" class="tsd-kind-icon">get<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../modules/params.html#isshorthand" class="tsd-kind-icon">is<wbr>Shorthand</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../modules/params.html#unwrapshorthand" class="tsd-kind-icon">unwrap<wbr>Shorthand</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../modules/params.html#valfromstring" class="tsd-kind-icon">val<wbr>From<wbr>String</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../modules/params.html#valtostring" class="tsd-kind-icon">val<wbr>ToString</a>
 					</li>
 				</ul>
 			</nav>

@@ -5,19 +5,19 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>UIInjector | UI-Router</title>
+	<title>UI-Router</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="../assets/css/main.css">
-	<link rel="stylesheet" href="../assets/css/typedoctheme.css">
-	<script src="../assets/js/modernizr.js"></script>
+	<link rel="stylesheet" href="assets/css/main.css">
+	<link rel="stylesheet" href="assets/css/typedoctheme.css">
+	<script src="assets/js/modernizr.js"></script>
 </head>
 <body>
 <header>
 	<div class="tsd-page-toolbar">
 		<div class="container">
 			<div class="table-wrap">
-				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.js" data-base=".">
 					<div class="field">
 						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
 						<input id="tsd-search-field" type="text" />
@@ -26,7 +26,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">UI-Router</a>
+					<a href="index.html" class="title">UI-Router</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -57,178 +57,134 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../globals.html">Globals</a>
-				</li>
-				<li>
-					<a href="../modules/ng1.html">ng1</a>
-				</li>
-				<li>
-					<a href="../modules/ng1.____common_interface_.html">&quot;../common/interface&quot;</a>
-				</li>
-				<li>
-					<a href="ng1.____common_interface_.uiinjector.html">UIInjector</a>
+					<a href="globals.html">Globals</a>
 				</li>
 			</ul>
-			<h1>Interface UIInjector</h1>
+			<h1> UI-Router</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-comment">
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>This enhances the <a href="common.uiinjector.html">common.UIInjector</a> interface by adding the <code>$injector</code> service as the <a href="ng1.____common_interface_.uiinjector.html#native">native</a> injector.</p>
-					</div>
-				</div>
-			</section>
-			<section class="tsd-panel tsd-hierarchy">
-				<h3>Hierarchy</h3>
-				<ul class="tsd-hierarchy">
-					<li>
-						<span class="target">UIInjector</span>
-					</li>
+			<div class="tsd-panel tsd-typography">
+				<h1 id="angularui-router-nbsp-build-status-https-travis-ci-org-angular-ui-ui-router-svg-branch-master-https-travis-ci-org-angular-ui-ui-router-">AngularUI Router &nbsp;<a href="https://travis-ci.org/angular-ui/ui-router"><img src="https://travis-ci.org/angular-ui/ui-router.svg?branch=master" alt="Build Status"></a></h1>
+				<p><strong>Note: this is the Angular 1.x source for UI-Router version 1.0.  If you are looking for the source for UI-Router
+				version 0.2.x, it can be found <a href="https://github.com/angular-ui/ui-router/tree/legacy">here</a></strong></p>
+				<hr>
+				<h4 id="the-de-facto-solution-to-flexible-routing-in-angular">The de-facto solution to flexible routing in angular</h4>
+				<hr>
+				<p><strong><a href="https://ui-router.github.io/tutorials/">Tutorials</a></strong> |
+					<strong><a href="https://ui-router.github.io/docs/latest/">API Docs</a></strong> |
+					<strong><a href="http://unpkg.com/angular-ui-router@latest/release/angular-ui-router.js">Download stable</a></strong> (or <strong><a href="http://unpkg.com/angular-ui-router@latest/release/angular-ui-router.min.js">Minified</a></strong>) <strong>|</strong>
+					<strong><a href="https://github.com/angular-ui/ui-router/wiki">Guide</a> |</strong>
+					<strong><a href="http://ui-router.github.io/resources/sampleapp/">Sample App</a> |</strong>
+					<strong><a href="https://github.com/angular-ui/ui-router/wiki/Frequently-Asked-Questions">FAQ</a> |</strong>
+					<strong><a href="https://github.com/angular-ui/ui-router/blob/master/CONTRIBUTING.md#report-an-issue">Report an Issue</a> |</strong>
+					<strong><a href="https://github.com/angular-ui/ui-router/blob/master/CONTRIBUTING.md#contribute">Contribute</a> |</strong>
+				<strong><a href="http://stackoverflow.com/questions/ask?tags=angularjs,angular-ui-router">Help!</a> |</strong></p>
+				<hr>
+				<p>Angular UI-Router is a client-side <a href="https://en.wikipedia.org/wiki/Single-page_application">Single Page Application</a>
+				routing framework for <a href="http://angularjs.org">AngularJS</a>.  </p>
+				<p>Routing frameworks for SPAs update the browser&#39;s URL as the user navigates through the app.  Conversely, this allows
+					changes to the browser&#39;s URL to drive navigation through the app, thus allowing the user to create a bookmark to a
+				location deep within the SPA.</p>
+				<p>UI-Router applications are modeled as a hierarchical tree of states. UI-Router provides a
+					<a href="https://en.wikipedia.org/wiki/Finite-state_machine"><em>state machine</em></a> to manage the transitions between those
+				application states in a transaction-like manner. </p>
+				<h2 id="get-started">Get Started</h2>
+				<ul>
+					<li><a href="https://ui-router.github.io/ng1">UI-Router for Angular 1</a></li>
+					<li><a href="https://ui-router.github.io/ng2">UI-Router for Angular 2</a></li>
+					<li><a href="https://ui-router.github.io/react">UI-Router for React</a></li>
 				</ul>
-			</section>
-			<section class="tsd-panel-group tsd-index-group">
-				<h2>Index</h2>
-				<section class="tsd-panel tsd-index-panel">
-					<div class="tsd-index-content">
-						<section class="tsd-index-section tsd-is-not-exported">
-							<h3>Properties</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="ng1.____common_interface_.uiinjector.html#native" class="tsd-kind-icon">native</a></li>
-							</ul>
-						</section>
-					</div>
-				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
-				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="native" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>native</h3>-->
-					<!---->
-					<div class="tsd-signature tsd-kind-icon">native<span class="tsd-signature-symbol">:</span> <a href="common._injectorlike.html" class="tsd-signature-type">$InjectorLike</a>        <div class="tsd-header">
-							<p> The native Angular 1 <code>$injector</code> service </p>
-						</div>
-					</div>
-					<div class="tsd-declaration">
-						<div class="tsd-comment tsd-typography">
-							<div class="lead">
-								<p>The native Angular 1 <code>$injector</code> service</p>
-							</div>
-							<p>When you have access to a <code>UIInjector</code>, this property will contain the native <code>$injector</code> Angular 1 service.</p>
-							<dl class="tsd-comment-tags">
-								<dt>example</dt>
-								<dd><p>:
-									```js</p>
-									<p>$transition.onStart({}, function(transition) {
-										var uiInjector = transition.injector();
-										var $injector = uiInjector.native;
-										var val = $injector.invoke(someFunction);
-									});</p>
-								</dd>
-							</dl>
-						</div>
-					</div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/4d86ca2/src/ng1/services.ts#L317">ng1/services.ts:317</a></li>
-						</ul>
-					</aside>
-				</section>
-			</section>
+				<h2 id="resources">Resources</h2>
+				<ul>
+					<li><a href="https://github.com/angular-ui/ui-router/wiki">In-Depth Guide</a></li>
+					<li><a href="http://slid.es/timkindberg/ui-router#/">Slides comparing ngRoute to ui-router</a></li>
+					<li><a href="http://christopherthielen.github.io/ui-router-extras/#/home">UI-Router Extras / Addons for legacy (0.x)</a> (@christopherthielen)</li>
+				</ul>
+				<h3 id="videos">Videos</h3>
+				<ul>
+					<li><a href="https://egghead.io/lessons/angularjs-introduction-ui-router">Introduction Video</a> (egghead.io)</li>
+					<li><a href="https://www.youtube.com/watch?v=lBqiZSemrqg">Tim Kindberg on Angular UI-Router</a></li>
+					<li><a href="https://egghead.io/lessons/angularjs-ui-router-activating-states">Activating States</a> (egghead.io)</li>
+					<li><a href="http://youtu.be/QETUuZ27N0w">Learn Angular.js using UI-Router</a> (LearnCode.academy)</li>
+				</ul>
+				<h2 id="reporting-issues-and-contributing">Reporting issues and Contributing</h2>
+				<p>Please read our <a href="CONTRIBUTING.md">Contributor guidelines</a> before reporting an issue or creating a pull request.</p>
+			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../globals.html"><em>Globals</em></a>
+						<a href="globals.html"><em>Globals</em></a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/common.html">common</a>
+						<a href="modules/common.html">common</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/common_hof.html">common_<wbr>hof</a>
+						<a href="modules/common_hof.html">common_<wbr>hof</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/common_predicates.html">common_<wbr>predicates</a>
+						<a href="modules/common_predicates.html">common_<wbr>predicates</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/common_strings.html">common_<wbr>strings</a>
+						<a href="modules/common_strings.html">common_<wbr>strings</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/core.html">core</a>
+						<a href="modules/core.html">core</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/hooks.html">hooks</a>
+						<a href="modules/hooks.html">hooks</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/justjs.html">justjs</a>
-					</li>
-					<li class="current tsd-kind-external-module">
-						<a href="../modules/ng1.html">ng1</a>
-						<ul>
-							<li class="current tsd-kind-module tsd-parent-kind-external-module tsd-is-not-exported">
-								<a href="../modules/ng1.____common_interface_.html">"../common/interface"</a>
-							</li>
-						</ul>
+						<a href="modules/justjs.html">justjs</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/ng1_directives.html">ng1_<wbr>directives</a>
+						<a href="modules/ng1.html">ng1</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/ng1_state_events.html">ng1_<wbr>state_<wbr>events</a>
+						<a href="modules/ng1_directives.html">ng1_<wbr>directives</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/ng2.html">ng2</a>
+						<a href="modules/ng1_state_events.html">ng1_<wbr>state_<wbr>events</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/ng2_directives.html">ng2_<wbr>directives</a>
+						<a href="modules/ng2.html">ng2</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/params.html">params</a>
+						<a href="modules/ng2_directives.html">ng2_<wbr>directives</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/path.html">path</a>
+						<a href="modules/params.html">params</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/resolve.html">resolve</a>
+						<a href="modules/path.html">path</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/state.html">state</a>
+						<a href="modules/resolve.html">resolve</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/trace.html">trace</a>
+						<a href="modules/state.html">state</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/transition.html">transition</a>
+						<a href="modules/trace.html">trace</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/url.html">url</a>
+						<a href="modules/transition.html">transition</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/view.html">view</a>
+						<a href="modules/url.html">url</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/view.html">view</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-				</ul>
-				<ul class="current">
-					<li class="current tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
-						<a href="ng1.____common_interface_.uiinjector.html" class="tsd-kind-icon">UIInjector</a>
-						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="ng1.____common_interface_.uiinjector.html#native" class="tsd-kind-icon">native</a>
-							</li>
-						</ul>
-					</li>
-				</ul>
-				<ul class="after-current">
 				</ul>
 			</nav>
 		</div>
@@ -297,7 +253,7 @@
 	<p>Generated using <a href="http://typedoc.io" target="_blank">TypeDoc</a></p>
 </div>
 <div class="overlay"></div>
-<script src="../assets/js/main.js"></script>
-<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
+<script src="assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="assets/js/search.js"><' + '/script>');</script>
 </body>
 </html>

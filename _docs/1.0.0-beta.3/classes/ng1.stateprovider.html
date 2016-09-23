@@ -60,10 +60,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/state.html">state</a>
+					<a href="../modules/ng1.html">ng1</a>
 				</li>
 				<li>
-					<a href="state.stateprovider.html">StateProvider</a>
+					<a href="ng1.stateprovider.html">StateProvider</a>
 				</li>
 			</ul>
 			<h1>Class StateProvider</h1>
@@ -117,22 +117,22 @@
 						<section class="tsd-index-section ">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="state.stateprovider.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="ng1.stateprovider.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
-						<section class="tsd-index-section ">
+						<section class="tsd-index-section tsd-is-private tsd-is-private-protected">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="state.stateprovider.html#invalidcallbacks" class="tsd-kind-icon">invalid<wbr>Callbacks</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="state.stateprovider.html#stateregistry" class="tsd-kind-icon">state<wbr>Registry</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="ng1.stateprovider.html#stateregistry" class="tsd-kind-icon">state<wbr>Registry</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="ng1.stateprovider.html#stateservice" class="tsd-kind-icon">state<wbr>Service</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="state.stateprovider.html#decorator" class="tsd-kind-icon">decorator</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="state.stateprovider.html#oninvalid" class="tsd-kind-icon">on<wbr>Invalid</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="state.stateprovider.html#state" class="tsd-kind-icon">state</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="ng1.stateprovider.html#decorator" class="tsd-kind-icon">decorator</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="ng1.stateprovider.html#oninvalid" class="tsd-kind-icon">on<wbr>Invalid</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="ng1.stateprovider.html#state" class="tsd-kind-icon">state</a></li>
 							</ul>
 						</section>
 					</div>
@@ -146,7 +146,7 @@
 					<!--<h3>constructor</h3>-->
 					<!---->
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>State<wbr>Provider<span class="tsd-signature-symbol">(</span>stateRegistry<span class="tsd-signature-symbol">: </span><a href="state.stateregistry.html" class="tsd-signature-type">StateRegistry</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="state.stateprovider.html" class="tsd-signature-type">StateProvider</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>State<wbr>Provider<span class="tsd-signature-symbol">(</span>stateRegistry<span class="tsd-signature-symbol">: </span><a href="state.stateregistry.html" class="tsd-signature-type">StateRegistry</a>, stateService<span class="tsd-signature-symbol">: </span><a href="state.stateservice.html" class="tsd-signature-type">StateService</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ng1.stateprovider.html" class="tsd-signature-type">StateProvider</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -155,35 +155,24 @@
 								<li>
 									<h5>stateRegistry: <a href="state.stateregistry.html" class="tsd-signature-type">StateRegistry</a></h5>
 								</li>
+								<li>
+									<h5>stateService: <a href="state.stateservice.html" class="tsd-signature-type">StateService</a></h5>
+								</li>
 							</ul>
 							<div class="tsd-returns">
-								<h4 class="tsd-returns-title">Returns <a href="state.stateprovider.html" class="tsd-signature-type">StateProvider</a></h4>
+								<h4 class="tsd-returns-title">Returns <a href="ng1.stateprovider.html" class="tsd-signature-type">StateProvider</a></h4>
 							</div>
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/4d86ca2/src/state/state.ts#L31">state/state.ts:31</a></li>
+									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/ng1/stateProvider.ts#L30">ng1/stateProvider.ts:30</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group ">
+			<section class="tsd-panel-group tsd-member-group tsd-is-private tsd-is-private-protected">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="invalidcallbacks" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>invalid<wbr>Callbacks</h3>-->
-					<!---->
-					<div class="tsd-signature tsd-kind-icon">invalid<wbr>Callbacks<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Function</span><span class="tsd-signature-symbol">[]</span></div>
-					<div class="tsd-declaration">
-					</div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/4d86ca2/src/state/state.ts#L31">state/state.ts:31</a></li>
-						</ul>
-					</aside>
-				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
 					<a name="stateregistry" class="tsd-anchor"></a>
 					<!---->
@@ -194,7 +183,21 @@
 					</div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/4d86ca2/src/state/state.ts#L32">state/state.ts:32</a></li>
+							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/ng1/stateProvider.ts#L31">ng1/stateProvider.ts:31</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="stateservice" class="tsd-anchor"></a>
+					<!---->
+					<!--<h3><span class="tsd-flag ts-flagPrivate">Private</span> state<wbr>Service</h3>-->
+					<!---->
+					<div class="tsd-signature tsd-kind-icon">state<wbr>Service<span class="tsd-signature-symbol">:</span> <a href="state.stateservice.html" class="tsd-signature-type">StateService</a></div>
+					<div class="tsd-declaration">
+					</div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/ng1/stateProvider.ts#L31">ng1/stateProvider.ts:31</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -328,7 +331,7 @@ $state.go('home');
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/4d86ca2/src/state/state.ts#L127">state/state.ts:127</a></li>
+									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/ng1/stateProvider.ts#L126">ng1/stateProvider.ts:126</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
@@ -339,7 +342,7 @@ $state.go('home');
 					<!--<h3>on<wbr>Invalid</h3>-->
 					<!---->
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">on<wbr>Invalid<span class="tsd-signature-symbol">(</span>callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Invalid<span class="tsd-signature-symbol">(</span>callback<span class="tsd-signature-symbol">: </span><a href="../modules/state.html#oninvalidcallback" class="tsd-signature-type">OnInvalidCallback</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Function</span></li>
 						<li class="tsd-header">
 							<p> Registers an invalid state handler </p>
 						</li>
@@ -350,34 +353,21 @@ $state.go('home');
 								<div class="lead">
 									<p>Registers an invalid state handler</p>
 								</div>
-								<p>Registers a function to be injected and invoked when <a href="state.stateservice.html#transitionto">StateService.transitionTo</a> has been called with an invalid
-								state reference parameter</p>
-								<p>This function can be injected with one some special values:</p>
-								<ul>
-									<li><strong><code>$to$</code></strong>: TargetState</li>
-									<li><strong><code>$from$</code></strong>: TargetState</li>
-								</ul>
-								<p>Note: This API is subject to change.
-								Replacement of dependency injection support with some alternative is likely.</p>
+								<p>This is a passthrough to <a href="state.stateservice.html#oninvalid">StateService.onInvalid</a> for ng1.</p>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>callback: <span class="tsd-signature-type">Function</span></h5>
-									:         <div class="tsd-comment tsd-typography">
-										<p>  The function which will be injected and invoked, when a matching transition is started.
-											The function may optionally return a {TargetState} or a Promise for a TargetState.  If one
-										is returned, it is treated as a redirect.</p>
-									</div>
+									<h5>callback: <a href="../modules/state.html#oninvalidcallback" class="tsd-signature-type">OnInvalidCallback</a></h5>
 								</li>
 							</ul>
 							<div class="tsd-returns">
-								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Function</span></h4>
 							</div>
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/4d86ca2/src/state/state.ts#L296">state/state.ts:296</a></li>
+									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/ng1/stateProvider.ts#L282">ng1/stateProvider.ts:282</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
@@ -388,8 +378,8 @@ $state.go('home');
 					<!--<h3>state</h3>-->
 					<!---->
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">state<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, definition<span class="tsd-signature-symbol">: </span><a href="../interfaces/state.statedeclaration.html" class="tsd-signature-type">StateDeclaration</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="state.stateprovider.html" class="tsd-signature-type">StateProvider</a></li>
-						<li class="tsd-signature tsd-kind-icon">state<span class="tsd-signature-symbol">(</span>definition<span class="tsd-signature-symbol">: </span><a href="../interfaces/state.statedeclaration.html" class="tsd-signature-type">StateDeclaration</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="state.stateprovider.html" class="tsd-signature-type">StateProvider</a></li>
+						<li class="tsd-signature tsd-kind-icon">state<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, definition<span class="tsd-signature-symbol">: </span><a href="../interfaces/ng1.ng1statedeclaration.html" class="tsd-signature-type">Ng1StateDeclaration</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ng1.stateprovider.html" class="tsd-signature-type">StateProvider</a></li>
+						<li class="tsd-signature tsd-kind-icon">state<span class="tsd-signature-symbol">(</span>definition<span class="tsd-signature-symbol">: </span><a href="../interfaces/ng1.ng1statedeclaration.html" class="tsd-signature-type">Ng1StateDeclaration</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ng1.stateprovider.html" class="tsd-signature-type">StateProvider</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -545,35 +535,35 @@ $stateProvider
 									</div>
 								</li>
 								<li>
-									<h5>definition: <a href="../interfaces/state.statedeclaration.html" class="tsd-signature-type">StateDeclaration</a></h5>
+									<h5>definition: <a href="../interfaces/ng1.ng1statedeclaration.html" class="tsd-signature-type">Ng1StateDeclaration</a></h5>
 									:         <div class="tsd-comment tsd-typography">
 										<p>State configuration object.</p>
 									</div>
 								</li>
 							</ul>
 							<div class="tsd-returns">
-								<h4 class="tsd-returns-title">Returns <a href="state.stateprovider.html" class="tsd-signature-type">StateProvider</a></h4>
+								<h4 class="tsd-returns-title">Returns <a href="ng1.stateprovider.html" class="tsd-signature-type">StateProvider</a></h4>
 							</div>
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/4d86ca2/src/state/state.ts#L265">state/state.ts:265</a></li>
+									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/ng1/stateProvider.ts#L264">ng1/stateProvider.ts:264</a></li>
 								</ul>
 						</aside>        </li>
 						<li class="tsd-description">
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>definition: <a href="../interfaces/state.statedeclaration.html" class="tsd-signature-type">StateDeclaration</a></h5>
+									<h5>definition: <a href="../interfaces/ng1.ng1statedeclaration.html" class="tsd-signature-type">Ng1StateDeclaration</a></h5>
 								</li>
 							</ul>
 							<div class="tsd-returns">
-								<h4 class="tsd-returns-title">Returns <a href="state.stateprovider.html" class="tsd-signature-type">StateProvider</a></h4>
+								<h4 class="tsd-returns-title">Returns <a href="ng1.stateprovider.html" class="tsd-signature-type">StateProvider</a></h4>
 							</div>
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/4d86ca2/src/state/state.ts#L266">state/state.ts:266</a></li>
+									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/ng1/stateProvider.ts#L265">ng1/stateProvider.ts:265</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
@@ -607,8 +597,13 @@ $stateProvider
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/justjs.html">justjs</a>
 					</li>
-					<li class=" tsd-kind-external-module">
+					<li class="current tsd-kind-external-module">
 						<a href="../modules/ng1.html">ng1</a>
+						<ul>
+							<li class=" tsd-kind-module tsd-parent-kind-external-module tsd-is-not-exported">
+								<a href="../modules/ng1.____router_.html">"../router"</a>
+							</li>
+						</ul>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/ng1_directives.html">ng1_<wbr>directives</a>
@@ -631,7 +626,7 @@ $stateProvider
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/resolve.html">resolve</a>
 					</li>
-					<li class="current tsd-kind-external-module">
+					<li class=" tsd-kind-external-module">
 						<a href="../modules/state.html">state</a>
 					</li>
 					<li class=" tsd-kind-external-module">
@@ -651,118 +646,127 @@ $stateProvider
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-class tsd-parent-kind-external-module">
-						<a href="state.state-1.html" class="tsd-kind-icon">State</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-external-module">
-						<a href="state.statebuilder.html" class="tsd-kind-icon">State<wbr>Builder</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-external-module">
-						<a href="state.statematcher.html" class="tsd-kind-icon">State<wbr>Matcher</a>
+						<a href="ng1.ng1viewconfig.html" class="tsd-kind-icon">Ng1<wbr>View<wbr>Config</a>
 					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class tsd-parent-kind-external-module">
-						<a href="state.stateprovider.html" class="tsd-kind-icon">State<wbr>Provider</a>
+						<a href="ng1.stateprovider.html" class="tsd-kind-icon">State<wbr>Provider</a>
 						<ul>
 							<li class=" tsd-kind-constructor tsd-parent-kind-class">
-								<a href="state.stateprovider.html#constructor" class="tsd-kind-icon">constructor</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="state.stateprovider.html#invalidcallbacks" class="tsd-kind-icon">invalid<wbr>Callbacks</a>
+								<a href="ng1.stateprovider.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-								<a href="state.stateprovider.html#stateregistry" class="tsd-kind-icon">state<wbr>Registry</a>
+								<a href="ng1.stateprovider.html#stateregistry" class="tsd-kind-icon">state<wbr>Registry</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="ng1.stateprovider.html#stateservice" class="tsd-kind-icon">state<wbr>Service</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="state.stateprovider.html#decorator" class="tsd-kind-icon">decorator</a>
+								<a href="ng1.stateprovider.html#decorator" class="tsd-kind-icon">decorator</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="state.stateprovider.html#oninvalid" class="tsd-kind-icon">on<wbr>Invalid</a>
+								<a href="ng1.stateprovider.html#oninvalid" class="tsd-kind-icon">on<wbr>Invalid</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="state.stateprovider.html#state" class="tsd-kind-icon">state</a>
+								<a href="ng1.stateprovider.html#state" class="tsd-kind-icon">state</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-class tsd-parent-kind-external-module">
-						<a href="state.statequeuemanager.html" class="tsd-kind-icon">State<wbr>Queue<wbr>Manager</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-external-module">
-						<a href="state.stateregistry.html" class="tsd-kind-icon">State<wbr>Registry</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-external-module">
-						<a href="state.stateservice.html" class="tsd-kind-icon">State<wbr>Service</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-external-module">
-						<a href="state.targetstate.html" class="tsd-kind-icon">Target<wbr>State</a>
-					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="../interfaces/state.builders.html" class="tsd-kind-icon">Builders</a>
+						<a href="../interfaces/ng1.bindingtuple.html" class="tsd-kind-icon">Binding<wbr>Tuple</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="../interfaces/state.hrefoptions.html" class="tsd-kind-icon">Href<wbr>Options</a>
+						<a href="../interfaces/ng1.ng1controller.html" class="tsd-kind-icon">Ng1<wbr>Controller</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="../interfaces/state.lazyloadresult.html" class="tsd-kind-icon">Lazy<wbr>Load<wbr>Result</a>
+						<a href="../interfaces/ng1.ng1statedeclaration.html" class="tsd-kind-icon">Ng1<wbr>State<wbr>Declaration</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="../interfaces/state.providerlike.html" class="tsd-kind-icon">Provider<wbr>Like</a>
+						<a href="../interfaces/ng1.ng1viewdeclaration.html" class="tsd-kind-icon">Ng1<wbr>View<wbr>Declaration</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="../interfaces/state.statedeclaration.html" class="tsd-kind-icon">State<wbr>Declaration</a>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../modules/ng1.html#_state" class="tsd-kind-icon">$state</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="../interfaces/state.transitionpromise.html" class="tsd-kind-icon">Transition<wbr>Promise</a>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../modules/ng1.html#_stateparams" class="tsd-kind-icon">$state<wbr>Params</a>
 					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
-						<a href="../modules/state.html#builderfunction" class="tsd-kind-icon">Builder<wbr>Function</a>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../modules/ng1.html#_stateprovider" class="tsd-kind-icon">$state<wbr>Provider</a>
 					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
-						<a href="../modules/state.html#resolvetypes" class="tsd-kind-icon">Resolve<wbr>Types</a>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../modules/ng1.html#_transitions" class="tsd-kind-icon">$transitions</a>
 					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
-						<a href="../modules/state.html#stateorname" class="tsd-kind-icon">State<wbr>OrName</a>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../modules/ng1.html#_transitionsprovider" class="tsd-kind-icon">$transitions<wbr>Provider</a>
 					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
-						<a href="../modules/state.html#stateregistrylistener" class="tsd-kind-icon">State<wbr>Registry<wbr>Listener</a>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../modules/ng1.html#_urlmatcherfactory" class="tsd-kind-icon">$url<wbr>Matcher<wbr>Factory</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../modules/ng1.html#_urlmatcherfactoryprovider" class="tsd-kind-icon">$url<wbr>Matcher<wbr>Factory<wbr>Provider</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../modules/ng1.html#_urlrouter" class="tsd-kind-icon">$url<wbr>Router</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../modules/ng1.html#_urlrouterprovider" class="tsd-kind-icon">$url<wbr>Router<wbr>Provider</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../modules/ng1.html#id" class="tsd-kind-icon">id</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../modules/ng1.html#router" class="tsd-kind-icon">router</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../modules/ng1.html#_viewscrollprovider" class="tsd-kind-icon">$<wbr>View<wbr>Scroll<wbr>Provider</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../modules/ng1.html#_uirouter" class="tsd-kind-icon">$ui<wbr>Router</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module">
-						<a href="../modules/state.html#_includedbystatefilter" class="tsd-kind-icon">$<wbr>Included<wbr>ByState<wbr>Filter</a>
+						<a href="../modules/ng1.html#annotatecontroller" class="tsd-kind-icon">annotate<wbr>Controller</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../modules/ng1.html#getbindings" class="tsd-kind-icon">get<wbr>Bindings</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../modules/ng1.html#getcomponentinputs" class="tsd-kind-icon">get<wbr>Component<wbr>Inputs</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module">
-						<a href="../modules/state.html#_isstatefilter" class="tsd-kind-icon">$<wbr>IsState<wbr>Filter</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="../modules/state.html#databuilder" class="tsd-kind-icon">data<wbr>Builder</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="../modules/state.html#getnavigablebuilder" class="tsd-kind-icon">get<wbr>Navigable<wbr>Builder</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="../modules/state.html#getparamsbuilder" class="tsd-kind-icon">get<wbr>Params<wbr>Builder</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="../modules/state.html#geturlbuilder" class="tsd-kind-icon">get<wbr>Url<wbr>Builder</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="../modules/state.html#includesbuilder" class="tsd-kind-icon">includes<wbr>Builder</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="../modules/state.html#namebuilder" class="tsd-kind-icon">name<wbr>Builder</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="../modules/state.html#parseurl" class="tsd-kind-icon">parse<wbr>Url</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="../modules/state.html#pathbuilder" class="tsd-kind-icon">path<wbr>Builder</a>
+						<a href="../modules/ng1.html#getlocals" class="tsd-kind-icon">get<wbr>Locals</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module">
-						<a href="../modules/state.html#resolvablesbuilder" class="tsd-kind-icon">resolvables<wbr>Builder</a>
+						<a href="../modules/ng1.html#getstatehookbuilder" class="tsd-kind-icon">get<wbr>State<wbr>Hook<wbr>Builder</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="../modules/state.html#selfbuilder" class="tsd-kind-icon">self<wbr>Builder</a>
+						<a href="../modules/ng1.html#getstateprovider" class="tsd-kind-icon">get<wbr>State<wbr>Provider</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../modules/ng1.html#gettransitionsprovider" class="tsd-kind-icon">get<wbr>Transitions<wbr>Provider</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../modules/ng1.html#geturlrouterprovider" class="tsd-kind-icon">get<wbr>Url<wbr>Router<wbr>Provider</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+						<a href="../modules/ng1.html#ng1viewconfigfactory" class="tsd-kind-icon">ng1<wbr>View<wbr>Config<wbr>Factory</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+						<a href="../modules/ng1.html#ng1viewsbuilder" class="tsd-kind-icon">ng1<wbr>Views<wbr>Builder</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../modules/ng1.html#runblock" class="tsd-kind-icon">run<wbr>Block</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../modules/ng1.html#scopebindings" class="tsd-kind-icon">scope<wbr>Bindings</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+						<a href="../modules/ng1.html#watchdigests" class="tsd-kind-icon">watch<wbr>Digests</a>
+					</li>
+					<li class=" tsd-kind-object-literal tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../modules/ng1.html#_resolve" class="tsd-kind-icon">$resolve</a>
 					</li>
 				</ul>
 			</nav>
