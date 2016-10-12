@@ -1,7 +1,6 @@
 ---
 title: "UI-Router for Angular 2 - Hello Solar System!"
 excerpt: "Learn about parameters and resolve data"
-comments: true
 ---
 {% include toc icon="columns" title="Hello Solar System!" %}
 

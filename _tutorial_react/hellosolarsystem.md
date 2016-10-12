@@ -3,7 +3,6 @@ title: "UI-Router for React - Hello Solar System!"
 excerpt: "Learn about parameters and resolve data"
 layout: single
 sitemap: true
-comments: true
 ---
 {% include toc icon="columns" title="Hello Solar System!" %}
 

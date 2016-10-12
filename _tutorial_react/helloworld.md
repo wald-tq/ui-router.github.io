@@ -3,7 +3,6 @@ title: "UI-Router for React - Hello World!"
 excerpt: "Getting started with UI-Router for React"
 layout: single
 sitemap: true
-comments: true
 ---
 
 {% include toc icon="columns" title="Hello World!" %}

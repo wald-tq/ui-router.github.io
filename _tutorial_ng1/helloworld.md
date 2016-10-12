@@ -3,7 +3,6 @@ title: "UI-Router for Angular 1 - Hello World!"
 layout: single
 excerpt: "Getting started with UI-Router for Angular 1"
 sitemap: true
-comments: true
 ---
 
 {% include toc icon="columns" title="Hello World!" %}
