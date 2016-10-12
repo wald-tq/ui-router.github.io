@@ -39,7 +39,7 @@ We will go over each part in more detail below.
 </html>
 ```
 
-## `myApp.js`
+## `helloworld.js`
 
 ```js
 var myApp = angular.module('helloworld', ['ui.router']);
