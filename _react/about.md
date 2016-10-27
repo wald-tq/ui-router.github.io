@@ -26,9 +26,9 @@ npm install --save ui-router-react
 
 Learn UI-Router by following our tutorials.
 
-- [Hello World](/tutorial/react/helloworld)
-- [Hello Solar System](/tutorial/react/hellosolarsystem)
-- [Hello Galaxy](/tutorial/react/hellogalaxy)
+- [Hello World](/react/tutorial/helloworld)
+- [Hello Solar System](/react/tutorial/hellosolarsystem)
+- [Hello Galaxy](/react/tutorial/hellogalaxy)
 
 ## Sample application
 

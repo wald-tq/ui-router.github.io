@@ -1,7 +1,8 @@
 ---
 title: "UI-Router for React - Tutorials"
 sitemap: true
-permalink: /tutorial/react/
+redirect_from: /tutorial/react/
+permalink: /react/tutorial/
 ---
 
 [Get started](helloworld)

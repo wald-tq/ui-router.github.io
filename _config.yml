@@ -221,13 +221,13 @@ collections:
     permalink: /react/:path
   tutorial_ng1:
     output: true
-    permalink: /tutorial/ng1/:path
+    permalink: /ng1/tutorial/:path
   tutorial_ng2:
     output: true
-    permalink: /tutorial/ng2/:path
+    permalink: /ng2/tutorial/:path
   tutorial_react:
     output: true
-    permalink: /tutorial/react/:path
+    permalink: /react/tutorial/:path
   guide:
     output: true
     permalink: /guide/:path

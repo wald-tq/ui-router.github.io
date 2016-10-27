@@ -30,31 +30,31 @@ tutorial_ng1:
   - title: "Tutorial - Angular"
     children:
       - title: "1. Hello World!"
-        url: /tutorial/ng1/helloworld
+        url: /ng1/tutorial/helloworld
       - title: "2. Hello Solar System!"
-        url: /tutorial/ng1/hellosolarsystem
+        url: /ng1/tutorial/hellosolarsystem
       - title: "3. Hello Galaxy!"
-        url: /tutorial/ng1/hellogalaxy
+        url: /ng1/tutorial/hellogalaxy
 
 tutorial_ng2:
   - title: "Tutorial - Angular 2"
     children:
       - title: "Hello World!"
-        url: /tutorial/ng2/helloworld
+        url: /ng2/tutorial/helloworld
       - title: "Hello Solar System!"
-        url: /tutorial/ng2/hellosolarsystem
+        url: /ng2/tutorial/hellosolarsystem
       - title: "Hello Galaxy!"
-        url: /tutorial/ng2/hellogalaxy
+        url: /ng2/tutorial/hellogalaxy
 
 tutorial_react:
   - title: "Tutorial - React"
     children:
       - title: "Hello World!"
-        url: /tutorial/react/helloworld
+        url: /react/tutorial/helloworld
       - title: "Hello Solar System!"
-        url: /tutorial/react/hellosolarsystem
+        url: /react/tutorial/hellosolarsystem
       - title: "Hello Galaxy!"
-        url: /tutorial/react/hellogalaxy
+        url: /react/tutorial/hellogalaxy
 
 guide:
   - title: "Guide"

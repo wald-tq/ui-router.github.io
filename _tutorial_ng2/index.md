@@ -1,7 +1,8 @@
 ---
 title: "UI-Router for Angular 2 - Tutorials"
 sitemap: true
-permalink: /tutorial/ng2/
+redirect_from: /tutorial/ng2/
+permalink: /ng2/tutorial/
 ---
 
 [Get started](helloworld)

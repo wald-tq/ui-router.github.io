@@ -3,6 +3,7 @@ title: "UI-Router for React - Hello World!"
 excerpt: "Getting started with UI-Router for React"
 layout: single
 sitemap: true
+redirect_from: /tutorial/react/helloworld/
 ---
 
 {% include toc icon="columns" title="Hello World!" %}

@@ -1,6 +1,7 @@
 ---
 title: "UI-Router for Angular 1 - Hello Galaxy!"
 excerpt: "Learn about Nested States and Nested Views"
+redirect_from: /tutorial/ng1/hellogalaxy/
 ---
 {% include toc icon="columns" title="Hello Galaxy!" %}
 

@@ -3,6 +3,7 @@ title: "UI-Router for Angular 2 - Hello World!"
 layout: single
 excerpt: "Getting started with UI-Router for Angular 2"
 sitemap: true
+redirect_from: /tutorial/ng2/helloworld/
 ---
 
 {% include toc classes="collapsible" icon="columns" title="Hello World!" %}

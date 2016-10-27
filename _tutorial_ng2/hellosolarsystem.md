@@ -1,6 +1,7 @@
 ---
 title: "UI-Router for Angular 2 - Hello Solar System!"
 excerpt: "Learn about parameters and resolve data"
+redirect_from: /tutorial/ng2/hellosolarsystem/
 ---
 {% include toc icon="columns" title="Hello Solar System!" %}
 

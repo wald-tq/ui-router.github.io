@@ -32,9 +32,9 @@ Other examples:
 
 Learn UI-Router by following our tutorials.
 
-- [Hello World](/tutorial/ng2/helloworld)
-- [Hello Solar System](/tutorial/ng2/hellosolarsystem)
-- [Hello Galaxy](/tutorial/ng2/hellogalaxy)
+- [Hello World](/ng2/tutorial/helloworld)
+- [Hello Solar System](/ng2/tutorial/hellosolarsystem)
+- [Hello Galaxy](/ng2/tutorial/hellogalaxy)
  
 ## Quick Start
  
