@@ -219,21 +219,24 @@ collections:
   react:
     output: true
     permalink: /react/:path
-  tutorial_ng1:
+  ng1_tutorial:
     output: true
     permalink: /ng1/tutorial/:path
-  tutorial_ng2:
+  ng2_tutorial:
     output: true
     permalink: /ng2/tutorial/:path
-  tutorial_react:
+  react_tutorial:
     output: true
     permalink: /react/tutorial/:path
   guide:
     output: true
     permalink: /guide/:path
-  docs:
+  ng1_docs:
     output: true
-    permalink: /docs/:path:output_ext
+    permalink: /ng1/docs/:path:output_ext
+  ng2_docs:
+    output: true
+    permalink: /ng2/docs/:path:output_ext
   resources:
     output: true
     permalink: /resources/:path:output_ext
@@ -273,28 +276,28 @@ defaults:
         nav: "react"
   - scope:
       path: ""
-      type: tutorial_ng1
+      type: ng1_tutorial
     values:
       sitemap: true
       layout: single
       sidebar:
-        nav: "tutorial_ng1"
+        nav: "ng1_tutorial"
   - scope:
       path: ""
-      type: tutorial_ng2
+      type: ng2_tutorial
     values:
       sitemap: true
       layout: single
       sidebar:
-        nav: "tutorial_ng2"
+        nav: "ng2_tutorial"
   - scope:
       path: ""
-      type: tutorial_react
+      type: react_tutorial
     values:
       sitemap: true
       layout: single
       sidebar:
-        nav: "tutorial_react"
+        nav: "react_tutorial"
   - scope:
       path: ""
       type: guide
@@ -305,7 +308,13 @@ defaults:
         nav: "guide"
   - scope:
       path: ""
-      type: docs
+      type: ng1_docs
+    values:
+      sitemap: true
+      layout: docs
+  - scope:
+      path: ""
+      type: ng2_docs
     values:
       sitemap: true
       layout: docs

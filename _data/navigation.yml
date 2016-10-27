@@ -26,7 +26,7 @@ about:
       - title: "Features"
         url: /about/features
 
-tutorial_ng1:
+ng1_tutorial:
   - title: "Tutorial - Angular"
     children:
       - title: "1. Hello World!"
@@ -36,7 +36,7 @@ tutorial_ng1:
       - title: "3. Hello Galaxy!"
         url: /ng1/tutorial/hellogalaxy
 
-tutorial_ng2:
+ng2_tutorial:
   - title: "Tutorial - Angular 2"
     children:
       - title: "Hello World!"
@@ -46,7 +46,7 @@ tutorial_ng2:
       - title: "Hello Galaxy!"
         url: /ng2/tutorial/hellogalaxy
 
-tutorial_react:
+react_tutorial:
   - title: "Tutorial - React"
     children:
       - title: "Hello World!"
