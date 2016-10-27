@@ -55,31 +55,22 @@ The [UI-Router Sample App](/resources/sampleapp) is a non-trivial UI-Router appl
 
 To fix a UI-Router bug, or create an enhancement, follow these steps: 
 
-The Typescript source code for UI-Router for Angular 2 can be found in <https://github.com/angular-ui/ui-router>
-Note: This repository also hosts the code for UI-Router Core and UI-Router for Angular 1. 
+The Typescript source code for UI-Router for Angular 2 can be found at <https://github.com/ui-router/ng2>
+UI-Router for Angular 2 depends on UI-Router Core, which can be found at <https://github.com/ui-router/core>
 
 To get started:
 
 ```
-git clone https://github.com/angular-ui/ui-router
-cd ui-router
+git clone https://github.com/ui-router/ng2 ui-router-ng2
+git clone https://github.com/ui-router/core ui-router-core
+cd ui-router-core
 npm install
-npm test
+npm link
+npm run build
+
+cd ../ui-router-ng2
+npm install
+npm link ui-router-core
+npm run build
 ```
-
-All the code inside `src/` is relevant to angular 2, except for `ng1/`.
-Most of the UI-Router test harness is written in Angular 1.
-
-To create a UI-Router bundle to test a bug fix against your app, 
-build it with the `package.js` script.
-
-```
-node scripts/package.js ng2
-```
-
-A npm package directory structure will be built in `build_packages/ng2`.
-You can run `npm link` inside that directory, and then run `npm link ui-router-ng2` in your app's directory.
-Your app's npm dependency will use the local `ui-router-ng2` package that you just built. 
-
-Alternatively, bundles are also created in `build_packages/ng1/release/ui-router-ng2.js`.
 

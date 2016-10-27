@@ -39,30 +39,37 @@ The [UI-Router Sample App](/resources/sampleapp) is a non-trivial UI-Router appl
 To fix a UI-Router bug, or create an enhancement, follow these steps: 
 
 The Typescript source code for UI-Router for React can be found at <https://github.com/ui-router/react>
-The react code depends on the UI-Router Core code, found at <https://github.com/angular-ui/ui-router>
+The react code depends on the UI-Router Core code, found at <https://github.com/ui-router/core>
 
 To get started you will need to clone the UI-Router Core and UI-Router React repositories.
 
 ```
-git clone https://github.com/angular-ui/ui-router
-git clone https://github.com/ui-router/react
+git clone https://github.com/ui-router/core ui-router-core
+git clone https://github.com/ui-router/react ui-router-react
 ```
 
 Then, you will need to build ui-router core and link it locally using `npm link`
 
 ```
-cd ui-router
+cd ui-router-core
 npm install
-npm test
-./scripts/package.sh core
-cd build_packages/core
 npm link
+npm run build
 ```
 
 Then, link to it from the ui-router-react repository
 
 ```
-cd ../../../react
+cd ../ui-router-react
 npm install
 npm link ui-router-core
 ```
+
+To make changes to `ui-router-core` you should run the `npm run watch` script from the `ui-router-core` directory.
+This will watch the ui-router core code, compile it, and run the test suite when the core code (or tests) are modified.
+
+```
+cd ../ui-router-core
+npm run watch
+```
+
