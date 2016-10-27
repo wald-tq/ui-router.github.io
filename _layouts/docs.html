@@ -1,23 +1,14 @@
 ---
 ---
 
-{% assign paths = site.docs | map: "path" %}
-{% capture allpaths %}
-{% for path in paths %}
-{% assign pathel = path | split: "/" %}
-{{ pathel[1] }}
-{% endfor %}
-{% endcapture %}
-
 {% include base_path %}
-
-{% assign pagepath = page.path | split: "/" %}
 
 <!doctype html>
 <html lang="{{ site.locale | slice: 0,2 }}" class="no-js">
 <head>
   {% include head.html %}
   {% include head/custom.html %}
+  <script src="/assets/js/docs-version-switcher.js"></script>
 </head>
 
 <body>
@@ -26,95 +17,6 @@
 {% include masthead.html %}
 
 {{ content }}
-
-<div class="docs__version_switcher">
-  <select id="docs__version_switcher" onchange="switchVersion(this)">
-    {% assign versions = allpaths | remove: "index.html" | strip | split: " " | uniq | sort | reverse %}
-    {% for version in versions %}
-    <option value="{{version}}">{{version}}</option>
-    {% endfor %}
-  </select>
-
-  <script>
-    var el = document.getElementById("docs__version_switcher");
-    var options = Array.prototype.slice.call(el.children);
-    var uiRouterVersion = "{{ pagepath[1] }}";
-    console.log("ui-router " + uiRouterVersion + " docs");
-
-    function compareDigit(l, r) {
-      var ln = parseInt(l, 10), rn = parseInt(r, 10);
-      if (!isNaN(ln) && !isNaN(rn)) return ln - rn;
-      if (!isNaN(ln)) return -1;
-      if (!isNaN(rn)) return 1;
-      if (ln < rn) return -1;
-      if (ln > rn) return 1;
-      return 0;
-    }
-
-    var compareVersions = function (left, right) {
-      var a = left.value.split('.'), b = right.value.split('.');
-      while (a.length && b.length) {
-        var diff = compareDigit(a.shift(), b.shift());
-        if (diff !== 0) return diff;
-      }
-      if (a.length) return 1;
-      if (b.length) return -1;
-      return 0;
-    };
-
-    function reverse(compareFn) {
-      return function(left, right) {
-        return compareFn(right, left);
-      }
-    }
-
-    options.forEach(function(option) { el.removeChild(option); });
-    options.sort(reverse(compareVersions));
-    options.forEach(function(option) { el.appendChild(option); });
-    var selected = options.filter(function(option) { return option.value == uiRouterVersion; });
-    if (selected.length) selected[0].selected = true;
-
-    function switchVersion(version) {
-      var current = /(\/docs)\/([^/]*)\/?(.*)/.exec("{{page.url}}");
-      document.location.pathname = current[1] + "/" + version.value + "/" + current[3];
-    }
-    var injectChecks = 0;
-
-    function injectVersionSwitcher() {
-      el.parentElement.removeChild(el);
-
-      let tsdBreadcrumb = document.querySelectorAll(".tsd-page-title .tsd-breadcrumb")[0];
-      if (tsdBreadcrumb) {
-        let li = document.createElement("li");
-        li.appendChild(el);
-        if (tsdBreadcrumb.children.length) {
-          firstChild = tsdBreadcrumb.children[0];
-          tsdBreadcrumb.insertBefore(li, firstChild);
-        } else {
-          tsdBreadcrumb.appendChild(li);
-        }
-      }
-
-      let ngDocMenu = document.querySelectorAll("header.header .navbar-inner ul.nav")[0];
-      if (ngDocMenu) {
-        let li = document.createElement("li");
-        li.appendChild(el);
-        li.style.padding = 0;
-        li.style.paddingTop = "5px";
-        li.style.paddingLeft = "1em";
-        li.style.height = "40px";
-        ngDocMenu.appendChild(li);
-      }
-
-      if (++injectChecks < 5 && !tsdBreadcrumb && !ngDocMenu) {
-        setTimeout(injectVersionSwitcher, 250);
-      }
-    }
-
-    injectVersionSwitcher();
-  </script>
-
-</div>
 
 <div class="page__footer">
   <footer>
