@@ -37,3 +37,5 @@ for i in `find . -type d -depth 1` ; do
   find . -name "*.html" | sort | node ../paths_as_json_array.js > files.json
   popd;
 done
+
+./add_redirects.sh

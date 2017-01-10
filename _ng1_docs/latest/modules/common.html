@@ -203,8 +203,36 @@ redirect_from: /docs/latest/modules/common.html
 					<!--
         <h3>IInjectable</h3>
     -->
-					<div class="tsd-signature tsd-kind-icon">IInjectable<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Function</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">IInjectable<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Function</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span>    <div class="tsd-header">
+							<p> An ng1-style injectable </p>
+						</div>
+					</div>
 					<div class="tsd-declaration">
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>An ng1-style injectable</p>
+							</div>
+							<p>This could be a (non-minified) function such as:</p>
+							<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">injectableFunction</span>(<span class="hljs-params">SomeDependency</span>) </span>{
+
+}
+</code></pre>
+							<p>or an explicitly annotated function (minify safe)</p>
+							<pre><code class="lang-js">injectableFunction.$inject = [ <span class="hljs-string">'SomeDependency'</span> ];
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">injectableFunction</span>(<span class="hljs-params">SomeDependency</span>) </span>{
+
+}
+</code></pre>
+							<p>or an array style annotated function (minify safe)</p>
+							<pre><code class="lang-js">[<span class="hljs-string">'SomeDependency'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">injectableFunction</span>(<span class="hljs-params">SomeDependency</span>) </span>{
+
+}];
+</code></pre>
+							<dl class="tsd-comment-tags">
+								<dt>publicapi</dt>
+								<dd></dd>
+							</dl>
+						</div>
 					</div>
 					<aside class="tsd-sources">
 						<ul>
