@@ -3,6 +3,7 @@ layout: post
 excerpt: UI-Router 1.0.0-rc.1 is released
 comments: true
 permalink: /blog/:title/
+redirect_from: /blog/uirouter-1.0.0-rc.1/
 ---
 
 {% include toc icon="columns" title="UI-Router 1.0.0-rc.1" %}
