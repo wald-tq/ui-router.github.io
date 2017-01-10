@@ -1,17 +1,17 @@
 ---
-redirect_from: /docs/latest/modules/common_strings.html
 ---
 <!doctype html>
 <html class="default no-js">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>common_strings | UI-Router</title>
+	<title>common_strings | angular-ui-router</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
-	<link rel="stylesheet" href="../assets/css/typedoctheme.css">
+	<link rel="stylesheet" href="../assets/css/uirouter.css">
 	<script src="../assets/js/modernizr.js"></script>
+	<script src="../assets/js/reset.js"></script>
 </head>
 <body>
 <header>
@@ -27,26 +27,31 @@ redirect_from: /docs/latest/modules/common_strings.html
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">UI-Router</a>
+					<a href="../index.html" class="title">angular-ui-router</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
 						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
 						<div class="tsd-filter-group">
-							<div class="tsd-select" id="tsd-filter-visibility">
-								<span class="tsd-select-label">All</span>
-								<ul class="tsd-select-list">
-									<li data-value="public">Public</li>
-									<li data-value="protected">Public/Protected</li>
-									<li data-value="private" class="selected">All</li>
-								</ul>
-							</div>
-							<input type="checkbox" id="tsd-filter-inherited" checked />
-							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<!--
+                            <div class="tsd-select" id="tsd-filter-visibility">
+                                <span class="tsd-select-label">All</span>
+                                <ul class="tsd-select-list">
+                                    <li data-value="public">Public</li>
+                                    <li data-value="protected">Public/Protected</li>
+                                    <li data-value="private" class="selected">All</li>
+                                </ul>
+                            </div>
+
+                            <input type="checkbox" id="tsd-filter-inherited" checked />
+                            <label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+                            -->
 							<input type="checkbox" id="tsd-filter-externals" checked />
-							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
-							<input type="checkbox" id="tsd-filter-only-exported" />
-							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+							<label class="tsd-widget" for="tsd-filter-externals">Internal UI-Router API</label>
+							<!--
+                                <input type="checkbox" id="tsd-filter-only-exported" />
+                                <label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+                            -->
 						</div>
 					</div>
 					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
@@ -58,13 +63,13 @@ redirect_from: /docs/latest/modules/common_strings.html
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../globals.html">Globals</a>
+					<a href="../index.html">angular-ui-router</a>
 				</li>
 				<li>
 					<a href="common_strings.html">common_strings</a>
 				</li>
 			</ul>
-			<h1>External module common_strings</h1>
+			<h1>Module common_strings</h1>
 		</div>
 	</div>
 </header>
@@ -73,57 +78,53 @@ redirect_from: /docs/latest/modules/common_strings.html
 		<div class="col-8 col-content">
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
-					<dl class="tsd-comment-tags">
-						<dt>module</dt>
-						<dd><p>common_strings</p>
-						</dd>
-					</dl>
+					<div class="lead">
+						<p>Functions that manipulate strings</p>
+					</div>
+					<p>Although these functions are exported, they are subject to change without notice.</p>
 				</div>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
-						<section class="tsd-index-section tsd-is-not-exported">
+						<section class="tsd-index-section tsd-is-external tsd-is-not-exported">
 							<h3>Variables</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="common_strings.html#stringifypatternfn" class="tsd-kind-icon">stringify<wbr>Pattern<wbr>Fn</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported"><a href="common_strings.html#stringifypatternfn" class="tsd-kind-icon">stringify<wbr>Pattern<wbr>Fn</a></li>
 							</ul>
 						</section>
-						<section class="tsd-index-section ">
+						<section class="tsd-index-section tsd-is-external">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="common_strings.html#_fromjson" class="tsd-kind-icon">_from<wbr>Json</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="common_strings.html#_tojson" class="tsd-kind-icon">_to<wbr>Json</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="common_strings.html#beforeaftersubstr" class="tsd-kind-icon">before<wbr>After<wbr>Substr</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="common_strings.html#fntostring" class="tsd-kind-icon">fn<wbr>ToString</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="common_strings.html#functiontostring" class="tsd-kind-icon">function<wbr>ToString</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="common_strings.html#kebobstring" class="tsd-kind-icon">kebob<wbr>String</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="common_strings.html#maxlength" class="tsd-kind-icon">max<wbr>Length</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="common_strings.html#padstring" class="tsd-kind-icon">pad<wbr>String</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="common_strings.html#promisetostring" class="tsd-kind-icon">promise<wbr>ToString</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="common_strings.html#stringify" class="tsd-kind-icon">stringify</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="common_strings.html#stringifypattern" class="tsd-kind-icon">stringify<wbr>Pattern</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported"><a href="common_strings.html#_fromjson" class="tsd-kind-icon">_from<wbr>Json</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported"><a href="common_strings.html#_tojson" class="tsd-kind-icon">_to<wbr>Json</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-external"><a href="common_strings.html#beforeaftersubstr" class="tsd-kind-icon">before<wbr>After<wbr>Substr</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-external"><a href="common_strings.html#fntostring" class="tsd-kind-icon">fn<wbr>ToString</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-external"><a href="common_strings.html#functiontostring" class="tsd-kind-icon">function<wbr>ToString</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-external"><a href="common_strings.html#joinneighborsr" class="tsd-kind-icon">join<wbr>NeighborsR</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-external"><a href="common_strings.html#kebobstring" class="tsd-kind-icon">kebob<wbr>String</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-external"><a href="common_strings.html#maxlength" class="tsd-kind-icon">max<wbr>Length</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-external"><a href="common_strings.html#padstring" class="tsd-kind-icon">pad<wbr>String</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported"><a href="common_strings.html#promisetostring" class="tsd-kind-icon">promise<wbr>ToString</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-external"><a href="common_strings.html#splitondelim" class="tsd-kind-icon">split<wbr>OnDelim</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-external"><a href="common_strings.html#stringify" class="tsd-kind-icon">stringify</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported"><a href="common_strings.html#stringifypattern" class="tsd-kind-icon">stringify<wbr>Pattern</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
+			<section class="tsd-panel-group tsd-member-group tsd-is-external tsd-is-not-exported">
 				<h2>Variables</h2>
-				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
 					<a name="stringifypatternfn" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>stringify<wbr>Pattern<wbr>Fn</h3>-->
-					<!---->
-					<div class="tsd-signature tsd-kind-icon">stringify<wbr>Pattern<wbr>Fn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
+					<!--
+        <h3>stringify<wbr>Pattern<wbr>Fn</h3>
+    -->
+					<div class="tsd-signature tsd-kind-icon">stringify<wbr>Pattern<wbr>Fn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span><span class="tsd-signature-symbol"> =&nbsp;null</span></div>
 					<div class="tsd-declaration">
 					</div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/common/strings.ts#L74">common/strings.ts:74</a></li>
-						</ul>
-					</aside>
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
 						<ul class="tsd-parameters">
@@ -136,7 +137,7 @@ redirect_from: /docs/latest/modules/common_strings.html
 										<h4 class="tsd-parameters-title">Parameters</h4>
 										<ul class="tsd-parameters">
 											<li>
-												<h5>val: <span class="tsd-signature-type">any</span></h5>
+												<h5>val <span class="tsd-signature-type">any</span></h5>
 											</li>
 										</ul>
 										<div class="tsd-returns">
@@ -147,16 +148,21 @@ redirect_from: /docs/latest/modules/common_strings.html
 							</li>
 						</ul>
 					</div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/common/strings.ts#L80">ui-router-core/src/common/strings.ts:80</a></li>
+						</ul>
+					</aside>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group ">
+			<section class="tsd-panel-group tsd-member-group tsd-is-external">
 				<h2>Functions</h2>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
 					<a name="_fromjson" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>_from<wbr>Json</h3>-->
-					<!---->
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<!--
+        <h3>_from<wbr>Json</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
 						<li class="tsd-signature tsd-kind-icon">_from<wbr>Json<span class="tsd-signature-symbol">(</span>json<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
@@ -164,7 +170,7 @@ redirect_from: /docs/latest/modules/common_strings.html
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>json: <span class="tsd-signature-type">string</span></h5>
+									<h5>json <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
 							<div class="tsd-returns">
@@ -173,17 +179,17 @@ redirect_from: /docs/latest/modules/common_strings.html
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/common/strings.ts#L48">common/strings.ts:48</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/common/strings.ts#L54">ui-router-core/src/common/strings.ts:54</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
 					<a name="_tojson" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>_to<wbr>Json</h3>-->
-					<!---->
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<!--
+        <h3>_to<wbr>Json</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
 						<li class="tsd-signature tsd-kind-icon">_to<wbr>Json<span class="tsd-signature-symbol">(</span>obj<span class="tsd-signature-symbol">: </span><a href="../interfaces/common.obj.html" class="tsd-signature-type">Obj</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
@@ -191,7 +197,7 @@ redirect_from: /docs/latest/modules/common_strings.html
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>obj: <a href="../interfaces/common.obj.html" class="tsd-signature-type">Obj</a></h5>
+									<h5>obj <a href="../interfaces/common.obj.html" class="tsd-signature-type">Obj</a></h5>
 								</li>
 							</ul>
 							<div class="tsd-returns">
@@ -200,17 +206,17 @@ redirect_from: /docs/latest/modules/common_strings.html
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/common/strings.ts#L44">common/strings.ts:44</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/common/strings.ts#L50">ui-router-core/src/common/strings.ts:50</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-external">
 					<a name="beforeaftersubstr" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>before<wbr>After<wbr>Substr</h3>-->
-					<!---->
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
+					<!--
+        <h3>before<wbr>After<wbr>Substr</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-external">
 						<li class="tsd-signature tsd-kind-icon">before<wbr>After<wbr>Substr<span class="tsd-signature-symbol">(</span>char<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span></li>
 						<li class="tsd-header">
 							<p> Returns a function that splits a string on a character or substring </p>
@@ -226,7 +232,7 @@ redirect_from: /docs/latest/modules/common_strings.html
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>char: <span class="tsd-signature-type">string</span></h5>
+									<h5>char <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
 							<div class="tsd-returns">
@@ -235,17 +241,17 @@ redirect_from: /docs/latest/modules/common_strings.html
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/common/strings.ts#L108">common/strings.ts:108</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/common/strings.ts#L114">ui-router-core/src/common/strings.ts:114</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-external">
 					<a name="fntostring" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>fn<wbr>ToString</h3>-->
-					<!---->
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
+					<!--
+        <h3>fn<wbr>ToString</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-external">
 						<li class="tsd-signature tsd-kind-icon">fn<wbr>ToString<span class="tsd-signature-symbol">(</span>fn<span class="tsd-signature-symbol">: </span><a href="common.html#iinjectable" class="tsd-signature-type">IInjectable</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
@@ -253,7 +259,7 @@ redirect_from: /docs/latest/modules/common_strings.html
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>fn: <a href="common.html#iinjectable" class="tsd-signature-type">IInjectable</a></h5>
+									<h5>fn <a href="common.html#iinjectable" class="tsd-signature-type">IInjectable</a></h5>
 								</li>
 							</ul>
 							<div class="tsd-returns">
@@ -262,17 +268,17 @@ redirect_from: /docs/latest/modules/common_strings.html
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/common/strings.ts#L69">common/strings.ts:69</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/common/strings.ts#L75">ui-router-core/src/common/strings.ts:75</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-external">
 					<a name="functiontostring" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>function<wbr>ToString</h3>-->
-					<!---->
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
+					<!--
+        <h3>function<wbr>ToString</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-external">
 						<li class="tsd-signature tsd-kind-icon">function<wbr>ToString<span class="tsd-signature-symbol">(</span>fn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
@@ -280,7 +286,7 @@ redirect_from: /docs/latest/modules/common_strings.html
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>fn: <span class="tsd-signature-type">Function</span></h5>
+									<h5>fn <span class="tsd-signature-type">Function</span></h5>
 								</li>
 							</ul>
 							<div class="tsd-returns">
@@ -289,17 +295,61 @@ redirect_from: /docs/latest/modules/common_strings.html
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/common/strings.ts#L57">common/strings.ts:57</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/common/strings.ts#L63">ui-router-core/src/common/strings.ts:63</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-external">
+					<a name="joinneighborsr" class="tsd-anchor"></a>
+					<!--
+        <h3>join<wbr>NeighborsR</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">join<wbr>NeighborsR<span class="tsd-signature-symbol">(</span>acc<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span>, x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-header">
+							<p> Reduce fn that joins neighboring strings </p>
+						</li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Reduce fn that joins neighboring strings</p>
+								</div>
+								<p>Given an array of strings, returns a new array
+								where all neighboring strings have been joined.</p>
+								<h4 id="example-">Example:</h4>
+								<pre><code class="lang-js"><span class="hljs-keyword">let</span> arr = [<span class="hljs-string">"foo"</span>, <span class="hljs-string">"bar"</span>, <span class="hljs-number">1</span>, <span class="hljs-string">"baz"</span>, <span class="hljs-string">""</span>, <span class="hljs-string">"qux"</span> ];
+arr.reduce(joinNeighborsR, []) <span class="hljs-comment">// ["foobar", 1, "bazqux" ]</span>
+</code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>acc <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+								<li>
+									<h5>x <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<div class="tsd-returns">
+								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							</div>
+							<hr>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/common/strings.ts#L150">ui-router-core/src/common/strings.ts:150</a></li>
+								</ul>
+						</aside>        </li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-external">
 					<a name="kebobstring" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>kebob<wbr>String</h3>-->
-					<!---->
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
+					<!--
+        <h3>kebob<wbr>String</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-external">
 						<li class="tsd-signature tsd-kind-icon">kebob<wbr>String<span class="tsd-signature-symbol">(</span>camelCase<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
@@ -307,7 +357,7 @@ redirect_from: /docs/latest/modules/common_strings.html
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>camelCase: <span class="tsd-signature-type">string</span></h5>
+									<h5>camelCase <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
 							<div class="tsd-returns">
@@ -316,17 +366,17 @@ redirect_from: /docs/latest/modules/common_strings.html
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/common/strings.ts#L38">common/strings.ts:38</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/common/strings.ts#L44">ui-router-core/src/common/strings.ts:44</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-external">
 					<a name="maxlength" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>max<wbr>Length</h3>-->
-					<!---->
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
+					<!--
+        <h3>max<wbr>Length</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-external">
 						<li class="tsd-signature tsd-kind-icon">max<wbr>Length<span class="tsd-signature-symbol">(</span>max<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, str<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 						<li class="tsd-header">
 							<p> Returns a string shortened to a maximum length </p>
@@ -344,13 +394,13 @@ redirect_from: /docs/latest/modules/common_strings.html
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>max: <span class="tsd-signature-type">number</span></h5>
+									<h5>max <span class="tsd-signature-type">number</span></h5>
 									:         <div class="tsd-comment tsd-typography">
 										<p>the maximum length of the string to return</p>
 									</div>
 								</li>
 								<li>
-									<h5>str: <span class="tsd-signature-type">string</span></h5>
+									<h5>str <span class="tsd-signature-type">string</span></h5>
 									:         <div class="tsd-comment tsd-typography">
 										<p>the input string</p>
 									</div>
@@ -362,17 +412,17 @@ redirect_from: /docs/latest/modules/common_strings.html
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/common/strings.ts#L19">common/strings.ts:19</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/common/strings.ts#L25">ui-router-core/src/common/strings.ts:25</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-external">
 					<a name="padstring" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>pad<wbr>String</h3>-->
-					<!---->
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
+					<!--
+        <h3>pad<wbr>String</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-external">
 						<li class="tsd-signature tsd-kind-icon">pad<wbr>String<span class="tsd-signature-symbol">(</span>length<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, str<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 						<li class="tsd-header">
 							<p> Returns a string, with spaces added to the end, up to a desired str length </p>
@@ -390,13 +440,13 @@ redirect_from: /docs/latest/modules/common_strings.html
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>length: <span class="tsd-signature-type">number</span></h5>
+									<h5>length <span class="tsd-signature-type">number</span></h5>
 									:         <div class="tsd-comment tsd-typography">
 										<p>the desired length of the string to return</p>
 									</div>
 								</li>
 								<li>
-									<h5>str: <span class="tsd-signature-type">string</span></h5>
+									<h5>str <span class="tsd-signature-type">string</span></h5>
 									:         <div class="tsd-comment tsd-typography">
 										<p>the input string</p>
 									</div>
@@ -408,17 +458,17 @@ redirect_from: /docs/latest/modules/common_strings.html
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/common/strings.ts#L33">common/strings.ts:33</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/common/strings.ts#L39">ui-router-core/src/common/strings.ts:39</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
 					<a name="promisetostring" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>promise<wbr>ToString</h3>-->
-					<!---->
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<!--
+        <h3>promise<wbr>ToString</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
 						<li class="tsd-signature tsd-kind-icon">promise<wbr>ToString<span class="tsd-signature-symbol">(</span>p<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
@@ -426,7 +476,7 @@ redirect_from: /docs/latest/modules/common_strings.html
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>p: <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5>p <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 							</ul>
 							<div class="tsd-returns">
@@ -435,17 +485,57 @@ redirect_from: /docs/latest/modules/common_strings.html
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/common/strings.ts#L53">common/strings.ts:53</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/common/strings.ts#L59">ui-router-core/src/common/strings.ts:59</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-external">
+					<a name="splitondelim" class="tsd-anchor"></a>
+					<!--
+        <h3>split<wbr>OnDelim</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">split<wbr>OnDelim<span class="tsd-signature-symbol">(</span>delim<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span></li>
+						<li class="tsd-header">
+							<p> Splits on a delimiter, but returns the delimiters in the array </p>
+						</li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Splits on a delimiter, but returns the delimiters in the array</p>
+								</div>
+								<h4 id="example-">Example:</h4>
+								<pre><code class="lang-js"><span class="hljs-keyword">var</span> splitOnSlashes = splitOnDelim(<span class="hljs-string">'/'</span>);
+splitOnSlashes(<span class="hljs-string">"/foo"</span>); <span class="hljs-comment">// ["/", "foo"]</span>
+splitOnSlashes(<span class="hljs-string">"/foo/"</span>); <span class="hljs-comment">// ["/", "foo", "/"]</span>
+</code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>delim <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<div class="tsd-returns">
+								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">(Anonymous function)</span></h4>
+							</div>
+							<hr>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/common/strings.ts#L131">ui-router-core/src/common/strings.ts:131</a></li>
+								</ul>
+						</aside>        </li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-external">
 					<a name="stringify" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>stringify</h3>-->
-					<!---->
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
+					<!--
+        <h3>stringify</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-external">
 						<li class="tsd-signature tsd-kind-icon">stringify<span class="tsd-signature-symbol">(</span>o<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
@@ -453,7 +543,7 @@ redirect_from: /docs/latest/modules/common_strings.html
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>o: <span class="tsd-signature-type">any</span></h5>
+									<h5>o <span class="tsd-signature-type">any</span></h5>
 								</li>
 							</ul>
 							<div class="tsd-returns">
@@ -462,17 +552,17 @@ redirect_from: /docs/latest/modules/common_strings.html
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/common/strings.ts#L93">common/strings.ts:93</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/common/strings.ts#L99">ui-router-core/src/common/strings.ts:99</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
 					<a name="stringifypattern" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>stringify<wbr>Pattern</h3>-->
-					<!---->
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<!--
+        <h3>stringify<wbr>Pattern</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
 						<li class="tsd-signature tsd-kind-icon">stringify<wbr>Pattern<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
@@ -480,7 +570,7 @@ redirect_from: /docs/latest/modules/common_strings.html
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>value: <span class="tsd-signature-type">any</span></h5>
+									<h5>value <span class="tsd-signature-type">any</span></h5>
 								</li>
 							</ul>
 							<div class="tsd-returns">
@@ -489,7 +579,7 @@ redirect_from: /docs/latest/modules/common_strings.html
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/common/strings.ts#L75">common/strings.ts:75</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/common/strings.ts#L81">ui-router-core/src/common/strings.ts:81</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
@@ -500,49 +590,25 @@ redirect_from: /docs/latest/modules/common_strings.html
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../globals.html"><em>Globals</em></a>
+						<a href="../index.html"><em>angular-<wbr>ui-<wbr>router</em></a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="common.html">common</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="common_hof.html">common_<wbr>hof</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="common_predicates.html">common_<wbr>predicates</a>
-					</li>
-					<li class="current tsd-kind-external-module">
-						<a href="common_strings.html">common_<wbr>strings</a>
+					<li class="label tsd-is-external">
+						<span>Public API</span>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="core.html">core</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="hooks.html">hooks</a>
+						<a href="directives.html">directives</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="justjs.html">justjs</a>
+						<a href="injectables.html">injectables</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="ng1.html">ng1</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="ng1_directives.html">ng1_<wbr>directives</a>
-					</li>
-					<li class=" tsd-kind-external-module">
 						<a href="ng1_state_events.html">ng1_<wbr>state_<wbr>events</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="ng2.html">ng2</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="ng2_directives.html">ng2_<wbr>directives</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="params.html">params</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="path.html">path</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="resolve.html">resolve</a>
@@ -559,47 +625,77 @@ redirect_from: /docs/latest/modules/common_strings.html
 					<li class=" tsd-kind-external-module">
 						<a href="url.html">url</a>
 					</li>
-					<li class=" tsd-kind-external-module">
+					<li class="label tsd-is-external">
+						<span>Internal UI-<wbr><wbr>Router API</span>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="common.html">common</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="common_hof.html">common_<wbr>hof</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="common_predicates.html">common_<wbr>predicates</a>
+					</li>
+					<li class="current tsd-kind-external-module tsd-is-external">
+						<a href="common_strings.html">common_<wbr>strings</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="hooks.html">hooks</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="params.html">params</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="path.html">path</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
 						<a href="view.html">view</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
 						<a href="common_strings.html#stringifypatternfn" class="tsd-kind-icon">stringify<wbr>Pattern<wbr>Fn</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
 						<a href="common_strings.html#_fromjson" class="tsd-kind-icon">_from<wbr>Json</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
 						<a href="common_strings.html#_tojson" class="tsd-kind-icon">_to<wbr>Json</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-external">
 						<a href="common_strings.html#beforeaftersubstr" class="tsd-kind-icon">before<wbr>After<wbr>Substr</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-external">
 						<a href="common_strings.html#fntostring" class="tsd-kind-icon">fn<wbr>ToString</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-external">
 						<a href="common_strings.html#functiontostring" class="tsd-kind-icon">function<wbr>ToString</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-external">
+						<a href="common_strings.html#joinneighborsr" class="tsd-kind-icon">join<wbr>NeighborsR</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-external">
 						<a href="common_strings.html#kebobstring" class="tsd-kind-icon">kebob<wbr>String</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-external">
 						<a href="common_strings.html#maxlength" class="tsd-kind-icon">max<wbr>Length</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-external">
 						<a href="common_strings.html#padstring" class="tsd-kind-icon">pad<wbr>String</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
 						<a href="common_strings.html#promisetostring" class="tsd-kind-icon">promise<wbr>ToString</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-external">
+						<a href="common_strings.html#splitondelim" class="tsd-kind-icon">split<wbr>OnDelim</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-external">
 						<a href="common_strings.html#stringify" class="tsd-kind-icon">stringify</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
 						<a href="common_strings.html#stringifypattern" class="tsd-kind-icon">stringify<wbr>Pattern</a>
 					</li>
 				</ul>

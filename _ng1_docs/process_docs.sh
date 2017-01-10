@@ -1,5 +1,7 @@
 #!/bin/sh
 # Find legacy docs and frame them
+pushd `dirname $0`;
+
 for file in `ls */index.html` ; do
   if grep -q ".title ng-bind-template=.UI Router: {{partialTitle}}..Docs..title." $file ; then
     if head -n 1 $file | grep -q "^---$" ; then

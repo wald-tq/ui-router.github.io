@@ -1,17 +1,17 @@
 ---
-redirect_from: /docs/latest/classes/common.queue.html
 ---
 <!doctype html>
 <html class="default no-js">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Queue | UI-Router</title>
+	<title>Queue | angular-ui-router</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
-	<link rel="stylesheet" href="../assets/css/typedoctheme.css">
+	<link rel="stylesheet" href="../assets/css/uirouter.css">
 	<script src="../assets/js/modernizr.js"></script>
+	<script src="../assets/js/reset.js"></script>
 </head>
 <body>
 <header>
@@ -27,26 +27,31 @@ redirect_from: /docs/latest/classes/common.queue.html
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">UI-Router</a>
+					<a href="../index.html" class="title">angular-ui-router</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
 						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
 						<div class="tsd-filter-group">
-							<div class="tsd-select" id="tsd-filter-visibility">
-								<span class="tsd-select-label">All</span>
-								<ul class="tsd-select-list">
-									<li data-value="public">Public</li>
-									<li data-value="protected">Public/Protected</li>
-									<li data-value="private" class="selected">All</li>
-								</ul>
-							</div>
-							<input type="checkbox" id="tsd-filter-inherited" checked />
-							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<!--
+                            <div class="tsd-select" id="tsd-filter-visibility">
+                                <span class="tsd-select-label">All</span>
+                                <ul class="tsd-select-list">
+                                    <li data-value="public">Public</li>
+                                    <li data-value="protected">Public/Protected</li>
+                                    <li data-value="private" class="selected">All</li>
+                                </ul>
+                            </div>
+
+                            <input type="checkbox" id="tsd-filter-inherited" checked />
+                            <label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+                            -->
 							<input type="checkbox" id="tsd-filter-externals" checked />
-							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
-							<input type="checkbox" id="tsd-filter-only-exported" />
-							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+							<label class="tsd-widget" for="tsd-filter-externals">Internal UI-Router API</label>
+							<!--
+                                <input type="checkbox" id="tsd-filter-only-exported" />
+                                <label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+                            -->
 						</div>
 					</div>
 					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
@@ -58,7 +63,7 @@ redirect_from: /docs/latest/classes/common.queue.html
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../globals.html">Globals</a>
+					<a href="../index.html">angular-ui-router</a>
 				</li>
 				<li>
 					<a href="../modules/common.html">common</a>
@@ -101,42 +106,42 @@ redirect_from: /docs/latest/classes/common.queue.html
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
-						<section class="tsd-index-section ">
+						<section class="tsd-index-section tsd-is-external">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="common.queue.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-external"><a href="common.queue.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
-						<section class="tsd-index-section tsd-is-private tsd-is-private-protected">
+						<section class="tsd-index-section tsd-is-private tsd-is-private-protected tsd-is-external">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="common.queue.html#_items" class="tsd-kind-icon">_items</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="common.queue.html#_limit" class="tsd-kind-icon">_limit</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-external"><a href="common.queue.html#_items" class="tsd-kind-icon">_items</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-external"><a href="common.queue.html#_limit" class="tsd-kind-icon">_limit</a></li>
 							</ul>
 						</section>
-						<section class="tsd-index-section ">
+						<section class="tsd-index-section tsd-is-external">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="common.queue.html#clear" class="tsd-kind-icon">clear</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="common.queue.html#dequeue" class="tsd-kind-icon">dequeue</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="common.queue.html#enqueue" class="tsd-kind-icon">enqueue</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="common.queue.html#peekhead" class="tsd-kind-icon">peek<wbr>Head</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="common.queue.html#peektail" class="tsd-kind-icon">peek<wbr>Tail</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="common.queue.html#remove" class="tsd-kind-icon">remove</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="common.queue.html#size" class="tsd-kind-icon">size</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="common.queue.html#clear" class="tsd-kind-icon">clear</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="common.queue.html#dequeue" class="tsd-kind-icon">dequeue</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="common.queue.html#enqueue" class="tsd-kind-icon">enqueue</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="common.queue.html#peekhead" class="tsd-kind-icon">peek<wbr>Head</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="common.queue.html#peektail" class="tsd-kind-icon">peek<wbr>Tail</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="common.queue.html#remove" class="tsd-kind-icon">remove</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="common.queue.html#size" class="tsd-kind-icon">size</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group ">
+			<section class="tsd-panel-group tsd-member-group tsd-is-external">
 				<h2>Constructors</h2>
-				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class tsd-is-external">
 					<a name="constructor" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>constructor</h3>-->
-					<!---->
-					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+					<!--
+        <h3>constructor</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-external">
 						<li class="tsd-signature tsd-kind-icon">new <wbr>Queue<span class="tsd-signature-symbol">(</span>_items<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span>, _limit<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="common.queue.html" class="tsd-signature-type">Queue</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
@@ -144,10 +149,10 @@ redirect_from: /docs/latest/classes/common.queue.html
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>_items <span class="tsd-flag ts-flagDefault value">Default value</span>: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[]</span></h5>
+									<h5>_items: <span class="tsd-flag ts-flagDefault value">Default value</span>&nbsp; <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[]</span></h5>
 								</li>
 								<li>
-									<h5>_limit <span class="tsd-flag ts-flagDefault value">Default value</span>: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;null</span></h5>
+									<h5>_limit: <span class="tsd-flag ts-flagDefault value">Default value</span>&nbsp; <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;null</span></h5>
 								</li>
 							</ul>
 							<div class="tsd-returns">
@@ -156,51 +161,51 @@ redirect_from: /docs/latest/classes/common.queue.html
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/common/queue.ts#L3">common/queue.ts:3</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/common/queue.ts#L5">ui-router-core/src/common/queue.ts:5</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-private tsd-is-private-protected">
+			<section class="tsd-panel-group tsd-member-group tsd-is-private tsd-is-private-protected tsd-is-external">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-external">
 					<a name="_items" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3><span class="tsd-flag ts-flagPrivate">Private</span> _items</h3>-->
-					<!---->
+					<!--
+        <h3><span class="tsd-flag ts-flagPrivate">Private</span> _items</h3>
+    -->
 					<div class="tsd-signature tsd-kind-icon">_items<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></div>
 					<div class="tsd-declaration">
 					</div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/common/queue.ts#L4">common/queue.ts:4</a></li>
+							<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/common/queue.ts#L6">ui-router-core/src/common/queue.ts:6</a></li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-external">
 					<a name="_limit" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3><span class="tsd-flag ts-flagPrivate">Private</span> _limit</h3>-->
-					<!---->
+					<!--
+        <h3><span class="tsd-flag ts-flagPrivate">Private</span> _limit</h3>
+    -->
 					<div class="tsd-signature tsd-kind-icon">_limit<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<div class="tsd-declaration">
 					</div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/common/queue.ts#L4">common/queue.ts:4</a></li>
+							<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/common/queue.ts#L6">ui-router-core/src/common/queue.ts:6</a></li>
 						</ul>
 					</aside>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group ">
+			<section class="tsd-panel-group tsd-member-group tsd-is-external">
 				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
 					<a name="clear" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>clear</h3>-->
-					<!---->
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<!--
+        <h3>clear</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
 						<li class="tsd-signature tsd-kind-icon">clear<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
@@ -211,17 +216,17 @@ redirect_from: /docs/latest/classes/common.queue.html
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/common/queue.ts#L18">common/queue.ts:18</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/common/queue.ts#L20">ui-router-core/src/common/queue.ts:20</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
 					<a name="dequeue" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>dequeue</h3>-->
-					<!---->
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<!--
+        <h3>dequeue</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
 						<li class="tsd-signature tsd-kind-icon">dequeue<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
@@ -232,17 +237,17 @@ redirect_from: /docs/latest/classes/common.queue.html
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/common/queue.ts#L13">common/queue.ts:13</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/common/queue.ts#L15">ui-router-core/src/common/queue.ts:15</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
 					<a name="enqueue" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>enqueue</h3>-->
-					<!---->
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<!--
+        <h3>enqueue</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
 						<li class="tsd-signature tsd-kind-icon">enqueue<span class="tsd-signature-symbol">(</span>item<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
@@ -250,7 +255,7 @@ redirect_from: /docs/latest/classes/common.queue.html
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>item: <span class="tsd-signature-type">T</span></h5>
+									<h5>item <span class="tsd-signature-type">T</span></h5>
 								</li>
 							</ul>
 							<div class="tsd-returns">
@@ -259,17 +264,17 @@ redirect_from: /docs/latest/classes/common.queue.html
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/common/queue.ts#L6">common/queue.ts:6</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/common/queue.ts#L8">ui-router-core/src/common/queue.ts:8</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
 					<a name="peekhead" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>peek<wbr>Head</h3>-->
-					<!---->
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<!--
+        <h3>peek<wbr>Head</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
 						<li class="tsd-signature tsd-kind-icon">peek<wbr>Head<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
@@ -280,17 +285,17 @@ redirect_from: /docs/latest/classes/common.queue.html
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/common/queue.ts#L37">common/queue.ts:37</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/common/queue.ts#L39">ui-router-core/src/common/queue.ts:39</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
 					<a name="peektail" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>peek<wbr>Tail</h3>-->
-					<!---->
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<!--
+        <h3>peek<wbr>Tail</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
 						<li class="tsd-signature tsd-kind-icon">peek<wbr>Tail<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
@@ -301,17 +306,17 @@ redirect_from: /docs/latest/classes/common.queue.html
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/common/queue.ts#L33">common/queue.ts:33</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/common/queue.ts#L35">ui-router-core/src/common/queue.ts:35</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
 					<a name="remove" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>remove</h3>-->
-					<!---->
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<!--
+        <h3>remove</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
 						<li class="tsd-signature tsd-kind-icon">remove<span class="tsd-signature-symbol">(</span>item<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
@@ -319,7 +324,7 @@ redirect_from: /docs/latest/classes/common.queue.html
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>item: <span class="tsd-signature-type">T</span></h5>
+									<h5>item <span class="tsd-signature-type">T</span></h5>
 								</li>
 							</ul>
 							<div class="tsd-returns">
@@ -328,17 +333,17 @@ redirect_from: /docs/latest/classes/common.queue.html
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/common/queue.ts#L28">common/queue.ts:28</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/common/queue.ts#L30">ui-router-core/src/common/queue.ts:30</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
 					<a name="size" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>size</h3>-->
-					<!---->
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<!--
+        <h3>size</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
 						<li class="tsd-signature tsd-kind-icon">size<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
@@ -349,7 +354,7 @@ redirect_from: /docs/latest/classes/common.queue.html
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/common/queue.ts#L24">common/queue.ts:24</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/common/queue.ts#L26">ui-router-core/src/common/queue.ts:26</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
@@ -360,49 +365,25 @@ redirect_from: /docs/latest/classes/common.queue.html
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../globals.html"><em>Globals</em></a>
+						<a href="../index.html"><em>angular-<wbr>ui-<wbr>router</em></a>
 					</li>
-					<li class="current tsd-kind-external-module">
-						<a href="../modules/common.html">common</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/common_hof.html">common_<wbr>hof</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/common_predicates.html">common_<wbr>predicates</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/common_strings.html">common_<wbr>strings</a>
+					<li class="label tsd-is-external">
+						<span>Public API</span>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/core.html">core</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/hooks.html">hooks</a>
+						<a href="../modules/directives.html">directives</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/justjs.html">justjs</a>
+						<a href="../modules/injectables.html">injectables</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/ng1.html">ng1</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/ng1_directives.html">ng1_<wbr>directives</a>
-					</li>
-					<li class=" tsd-kind-external-module">
 						<a href="../modules/ng1_state_events.html">ng1_<wbr>state_<wbr>events</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/ng2.html">ng2</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/ng2_directives.html">ng2_<wbr>directives</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/params.html">params</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/path.html">path</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/resolve.html">resolve</a>
@@ -419,7 +400,31 @@ redirect_from: /docs/latest/classes/common.queue.html
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/url.html">url</a>
 					</li>
-					<li class=" tsd-kind-external-module">
+					<li class="label tsd-is-external">
+						<span>Internal UI-<wbr><wbr>Router API</span>
+					</li>
+					<li class="current tsd-kind-external-module tsd-is-external">
+						<a href="../modules/common.html">common</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/common_hof.html">common_<wbr>hof</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/common_predicates.html">common_<wbr>predicates</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/common_strings.html">common_<wbr>strings</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/hooks.html">hooks</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/params.html">params</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/path.html">path</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
 						<a href="../modules/view.html">view</a>
 					</li>
 				</ul>
@@ -428,37 +433,37 @@ redirect_from: /docs/latest/classes/common.queue.html
 				<ul class="before-current">
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-class tsd-parent-kind-external-module tsd-has-type-parameter">
+					<li class="current tsd-kind-class tsd-parent-kind-external-module tsd-has-type-parameter tsd-is-external">
 						<a href="common.queue.html" class="tsd-kind-icon">Queue</a>
 						<ul>
-							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-external">
 								<a href="common.queue.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-external">
 								<a href="common.queue.html#_items" class="tsd-kind-icon">_items</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-external">
 								<a href="common.queue.html#_limit" class="tsd-kind-icon">_limit</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
 								<a href="common.queue.html#clear" class="tsd-kind-icon">clear</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
 								<a href="common.queue.html#dequeue" class="tsd-kind-icon">dequeue</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
 								<a href="common.queue.html#enqueue" class="tsd-kind-icon">enqueue</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
 								<a href="common.queue.html#peekhead" class="tsd-kind-icon">peek<wbr>Head</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
 								<a href="common.queue.html#peektail" class="tsd-kind-icon">peek<wbr>Tail</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
 								<a href="common.queue.html#remove" class="tsd-kind-icon">remove</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
 								<a href="common.queue.html#size" class="tsd-kind-icon">size</a>
 							</li>
 						</ul>

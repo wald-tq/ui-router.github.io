@@ -1,17 +1,17 @@
 ---
-redirect_from: /docs/latest/interfaces/params.rawparams.html
 ---
 <!doctype html>
 <html class="default no-js">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>RawParams | UI-Router</title>
+	<title>RawParams | angular-ui-router</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
-	<link rel="stylesheet" href="../assets/css/typedoctheme.css">
+	<link rel="stylesheet" href="../assets/css/uirouter.css">
 	<script src="../assets/js/modernizr.js"></script>
+	<script src="../assets/js/reset.js"></script>
 </head>
 <body>
 <header>
@@ -27,26 +27,31 @@ redirect_from: /docs/latest/interfaces/params.rawparams.html
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">UI-Router</a>
+					<a href="../index.html" class="title">angular-ui-router</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
 						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
 						<div class="tsd-filter-group">
-							<div class="tsd-select" id="tsd-filter-visibility">
-								<span class="tsd-select-label">All</span>
-								<ul class="tsd-select-list">
-									<li data-value="public">Public</li>
-									<li data-value="protected">Public/Protected</li>
-									<li data-value="private" class="selected">All</li>
-								</ul>
-							</div>
-							<input type="checkbox" id="tsd-filter-inherited" checked />
-							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<!--
+                            <div class="tsd-select" id="tsd-filter-visibility">
+                                <span class="tsd-select-label">All</span>
+                                <ul class="tsd-select-list">
+                                    <li data-value="public">Public</li>
+                                    <li data-value="protected">Public/Protected</li>
+                                    <li data-value="private" class="selected">All</li>
+                                </ul>
+                            </div>
+
+                            <input type="checkbox" id="tsd-filter-inherited" checked />
+                            <label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+                            -->
 							<input type="checkbox" id="tsd-filter-externals" checked />
-							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
-							<input type="checkbox" id="tsd-filter-only-exported" />
-							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+							<label class="tsd-widget" for="tsd-filter-externals">Internal UI-Router API</label>
+							<!--
+                                <input type="checkbox" id="tsd-filter-only-exported" />
+                                <label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+                            -->
 						</div>
 					</div>
 					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
@@ -58,7 +63,7 @@ redirect_from: /docs/latest/interfaces/params.rawparams.html
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../globals.html">Globals</a>
+					<a href="../index.html">angular-ui-router</a>
 				</li>
 				<li>
 					<a href="../modules/params.html">params</a>
@@ -80,6 +85,12 @@ redirect_from: /docs/latest/interfaces/params.rawparams.html
 						<p>Parameter values</p>
 					</div>
 					<p>An object containing state parameter key/value pairs</p>
+					<h4 id="example-">Example:</h4>
+					<pre><code class="lang-js">{
+  <span class="hljs-attr">userId</span>: <span class="hljs-number">353474</span>,
+  <span class="hljs-attr">folderId</span>: <span class="hljs-string">'inbox'</span>
+}
+</code></pre>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -98,6 +109,12 @@ redirect_from: /docs/latest/interfaces/params.rawparams.html
 						<p>Parameter values</p>
 					</div>
 					<p>An object containing state parameter key/value pairs</p>
+					<h4 id="example-">Example:</h4>
+					<pre><code class="lang-js">{
+  <span class="hljs-attr">userId</span>: <span class="hljs-number">353474</span>,
+  <span class="hljs-attr">folderId</span>: <span class="hljs-string">'inbox'</span>
+}
+</code></pre>
 				</div>
 			</section>
 		</div>
@@ -105,49 +122,25 @@ redirect_from: /docs/latest/interfaces/params.rawparams.html
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../globals.html"><em>Globals</em></a>
+						<a href="../index.html"><em>angular-<wbr>ui-<wbr>router</em></a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/common.html">common</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/common_hof.html">common_<wbr>hof</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/common_predicates.html">common_<wbr>predicates</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/common_strings.html">common_<wbr>strings</a>
+					<li class="label tsd-is-external">
+						<span>Public API</span>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/core.html">core</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/hooks.html">hooks</a>
+						<a href="../modules/directives.html">directives</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/justjs.html">justjs</a>
+						<a href="../modules/injectables.html">injectables</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/ng1.html">ng1</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/ng1_directives.html">ng1_<wbr>directives</a>
-					</li>
-					<li class=" tsd-kind-external-module">
 						<a href="../modules/ng1_state_events.html">ng1_<wbr>state_<wbr>events</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/ng2.html">ng2</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/ng2_directives.html">ng2_<wbr>directives</a>
-					</li>
-					<li class="current tsd-kind-external-module">
-						<a href="../modules/params.html">params</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/path.html">path</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/resolve.html">resolve</a>
@@ -164,26 +157,50 @@ redirect_from: /docs/latest/interfaces/params.rawparams.html
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/url.html">url</a>
 					</li>
-					<li class=" tsd-kind-external-module">
+					<li class="label tsd-is-external">
+						<span>Internal UI-<wbr><wbr>Router API</span>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/common.html">common</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/common_hof.html">common_<wbr>hof</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/common_predicates.html">common_<wbr>predicates</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/common_strings.html">common_<wbr>strings</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/hooks.html">hooks</a>
+					</li>
+					<li class="current tsd-kind-external-module tsd-is-external">
+						<a href="../modules/params.html">params</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/path.html">path</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
 						<a href="../modules/view.html">view</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-enum tsd-parent-kind-external-module">
+					<li class=" tsd-kind-enum tsd-parent-kind-external-module tsd-is-external">
 						<a href="../enums/params.deftype.html" class="tsd-kind-icon">Def<wbr>Type</a>
 					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-external-module">
+					<li class=" tsd-kind-class tsd-parent-kind-external-module tsd-is-external">
 						<a href="../classes/params.param.html" class="tsd-kind-icon">Param</a>
 					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-external-module">
+					<li class=" tsd-kind-class tsd-parent-kind-external-module tsd-is-external">
 						<a href="../classes/params.paramtype.html" class="tsd-kind-icon">Param<wbr>Type</a>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-external-module">
 						<a href="../classes/params.paramtypes.html" class="tsd-kind-icon">Param<wbr>Types</a>
 					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-external-module">
+					<li class=" tsd-kind-class tsd-parent-kind-external-module tsd-is-external">
 						<a href="../classes/params.stateparams.html" class="tsd-kind-icon">State<wbr>Params</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
@@ -199,38 +216,32 @@ redirect_from: /docs/latest/interfaces/params.rawparams.html
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-external">
 						<a href="params.replace.html" class="tsd-kind-icon">Replace</a>
 					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-external">
 						<a href="../modules/params.html#paramsorarray" class="tsd-kind-icon">Params<wbr>OrArray</a>
 					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
 						<a href="../modules/params.html#hasown" class="tsd-kind-icon">has<wbr>Own</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
 						<a href="../modules/params.html#arraytype" class="tsd-kind-icon">Array<wbr>Type</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
 						<a href="../modules/params.html#getreplace" class="tsd-kind-icon">get<wbr>Replace</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
 						<a href="../modules/params.html#getsquashpolicy" class="tsd-kind-icon">get<wbr>Squash<wbr>Policy</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
 						<a href="../modules/params.html#gettype" class="tsd-kind-icon">get<wbr>Type</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
 						<a href="../modules/params.html#isshorthand" class="tsd-kind-icon">is<wbr>Shorthand</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
 						<a href="../modules/params.html#unwrapshorthand" class="tsd-kind-icon">unwrap<wbr>Shorthand</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="../modules/params.html#valfromstring" class="tsd-kind-icon">val<wbr>From<wbr>String</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="../modules/params.html#valtostring" class="tsd-kind-icon">val<wbr>ToString</a>
 					</li>
 				</ul>
 			</nav>

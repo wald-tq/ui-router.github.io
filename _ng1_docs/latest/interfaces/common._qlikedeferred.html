@@ -1,17 +1,17 @@
 ---
-redirect_from: /docs/latest/interfaces/common._qlikedeferred.html
 ---
 <!doctype html>
 <html class="default no-js">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>$QLikeDeferred | UI-Router</title>
+	<title>$QLikeDeferred | angular-ui-router</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
-	<link rel="stylesheet" href="../assets/css/typedoctheme.css">
+	<link rel="stylesheet" href="../assets/css/uirouter.css">
 	<script src="../assets/js/modernizr.js"></script>
+	<script src="../assets/js/reset.js"></script>
 </head>
 <body>
 <header>
@@ -27,26 +27,31 @@ redirect_from: /docs/latest/interfaces/common._qlikedeferred.html
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">UI-Router</a>
+					<a href="../index.html" class="title">angular-ui-router</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
 						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
 						<div class="tsd-filter-group">
-							<div class="tsd-select" id="tsd-filter-visibility">
-								<span class="tsd-select-label">All</span>
-								<ul class="tsd-select-list">
-									<li data-value="public">Public</li>
-									<li data-value="protected">Public/Protected</li>
-									<li data-value="private" class="selected">All</li>
-								</ul>
-							</div>
-							<input type="checkbox" id="tsd-filter-inherited" checked />
-							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<!--
+                            <div class="tsd-select" id="tsd-filter-visibility">
+                                <span class="tsd-select-label">All</span>
+                                <ul class="tsd-select-list">
+                                    <li data-value="public">Public</li>
+                                    <li data-value="protected">Public/Protected</li>
+                                    <li data-value="private" class="selected">All</li>
+                                </ul>
+                            </div>
+
+                            <input type="checkbox" id="tsd-filter-inherited" checked />
+                            <label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+                            -->
 							<input type="checkbox" id="tsd-filter-externals" checked />
-							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
-							<input type="checkbox" id="tsd-filter-only-exported" />
-							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+							<label class="tsd-widget" for="tsd-filter-externals">Internal UI-Router API</label>
+							<!--
+                                <input type="checkbox" id="tsd-filter-only-exported" />
+                                <label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+                            -->
 						</div>
 					</div>
 					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
@@ -58,7 +63,7 @@ redirect_from: /docs/latest/interfaces/common._qlikedeferred.html
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../globals.html">Globals</a>
+					<a href="../index.html">angular-ui-router</a>
 				</li>
 				<li>
 					<a href="../modules/common.html">common</a>
@@ -86,46 +91,41 @@ redirect_from: /docs/latest/interfaces/common._qlikedeferred.html
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
-						<section class="tsd-index-section ">
+						<section class="tsd-index-section tsd-is-external">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="common._qlikedeferred.html#promise" class="tsd-kind-icon">promise</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="common._qlikedeferred.html#reject" class="tsd-kind-icon">reject</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="common._qlikedeferred.html#resolve" class="tsd-kind-icon">resolve</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="common._qlikedeferred.html#promise" class="tsd-kind-icon">promise</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="common._qlikedeferred.html#reject" class="tsd-kind-icon">reject</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="common._qlikedeferred.html#resolve" class="tsd-kind-icon">resolve</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group ">
+			<section class="tsd-panel-group tsd-member-group tsd-is-external">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
 					<a name="promise" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>promise</h3>-->
-					<!---->
+					<!--
+        <h3>promise</h3>
+    -->
 					<div class="tsd-signature tsd-kind-icon">promise<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<div class="tsd-declaration">
 					</div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/common/coreservices.ts#L31">common/coreservices.ts:31</a></li>
+							<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/common/coreservices.ts#L24">ui-router-core/src/common/coreservices.ts:24</a></li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
 					<a name="reject" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>reject</h3>-->
-					<!---->
+					<!--
+        <h3>reject</h3>
+    -->
 					<div class="tsd-signature tsd-kind-icon">reject<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<div class="tsd-declaration">
 					</div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/common/coreservices.ts#L30">common/coreservices.ts:30</a></li>
-						</ul>
-					</aside>
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
 						<ul class="tsd-parameters">
@@ -138,7 +138,7 @@ redirect_from: /docs/latest/interfaces/common._qlikedeferred.html
 										<h4 class="tsd-parameters-title">Parameters</h4>
 										<ul class="tsd-parameters">
 											<li>
-												<h5>reason <span class="tsd-flag ts-flagOptional">Optional</span>: <span class="tsd-signature-type">any</span></h5>
+												<h5>reason: <span class="tsd-flag ts-flagOptional">Optional</span>&nbsp; <span class="tsd-signature-type">any</span></h5>
 											</li>
 										</ul>
 										<div class="tsd-returns">
@@ -149,20 +149,20 @@ redirect_from: /docs/latest/interfaces/common._qlikedeferred.html
 							</li>
 						</ul>
 					</div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/common/coreservices.ts#L23">ui-router-core/src/common/coreservices.ts:23</a></li>
+						</ul>
+					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
 					<a name="resolve" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>resolve</h3>-->
-					<!---->
+					<!--
+        <h3>resolve</h3>
+    -->
 					<div class="tsd-signature tsd-kind-icon">resolve<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<div class="tsd-declaration">
 					</div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/common/coreservices.ts#L29">common/coreservices.ts:29</a></li>
-						</ul>
-					</aside>
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
 						<ul class="tsd-parameters">
@@ -175,7 +175,7 @@ redirect_from: /docs/latest/interfaces/common._qlikedeferred.html
 										<h4 class="tsd-parameters-title">Parameters</h4>
 										<ul class="tsd-parameters">
 											<li>
-												<h5>val <span class="tsd-flag ts-flagOptional">Optional</span>: <span class="tsd-signature-type">any</span></h5>
+												<h5>val: <span class="tsd-flag ts-flagOptional">Optional</span>&nbsp; <span class="tsd-signature-type">any</span></h5>
 											</li>
 										</ul>
 										<div class="tsd-returns">
@@ -186,6 +186,11 @@ redirect_from: /docs/latest/interfaces/common._qlikedeferred.html
 							</li>
 						</ul>
 					</div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/common/coreservices.ts#L22">ui-router-core/src/common/coreservices.ts:22</a></li>
+						</ul>
+					</aside>
 				</section>
 			</section>
 		</div>
@@ -193,49 +198,25 @@ redirect_from: /docs/latest/interfaces/common._qlikedeferred.html
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../globals.html"><em>Globals</em></a>
+						<a href="../index.html"><em>angular-<wbr>ui-<wbr>router</em></a>
 					</li>
-					<li class="current tsd-kind-external-module">
-						<a href="../modules/common.html">common</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/common_hof.html">common_<wbr>hof</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/common_predicates.html">common_<wbr>predicates</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/common_strings.html">common_<wbr>strings</a>
+					<li class="label tsd-is-external">
+						<span>Public API</span>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/core.html">core</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/hooks.html">hooks</a>
+						<a href="../modules/directives.html">directives</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/justjs.html">justjs</a>
+						<a href="../modules/injectables.html">injectables</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/ng1.html">ng1</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/ng1_directives.html">ng1_<wbr>directives</a>
-					</li>
-					<li class=" tsd-kind-external-module">
 						<a href="../modules/ng1_state_events.html">ng1_<wbr>state_<wbr>events</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/ng2.html">ng2</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/ng2_directives.html">ng2_<wbr>directives</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/params.html">params</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/path.html">path</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/resolve.html">resolve</a>
@@ -252,7 +233,31 @@ redirect_from: /docs/latest/interfaces/common._qlikedeferred.html
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/url.html">url</a>
 					</li>
-					<li class=" tsd-kind-external-module">
+					<li class="label tsd-is-external">
+						<span>Internal UI-<wbr><wbr>Router API</span>
+					</li>
+					<li class="current tsd-kind-external-module tsd-is-external">
+						<a href="../modules/common.html">common</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/common_hof.html">common_<wbr>hof</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/common_predicates.html">common_<wbr>predicates</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/common_strings.html">common_<wbr>strings</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/hooks.html">hooks</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/params.html">params</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/path.html">path</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
 						<a href="../modules/view.html">view</a>
 					</li>
 				</ul>
@@ -261,16 +266,16 @@ redirect_from: /docs/latest/interfaces/common._qlikedeferred.html
 				<ul class="before-current">
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-interface tsd-parent-kind-external-module">
+					<li class="current tsd-kind-interface tsd-parent-kind-external-module tsd-is-external">
 						<a href="common._qlikedeferred.html" class="tsd-kind-icon">$QLike<wbr>Deferred</a>
 						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
 								<a href="common._qlikedeferred.html#promise" class="tsd-kind-icon">promise</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
 								<a href="common._qlikedeferred.html#reject" class="tsd-kind-icon">reject</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
 								<a href="common._qlikedeferred.html#resolve" class="tsd-kind-icon">resolve</a>
 							</li>
 						</ul>

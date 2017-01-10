@@ -1,17 +1,17 @@
 ---
-redirect_from: /docs/latest/modules/url.html
 ---
 <!doctype html>
 <html class="default no-js">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>url | UI-Router</title>
+	<title>url | angular-ui-router</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
-	<link rel="stylesheet" href="../assets/css/typedoctheme.css">
+	<link rel="stylesheet" href="../assets/css/uirouter.css">
 	<script src="../assets/js/modernizr.js"></script>
+	<script src="../assets/js/reset.js"></script>
 </head>
 <body>
 <header>
@@ -27,26 +27,31 @@ redirect_from: /docs/latest/modules/url.html
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">UI-Router</a>
+					<a href="../index.html" class="title">angular-ui-router</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
 						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
 						<div class="tsd-filter-group">
-							<div class="tsd-select" id="tsd-filter-visibility">
-								<span class="tsd-select-label">All</span>
-								<ul class="tsd-select-list">
-									<li data-value="public">Public</li>
-									<li data-value="protected">Public/Protected</li>
-									<li data-value="private" class="selected">All</li>
-								</ul>
-							</div>
-							<input type="checkbox" id="tsd-filter-inherited" checked />
-							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<!--
+                            <div class="tsd-select" id="tsd-filter-visibility">
+                                <span class="tsd-select-label">All</span>
+                                <ul class="tsd-select-list">
+                                    <li data-value="public">Public</li>
+                                    <li data-value="protected">Public/Protected</li>
+                                    <li data-value="private" class="selected">All</li>
+                                </ul>
+                            </div>
+
+                            <input type="checkbox" id="tsd-filter-inherited" checked />
+                            <label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+                            -->
 							<input type="checkbox" id="tsd-filter-externals" checked />
-							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
-							<input type="checkbox" id="tsd-filter-only-exported" />
-							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+							<label class="tsd-widget" for="tsd-filter-externals">Internal UI-Router API</label>
+							<!--
+                                <input type="checkbox" id="tsd-filter-only-exported" />
+                                <label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+                            -->
 						</div>
 					</div>
 					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
@@ -58,13 +63,13 @@ redirect_from: /docs/latest/modules/url.html
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../globals.html">Globals</a>
+					<a href="../index.html">angular-ui-router</a>
 				</li>
 				<li>
 					<a href="url.html">url</a>
 				</li>
 			</ul>
-			<h1>External module url</h1>
+			<h1>Module url</h1>
 		</div>
 	</div>
 </header>
@@ -73,6 +78,11 @@ redirect_from: /docs/latest/modules/url.html
 		<div class="col-8 col-content">
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<h1 id="url-subsystem">URL subsystem</h1>
+					</div>
+					<p>Contains code related to managing the URL</p>
+					<p>The primary API is found in <a href="../classes/url.urlservice.html">UrlService</a>, <a href="../classes/url.urlservice.html#config">UrlService.config</a>, and <a href="../classes/url.urlservice.html#rules">UrlService.rules</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
@@ -82,35 +92,122 @@ redirect_from: /docs/latest/modules/url.html
 						<section class="tsd-index-section ">
 							<h3>Classes</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-class tsd-parent-kind-external-module"><a href="../classes/url.matcherconfig.html" class="tsd-kind-icon">Matcher<wbr>Config</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-external-module tsd-is-external"><a href="../classes/url.baseurlrule.html" class="tsd-kind-icon">Base<wbr>Url<wbr>Rule</a></li>
 								<li class="tsd-kind-class tsd-parent-kind-external-module"><a href="../classes/url.urlmatcher.html" class="tsd-kind-icon">Url<wbr>Matcher</a></li>
-								<li class="tsd-kind-class tsd-parent-kind-external-module"><a href="../classes/url.urlmatcherfactory.html" class="tsd-kind-icon">Url<wbr>Matcher<wbr>Factory</a></li>
-								<li class="tsd-kind-class tsd-parent-kind-external-module"><a href="../classes/url.urlrouter.html" class="tsd-kind-icon">Url<wbr>Router</a></li>
-								<li class="tsd-kind-class tsd-parent-kind-external-module"><a href="../classes/url.urlrouterprovider.html" class="tsd-kind-icon">Url<wbr>Router<wbr>Provider</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-external-module tsd-is-external"><a href="../classes/url.urlmatcherfactory.html" class="tsd-kind-icon">Url<wbr>Matcher<wbr>Factory</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-external-module tsd-is-external"><a href="../classes/url.urlrouter.html" class="tsd-kind-icon">Url<wbr>Router</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-external-module tsd-is-external"><a href="../classes/url.urlrouterprovider.html" class="tsd-kind-icon">Url<wbr>Router<wbr>Provider</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-external-module tsd-is-external"><a href="../classes/url.urlrulefactory.html" class="tsd-kind-icon">Url<wbr>Rule<wbr>Factory</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-external-module"><a href="../classes/url.urlservice.html" class="tsd-kind-icon">Url<wbr>Service</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
+							<h3>Interfaces</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-interface tsd-parent-kind-external-module"><a href="../interfaces/url.matchresult.html" class="tsd-kind-icon">Match<wbr>Result</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-external"><a href="../interfaces/url.matcherurlrule.html" class="tsd-kind-icon">Matcher<wbr>Url<wbr>Rule</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-external"><a href="../interfaces/url.paramfactory.html" class="tsd-kind-icon">Param<wbr>Factory</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-external"><a href="../interfaces/url.rawng1rulefunction.html" class="tsd-kind-icon">Raw<wbr>Ng1<wbr>Rule<wbr>Function</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-external"><a href="../interfaces/url.regexprule.html" class="tsd-kind-icon">Reg<wbr>Exp<wbr>Rule</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-external"><a href="../interfaces/url.staterule.html" class="tsd-kind-icon">State<wbr>Rule</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module"><a href="../interfaces/url.urlconfigapi.html" class="tsd-kind-icon">Url<wbr>Config<wbr>Api</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module"><a href="../interfaces/url.urlmatcherconfig.html" class="tsd-kind-icon">Url<wbr>Matcher<wbr>Config</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module"><a href="../interfaces/url.urlparts.html" class="tsd-kind-icon">Url<wbr>Parts</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module"><a href="../interfaces/url.urlrule.html" class="tsd-kind-icon">Url<wbr>Rule</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module"><a href="../interfaces/url.urlrulehandlerfn.html" class="tsd-kind-icon">Url<wbr>Rule<wbr>Handler<wbr>Fn</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module"><a href="../interfaces/url.urlrulematchfn.html" class="tsd-kind-icon">Url<wbr>Rule<wbr>Match<wbr>Fn</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module"><a href="../interfaces/url.urlrulesapi.html" class="tsd-kind-icon">Url<wbr>Rules<wbr>Api</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-external"><a href="../interfaces/url.urlsyncapi.html" class="tsd-kind-icon">Url<wbr>Sync<wbr>Api</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-external">
+							<h3>Type aliases</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-external"><a href="url.html#urlruletype" class="tsd-kind-icon">Url<wbr>Rule<wbr>Type</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Variables</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-variable tsd-parent-kind-external-module"><a href="url.html#matcherconfig-1" class="tsd-kind-icon">matcher<wbr>Config</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="url.html#defaultrulesortfn" class="tsd-kind-icon">default<wbr>Rule<wbr>Sort<wbr>Fn</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Variables</h2>
-				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module">
-					<a name="matcherconfig-1" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>matcher<wbr>Config</h3>-->
-					<!---->
-					<div class="tsd-signature tsd-kind-icon">matcher<wbr>Config<span class="tsd-signature-symbol">:</span> <a href="../classes/url.matcherconfig.html" class="tsd-signature-type">MatcherConfig</a></div>
+			<section class="tsd-panel-group tsd-member-group tsd-is-external">
+				<h2>Type aliases</h2>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-external">
+					<a name="urlruletype" class="tsd-anchor"></a>
+					<!--
+        <h3>Url<wbr>Rule<wbr>Type</h3>
+    -->
+					<div class="tsd-signature tsd-kind-icon">Url<wbr>Rule<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"STATE"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"URLMATCHER"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"REGEXP"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"RAW"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"OTHER"</span></div>
 					<div class="tsd-declaration">
+						<div class="tsd-comment tsd-typography">
+						</div>
 					</div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/url/urlMatcherConfig.ts#L25">url/urlMatcherConfig.ts:25</a></li>
+							<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/url/interface.ts#L417">ui-router-core/src/url/interface.ts:417</a></li>
+						</ul>
+					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
+				<h2>Variables</h2>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="defaultrulesortfn" class="tsd-anchor"></a>
+					<!--
+        <h3>default<wbr>Rule<wbr>Sort<wbr>Fn</h3>
+    -->
+					<div class="tsd-signature tsd-kind-icon">default<wbr>Rule<wbr>Sort<wbr>Fn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span>    <div class="tsd-header">
+							<p> Default rule priority sorting function. </p>
+						</div>
+					</div>
+					<div class="tsd-declaration">
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Default rule priority sorting function.</p>
+							</div>
+							<p>Sorts rules by:</p>
+							<ul>
+								<li>Explicit priority (set rule priority using <a href="../interfaces/url.urlrulesapi.html#when">UrlRulesApi.when</a>)</li>
+								<li>Rule type (STATE: 4, URLMATCHER: 4, REGEXP: 3, RAW: 2, OTHER: 1)</li>
+								<li><code>UrlMatcher</code> specificity (<a href="../classes/url.urlmatcher.html#compare">UrlMatcher.compare</a>): works for STATE and URLMATCHER types to pick the most specific rule.</li>
+								<li>Registration order (for rule types other than STATE and URLMATCHER)</li>
+							</ul>
+						</div>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-siganture">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-variable tsd-is-not-exported">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>a<span class="tsd-signature-symbol">: </span><a href="../interfaces/url.urlrule.html" class="tsd-signature-type">UrlRule</a>, b<span class="tsd-signature-symbol">: </span><a href="../interfaces/url.urlrule.html" class="tsd-signature-type">UrlRule</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>a <a href="../interfaces/url.urlrule.html" class="tsd-signature-type">UrlRule</a></h5>
+											</li>
+											<li>
+												<h5>b <a href="../interfaces/url.urlrule.html" class="tsd-signature-type">UrlRule</a></h5>
+											</li>
+										</ul>
+										<div class="tsd-returns">
+											<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+										</div>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/url/urlRouter.ts#L43">ui-router-core/src/url/urlRouter.ts:43</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -120,49 +217,25 @@ redirect_from: /docs/latest/modules/url.html
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../globals.html"><em>Globals</em></a>
+						<a href="../index.html"><em>angular-<wbr>ui-<wbr>router</em></a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="common.html">common</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="common_hof.html">common_<wbr>hof</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="common_predicates.html">common_<wbr>predicates</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="common_strings.html">common_<wbr>strings</a>
+					<li class="label tsd-is-external">
+						<span>Public API</span>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="core.html">core</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="hooks.html">hooks</a>
+						<a href="directives.html">directives</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="justjs.html">justjs</a>
+						<a href="injectables.html">injectables</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="ng1.html">ng1</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="ng1_directives.html">ng1_<wbr>directives</a>
-					</li>
-					<li class=" tsd-kind-external-module">
 						<a href="ng1_state_events.html">ng1_<wbr>state_<wbr>events</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="ng2.html">ng2</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="ng2_directives.html">ng2_<wbr>directives</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="params.html">params</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="path.html">path</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="resolve.html">resolve</a>
@@ -179,30 +252,105 @@ redirect_from: /docs/latest/modules/url.html
 					<li class="current tsd-kind-external-module">
 						<a href="url.html">url</a>
 					</li>
-					<li class=" tsd-kind-external-module">
+					<li class="label tsd-is-external">
+						<span>Internal UI-<wbr><wbr>Router API</span>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="common.html">common</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="common_hof.html">common_<wbr>hof</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="common_predicates.html">common_<wbr>predicates</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="common_strings.html">common_<wbr>strings</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="hooks.html">hooks</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="params.html">params</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="path.html">path</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
 						<a href="view.html">view</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-class tsd-parent-kind-external-module">
-						<a href="../classes/url.matcherconfig.html" class="tsd-kind-icon">Matcher<wbr>Config</a>
+					<li class=" tsd-kind-class tsd-parent-kind-external-module tsd-is-external">
+						<a href="../classes/url.baseurlrule.html" class="tsd-kind-icon">Base<wbr>Url<wbr>Rule</a>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-external-module">
 						<a href="../classes/url.urlmatcher.html" class="tsd-kind-icon">Url<wbr>Matcher</a>
 					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-external-module">
+					<li class=" tsd-kind-class tsd-parent-kind-external-module tsd-is-external">
 						<a href="../classes/url.urlmatcherfactory.html" class="tsd-kind-icon">Url<wbr>Matcher<wbr>Factory</a>
 					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-external-module">
+					<li class=" tsd-kind-class tsd-parent-kind-external-module tsd-is-external">
 						<a href="../classes/url.urlrouter.html" class="tsd-kind-icon">Url<wbr>Router</a>
 					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-external-module">
+					<li class=" tsd-kind-class tsd-parent-kind-external-module tsd-is-external">
 						<a href="../classes/url.urlrouterprovider.html" class="tsd-kind-icon">Url<wbr>Router<wbr>Provider</a>
 					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
-						<a href="url.html#matcherconfig-1" class="tsd-kind-icon">matcher<wbr>Config</a>
+					<li class=" tsd-kind-class tsd-parent-kind-external-module tsd-is-external">
+						<a href="../classes/url.urlrulefactory.html" class="tsd-kind-icon">Url<wbr>Rule<wbr>Factory</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-external-module">
+						<a href="../classes/url.urlservice.html" class="tsd-kind-icon">Url<wbr>Service</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="../interfaces/url.matchresult.html" class="tsd-kind-icon">Match<wbr>Result</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-external">
+						<a href="../interfaces/url.matcherurlrule.html" class="tsd-kind-icon">Matcher<wbr>Url<wbr>Rule</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-external">
+						<a href="../interfaces/url.paramfactory.html" class="tsd-kind-icon">Param<wbr>Factory</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-external">
+						<a href="../interfaces/url.rawng1rulefunction.html" class="tsd-kind-icon">Raw<wbr>Ng1<wbr>Rule<wbr>Function</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-external">
+						<a href="../interfaces/url.regexprule.html" class="tsd-kind-icon">Reg<wbr>Exp<wbr>Rule</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-external">
+						<a href="../interfaces/url.staterule.html" class="tsd-kind-icon">State<wbr>Rule</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="../interfaces/url.urlconfigapi.html" class="tsd-kind-icon">Url<wbr>Config<wbr>Api</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="../interfaces/url.urlmatcherconfig.html" class="tsd-kind-icon">Url<wbr>Matcher<wbr>Config</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="../interfaces/url.urlparts.html" class="tsd-kind-icon">Url<wbr>Parts</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="../interfaces/url.urlrule.html" class="tsd-kind-icon">Url<wbr>Rule</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="../interfaces/url.urlrulehandlerfn.html" class="tsd-kind-icon">Url<wbr>Rule<wbr>Handler<wbr>Fn</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="../interfaces/url.urlrulematchfn.html" class="tsd-kind-icon">Url<wbr>Rule<wbr>Match<wbr>Fn</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="../interfaces/url.urlrulesapi.html" class="tsd-kind-icon">Url<wbr>Rules<wbr>Api</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-external">
+						<a href="../interfaces/url.urlsyncapi.html" class="tsd-kind-icon">Url<wbr>Sync<wbr>Api</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-external">
+						<a href="url.html#urlruletype" class="tsd-kind-icon">Url<wbr>Rule<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="url.html#defaultrulesortfn" class="tsd-kind-icon">default<wbr>Rule<wbr>Sort<wbr>Fn</a>
 					</li>
 				</ul>
 			</nav>

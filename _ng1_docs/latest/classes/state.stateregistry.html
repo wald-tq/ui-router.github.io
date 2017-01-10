@@ -1,17 +1,17 @@
 ---
-redirect_from: /docs/latest/classes/state.stateregistry.html
 ---
 <!doctype html>
 <html class="default no-js">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>StateRegistry | UI-Router</title>
+	<title>StateRegistry | angular-ui-router</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
-	<link rel="stylesheet" href="../assets/css/typedoctheme.css">
+	<link rel="stylesheet" href="../assets/css/uirouter.css">
 	<script src="../assets/js/modernizr.js"></script>
+	<script src="../assets/js/reset.js"></script>
 </head>
 <body>
 <header>
@@ -27,26 +27,31 @@ redirect_from: /docs/latest/classes/state.stateregistry.html
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">UI-Router</a>
+					<a href="../index.html" class="title">angular-ui-router</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
 						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
 						<div class="tsd-filter-group">
-							<div class="tsd-select" id="tsd-filter-visibility">
-								<span class="tsd-select-label">All</span>
-								<ul class="tsd-select-list">
-									<li data-value="public">Public</li>
-									<li data-value="protected">Public/Protected</li>
-									<li data-value="private" class="selected">All</li>
-								</ul>
-							</div>
-							<input type="checkbox" id="tsd-filter-inherited" checked />
-							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<!--
+                            <div class="tsd-select" id="tsd-filter-visibility">
+                                <span class="tsd-select-label">All</span>
+                                <ul class="tsd-select-list">
+                                    <li data-value="public">Public</li>
+                                    <li data-value="protected">Public/Protected</li>
+                                    <li data-value="private" class="selected">All</li>
+                                </ul>
+                            </div>
+
+                            <input type="checkbox" id="tsd-filter-inherited" checked />
+                            <label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+                            -->
 							<input type="checkbox" id="tsd-filter-externals" checked />
-							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
-							<input type="checkbox" id="tsd-filter-only-exported" />
-							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+							<label class="tsd-widget" for="tsd-filter-externals">Internal UI-Router API</label>
+							<!--
+                                <input type="checkbox" id="tsd-filter-only-exported" />
+                                <label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+                            -->
 						</div>
 					</div>
 					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
@@ -58,7 +63,7 @@ redirect_from: /docs/latest/classes/state.stateregistry.html
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../globals.html">Globals</a>
+					<a href="../index.html">angular-ui-router</a>
 				</li>
 				<li>
 					<a href="../modules/state.html">state</a>
@@ -86,29 +91,31 @@ redirect_from: /docs/latest/classes/state.stateregistry.html
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
-						<section class="tsd-index-section ">
+						<section class="tsd-index-section tsd-is-external">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="state.stateregistry.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-external"><a href="state.stateregistry.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="state.stateregistry.html#_root" class="tsd-kind-icon">_root</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="state.stateregistry.html#_router" class="tsd-kind-icon">_router</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="state.stateregistry.html#builder" class="tsd-kind-icon">builder</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="state.stateregistry.html#listeners" class="tsd-kind-icon">listeners</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="state.stateregistry.html#matcher" class="tsd-kind-icon">matcher</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="state.stateregistry.html#statequeue" class="tsd-kind-icon">state<wbr>Queue</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="state.stateregistry.html#states" class="tsd-kind-icon">states</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="state.stateregistry.html#urlrouterprovider" class="tsd-kind-icon">url<wbr>Router<wbr>Provider</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-external"><a href="state.stateregistry.html#_registerroot" class="tsd-kind-icon">_register<wbr>Root</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="state.stateregistry.html#decorator" class="tsd-kind-icon">decorator</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="state.stateregistry.html#deregister" class="tsd-kind-icon">deregister</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="state.stateregistry.html#dispose" class="tsd-kind-icon">dispose</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="state.stateregistry.html#get" class="tsd-kind-icon">get</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="state.stateregistry.html#onstateschanged" class="tsd-kind-icon">on<wbr>States<wbr>Changed</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="state.stateregistry.html#register" class="tsd-kind-icon">register</a></li>
@@ -118,25 +125,24 @@ redirect_from: /docs/latest/classes/state.stateregistry.html
 					</div>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group ">
+			<section class="tsd-panel-group tsd-member-group tsd-is-external">
 				<h2>Constructors</h2>
-				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class tsd-is-external">
 					<a name="constructor" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>constructor</h3>-->
-					<!---->
-					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>State<wbr>Registry<span class="tsd-signature-symbol">(</span>urlMatcherFactory<span class="tsd-signature-symbol">: </span><a href="url.urlmatcherfactory.html" class="tsd-signature-type">UrlMatcherFactory</a>, urlRouterProvider<span class="tsd-signature-symbol">: </span><a href="url.urlrouterprovider.html" class="tsd-signature-type">UrlRouterProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="state.stateregistry.html" class="tsd-signature-type">StateRegistry</a></li>
+					<!--
+        <h3>constructor</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>State<wbr>Registry<span class="tsd-signature-symbol">(</span>_router<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">UIRouter</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="state.stateregistry.html" class="tsd-signature-type">StateRegistry</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
+							<div class="tsd-comment tsd-typography">
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>urlMatcherFactory: <a href="url.urlmatcherfactory.html" class="tsd-signature-type">UrlMatcherFactory</a></h5>
-								</li>
-								<li>
-									<h5>urlRouterProvider: <a href="url.urlrouterprovider.html" class="tsd-signature-type">UrlRouterProvider</a></h5>
+									<h5>_router <span class="tsd-signature-type">UIRouter</span></h5>
 								</li>
 							</ul>
 							<div class="tsd-returns">
@@ -145,7 +151,7 @@ redirect_from: /docs/latest/classes/state.stateregistry.html
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/state/stateRegistry.ts#L32">state/stateRegistry.ts:32</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/state/stateRegistry.ts#L35">ui-router-core/src/state/stateRegistry.ts:35</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
@@ -155,87 +161,96 @@ redirect_from: /docs/latest/classes/state.stateregistry.html
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
 					<a name="_root" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3><span class="tsd-flag ts-flagPrivate">Private</span> _root</h3>-->
-					<!---->
+					<!--
+        <h3><span class="tsd-flag ts-flagPrivate">Private</span> _root</h3>
+    -->
 					<div class="tsd-signature tsd-kind-icon">_root<span class="tsd-signature-symbol">:</span> <a href="state.state-1.html" class="tsd-signature-type">State</a></div>
 					<div class="tsd-declaration">
 					</div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/state/stateRegistry.ts#L25">state/stateRegistry.ts:25</a></li>
+							<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/state/stateRegistry.ts#L28">ui-router-core/src/state/stateRegistry.ts:28</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="_router" class="tsd-anchor"></a>
+					<!--
+        <h3><span class="tsd-flag ts-flagPrivate">Private</span> _router</h3>
+    -->
+					<div class="tsd-signature tsd-kind-icon">_router<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">UIRouter</span></div>
+					<div class="tsd-declaration">
+					</div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/state/stateRegistry.ts#L38">ui-router-core/src/state/stateRegistry.ts:38</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
 					<a name="builder" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3><span class="tsd-flag ts-flagPrivate">Private</span> builder</h3>-->
-					<!---->
+					<!--
+        <h3><span class="tsd-flag ts-flagPrivate">Private</span> builder</h3>
+    -->
 					<div class="tsd-signature tsd-kind-icon">builder<span class="tsd-signature-symbol">:</span> <a href="state.statebuilder.html" class="tsd-signature-type">StateBuilder</a></div>
 					<div class="tsd-declaration">
 					</div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/state/stateRegistry.ts#L29">state/stateRegistry.ts:29</a></li>
+							<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/state/stateRegistry.ts#L32">ui-router-core/src/state/stateRegistry.ts:32</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="listeners" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>listeners</h3>-->
-					<!---->
-					<div class="tsd-signature tsd-kind-icon">listeners<span class="tsd-signature-symbol">:</span> <a href="../modules/state.html#stateregistrylistener" class="tsd-signature-type">StateRegistryListener</a><span class="tsd-signature-symbol">[]</span></div>
+					<!--
+        <h3>listeners</h3>
+    -->
+					<div class="tsd-signature tsd-kind-icon">listeners<span class="tsd-signature-symbol">:</span> <a href="../modules/state.html#stateregistrylistener" class="tsd-signature-type">StateRegistryListener</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[]</span></div>
 					<div class="tsd-declaration">
 					</div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/state/stateRegistry.ts#L32">state/stateRegistry.ts:32</a></li>
+							<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/state/stateRegistry.ts#L35">ui-router-core/src/state/stateRegistry.ts:35</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="matcher" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>matcher</h3>-->
-					<!---->
+					<!--
+        <h3>matcher</h3>
+    -->
 					<div class="tsd-signature tsd-kind-icon">matcher<span class="tsd-signature-symbol">:</span> <a href="state.statematcher.html" class="tsd-signature-type">StateMatcher</a></div>
 					<div class="tsd-declaration">
 					</div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/state/stateRegistry.ts#L28">state/stateRegistry.ts:28</a></li>
+							<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/state/stateRegistry.ts#L31">ui-router-core/src/state/stateRegistry.ts:31</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="statequeue" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>state<wbr>Queue</h3>-->
-					<!---->
+					<!--
+        <h3>state<wbr>Queue</h3>
+    -->
 					<div class="tsd-signature tsd-kind-icon">state<wbr>Queue<span class="tsd-signature-symbol">:</span> <a href="state.statequeuemanager.html" class="tsd-signature-type">StateQueueManager</a></div>
 					<div class="tsd-declaration">
 					</div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/state/stateRegistry.ts#L30">state/stateRegistry.ts:30</a></li>
+							<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/state/stateRegistry.ts#L33">ui-router-core/src/state/stateRegistry.ts:33</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
 					<a name="states" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3><span class="tsd-flag ts-flagPrivate">Private</span> states</h3>-->
-					<!---->
+					<!--
+        <h3><span class="tsd-flag ts-flagPrivate">Private</span> states</h3>
+    -->
 					<div class="tsd-signature tsd-kind-icon">states<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<div class="tsd-declaration">
 					</div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/state/stateRegistry.ts#L26">state/stateRegistry.ts:26</a></li>
-						</ul>
-					</aside>
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
 						<ul class="tsd-parameters">
@@ -244,64 +259,78 @@ redirect_from: /docs/latest/classes/state.stateregistry.html
 							</li>
 						</ul>
 					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-					<a name="urlrouterprovider" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3><span class="tsd-flag ts-flagPrivate">Private</span> url<wbr>Router<wbr>Provider</h3>-->
-					<!---->
-					<div class="tsd-signature tsd-kind-icon">url<wbr>Router<wbr>Provider<span class="tsd-signature-symbol">:</span> <a href="url.urlrouterprovider.html" class="tsd-signature-type">UrlRouterProvider</a></div>
-					<div class="tsd-declaration">
-					</div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/state/stateRegistry.ts#L34">state/stateRegistry.ts:34</a></li>
+							<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/state/stateRegistry.ts#L29">ui-router-core/src/state/stateRegistry.ts:29</a></li>
 						</ul>
 					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-external">
+					<a name="_registerroot" class="tsd-anchor"></a>
+					<!--
+        <h3><span class="tsd-flag ts-flagPrivate">Private</span> _register<wbr>Root</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">_register<wbr>Root<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<div class="tsd-comment tsd-typography">
+							</div>
+							<div class="tsd-returns">
+								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							</div>
+							<hr>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/state/stateRegistry.ts#L46">ui-router-core/src/state/stateRegistry.ts:46</a></li>
+								</ul>
+						</aside>        </li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="decorator" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>decorator</h3>-->
-					<!---->
+					<!--
+        <h3>decorator</h3>
+    -->
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">decorator<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, func<span class="tsd-signature-symbol">: </span><a href="../modules/state.html#builderfunction" class="tsd-signature-type">BuilderFunction</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Function</span></li>
+						<li class="tsd-signature tsd-kind-icon">decorator<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, func<span class="tsd-signature-symbol">: </span><a href="../modules/state.html#builderfunction" class="tsd-signature-type">BuilderFunction</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>name: <span class="tsd-signature-type">string</span></h5>
+									<h5>name <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5>func: <a href="../modules/state.html#builderfunction" class="tsd-signature-type">BuilderFunction</a></h5>
+									<h5>func <a href="../modules/state.html#builderfunction" class="tsd-signature-type">BuilderFunction</a></h5>
 								</li>
 							</ul>
 							<div class="tsd-returns">
-								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">function</span>
+								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Function</span>
+									<span class="tsd-signature-symbol"> | </span>
+									<span class="tsd-signature-type">function</span>
 									<span class="tsd-signature-symbol"> | </span>
 									<span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">&gt;</span>
-									<span class="tsd-signature-symbol"> | </span>
-									<span class="tsd-signature-type">Function</span>
 								</h4>
 							</div>
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/state/stateRegistry.ts#L185">state/stateRegistry.ts:185</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/state/stateRegistry.ts#L201">ui-router-core/src/state/stateRegistry.ts:201</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="deregister" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>deregister</h3>-->
-					<!---->
+					<!--
+        <h3>deregister</h3>
+    -->
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">deregister<span class="tsd-signature-symbol">(</span>stateOrName<span class="tsd-signature-symbol">: </span><a href="../modules/state.html#stateorname" class="tsd-signature-type">StateOrName</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="state.state-1.html" class="tsd-signature-type">State</a><span class="tsd-signature-symbol">&gt;</span></li>
 						<li class="tsd-header">
@@ -320,7 +349,7 @@ redirect_from: /docs/latest/classes/state.stateregistry.html
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>stateOrName: <a href="../modules/state.html#stateorname" class="tsd-signature-type">StateOrName</a></h5>
+									<h5>stateOrName <a href="../modules/state.html#stateorname" class="tsd-signature-type">StateOrName</a></h5>
 									:         <div class="tsd-comment tsd-typography">
 										<p>the state&#39;s name or object representation</p>
 									</div>
@@ -333,16 +362,39 @@ redirect_from: /docs/latest/classes/state.stateregistry.html
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/state/stateRegistry.ts#L149">state/stateRegistry.ts:149</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/state/stateRegistry.ts#L165">ui-router-core/src/state/stateRegistry.ts:165</a></li>
+								</ul>
+						</aside>        </li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<a name="dispose" class="tsd-anchor"></a>
+					<!--
+        <h3>dispose</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">dispose<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<div class="tsd-comment tsd-typography">
+							</div>
+							<div class="tsd-returns">
+								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							</div>
+							<hr>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/state/stateRegistry.ts#L62">ui-router-core/src/state/stateRegistry.ts:62</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="get" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>get</h3>-->
-					<!---->
+					<!--
+        <h3>get</h3>
+    -->
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">get<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/state.statedeclaration.html" class="tsd-signature-type">StateDeclaration</a><span class="tsd-signature-symbol">[]</span></li>
 						<li class="tsd-header">
@@ -369,7 +421,7 @@ redirect_from: /docs/latest/classes/state.stateregistry.html
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/state/stateRegistry.ts#L166">state/stateRegistry.ts:166</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/state/stateRegistry.ts#L182">ui-router-core/src/state/stateRegistry.ts:182</a></li>
 								</ul>
 						</aside>        </li>
 						<li class="tsd-description">
@@ -383,13 +435,13 @@ redirect_from: /docs/latest/classes/state.stateregistry.html
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>stateOrName: <a href="../modules/state.html#stateorname" class="tsd-signature-type">StateOrName</a></h5>
+									<h5>stateOrName <a href="../modules/state.html#stateorname" class="tsd-signature-type">StateOrName</a></h5>
 									:         <div class="tsd-comment tsd-typography">
 										<p>either the name of a state, or a state object.</p>
 									</div>
 								</li>
 								<li>
-									<h5>base <span class="tsd-flag ts-flagOptional">Optional</span>: <a href="../modules/state.html#stateorname" class="tsd-signature-type">StateOrName</a></h5>
+									<h5>base: <span class="tsd-flag ts-flagOptional">Optional</span>&nbsp; <a href="../modules/state.html#stateorname" class="tsd-signature-type">StateOrName</a></h5>
 								</li>
 							</ul>
 							<div class="tsd-returns">
@@ -399,16 +451,16 @@ redirect_from: /docs/latest/classes/state.stateregistry.html
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/state/stateRegistry.ts#L177">state/stateRegistry.ts:177</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/state/stateRegistry.ts#L193">ui-router-core/src/state/stateRegistry.ts:193</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="onstateschanged" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>on<wbr>States<wbr>Changed</h3>-->
-					<!---->
+					<!--
+        <h3>on<wbr>States<wbr>Changed</h3>
+    -->
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">on<wbr>States<wbr>Changed<span class="tsd-signature-symbol">(</span>listener<span class="tsd-signature-symbol">: </span><a href="../modules/state.html#stateregistrylistener" class="tsd-signature-type">StateRegistryListener</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span></li>
 						<li class="tsd-header">
@@ -422,19 +474,17 @@ redirect_from: /docs/latest/classes/state.stateregistry.html
 									<p>Listen for a State Registry events</p>
 								</div>
 								<p>Adds a callback that is invoked when states are registered or deregistered with the StateRegistry.</p>
-								<dl class="tsd-comment-tags">
-									<dt>example</dt>
-									<dd><pre><code class="lang-js">
-<span class="hljs-keyword">let</span> allStates = registry.get();
+								<h4 id="example-">Example:</h4>
+								<pre><code class="lang-js"><span class="hljs-keyword">let</span> allStates = registry.get();
 
 <span class="hljs-comment">// Later, invoke deregisterFn() to remove the listener</span>
-<span class="hljs-keyword">let</span> deregisterFn = registry.onStatesChanged((event, states) =&gt; {
+<span class="hljs-keyword">let</span> deregisterFn = registry.onStatesChanged(<span class="hljs-function">(<span class="hljs-params">event, states</span>) =&gt;</span> {
   <span class="hljs-keyword">switch</span>(event) {
-    <span class="hljs-keyword">case</span>: <span class="hljs-string">'registered'</span>:
-      states.forEach(state =&gt; allStates.push(state));
+    <span class="hljs-attr">case</span>: <span class="hljs-string">'registered'</span>:
+      states.forEach(<span class="hljs-function"><span class="hljs-params">state</span> =&gt;</span> allStates.push(state));
       <span class="hljs-keyword">break</span>;
     <span class="hljs-keyword">case</span>: <span class="hljs-string">'deregistered'</span>:
-      states.forEach(state =&gt; {
+      states.forEach(<span class="hljs-function"><span class="hljs-params">state</span> =&gt;</span> {
         <span class="hljs-keyword">let</span> idx = allStates.indexOf(state);
         <span class="hljs-keyword">if</span> (idx !== <span class="hljs-number">-1</span>) allStates.splice(idx, <span class="hljs-number">1</span>);
       });
@@ -442,13 +492,11 @@ redirect_from: /docs/latest/classes/state.stateregistry.html
   }
 });
 </code></pre>
-									</dd>
-								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>listener: <a href="../modules/state.html#stateregistrylistener" class="tsd-signature-type">StateRegistryListener</a></h5>
+									<h5>listener <a href="../modules/state.html#stateregistrylistener" class="tsd-signature-type">StateRegistryListener</a></h5>
 									:         <div class="tsd-comment tsd-typography">
 										<p>a callback function invoked when the registered states changes.
 											The function receives two parameters, <code>event</code> and <code>state</code>.
@@ -477,16 +525,16 @@ redirect_from: /docs/latest/classes/state.stateregistry.html
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/state/stateRegistry.ts#L84">state/stateRegistry.ts:84</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/state/stateRegistry.ts#L98">ui-router-core/src/state/stateRegistry.ts:98</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="register" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>register</h3>-->
-					<!---->
+					<!--
+        <h3>register</h3>
+    -->
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">register<span class="tsd-signature-symbol">(</span>stateDefinition<span class="tsd-signature-symbol">: </span><a href="../interfaces/state.statedeclaration.html" class="tsd-signature-type">StateDeclaration</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="state.state-1.html" class="tsd-signature-type">State</a></li>
 						<li class="tsd-header">
@@ -499,14 +547,13 @@ redirect_from: /docs/latest/classes/state.stateregistry.html
 								<div class="lead">
 									<p>Adds a state to the registry</p>
 								</div>
-								<p>Registers a [[StateDefinition]] or queues it for registration.</p>
-								<p>Note: a state will be queued if the state&#39;s parent isn&#39;t yet registered.
-								It will also be queued if the queue is not yet in <a href="state.statequeuemanager.html#autoflush">StateQueueManager.autoFlush</a> mode.</p>
+								<p>Registers a <a href="../interfaces/state.statedeclaration.html">StateDeclaration</a> or queues it for registration.</p>
+								<p>Note: a state will be queued if the state&#39;s parent isn&#39;t yet registered.</p>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>stateDefinition: <a href="../interfaces/state.statedeclaration.html" class="tsd-signature-type">StateDeclaration</a></h5>
+									<h5>stateDefinition <a href="../interfaces/state.statedeclaration.html" class="tsd-signature-type">StateDeclaration</a></h5>
 									:         <div class="tsd-comment tsd-typography">
 										<p>the definition of the state to register.</p>
 									</div>
@@ -521,16 +568,16 @@ redirect_from: /docs/latest/classes/state.stateregistry.html
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/state/stateRegistry.ts#L117">state/stateRegistry.ts:117</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/state/stateRegistry.ts#L130">ui-router-core/src/state/stateRegistry.ts:130</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="root" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>root</h3>-->
-					<!---->
+					<!--
+        <h3>root</h3>
+    -->
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">root<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="state.state-1.html" class="tsd-signature-type">State</a></li>
 						<li class="tsd-header">
@@ -554,7 +601,7 @@ redirect_from: /docs/latest/classes/state.stateregistry.html
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/state/stateRegistry.ts#L100">state/stateRegistry.ts:100</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/state/stateRegistry.ts#L114">ui-router-core/src/state/stateRegistry.ts:114</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
@@ -565,49 +612,25 @@ redirect_from: /docs/latest/classes/state.stateregistry.html
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../globals.html"><em>Globals</em></a>
+						<a href="../index.html"><em>angular-<wbr>ui-<wbr>router</em></a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/common.html">common</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/common_hof.html">common_<wbr>hof</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/common_predicates.html">common_<wbr>predicates</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/common_strings.html">common_<wbr>strings</a>
+					<li class="label tsd-is-external">
+						<span>Public API</span>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/core.html">core</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/hooks.html">hooks</a>
+						<a href="../modules/directives.html">directives</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/justjs.html">justjs</a>
+						<a href="../modules/injectables.html">injectables</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/ng1.html">ng1</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/ng1_directives.html">ng1_<wbr>directives</a>
-					</li>
-					<li class=" tsd-kind-external-module">
 						<a href="../modules/ng1_state_events.html">ng1_<wbr>state_<wbr>events</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/ng2.html">ng2</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/ng2_directives.html">ng2_<wbr>directives</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/params.html">params</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/path.html">path</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/resolve.html">resolve</a>
@@ -624,7 +647,31 @@ redirect_from: /docs/latest/classes/state.stateregistry.html
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/url.html">url</a>
 					</li>
-					<li class=" tsd-kind-external-module">
+					<li class="label tsd-is-external">
+						<span>Internal UI-<wbr><wbr>Router API</span>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/common.html">common</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/common_hof.html">common_<wbr>hof</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/common_predicates.html">common_<wbr>predicates</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/common_strings.html">common_<wbr>strings</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/hooks.html">hooks</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/params.html">params</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/path.html">path</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
 						<a href="../modules/view.html">view</a>
 					</li>
 				</ul>
@@ -634,13 +681,13 @@ redirect_from: /docs/latest/classes/state.stateregistry.html
 					<li class=" tsd-kind-class tsd-parent-kind-external-module">
 						<a href="state.state-1.html" class="tsd-kind-icon">State</a>
 					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-external-module">
+					<li class=" tsd-kind-class tsd-parent-kind-external-module tsd-is-external">
 						<a href="state.statebuilder.html" class="tsd-kind-icon">State<wbr>Builder</a>
 					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-external-module">
+					<li class=" tsd-kind-class tsd-parent-kind-external-module tsd-is-external">
 						<a href="state.statematcher.html" class="tsd-kind-icon">State<wbr>Matcher</a>
 					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-external-module">
+					<li class=" tsd-kind-class tsd-parent-kind-external-module tsd-is-external">
 						<a href="state.statequeuemanager.html" class="tsd-kind-icon">State<wbr>Queue<wbr>Manager</a>
 					</li>
 				</ul>
@@ -648,11 +695,14 @@ redirect_from: /docs/latest/classes/state.stateregistry.html
 					<li class="current tsd-kind-class tsd-parent-kind-external-module">
 						<a href="state.stateregistry.html" class="tsd-kind-icon">State<wbr>Registry</a>
 						<ul>
-							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-external">
 								<a href="state.stateregistry.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
 								<a href="state.stateregistry.html#_root" class="tsd-kind-icon">_root</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="state.stateregistry.html#_router" class="tsd-kind-icon">_router</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
 								<a href="state.stateregistry.html#builder" class="tsd-kind-icon">builder</a>
@@ -669,14 +719,17 @@ redirect_from: /docs/latest/classes/state.stateregistry.html
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
 								<a href="state.stateregistry.html#states" class="tsd-kind-icon">states</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-								<a href="state.stateregistry.html#urlrouterprovider" class="tsd-kind-icon">url<wbr>Router<wbr>Provider</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-external">
+								<a href="state.stateregistry.html#_registerroot" class="tsd-kind-icon">_register<wbr>Root</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="state.stateregistry.html#decorator" class="tsd-kind-icon">decorator</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="state.stateregistry.html#deregister" class="tsd-kind-icon">deregister</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
+								<a href="state.stateregistry.html#dispose" class="tsd-kind-icon">dispose</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="state.stateregistry.html#get" class="tsd-kind-icon">get</a>
@@ -700,29 +753,35 @@ redirect_from: /docs/latest/classes/state.stateregistry.html
 					<li class=" tsd-kind-class tsd-parent-kind-external-module">
 						<a href="state.targetstate.html" class="tsd-kind-icon">Target<wbr>State</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
 						<a href="../interfaces/state.builders.html" class="tsd-kind-icon">Builders</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-external">
 						<a href="../interfaces/state.hrefoptions.html" class="tsd-kind-icon">Href<wbr>Options</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-external">
 						<a href="../interfaces/state.lazyloadresult.html" class="tsd-kind-icon">Lazy<wbr>Load<wbr>Result</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="../interfaces/state.providerlike.html" class="tsd-kind-icon">Provider<wbr>Like</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
 						<a href="../interfaces/state.statedeclaration.html" class="tsd-kind-icon">State<wbr>Declaration</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="../interfaces/state.targetstatedef.html" class="tsd-kind-icon">Target<wbr>State<wbr>Def</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-external">
 						<a href="../interfaces/state.transitionpromise.html" class="tsd-kind-icon">Transition<wbr>Promise</a>
 					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-external">
+						<a href="../interfaces/state._viewdeclaration.html" class="tsd-kind-icon">_<wbr>View<wbr>Declaration</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-external">
 						<a href="../modules/state.html#builderfunction" class="tsd-kind-icon">Builder<wbr>Function</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
 						<a href="../modules/state.html#oninvalidcallback" class="tsd-kind-icon">On<wbr>Invalid<wbr>Callback</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
+						<a href="../modules/state.html#redirecttoresult" class="tsd-kind-icon">Redirect<wbr>ToResult</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
 						<a href="../modules/state.html#resolvetypes" class="tsd-kind-icon">Resolve<wbr>Types</a>
@@ -733,40 +792,34 @@ redirect_from: /docs/latest/classes/state.stateregistry.html
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
 						<a href="../modules/state.html#stateregistrylistener" class="tsd-kind-icon">State<wbr>Registry<wbr>Listener</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module">
-						<a href="../modules/state.html#_includedbystatefilter" class="tsd-kind-icon">$<wbr>Included<wbr>ByState<wbr>Filter</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module">
-						<a href="../modules/state.html#_isstatefilter" class="tsd-kind-icon">$<wbr>IsState<wbr>Filter</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
 						<a href="../modules/state.html#databuilder" class="tsd-kind-icon">data<wbr>Builder</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
 						<a href="../modules/state.html#getnavigablebuilder" class="tsd-kind-icon">get<wbr>Navigable<wbr>Builder</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
 						<a href="../modules/state.html#getparamsbuilder" class="tsd-kind-icon">get<wbr>Params<wbr>Builder</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
 						<a href="../modules/state.html#geturlbuilder" class="tsd-kind-icon">get<wbr>Url<wbr>Builder</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
 						<a href="../modules/state.html#includesbuilder" class="tsd-kind-icon">includes<wbr>Builder</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
 						<a href="../modules/state.html#namebuilder" class="tsd-kind-icon">name<wbr>Builder</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
 						<a href="../modules/state.html#parseurl" class="tsd-kind-icon">parse<wbr>Url</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
 						<a href="../modules/state.html#pathbuilder" class="tsd-kind-icon">path<wbr>Builder</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-external">
 						<a href="../modules/state.html#resolvablesbuilder" class="tsd-kind-icon">resolvables<wbr>Builder</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
 						<a href="../modules/state.html#selfbuilder" class="tsd-kind-icon">self<wbr>Builder</a>
 					</li>
 				</ul>

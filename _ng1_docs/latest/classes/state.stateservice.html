@@ -1,17 +1,17 @@
 ---
-redirect_from: /docs/latest/classes/state.stateservice.html
 ---
 <!doctype html>
 <html class="default no-js">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>StateService | UI-Router</title>
+	<title>StateService | angular-ui-router</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
-	<link rel="stylesheet" href="../assets/css/typedoctheme.css">
+	<link rel="stylesheet" href="../assets/css/uirouter.css">
 	<script src="../assets/js/modernizr.js"></script>
+	<script src="../assets/js/reset.js"></script>
 </head>
 <body>
 <header>
@@ -27,26 +27,31 @@ redirect_from: /docs/latest/classes/state.stateservice.html
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">UI-Router</a>
+					<a href="../index.html" class="title">angular-ui-router</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
 						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
 						<div class="tsd-filter-group">
-							<div class="tsd-select" id="tsd-filter-visibility">
-								<span class="tsd-select-label">All</span>
-								<ul class="tsd-select-list">
-									<li data-value="public">Public</li>
-									<li data-value="protected">Public/Protected</li>
-									<li data-value="private" class="selected">All</li>
-								</ul>
-							</div>
-							<input type="checkbox" id="tsd-filter-inherited" checked />
-							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<!--
+                            <div class="tsd-select" id="tsd-filter-visibility">
+                                <span class="tsd-select-label">All</span>
+                                <ul class="tsd-select-list">
+                                    <li data-value="public">Public</li>
+                                    <li data-value="protected">Public/Protected</li>
+                                    <li data-value="private" class="selected">All</li>
+                                </ul>
+                            </div>
+
+                            <input type="checkbox" id="tsd-filter-inherited" checked />
+                            <label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+                            -->
 							<input type="checkbox" id="tsd-filter-externals" checked />
-							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
-							<input type="checkbox" id="tsd-filter-only-exported" />
-							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+							<label class="tsd-widget" for="tsd-filter-externals">Internal UI-Router API</label>
+							<!--
+                                <input type="checkbox" id="tsd-filter-only-exported" />
+                                <label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+                            -->
 						</div>
 					</div>
 					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
@@ -58,7 +63,7 @@ redirect_from: /docs/latest/classes/state.stateservice.html
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../globals.html">Globals</a>
+					<a href="../index.html">angular-ui-router</a>
 				</li>
 				<li>
 					<a href="../modules/state.html">state</a>
@@ -74,6 +79,15 @@ redirect_from: /docs/latest/classes/state.stateservice.html
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Provides state related service functions</p>
+					</div>
+					<p>This class provides services related to ui-router states.
+					An instance of this class is located on the global <a href="core.uirouter.html">UIRouter</a> object.</p>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -86,10 +100,16 @@ redirect_from: /docs/latest/classes/state.stateservice.html
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
+						<section class="tsd-index-section tsd-is-external">
+							<h3>Constructors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-external"><a href="state.stateservice.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="state.stateservice.html#invalidcallbacks" class="tsd-kind-icon">invalid<wbr>Callbacks</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-external"><a href="state.stateservice.html#invalidcallbacks" class="tsd-kind-icon">invalid<wbr>Callbacks</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="state.stateservice.html#router" class="tsd-kind-icon">router</a></li>
 							</ul>
 						</section>
@@ -105,13 +125,16 @@ redirect_from: /docs/latest/classes/state.stateservice.html
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="state.stateservice.html#_handleinvalidtargetstate" class="tsd-kind-icon">_handle<wbr>Invalid<wbr>Target<wbr>State</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-external"><a href="state.stateservice.html#_handleinvalidtargetstate" class="tsd-kind-icon">_handle<wbr>Invalid<wbr>Target<wbr>State</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="state.stateservice.html#defaulterrorhandler" class="tsd-kind-icon">default<wbr>Error<wbr>Handler</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="state.stateservice.html#dispose" class="tsd-kind-icon">dispose</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="state.stateservice.html#get" class="tsd-kind-icon">get</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="state.stateservice.html#getcurrentpath" class="tsd-kind-icon">get<wbr>Current<wbr>Path</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="state.stateservice.html#go" class="tsd-kind-icon">go</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="state.stateservice.html#href" class="tsd-kind-icon">href</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="state.stateservice.html#includes" class="tsd-kind-icon">includes</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="state.stateservice.html#is" class="tsd-kind-icon">is</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="state.stateservice.html#lazyload" class="tsd-kind-icon">lazy<wbr>Load</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="state.stateservice.html#oninvalid" class="tsd-kind-icon">on<wbr>Invalid</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="state.stateservice.html#reload" class="tsd-kind-icon">reload</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="state.stateservice.html#target" class="tsd-kind-icon">target</a></li>
@@ -121,33 +144,67 @@ redirect_from: /docs/latest/classes/state.stateservice.html
 					</div>
 				</section>
 			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-external">
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class tsd-is-external">
+					<a name="constructor" class="tsd-anchor"></a>
+					<!--
+        <h3>constructor</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>State<wbr>Service<span class="tsd-signature-symbol">(</span>router<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">UIRouter</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="state.stateservice.html" class="tsd-signature-type">StateService</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<div class="tsd-comment tsd-typography">
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>router <span class="tsd-signature-type">UIRouter</span></h5>
+								</li>
+							</ul>
+							<div class="tsd-returns">
+								<h4 class="tsd-returns-title">Returns <a href="state.stateservice.html" class="tsd-signature-type">StateService</a></h4>
+							</div>
+							<hr>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/state/stateService.ts#L73">ui-router-core/src/state/stateService.ts:73</a></li>
+								</ul>
+						</aside>        </li>
+					</ul>
+				</section>
+			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
 					<a name="invalidcallbacks" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>invalid<wbr>Callbacks</h3>-->
-					<!---->
-					<div class="tsd-signature tsd-kind-icon">invalid<wbr>Callbacks<span class="tsd-signature-symbol">:</span> <a href="../modules/state.html#oninvalidcallback" class="tsd-signature-type">OnInvalidCallback</a><span class="tsd-signature-symbol">[]</span></div>
+					<!--
+        <h3>invalid<wbr>Callbacks</h3>
+    -->
+					<div class="tsd-signature tsd-kind-icon">invalid<wbr>Callbacks<span class="tsd-signature-symbol">:</span> <a href="../modules/state.html#oninvalidcallback" class="tsd-signature-type">OnInvalidCallback</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[]</span></div>
 					<div class="tsd-declaration">
+						<div class="tsd-comment tsd-typography">
+						</div>
 					</div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/state/stateService.ts#L36">state/stateService.ts:36</a></li>
+							<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/state/stateService.ts#L48">ui-router-core/src/state/stateService.ts:48</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
 					<a name="router" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3><span class="tsd-flag ts-flagPrivate">Private</span> router</h3>-->
-					<!---->
+					<!--
+        <h3><span class="tsd-flag ts-flagPrivate">Private</span> router</h3>
+    -->
 					<div class="tsd-signature tsd-kind-icon">router<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">UIRouter</span></div>
 					<div class="tsd-declaration">
 					</div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/state/stateService.ts#L44">state/stateService.ts:44</a></li>
+							<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/state/stateService.ts#L76">ui-router-core/src/state/stateService.ts:76</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -156,84 +213,108 @@ redirect_from: /docs/latest/classes/state.stateservice.html
 				<h2>Accessors</h2>
 				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
 					<a name="_current" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>$current</h3>-->
-					<!---->
+					<!--
+        <h3>$current</h3>
+    -->
 					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="state.state-1.html" class="tsd-signature-type">State</a></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> $current<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="state.state-1.html" class="tsd-signature-type">State</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>The current <a href="state.state-1.html">State</a></p>
+								</div>
+								<p>This is a passthrough through to <a href="../interfaces/core.uirouterglobals.html#_current">UIRouterGlobals.$current</a></p>
+							</div>
 							<div class="tsd-returns">
 								<h4 class="tsd-returns-title">Returns <a href="state.state-1.html" class="tsd-signature-type">State</a></h4>
 							</div>
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/state/stateService.ts#L41">state/stateService.ts:41</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/state/stateService.ts#L73">ui-router-core/src/state/stateService.ts:73</a></li>
 								</ul>
 						</aside>            </li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
 					<a name="current" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>current</h3>-->
-					<!---->
+					<!--
+        <h3>current</h3>
+    -->
 					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/state.statedeclaration.html" class="tsd-signature-type">StateDeclaration</a></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> current<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/state.statedeclaration.html" class="tsd-signature-type">StateDeclaration</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>The current <a href="../interfaces/state.statedeclaration.html">StateDeclaration</a></p>
+								</div>
+								<p>This is a passthrough through to <a href="../interfaces/core.uirouterglobals.html#current">UIRouterGlobals.current</a></p>
+							</div>
 							<div class="tsd-returns">
 								<h4 class="tsd-returns-title">Returns <a href="../interfaces/state.statedeclaration.html" class="tsd-signature-type">StateDeclaration</a></h4>
 							</div>
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/state/stateService.ts#L40">state/stateService.ts:40</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/state/stateService.ts#L67">ui-router-core/src/state/stateService.ts:67</a></li>
 								</ul>
 						</aside>            </li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
 					<a name="params" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>params</h3>-->
-					<!---->
+					<!--
+        <h3>params</h3>
+    -->
 					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="params.stateparams.html" class="tsd-signature-type">StateParams</a></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> params<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="params.stateparams.html" class="tsd-signature-type">StateParams</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>The latest successful state parameters</p>
+								</div>
+								<p>This is a passthrough through to <a href="../interfaces/core.uirouterglobals.html#params">UIRouterGlobals.params</a></p>
+							</div>
 							<div class="tsd-returns">
 								<h4 class="tsd-returns-title">Returns <a href="params.stateparams.html" class="tsd-signature-type">StateParams</a></h4>
 							</div>
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/state/stateService.ts#L39">state/stateService.ts:39</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/state/stateService.ts#L61">ui-router-core/src/state/stateService.ts:61</a></li>
 								</ul>
 						</aside>            </li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
 					<a name="transition" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>transition</h3>-->
-					<!---->
+					<!--
+        <h3>transition</h3>
+    -->
 					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="transition.transition-1.html" class="tsd-signature-type">Transition</a></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> transition<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="transition.transition-1.html" class="tsd-signature-type">Transition</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>The <a href="transition.transition-1.html">Transition</a> currently in progress (or null)</p>
+								</div>
+								<p>This is a passthrough through to <a href="../interfaces/core.uirouterglobals.html#transition">UIRouterGlobals.transition</a></p>
+							</div>
 							<div class="tsd-returns">
 								<h4 class="tsd-returns-title">Returns <a href="transition.transition-1.html" class="tsd-signature-type">Transition</a></h4>
 							</div>
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/state/stateService.ts#L38">state/stateService.ts:38</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/state/stateService.ts#L55">ui-router-core/src/state/stateService.ts:55</a></li>
 								</ul>
 						</aside>            </li>
 					</ul>
@@ -241,12 +322,12 @@ redirect_from: /docs/latest/classes/state.stateservice.html
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-external">
 					<a name="_handleinvalidtargetstate" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3><span class="tsd-flag ts-flagPrivate">Private</span> _handle<wbr>Invalid<wbr>Target<wbr>State</h3>-->
-					<!---->
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<!--
+        <h3><span class="tsd-flag ts-flagPrivate">Private</span> _handle<wbr>Invalid<wbr>Target<wbr>State</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-external">
 						<li class="tsd-signature tsd-kind-icon">_handle<wbr>Invalid<wbr>Target<wbr>State<span class="tsd-signature-symbol">(</span>fromPath<span class="tsd-signature-symbol">: </span><a href="path.pathnode.html" class="tsd-signature-type">PathNode</a><span class="tsd-signature-symbol">[]</span>, toState<span class="tsd-signature-symbol">: </span><a href="state.targetstate.html" class="tsd-signature-type">TargetState</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 						<li class="tsd-header">
 							<p> Handler for when <a href="state.stateservice.html#transitionto">transitionTo</a> is called with an invalid state. </p>
@@ -266,10 +347,10 @@ redirect_from: /docs/latest/classes/state.stateservice.html
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>fromPath: <a href="path.pathnode.html" class="tsd-signature-type">PathNode</a><span class="tsd-signature-symbol">[]</span></h5>
+									<h5>fromPath <a href="path.pathnode.html" class="tsd-signature-type">PathNode</a><span class="tsd-signature-symbol">[]</span></h5>
 								</li>
 								<li>
-									<h5>toState: <a href="state.targetstate.html" class="tsd-signature-type">TargetState</a></h5>
+									<h5>toState <a href="state.targetstate.html" class="tsd-signature-type">TargetState</a></h5>
 								</li>
 							</ul>
 							<div class="tsd-returns">
@@ -278,16 +359,16 @@ redirect_from: /docs/latest/classes/state.stateservice.html
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/state/stateService.ts#L59">state/stateService.ts:59</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/state/stateService.ts#L99">ui-router-core/src/state/stateService.ts:99</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="defaulterrorhandler" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>default<wbr>Error<wbr>Handler</h3>-->
-					<!---->
+					<!--
+        <h3>default<wbr>Error<wbr>Handler</h3>
+    -->
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">default<wbr>Error<wbr>Handler<span class="tsd-signature-symbol">(</span>handler<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span></li>
 						<li class="tsd-header">
@@ -307,20 +388,16 @@ redirect_from: /docs/latest/classes/state.stateservice.html
 								Redirected and Ignored Transitions are not considered to be errors by <a href="state.stateservice.html#transitionto">StateService.transitionTo</a>.</p>
 								<p>The built-in default error handler logs the error to the console.</p>
 								<p>You can provide your own custom handler.</p>
-								<dl class="tsd-comment-tags">
-									<dt>example</dt>
-									<dd><pre><code class="lang-js">
-stateService.defaultErrorHandler(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+								<h4 id="example-">Example:</h4>
+								<pre><code class="lang-js">stateService.defaultErrorHandler(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
   <span class="hljs-comment">// Do not log transitionTo errors</span>
 });
 </code></pre>
-									</dd>
-								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>handler <span class="tsd-flag ts-flagOptional">Optional</span>: <span class="tsd-signature-type">function</span></h5>
+									<h5>handler: <span class="tsd-flag ts-flagOptional">Optional</span>&nbsp; <span class="tsd-signature-type">function</span></h5>
 									:         <div class="tsd-comment tsd-typography">
 										<p>a global error handler function</p>
 									</div>
@@ -334,7 +411,7 @@ stateService.defaultErrorHandler(<span class="hljs-function"><span class="hljs-k
 													<h4 class="tsd-parameters-title">Parameters</h4>
 													<ul class="tsd-parameters">
 														<li>
-															<h5>error: <span class="tsd-signature-type">any</span></h5>
+															<h5>error <span class="tsd-signature-type">any</span></h5>
 														</li>
 													</ul>
 													<div class="tsd-returns">
@@ -359,7 +436,7 @@ stateService.defaultErrorHandler(<span class="hljs-function"><span class="hljs-k
 												<h4 class="tsd-parameters-title">Parameters</h4>
 												<ul class="tsd-parameters">
 													<li>
-														<h5>error: <span class="tsd-signature-type">any</span></h5>
+														<h5>error <span class="tsd-signature-type">any</span></h5>
 													</li>
 												</ul>
 												<div class="tsd-returns">
@@ -373,54 +450,70 @@ stateService.defaultErrorHandler(<span class="hljs-function"><span class="hljs-k
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/state/stateService.ts#L566">state/stateService.ts:566</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/state/stateService.ts#L573">ui-router-core/src/state/stateService.ts:573</a></li>
+								</ul>
+						</aside>        </li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<a name="dispose" class="tsd-anchor"></a>
+					<!--
+        <h3>dispose</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">dispose<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<div class="tsd-comment tsd-typography">
+							</div>
+							<div class="tsd-returns">
+								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							</div>
+							<hr>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/state/stateService.ts#L83">ui-router-core/src/state/stateService.ts:83</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="get" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>get</h3>-->
-					<!---->
+					<!--
+        <h3>get</h3>
+    -->
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">get<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/state.statedeclaration.html" class="tsd-signature-type">StateDeclaration</a><span class="tsd-signature-symbol">[]</span></li>
+						<li class="tsd-header">
+							<p> Gets a registered <a href="../interfaces/state.statedeclaration.html">StateDeclaration</a> object </p>
+						</li>
 						<li class="tsd-signature tsd-kind-icon">get<span class="tsd-signature-symbol">(</span>stateOrName<span class="tsd-signature-symbol">: </span><a href="../modules/state.html#stateorname" class="tsd-signature-type">StateOrName</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/state.statedeclaration.html" class="tsd-signature-type">StateDeclaration</a></li>
 						<li class="tsd-signature tsd-kind-icon">get<span class="tsd-signature-symbol">(</span>stateOrName<span class="tsd-signature-symbol">: </span><a href="../modules/state.html#stateorname" class="tsd-signature-type">StateOrName</a>, base<span class="tsd-signature-symbol">: </span><a href="../modules/state.html#stateorname" class="tsd-signature-type">StateOrName</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/state.statedeclaration.html" class="tsd-signature-type">StateDeclaration</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<div class="tsd-comment tsd-typography">
-								<dl class="tsd-comment-tags">
-									<dt>ngdoc</dt>
-									<dd><p>function</p>
-									</dd>
-									<dt>name</dt>
-									<dd><p>ui.router.state.$state#get</p>
-									</dd>
-									<dt>methodof</dt>
-									<dd><p>ui.router.state.$state</p>
-									</dd>
-									<dt>description</dt>
-									<dd><p>Returns the state configuration object for any specific state or all states.</p>
-									</dd>
-								</dl>
+								<div class="lead">
+									<p>Gets a registered <a href="../interfaces/state.statedeclaration.html">StateDeclaration</a> object</p>
+								</div>
+								<p>Returns the state declaration object for any specific state, or for all registered states.</p>
 							</div>
 							<div class="tsd-returns">
 								<h4 class="tsd-returns-title">Returns <a href="../interfaces/state.statedeclaration.html" class="tsd-signature-type">StateDeclaration</a><span class="tsd-signature-symbol">[]</span></h4>
-								: <p>State configuration object or array of all objects.</p>
+								: <p>a <a href="../interfaces/state.statedeclaration.html">StateDeclaration</a> object (or array of all registered <a href="../interfaces/state.statedeclaration.html">StateDeclaration</a> objects.)</p>
 							</div>
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/state/stateService.ts#L583">state/stateService.ts:583</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/state/stateService.ts#L588">ui-router-core/src/state/stateService.ts:588</a></li>
 								</ul>
 						</aside>        </li>
 						<li class="tsd-description">
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>stateOrName: <a href="../modules/state.html#stateorname" class="tsd-signature-type">StateOrName</a></h5>
+									<h5>stateOrName <a href="../modules/state.html#stateorname" class="tsd-signature-type">StateOrName</a></h5>
 								</li>
 							</ul>
 							<div class="tsd-returns">
@@ -429,17 +522,17 @@ stateService.defaultErrorHandler(<span class="hljs-function"><span class="hljs-k
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/state/stateService.ts#L584">state/stateService.ts:584</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/state/stateService.ts#L589">ui-router-core/src/state/stateService.ts:589</a></li>
 								</ul>
 						</aside>        </li>
 						<li class="tsd-description">
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>stateOrName: <a href="../modules/state.html#stateorname" class="tsd-signature-type">StateOrName</a></h5>
+									<h5>stateOrName <a href="../modules/state.html#stateorname" class="tsd-signature-type">StateOrName</a></h5>
 								</li>
 								<li>
-									<h5>base: <a href="../modules/state.html#stateorname" class="tsd-signature-type">StateOrName</a></h5>
+									<h5>base <a href="../modules/state.html#stateorname" class="tsd-signature-type">StateOrName</a></h5>
 								</li>
 							</ul>
 							<div class="tsd-returns">
@@ -448,57 +541,69 @@ stateService.defaultErrorHandler(<span class="hljs-function"><span class="hljs-k
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/state/stateService.ts#L585">state/stateService.ts:585</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/state/stateService.ts#L590">ui-router-core/src/state/stateService.ts:590</a></li>
+								</ul>
+						</aside>        </li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a name="getcurrentpath" class="tsd-anchor"></a>
+					<!--
+        <h3><span class="tsd-flag ts-flagPrivate">Private</span> get<wbr>Current<wbr>Path</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Current<wbr>Path<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="path.pathnode.html" class="tsd-signature-type">PathNode</a><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<div class="tsd-returns">
+								<h4 class="tsd-returns-title">Returns <a href="path.pathnode.html" class="tsd-signature-type">PathNode</a><span class="tsd-signature-symbol">[]</span></h4>
+							</div>
+							<hr>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/state/stateService.ts#L296">ui-router-core/src/state/stateService.ts:296</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="go" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>go</h3>-->
-					<!---->
+					<!--
+        <h3>go</h3>
+    -->
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">go<span class="tsd-signature-symbol">(</span>to<span class="tsd-signature-symbol">: </span><a href="../modules/state.html#stateorname" class="tsd-signature-type">StateOrName</a>, params<span class="tsd-signature-symbol">?: </span><a href="../interfaces/params.rawparams.html" class="tsd-signature-type">RawParams</a>, options<span class="tsd-signature-symbol">?: </span><a href="../interfaces/transition.transitionoptions.html" class="tsd-signature-type">TransitionOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/state.transitionpromise.html" class="tsd-signature-type">TransitionPromise</a></li>
+						<li class="tsd-header">
+							<p> Transition to a different state or parameters </p>
+						</li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<div class="tsd-comment tsd-typography">
-								<dl class="tsd-comment-tags">
-									<dt>ngdoc</dt>
-									<dd><p>function</p>
-									</dd>
-									<dt>name</dt>
-									<dd><p>ui.router.state.$state#go</p>
-									</dd>
-									<dt>methodof</dt>
-									<dd><p>ui.router.state.$state</p>
-									</dd>
-									<dt>description</dt>
-									<dd><p>Convenience method for transitioning to a new state. <code>$state.go</code> calls
-											<code>$state.transitionTo</code> internally but automatically sets options to
-											<code>{ location: true, inherit: true, relative: $state.$current, notify: true }</code>.
-											This allows you to easily use an absolute or relative to path and specify
-											only the parameters you&#39;d like to update (while letting unspecified parameters
-										inherit from the currently active ancestor states).</p>
-									</dd>
-									<dt>example</dt>
-									<dd><p><pre>
-let app = angular.module(&#39;app&#39;, [&#39;ui.router&#39;]);</p>
-<p>app.controller(&#39;ctrl&#39;, function ($scope, $state) {
-  $scope.changeState = function () {
-    $state.go(&#39;contact.detail&#39;);
+								<div class="lead">
+									<p>Transition to a different state or parameters</p>
+								</div>
+								<p>Convenience method for transitioning to a new state.</p>
+								<p><code>$state.go</code> calls <code>$state.transitionTo</code> internally but automatically sets options to
+									<code>{ location: true, inherit: true, relative: $state.$current, notify: true }</code>.
+									This allows you to easily use an absolute or relative to path and specify
+									only the parameters you&#39;d like to update (while letting unspecified parameters
+								inherit from the currently active ancestor states).</p>
+								<h4 id="example-">Example:</h4>
+								<pre><code class="lang-js"><span class="hljs-keyword">let</span> app = angular.module(<span class="hljs-string">'app'</span>, [<span class="hljs-string">'ui.router'</span>]);
+
+app.controller(<span class="hljs-string">'ctrl'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">$scope, $state</span>) </span>{
+  $scope.changeState = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    $state.go(<span class="hljs-string">'contact.detail'</span>);
   };
 });
-</pre>
-										<img src='../ngdoc_assets/StateGoExamples.png'/></p>
-									</dd>
-								</dl>
+</code></pre>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>to: <a href="../modules/state.html#stateorname" class="tsd-signature-type">StateOrName</a></h5>
+									<h5>to <a href="../modules/state.html#stateorname" class="tsd-signature-type">StateOrName</a></h5>
 									:         <div class="tsd-comment tsd-typography">
 										<p>Absolute state name, state object, or relative state path. Some examples:</p>
 										<ul>
@@ -510,106 +615,88 @@ let app = angular.module(&#39;app&#39;, [&#39;ui.router&#39;]);</p>
 									</div>
 								</li>
 								<li>
-									<h5>params <span class="tsd-flag ts-flagOptional">Optional</span>: <a href="../interfaces/params.rawparams.html" class="tsd-signature-type">RawParams</a></h5>
+									<h5>params: <span class="tsd-flag ts-flagOptional">Optional</span>&nbsp; <a href="../interfaces/params.rawparams.html" class="tsd-signature-type">RawParams</a></h5>
 									:         <div class="tsd-comment tsd-typography">
-										<p>A map of the parameters that will be sent to the state,
-											will populate $stateParams. Any parameters that are not specified will be inherited from currently
-											defined parameters. This allows, for example, going to a sibling state that shares parameters
-											specified in a parent state. Parameter inheritance only works between common ancestor states, I.e.
+										<p>A map of the parameters that will be sent to the state, will populate $stateParams.</p>
+										<p>   Any parameters that are not specified will be inherited from currently defined parameters (because of <code>inherit: true</code>).
+										This allows, for example, going to a sibling state that shares parameters specified in a parent state.</p>
+										<p>   Parameter inheritance only works between common ancestor states, I.e.
 											transitioning to a sibling will get you the parameters for all parents, transitioning to a child
 										will get you all current parameters, etc.</p>
 									</div>
 								</li>
 								<li>
-									<h5>options <span class="tsd-flag ts-flagOptional">Optional</span>: <a href="../interfaces/transition.transitionoptions.html" class="tsd-signature-type">TransitionOptions</a></h5>
+									<h5>options: <span class="tsd-flag ts-flagOptional">Optional</span>&nbsp; <a href="../interfaces/transition.transitionoptions.html" class="tsd-signature-type">TransitionOptions</a></h5>
 									:         <div class="tsd-comment tsd-typography">
-										<p>Options object. The options are:</p>
-										<ul>
-											<li><strong><code>location</code></strong> - {boolean=true|string=} - If <code>true</code> will update the url in the location bar, if <code>false</code>
-											will not. If string, must be <code>&quot;replace&quot;</code>, which will update url and also replace last history record.</li>
-											<li><strong><code>inherit</code></strong> - {boolean=true}, If <code>true</code> will inherit url parameters from current url.</li>
-											<li><strong><code>relative</code></strong> - {object=$state.$current}, When transitioning with relative path (e.g &#39;^&#39;),
-											defines which state to be relative from.</li>
-											<li><strong><code>notify</code></strong> - {boolean=true}, If <code>true</code> will broadcast $stateChangeStart and $stateChangeSuccess events.</li>
-											<li><strong><code>reload</code></strong> (v0.2.5) - {boolean=false}, If <code>true</code> will force transition even if the state or params
-												have not changed, aka a reload of the same state. It differs from reloadOnSearch because you&#39;d
-											use this when you want to force a reload when <em>everything</em> is the same, including search params.</li>
-										</ul>
+										<p>Transition options</p>
 									</div>
 								</li>
 							</ul>
 							<div class="tsd-returns">
 								<h4 class="tsd-returns-title">Returns <a href="../interfaces/state.transitionpromise.html" class="tsd-signature-type">TransitionPromise</a></h4>
 								: <p>A promise representing the state of the new transition.</p>
-								<p>Possible success values:</p>
 								<ul>
-									<li>$state.current</li>
-								</ul>
-								<p><br/>Possible rejection values:</p>
-								<ul>
-									<li>&#39;transition superseded&#39; - when a newer transition has been started after this one</li>
-									<li>&#39;transition prevented&#39; - when <code>event.preventDefault()</code> has been called in a <code>$stateChangeStart</code> listener</li>
-									<li>&#39;transition aborted&#39; - when <code>event.preventDefault()</code> has been called in a <code>$stateNotFound</code> listener or
-									when a <code>$stateNotFound</code> <code>event.retry</code> promise errors.</li>
-									<li>&#39;transition failed&#39; - when a state has been unsuccessfully found after 2 tries.</li>
-									<li><em>resolve error</em> - when an error has occurred with a <code>resolve</code></li>
+									<li><p>Possible success values:</p>
+										<ul>
+											<li>$state.current</li>
+										</ul>
+									</li>
+									<li><p>Possible rejection reasons:</p>
+										<ul>
+											<li>transition superseded - when a newer transition has been started after this one</li>
+											<li>transition aborted - when the transition is cancelled by a Transition Hook returning <code>false</code></li>
+											<li>transition failed - when a transition hook errors</li>
+											<li>resolve error - when a resolve has errored or rejected</li>
+										</ul>
+									</li>
 								</ul>
 							</div>
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/state/stateService.ts#L243">state/stateService.ts:243</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/state/stateService.ts#L269">ui-router-core/src/state/stateService.ts:269</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="href" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>href</h3>-->
-					<!---->
+					<!--
+        <h3>href</h3>
+    -->
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">href<span class="tsd-signature-symbol">(</span>stateOrName<span class="tsd-signature-symbol">: </span><a href="../modules/state.html#stateorname" class="tsd-signature-type">StateOrName</a>, params<span class="tsd-signature-symbol">: </span><a href="../interfaces/params.rawparams.html" class="tsd-signature-type">RawParams</a>, options<span class="tsd-signature-symbol">?: </span><a href="../interfaces/state.hrefoptions.html" class="tsd-signature-type">HrefOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+						<li class="tsd-header">
+							<p> Generates a URL for a state and parameters </p>
+						</li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<div class="tsd-comment tsd-typography">
-								<dl class="tsd-comment-tags">
-									<dt>ngdoc</dt>
-									<dd><p>function</p>
-									</dd>
-									<dt>name</dt>
-									<dd><p>ui.router.state.$state#href</p>
-									</dd>
-									<dt>methodof</dt>
-									<dd><p>ui.router.state.$state</p>
-									</dd>
-									<dt>description</dt>
-									<dd><p>A url generation method that returns the compiled url for the given state populated with the given params.</p>
-									</dd>
-									<dt>example</dt>
-									<dd><pre>
-expect($state.href("about.person", { person: "bob" })).toEqual("/about/bob");
-</pre>
-									</dd>
-								</dl>
+								<div class="lead">
+									<p>Generates a URL for a state and parameters</p>
+								</div>
+								<p>Returns the url for the given state populated with the given params.</p>
+								<h4 id="example-">Example:</h4>
+								<pre><code class="lang-js">expect($state.href(<span class="hljs-string">"about.person"</span>, { <span class="hljs-attr">person</span>: <span class="hljs-string">"bob"</span> })).toEqual(<span class="hljs-string">"/about/bob"</span>);
+</code></pre>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>stateOrName: <a href="../modules/state.html#stateorname" class="tsd-signature-type">StateOrName</a></h5>
+									<h5>stateOrName <a href="../modules/state.html#stateorname" class="tsd-signature-type">StateOrName</a></h5>
 									:         <div class="tsd-comment tsd-typography">
 										<p>The state name or state object you&#39;d like to generate a url from.</p>
 									</div>
 								</li>
 								<li>
-									<h5>params: <a href="../interfaces/params.rawparams.html" class="tsd-signature-type">RawParams</a></h5>
+									<h5>params <a href="../interfaces/params.rawparams.html" class="tsd-signature-type">RawParams</a></h5>
 									:         <div class="tsd-comment tsd-typography">
 										<p>An object of parameter values to fill the state&#39;s required parameters.</p>
 									</div>
 								</li>
 								<li>
-									<h5>options <span class="tsd-flag ts-flagOptional">Optional</span>: <a href="../interfaces/state.hrefoptions.html" class="tsd-signature-type">HrefOptions</a></h5>
+									<h5>options: <span class="tsd-flag ts-flagOptional">Optional</span>&nbsp; <a href="../interfaces/state.hrefoptions.html" class="tsd-signature-type">HrefOptions</a></h5>
 									:         <div class="tsd-comment tsd-typography">
 										<p>Options object. The options are:</p>
 										<ul>
@@ -631,91 +718,72 @@ expect($state.href("about.person", { person: "bob" })).toEqual("/about/bob");
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/state/stateService.ts#L502">state/stateService.ts:502</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/state/stateService.ts#L510">ui-router-core/src/state/stateService.ts:510</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="includes" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>includes</h3>-->
-					<!---->
+					<!--
+        <h3>includes</h3>
+    -->
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">includes<span class="tsd-signature-symbol">(</span>stateOrName<span class="tsd-signature-symbol">: </span><a href="../modules/state.html#stateorname" class="tsd-signature-type">StateOrName</a>, params<span class="tsd-signature-symbol">?: </span><a href="../interfaces/params.rawparams.html" class="tsd-signature-type">RawParams</a>, options<span class="tsd-signature-symbol">?: </span><a href="../interfaces/transition.transitionoptions.html" class="tsd-signature-type">TransitionOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-header">
+							<p> Checks if the current state <em>includes</em> the provided state </p>
+						</li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<div class="tsd-comment tsd-typography">
-								<dl class="tsd-comment-tags">
-									<dt>ngdoc</dt>
-									<dd><p>function</p>
-									</dd>
-									<dt>name</dt>
-									<dd><p>ui.router.state.$state#includes</p>
-									</dd>
-									<dt>methodof</dt>
-									<dd><p>ui.router.state.$state</p>
-									</dd>
-									<dt>description</dt>
-									<dd><p>A method to determine if the current active state is equal to or is the child of the
-											state stateName. If any params are passed then they will be tested for a match as well.
-										Not all the parameters need to be passed, just the ones you&#39;d like to test for equality.</p>
-									</dd>
-									<dt>example</dt>
-									<dd><p>Partial and relative names</p>
-										<pre>
-$state.$current.name = 'contacts.details.item';
-
-// Using partial names
-$state.includes("contacts"); // returns true
-$state.includes("contacts.details"); // returns true
-$state.includes("contacts.details.item"); // returns true
-$state.includes("contacts.list"); // returns false
-$state.includes("about"); // returns false
-
-// Using relative names (. and ^), typically from a template
-// E.g. from the 'contacts.details' template
-<div ng-class="{highlighted: $state.includes('.item')}">Item</div>
-</pre>
-										<p>Basic globbing patterns</p>
-										<pre>
-$state.$current.name = 'contacts.details.item.url';
-
-$state.includes("*.details.*.*"); // returns true
-$state.includes("*.details.**"); // returns true
-$state.includes("**.item.**"); // returns true
-$state.includes("*.details.item.url"); // returns true
-$state.includes("*.details.*.url"); // returns true
-$state.includes("*.details.*"); // returns false
-$state.includes("item.**"); // returns false
-</pre>
-									</dd>
-								</dl>
+								<div class="lead">
+									<p>Checks if the current state <em>includes</em> the provided state</p>
+								</div>
+								<p>A method to determine if the current active state is equal to or is the child of the
+									state stateName. If any params are passed then they will be tested for a match as well.
+								Not all the parameters need to be passed, just the ones you&#39;d like to test for equality.</p>
+								<h4 id="example-when-state-current-name-contacts-details-item-">Example when <code>$state.$current.name === &#39;contacts.details.item&#39;</code></h4>
+								<pre><code class="lang-js"><span class="hljs-comment">// Using partial names</span>
+$state.includes(<span class="hljs-string">"contacts"</span>); <span class="hljs-comment">// returns true</span>
+$state.includes(<span class="hljs-string">"contacts.details"</span>); <span class="hljs-comment">// returns true</span>
+$state.includes(<span class="hljs-string">"contacts.details.item"</span>); <span class="hljs-comment">// returns true</span>
+$state.includes(<span class="hljs-string">"contacts.list"</span>); <span class="hljs-comment">// returns false</span>
+$state.includes(<span class="hljs-string">"about"</span>); <span class="hljs-comment">// returns false</span>
+</code></pre>
+								<h4 id="glob-examples-when-state-current-name-contacts-details-item-url-">Glob Examples when <code>* $state.$current.name === &#39;contacts.details.item.url&#39;</code>:</h4>
+								<pre><code class="lang-js">$state.includes(<span class="hljs-string">"*.details.*.*"</span>); <span class="hljs-comment">// returns true</span>
+$state.includes(<span class="hljs-string">"*.details.**"</span>); <span class="hljs-comment">// returns true</span>
+$state.includes(<span class="hljs-string">"**.item.**"</span>); <span class="hljs-comment">// returns true</span>
+$state.includes(<span class="hljs-string">"*.details.item.url"</span>); <span class="hljs-comment">// returns true</span>
+$state.includes(<span class="hljs-string">"*.details.*.url"</span>); <span class="hljs-comment">// returns true</span>
+$state.includes(<span class="hljs-string">"*.details.*"</span>); <span class="hljs-comment">// returns false</span>
+$state.includes(<span class="hljs-string">"item.**"</span>); <span class="hljs-comment">// returns false</span>
+</code></pre>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>stateOrName: <a href="../modules/state.html#stateorname" class="tsd-signature-type">StateOrName</a></h5>
+									<h5>stateOrName <a href="../modules/state.html#stateorname" class="tsd-signature-type">StateOrName</a></h5>
 									:         <div class="tsd-comment tsd-typography">
 										<p>A partial name, relative name, glob pattern,
 										or state object to be searched for within the current state name.</p>
 									</div>
 								</li>
 								<li>
-									<h5>params <span class="tsd-flag ts-flagOptional">Optional</span>: <a href="../interfaces/params.rawparams.html" class="tsd-signature-type">RawParams</a></h5>
+									<h5>params: <span class="tsd-flag ts-flagOptional">Optional</span>&nbsp; <a href="../interfaces/params.rawparams.html" class="tsd-signature-type">RawParams</a></h5>
 									:         <div class="tsd-comment tsd-typography">
 										<p>A param object, e.g. <code>{sectionId: section.id}</code>,
 										that you&#39;d like to test against the current active state.</p>
 									</div>
 								</li>
 								<li>
-									<h5>options <span class="tsd-flag ts-flagOptional">Optional</span>: <a href="../interfaces/transition.transitionoptions.html" class="tsd-signature-type">TransitionOptions</a></h5>
+									<h5>options: <span class="tsd-flag ts-flagOptional">Optional</span>&nbsp; <a href="../interfaces/transition.transitionoptions.html" class="tsd-signature-type">TransitionOptions</a></h5>
 									:         <div class="tsd-comment tsd-typography">
-										<p>An options object.  The options are:</p>
+										<p>An options object. The options are:</p>
 										<ul>
-											<li><strong><code>relative</code></strong> - {string|object=} -  If <code>stateOrName</code> is a relative state reference and <code>options.relative</code> is set,
-											.includes will test relative to <code>options.relative</code> state (or name).</li>
+											<li><code>relative</code>: If <code>stateOrName</code> is a relative state name and <code>options.relative</code> is set, .is will
+											test relative to <code>options.relative</code> state (or name).</li>
 										</ul>
 									</div>
 								</li>
@@ -727,77 +795,72 @@ $state.includes("item.**"); // returns false
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/state/stateService.ts#L458">state/stateService.ts:458</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/state/stateService.ts#L467">ui-router-core/src/state/stateService.ts:467</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="is" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>is</h3>-->
-					<!---->
+					<!--
+        <h3>is</h3>
+    -->
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">is<span class="tsd-signature-symbol">(</span>stateOrName<span class="tsd-signature-symbol">: </span><a href="../modules/state.html#stateorname" class="tsd-signature-type">StateOrName</a>, params<span class="tsd-signature-symbol">?: </span><a href="../interfaces/params.rawparams.html" class="tsd-signature-type">RawParams</a>, options<span class="tsd-signature-symbol">?: </span><a href="../interfaces/transition.transitionoptions.html" class="tsd-signature-type">TransitionOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">is<span class="tsd-signature-symbol">(</span>stateOrName<span class="tsd-signature-symbol">: </span><a href="../modules/state.html#stateorname" class="tsd-signature-type">StateOrName</a>, params<span class="tsd-signature-symbol">?: </span><a href="../interfaces/params.rawparams.html" class="tsd-signature-type">RawParams</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-header">
+							<p> Checks if the current state <em>is</em> the provided state </p>
+						</li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<div class="tsd-comment tsd-typography">
-								<dl class="tsd-comment-tags">
-									<dt>ngdoc</dt>
-									<dd><p>function</p>
-									</dd>
-									<dt>name</dt>
-									<dd><p>ui.router.state.$state#is</p>
-									</dd>
-									<dt>methodof</dt>
-									<dd><p>ui.router.state.$state</p>
-									</dd>
-									<dt>description</dt>
-									<dd><p>Similar to {@link ui.router.state.$state#methods_includes $state.includes},
-											but only checks for the full state name. If params is supplied then it will be
-											tested for strict equality against the current active params object, so all params
-										must match with none missing and no extras.</p>
-									</dd>
-									<dt>example</dt>
-									<dd><pre>
-$state.$current.name = 'contacts.details.item';
+								<div class="lead">
+									<p>Checks if the current state <em>is</em> the provided state</p>
+								</div>
+								<p>Similar to <a href="state.stateservice.html#includes">includes</a> but only checks for the full state name.
+									If params is supplied then it will be tested for strict equality against the current
+								active params object, so all params must match with none missing and no extras.</p>
+								<h4 id="example-">Example:</h4>
+								<pre><code class="lang-js">$state.$current.name = <span class="hljs-string">'contacts.details.item'</span>;
 
-// absolute name
-$state.is('contact.details.item'); // returns true
-$state.is(contactDetailItemStateObject); // returns true
-
-// relative name (. and ^), typically from a template
-// E.g. from the 'contacts.details' template
-<div ng-class="{highlighted: $state.is('.item')}">Item</div>
-</pre>
-									</dd>
-								</dl>
+<span class="hljs-comment">// absolute name</span>
+$state.is(<span class="hljs-string">'contact.details.item'</span>); <span class="hljs-comment">// returns true</span>
+$state.is(contactDetailItemStateObject); <span class="hljs-comment">// returns true</span>
+</code></pre>
+								<p>// relative name (. and ^), typically from a template
+								// E.g. from the &#39;contacts.details&#39; template</p>
+								<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">ng-class</span>=<span class="hljs-string">"{highlighted: $state.is('.item')}"</span>&gt;</span>Item<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>stateOrName: <a href="../modules/state.html#stateorname" class="tsd-signature-type">StateOrName</a></h5>
+									<h5>stateOrName <a href="../modules/state.html#stateorname" class="tsd-signature-type">StateOrName</a></h5>
 									:         <div class="tsd-comment tsd-typography">
 										<p>The state name (absolute or relative) or state object you&#39;d like to check.</p>
 									</div>
 								</li>
 								<li>
-									<h5>params <span class="tsd-flag ts-flagOptional">Optional</span>: <a href="../interfaces/params.rawparams.html" class="tsd-signature-type">RawParams</a></h5>
+									<h5>params: <span class="tsd-flag ts-flagOptional">Optional</span>&nbsp; <a href="../interfaces/params.rawparams.html" class="tsd-signature-type">RawParams</a></h5>
 									:         <div class="tsd-comment tsd-typography">
 										<p>A param object, e.g. <code>{sectionId: section.id}</code>, that you&#39;d like
 										to test against the current active state.</p>
 									</div>
 								</li>
 								<li>
-									<h5>options <span class="tsd-flag ts-flagOptional">Optional</span>: <a href="../interfaces/transition.transitionoptions.html" class="tsd-signature-type">TransitionOptions</a></h5>
+									<h5>options: <span class="tsd-flag ts-flagOptional">Optional</span>&nbsp; <span class="tsd-signature-type">object</span></h5>
 									:         <div class="tsd-comment tsd-typography">
-										<p>An options object.  The options are:</p>
+										<p>An options object. The options are:</p>
 										<ul>
-											<li><strong><code>relative</code></strong> - {string|object} -  If <code>stateOrName</code> is a relative state name and <code>options.relative</code> is set, .is will
+											<li><code>relative</code>: If <code>stateOrName</code> is a relative state name and <code>options.relative</code> is set, .is will
 											test relative to <code>options.relative</code> state (or name).</li>
 										</ul>
 									</div>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter">
+											<h5><span class="tsd-flag ts-flagOptional">Optional</span> relative<span class="tsd-signature-symbol">?: </span><a href="../modules/state.html#stateorname" class="tsd-signature-type">StateOrName</a></h5>
+										</li>
+									</ul>
 								</li>
 							</ul>
 							<div class="tsd-returns">
@@ -807,16 +870,64 @@ $state.is(contactDetailItemStateObject); // returns true
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/state/stateService.ts#L399">state/stateService.ts:399</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/state/stateService.ts#L418">ui-router-core/src/state/stateService.ts:418</a></li>
+								</ul>
+						</aside>        </li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="lazyload" class="tsd-anchor"></a>
+					<!--
+        <h3>lazy<wbr>Load</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">lazy<wbr>Load<span class="tsd-signature-symbol">(</span>stateOrName<span class="tsd-signature-symbol">: </span><a href="../modules/state.html#stateorname" class="tsd-signature-type">StateOrName</a>, transition<span class="tsd-signature-symbol">?: </span><a href="transition.transition-1.html" class="tsd-signature-type">Transition</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/state.lazyloadresult.html" class="tsd-signature-type">LazyLoadResult</a><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-header">
+							<p> Lazy loads a state </p>
+						</li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Lazy loads a state</p>
+								</div>
+								<p>Explicitly runs a state&#39;s <a href="../interfaces/state.statedeclaration.html#lazyload">StateDeclaration.lazyLoad</a> function.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>stateOrName <a href="../modules/state.html#stateorname" class="tsd-signature-type">StateOrName</a></h5>
+									:         <div class="tsd-comment tsd-typography">
+										<p>the state that should be lazy loaded</p>
+									</div>
+								</li>
+								<li>
+									<h5>transition: <span class="tsd-flag ts-flagOptional">Optional</span>&nbsp; <a href="transition.transition-1.html" class="tsd-signature-type">Transition</a></h5>
+									:         <div class="tsd-comment tsd-typography">
+										<p>the optional Transition context to use (if the lazyLoad function requires an injector, etc)
+											Note: If no transition is provided, a noop transition is created using the from the current state to the current state.
+										This noop transition is not actually run.</p>
+									</div>
+								</li>
+							</ul>
+							<div class="tsd-returns">
+								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/state.lazyloadresult.html" class="tsd-signature-type">LazyLoadResult</a><span class="tsd-signature-symbol">&gt;</span></h4>
+								: <p>a promise to lazy load</p>
+							</div>
+							<hr>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/state/stateService.ts#L609">ui-router-core/src/state/stateService.ts:609</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="oninvalid" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>on<wbr>Invalid</h3>-->
-					<!---->
+					<!--
+        <h3>on<wbr>Invalid</h3>
+    -->
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">on<wbr>Invalid<span class="tsd-signature-symbol">(</span>callback<span class="tsd-signature-symbol">: </span><a href="../modules/state.html#oninvalidcallback" class="tsd-signature-type">OnInvalidCallback</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Function</span></li>
 						<li class="tsd-header">
@@ -836,7 +947,7 @@ $state.is(contactDetailItemStateObject); // returns true
   <span class="hljs-keyword">if</span> (to.name() === <span class="hljs-string">'foo'</span>) {
     <span class="hljs-keyword">let</span> lazyLoader = injector.get(<span class="hljs-string">'LazyLoadService'</span>);
     <span class="hljs-keyword">return</span> lazyLoader.load(<span class="hljs-string">'foo'</span>)
-        .then(() =&gt; stateService.target(<span class="hljs-string">'foo'</span>));
+        .then(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> stateService.target(<span class="hljs-string">'foo'</span>));
   }
 });
 </code></pre>
@@ -844,7 +955,7 @@ $state.is(contactDetailItemStateObject); // returns true
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>callback: <a href="../modules/state.html#oninvalidcallback" class="tsd-signature-type">OnInvalidCallback</a></h5>
+									<h5>callback <a href="../modules/state.html#oninvalidcallback" class="tsd-signature-type">OnInvalidCallback</a></h5>
 									:         <div class="tsd-comment tsd-typography">
 										<p>invoked when the toState is invalid
 											This function receives the (invalid) toState, the fromState, and an injector.
@@ -860,119 +971,109 @@ $state.is(contactDetailItemStateObject); // returns true
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/state/stateService.ts#L116">state/stateService.ts:116</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/state/stateService.ts#L156">ui-router-core/src/state/stateService.ts:156</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="reload" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>reload</h3>-->
-					<!---->
+					<!--
+        <h3>reload</h3>
+    -->
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">reload<span class="tsd-signature-symbol">(</span>reloadState<span class="tsd-signature-symbol">?: </span><a href="../modules/state.html#stateorname" class="tsd-signature-type">StateOrName</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="state.state-1.html" class="tsd-signature-type">State</a><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<div class="tsd-comment tsd-typography">
-								<dl class="tsd-comment-tags">
-									<dt>ngdoc</dt>
-									<dd><p>function</p>
-									</dd>
-									<dt>name</dt>
-									<dd><p>ui.router.state.$state#reload</p>
-									</dd>
-									<dt>methodof</dt>
-									<dd><p>ui.router.state.$state</p>
-									</dd>
-									<dt>description</dt>
-									<dd><p>A method that force reloads the current state, or a partial state hierarchy. All resolves are re-resolved,
-										controllers reinstantiated, and events re-fired.</p>
-									</dd>
-									<dt>example</dt>
-									<dd><pre>
-let app angular.module('app', ['ui.router']);
-
-app.controller('ctrl', function ($scope, $state) {
-  $scope.reload = function(){
-    $state.reload();
-  }
-});
-</pre>
-										<p><code>reload()</code> is just an alias for:</p>
-										<pre>
-$state.transitionTo($state.current, $stateParams, {
-  reload: true, inherit: false, notify: true
-});
-</pre>
-									</dd>
-									<dt>example</dt>
-									<dd><pre>
-//assuming app application consists of 3 states: 'contacts', 'contacts.detail', 'contacts.detail.item'
-//and current state is 'contacts.detail.item'
-let app angular.module('app', ['ui.router']);
-
-app.controller('ctrl', function ($scope, $state) {
-  $scope.reload = function(){
-    //will reload 'contact.detail' and nested 'contact.detail.item' states
-    $state.reload('contact.detail');
-  }
-});
-</pre>
-									</dd>
-								</dl>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>reloadState <span class="tsd-flag ts-flagOptional">Optional</span>: <a href="../modules/state.html#stateorname" class="tsd-signature-type">StateOrName</a></h5>
-									:         <div class="tsd-comment tsd-typography">
-										<p>A state name or a state object, which is the root of the resolves to be re-resolved.</p>
-									</div>
-								</li>
-							</ul>
-							<div class="tsd-returns">
-								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="state.state-1.html" class="tsd-signature-type">State</a><span class="tsd-signature-symbol">&gt;</span></h4>
-								: <p>A promise representing the state of the new transition. See
-								{@link ui.router.state.$state#methods_go $state.go}.</p>
-							</div>
-							<hr>
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/state/stateService.ts#L169">state/stateService.ts:169</a></li>
-								</ul>
-						</aside>        </li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="target" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>target</h3>-->
-					<!---->
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">target<span class="tsd-signature-symbol">(</span>identifier<span class="tsd-signature-symbol">: </span><a href="../modules/state.html#stateorname" class="tsd-signature-type">StateOrName</a>, params<span class="tsd-signature-symbol">?: </span><a href="../modules/params.html#paramsorarray" class="tsd-signature-type">ParamsOrArray</a>, options<span class="tsd-signature-symbol">?: </span><a href="../interfaces/transition.transitionoptions.html" class="tsd-signature-type">TransitionOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="state.targetstate.html" class="tsd-signature-type">TargetState</a></li>
 						<li class="tsd-header">
-							<p> Factory method for creating a TargetState </p>
+							<p> Reloads the current state </p>
 						</li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Factory method for creating a TargetState</p>
+									<p>Reloads the current state</p>
 								</div>
+								<p>A method that force reloads the current state, or a partial state hierarchy.
+								All resolves are re-resolved, and components reinstantiated.</p>
+								<h4 id="example-">Example:</h4>
+								<pre><code class="lang-js"><span class="hljs-keyword">let</span> app angular.module(<span class="hljs-string">'app'</span>, [<span class="hljs-string">'ui.router'</span>]);
+
+app.controller(<span class="hljs-string">'ctrl'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">$scope, $state</span>) </span>{
+  $scope.reload = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+    $state.reload();
+  }
+});
+</code></pre>
+								<p>Note: <code>reload()</code> is just an alias for:</p>
+								<pre><code class="lang-js">$state.transitionTo($state.current, $state.params, {
+  <span class="hljs-attr">reload</span>: <span class="hljs-literal">true</span>, <span class="hljs-attr">inherit</span>: <span class="hljs-literal">false</span>
+});
+</code></pre>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>identifier: <a href="../modules/state.html#stateorname" class="tsd-signature-type">StateOrName</a></h5>
+									<h5>reloadState: <span class="tsd-flag ts-flagOptional">Optional</span>&nbsp; <a href="../modules/state.html#stateorname" class="tsd-signature-type">StateOrName</a></h5>
+									:         <div class="tsd-comment tsd-typography">
+										<p>A state name or a state object.
+										If present, this state and all its children will be reloaded, but ancestors will not reload.</p>
+										<h4 id="example-">Example:</h4>
+										<pre><code class="lang-js"><span class="hljs-comment">//assuming app application consists of 3 states: 'contacts', 'contacts.detail', 'contacts.detail.item'</span>
+<span class="hljs-comment">//and current state is 'contacts.detail.item'</span>
+<span class="hljs-keyword">let</span> app angular.module(<span class="hljs-string">'app'</span>, [<span class="hljs-string">'ui.router'</span>]);
+
+app.controller(<span class="hljs-string">'ctrl'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">$scope, $state</span>) </span>{
+  $scope.reload = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-comment">//will reload 'contact.detail' and nested 'contact.detail.item' states</span>
+    $state.reload(<span class="hljs-string">'contact.detail'</span>);
+  }
+});
+</code></pre>
+									</div>
+								</li>
+							</ul>
+							<div class="tsd-returns">
+								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="state.state-1.html" class="tsd-signature-type">State</a><span class="tsd-signature-symbol">&gt;</span></h4>
+								: <p>A promise representing the state of the new transition. See <a href="state.stateservice.html#go">StateService.go</a></p>
+							</div>
+							<hr>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/state/stateService.ts#L208">ui-router-core/src/state/stateService.ts:208</a></li>
+								</ul>
+						</aside>        </li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="target" class="tsd-anchor"></a>
+					<!--
+        <h3>target</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">target<span class="tsd-signature-symbol">(</span>identifier<span class="tsd-signature-symbol">: </span><a href="../modules/state.html#stateorname" class="tsd-signature-type">StateOrName</a>, params<span class="tsd-signature-symbol">?: </span><a href="../modules/params.html#paramsorarray" class="tsd-signature-type">ParamsOrArray</a>, options<span class="tsd-signature-symbol">?: </span><a href="../interfaces/transition.transitionoptions.html" class="tsd-signature-type">TransitionOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="state.targetstate.html" class="tsd-signature-type">TargetState</a></li>
+						<li class="tsd-header">
+							<p> Creates a <a href="state.targetstate.html">TargetState</a> </p>
+						</li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Creates a <a href="state.targetstate.html">TargetState</a></p>
+								</div>
+								<p>This is a factory method for creating a TargetState</p>
+								<p>This may be returned from a Transition Hook to redirect a transition, for example.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>identifier <a href="../modules/state.html#stateorname" class="tsd-signature-type">StateOrName</a></h5>
 								</li>
 								<li>
-									<h5>params <span class="tsd-flag ts-flagOptional">Optional</span>: <a href="../modules/params.html#paramsorarray" class="tsd-signature-type">ParamsOrArray</a></h5>
+									<h5>params: <span class="tsd-flag ts-flagOptional">Optional</span>&nbsp; <a href="../modules/params.html#paramsorarray" class="tsd-signature-type">ParamsOrArray</a></h5>
 								</li>
 								<li>
-									<h5>options <span class="tsd-flag ts-flagDefault value">Default value</span>: <a href="../interfaces/transition.transitionoptions.html" class="tsd-signature-type">TransitionOptions</a><span class="tsd-signature-symbol"> =&nbsp;{}</span></h5>
+									<h5>options: <span class="tsd-flag ts-flagDefault value">Default value</span>&nbsp; <a href="../interfaces/transition.transitionoptions.html" class="tsd-signature-type">TransitionOptions</a><span class="tsd-signature-symbol"> =&nbsp;{}</span></h5>
 								</li>
 							</ul>
 							<div class="tsd-returns">
@@ -981,91 +1082,69 @@ app.controller('ctrl', function ($scope, $state) {
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/state/stateService.ts#L250">state/stateService.ts:250</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/state/stateService.ts#L282">ui-router-core/src/state/stateService.ts:282</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="transitionto" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>transition<wbr>To</h3>-->
-					<!---->
+					<!--
+        <h3>transition<wbr>To</h3>
+    -->
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">transition<wbr>To<span class="tsd-signature-symbol">(</span>to<span class="tsd-signature-symbol">: </span><a href="../modules/state.html#stateorname" class="tsd-signature-type">StateOrName</a>, toParams<span class="tsd-signature-symbol">?: </span><a href="../interfaces/params.rawparams.html" class="tsd-signature-type">RawParams</a>, options<span class="tsd-signature-symbol">?: </span><a href="../interfaces/transition.transitionoptions.html" class="tsd-signature-type">TransitionOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/state.transitionpromise.html" class="tsd-signature-type">TransitionPromise</a></li>
+						<li class="tsd-header">
+							<p> Low-level method for transitioning to a new state. </p>
+						</li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<div class="tsd-comment tsd-typography">
-								<dl class="tsd-comment-tags">
-									<dt>ngdoc</dt>
-									<dd><p>function</p>
-									</dd>
-									<dt>name</dt>
-									<dd><p>ui.router.state.$state#transitionTo</p>
-									</dd>
-									<dt>methodof</dt>
-									<dd><p>ui.router.state.$state</p>
-									</dd>
-									<dt>description</dt>
-									<dd><p>Low-level method for transitioning to a new state. {@link ui.router.state.$state#methods_go $state.go}
-										uses <code>transitionTo</code> internally. <code>$state.go</code> is recommended in most situations.</p>
-									</dd>
-									<dt>example</dt>
-									<dd><pre>
-let app = angular.module('app', ['ui.router']);
+								<div class="lead">
+									<p>Low-level method for transitioning to a new state.</p>
+								</div>
+								<p>The <a href="state.stateservice.html#go">go</a> method (which uses <code>transitionTo</code> internally) is recommended in most situations.</p>
+								<h4 id="example-">Example:</h4>
+								<pre><code class="lang-js"><span class="hljs-keyword">let</span> app = angular.module(<span class="hljs-string">'app'</span>, [<span class="hljs-string">'ui.router'</span>]);
 
-app.controller('ctrl', function ($scope, $state) {
-  $scope.changeState = function () {
-    $state.transitionTo('contact.detail');
+app.controller(<span class="hljs-string">'ctrl'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">$scope, $state</span>) </span>{
+  $scope.changeState = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    $state.transitionTo(<span class="hljs-string">'contact.detail'</span>);
   };
 });
-</pre>
-									</dd>
-								</dl>
+</code></pre>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>to: <a href="../modules/state.html#stateorname" class="tsd-signature-type">StateOrName</a></h5>
+									<h5>to <a href="../modules/state.html#stateorname" class="tsd-signature-type">StateOrName</a></h5>
 									:         <div class="tsd-comment tsd-typography">
 										<p>State name or state object.</p>
 									</div>
 								</li>
 								<li>
-									<h5>toParams <span class="tsd-flag ts-flagDefault value">Default value</span>: <a href="../interfaces/params.rawparams.html" class="tsd-signature-type">RawParams</a><span class="tsd-signature-symbol"> =&nbsp;{}</span></h5>
+									<h5>toParams: <span class="tsd-flag ts-flagDefault value">Default value</span>&nbsp; <a href="../interfaces/params.rawparams.html" class="tsd-signature-type">RawParams</a><span class="tsd-signature-symbol"> =&nbsp;{}</span></h5>
 									:         <div class="tsd-comment tsd-typography">
 										<p>A map of the parameters that will be sent to the state,
 										will populate $stateParams.</p>
 									</div>
 								</li>
 								<li>
-									<h5>options <span class="tsd-flag ts-flagDefault value">Default value</span>: <a href="../interfaces/transition.transitionoptions.html" class="tsd-signature-type">TransitionOptions</a><span class="tsd-signature-symbol"> =&nbsp;{}</span></h5>
+									<h5>options: <span class="tsd-flag ts-flagDefault value">Default value</span>&nbsp; <a href="../interfaces/transition.transitionoptions.html" class="tsd-signature-type">TransitionOptions</a><span class="tsd-signature-symbol"> =&nbsp;{}</span></h5>
 									:         <div class="tsd-comment tsd-typography">
-										<p>Options object. The options are:</p>
-										<ul>
-											<li><strong><code>location</code></strong> - {boolean=true|string=} - If <code>true</code> will update the url in the location bar, if <code>false</code>
-											will not. If string, must be <code>&quot;replace&quot;</code>, which will update url and also replace last history record.</li>
-											<li><strong><code>inherit</code></strong> - {boolean=false}, If <code>true</code> will inherit url parameters from current url.</li>
-											<li><strong><code>relative</code></strong> - {object=}, When transitioning with relative path (e.g &#39;^&#39;),
-											defines which state to be relative from.</li>
-											<li><strong><code>notify</code></strong> - {boolean=true}, If <code>true</code> will broadcast $stateChangeStart and $stateChangeSuccess events.</li>
-											<li><strong><code>reload</code></strong> (v0.2.5) - {boolean=false}, If <code>true</code> will force transition even if the state or params
-												have not changed, aka a reload of the same state. It differs from reloadOnSearch because you&#39;d
-											use this when you want to force a reload when <em>everything</em> is the same, including search params.</li>
-										</ul>
+										<p>Transition options</p>
 									</div>
 								</li>
 							</ul>
 							<div class="tsd-returns">
 								<h4 class="tsd-returns-title">Returns <a href="../interfaces/state.transitionpromise.html" class="tsd-signature-type">TransitionPromise</a></h4>
-								: <p>A promise representing the state of the new transition. See
-								{@link ui.router.state.$state#methods_go $state.go}.</p>
+								: <p>A promise representing the state of the new transition. See <a href="state.stateservice.html#go">go</a></p>
 							</div>
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/state/stateService.ts#L302">state/stateService.ts:302</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/state/stateService.ts#L326">ui-router-core/src/state/stateService.ts:326</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
@@ -1076,49 +1155,25 @@ app.controller('ctrl', function ($scope, $state) {
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../globals.html"><em>Globals</em></a>
+						<a href="../index.html"><em>angular-<wbr>ui-<wbr>router</em></a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/common.html">common</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/common_hof.html">common_<wbr>hof</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/common_predicates.html">common_<wbr>predicates</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/common_strings.html">common_<wbr>strings</a>
+					<li class="label tsd-is-external">
+						<span>Public API</span>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/core.html">core</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/hooks.html">hooks</a>
+						<a href="../modules/directives.html">directives</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/justjs.html">justjs</a>
+						<a href="../modules/injectables.html">injectables</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/ng1.html">ng1</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/ng1_directives.html">ng1_<wbr>directives</a>
-					</li>
-					<li class=" tsd-kind-external-module">
 						<a href="../modules/ng1_state_events.html">ng1_<wbr>state_<wbr>events</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/ng2.html">ng2</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/ng2_directives.html">ng2_<wbr>directives</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/params.html">params</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/path.html">path</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/resolve.html">resolve</a>
@@ -1135,7 +1190,31 @@ app.controller('ctrl', function ($scope, $state) {
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/url.html">url</a>
 					</li>
-					<li class=" tsd-kind-external-module">
+					<li class="label tsd-is-external">
+						<span>Internal UI-<wbr><wbr>Router API</span>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/common.html">common</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/common_hof.html">common_<wbr>hof</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/common_predicates.html">common_<wbr>predicates</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/common_strings.html">common_<wbr>strings</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/hooks.html">hooks</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/params.html">params</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/path.html">path</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
 						<a href="../modules/view.html">view</a>
 					</li>
 				</ul>
@@ -1145,13 +1224,13 @@ app.controller('ctrl', function ($scope, $state) {
 					<li class=" tsd-kind-class tsd-parent-kind-external-module">
 						<a href="state.state-1.html" class="tsd-kind-icon">State</a>
 					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-external-module">
+					<li class=" tsd-kind-class tsd-parent-kind-external-module tsd-is-external">
 						<a href="state.statebuilder.html" class="tsd-kind-icon">State<wbr>Builder</a>
 					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-external-module">
+					<li class=" tsd-kind-class tsd-parent-kind-external-module tsd-is-external">
 						<a href="state.statematcher.html" class="tsd-kind-icon">State<wbr>Matcher</a>
 					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-external-module">
+					<li class=" tsd-kind-class tsd-parent-kind-external-module tsd-is-external">
 						<a href="state.statequeuemanager.html" class="tsd-kind-icon">State<wbr>Queue<wbr>Manager</a>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-external-module">
@@ -1162,7 +1241,10 @@ app.controller('ctrl', function ($scope, $state) {
 					<li class="current tsd-kind-class tsd-parent-kind-external-module">
 						<a href="state.stateservice.html" class="tsd-kind-icon">State<wbr>Service</a>
 						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
+							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-external">
+								<a href="state.stateservice.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-external">
 								<a href="state.stateservice.html#invalidcallbacks" class="tsd-kind-icon">invalid<wbr>Callbacks</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
@@ -1180,14 +1262,20 @@ app.controller('ctrl', function ($scope, $state) {
 							<li class=" tsd-kind-get-signature tsd-parent-kind-class">
 								<a href="state.stateservice.html#transition" class="tsd-kind-icon">transition</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-external">
 								<a href="state.stateservice.html#_handleinvalidtargetstate" class="tsd-kind-icon">_handle<wbr>Invalid<wbr>Target<wbr>State</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="state.stateservice.html#defaulterrorhandler" class="tsd-kind-icon">default<wbr>Error<wbr>Handler</a>
 							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
+								<a href="state.stateservice.html#dispose" class="tsd-kind-icon">dispose</a>
+							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="state.stateservice.html#get" class="tsd-kind-icon">get</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="state.stateservice.html#getcurrentpath" class="tsd-kind-icon">get<wbr>Current<wbr>Path</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="state.stateservice.html#go" class="tsd-kind-icon">go</a>
@@ -1200,6 +1288,9 @@ app.controller('ctrl', function ($scope, $state) {
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="state.stateservice.html#is" class="tsd-kind-icon">is</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="state.stateservice.html#lazyload" class="tsd-kind-icon">lazy<wbr>Load</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="state.stateservice.html#oninvalid" class="tsd-kind-icon">on<wbr>Invalid</a>
@@ -1220,29 +1311,35 @@ app.controller('ctrl', function ($scope, $state) {
 					<li class=" tsd-kind-class tsd-parent-kind-external-module">
 						<a href="state.targetstate.html" class="tsd-kind-icon">Target<wbr>State</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
 						<a href="../interfaces/state.builders.html" class="tsd-kind-icon">Builders</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-external">
 						<a href="../interfaces/state.hrefoptions.html" class="tsd-kind-icon">Href<wbr>Options</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-external">
 						<a href="../interfaces/state.lazyloadresult.html" class="tsd-kind-icon">Lazy<wbr>Load<wbr>Result</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="../interfaces/state.providerlike.html" class="tsd-kind-icon">Provider<wbr>Like</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
 						<a href="../interfaces/state.statedeclaration.html" class="tsd-kind-icon">State<wbr>Declaration</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="../interfaces/state.targetstatedef.html" class="tsd-kind-icon">Target<wbr>State<wbr>Def</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-external">
 						<a href="../interfaces/state.transitionpromise.html" class="tsd-kind-icon">Transition<wbr>Promise</a>
 					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-external">
+						<a href="../interfaces/state._viewdeclaration.html" class="tsd-kind-icon">_<wbr>View<wbr>Declaration</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-external">
 						<a href="../modules/state.html#builderfunction" class="tsd-kind-icon">Builder<wbr>Function</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
 						<a href="../modules/state.html#oninvalidcallback" class="tsd-kind-icon">On<wbr>Invalid<wbr>Callback</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
+						<a href="../modules/state.html#redirecttoresult" class="tsd-kind-icon">Redirect<wbr>ToResult</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
 						<a href="../modules/state.html#resolvetypes" class="tsd-kind-icon">Resolve<wbr>Types</a>
@@ -1253,40 +1350,34 @@ app.controller('ctrl', function ($scope, $state) {
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
 						<a href="../modules/state.html#stateregistrylistener" class="tsd-kind-icon">State<wbr>Registry<wbr>Listener</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module">
-						<a href="../modules/state.html#_includedbystatefilter" class="tsd-kind-icon">$<wbr>Included<wbr>ByState<wbr>Filter</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module">
-						<a href="../modules/state.html#_isstatefilter" class="tsd-kind-icon">$<wbr>IsState<wbr>Filter</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
 						<a href="../modules/state.html#databuilder" class="tsd-kind-icon">data<wbr>Builder</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
 						<a href="../modules/state.html#getnavigablebuilder" class="tsd-kind-icon">get<wbr>Navigable<wbr>Builder</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
 						<a href="../modules/state.html#getparamsbuilder" class="tsd-kind-icon">get<wbr>Params<wbr>Builder</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
 						<a href="../modules/state.html#geturlbuilder" class="tsd-kind-icon">get<wbr>Url<wbr>Builder</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
 						<a href="../modules/state.html#includesbuilder" class="tsd-kind-icon">includes<wbr>Builder</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
 						<a href="../modules/state.html#namebuilder" class="tsd-kind-icon">name<wbr>Builder</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
 						<a href="../modules/state.html#parseurl" class="tsd-kind-icon">parse<wbr>Url</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
 						<a href="../modules/state.html#pathbuilder" class="tsd-kind-icon">path<wbr>Builder</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-external">
 						<a href="../modules/state.html#resolvablesbuilder" class="tsd-kind-icon">resolvables<wbr>Builder</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
 						<a href="../modules/state.html#selfbuilder" class="tsd-kind-icon">self<wbr>Builder</a>
 					</li>
 				</ul>

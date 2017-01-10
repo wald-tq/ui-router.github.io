@@ -1,17 +1,17 @@
 ---
-redirect_from: /docs/latest/classes/core.uirouter.html
 ---
 <!doctype html>
 <html class="default no-js">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>UIRouter | UI-Router</title>
+	<title>UIRouter | angular-ui-router</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
-	<link rel="stylesheet" href="../assets/css/typedoctheme.css">
+	<link rel="stylesheet" href="../assets/css/uirouter.css">
 	<script src="../assets/js/modernizr.js"></script>
+	<script src="../assets/js/reset.js"></script>
 </head>
 <body>
 <header>
@@ -27,26 +27,31 @@ redirect_from: /docs/latest/classes/core.uirouter.html
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">UI-Router</a>
+					<a href="../index.html" class="title">angular-ui-router</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
 						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
 						<div class="tsd-filter-group">
-							<div class="tsd-select" id="tsd-filter-visibility">
-								<span class="tsd-select-label">All</span>
-								<ul class="tsd-select-list">
-									<li data-value="public">Public</li>
-									<li data-value="protected">Public/Protected</li>
-									<li data-value="private" class="selected">All</li>
-								</ul>
-							</div>
-							<input type="checkbox" id="tsd-filter-inherited" checked />
-							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<!--
+                            <div class="tsd-select" id="tsd-filter-visibility">
+                                <span class="tsd-select-label">All</span>
+                                <ul class="tsd-select-list">
+                                    <li data-value="public">Public</li>
+                                    <li data-value="protected">Public/Protected</li>
+                                    <li data-value="private" class="selected">All</li>
+                                </ul>
+                            </div>
+
+                            <input type="checkbox" id="tsd-filter-inherited" checked />
+                            <label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+                            -->
 							<input type="checkbox" id="tsd-filter-externals" checked />
-							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
-							<input type="checkbox" id="tsd-filter-only-exported" />
-							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+							<label class="tsd-widget" for="tsd-filter-externals">Internal UI-Router API</label>
+							<!--
+                                <input type="checkbox" id="tsd-filter-only-exported" />
+                                <label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+                            -->
 						</div>
 					</div>
 					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
@@ -58,7 +63,7 @@ redirect_from: /docs/latest/classes/core.uirouter.html
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../globals.html">Globals</a>
+					<a href="../index.html">angular-ui-router</a>
 				</li>
 				<li>
 					<a href="../modules/core.html">core</a>
@@ -79,10 +84,14 @@ redirect_from: /docs/latest/classes/core.uirouter.html
 					<div class="lead">
 						<p>The master class used to instantiate an instance of UI-Router.</p>
 					</div>
-					<p>This class instantiates and wires the global UI-Router services.</p>
-					<p>After instantiating a new instance of the Router class, configure it for your app.  For instance, register
-						your app states with the <a href="core.uirouter.html#stateregistry">stateRegistry</a> (and set url options using ...).  Then, tell UI-Router to monitor
-					the URL by calling <code>urlRouter.listen()</code> ([[URLRouter.listen]])</p>
+					<p>UI-Router (for each specific framework) will create an instance of this class during bootstrap.
+					This class instantiates and wires the UI-Router services together.</p>
+					<p>After a new instance of the UIRouter class is created, it should be configured for your app.
+					For instance, app states should be registered with the <a href="core.uirouter.html#stateregistry">UIRouter.stateRegistry</a>.</p>
+					<hr>
+					<p>Normally the framework code will bootstrap UI-Router.
+						If you are bootstrapping UIRouter manually, tell it to monitor the URL by calling
+					<a href="url.urlservice.html#listen">UrlService.listen</a> then <a href="url.urlservice.html#sync">UrlService.sync</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -97,47 +106,86 @@ redirect_from: /docs/latest/classes/core.uirouter.html
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
-						<section class="tsd-index-section ">
+						<section class="tsd-index-section tsd-is-external">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="core.uirouter.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-external"><a href="core.uirouter.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="core.uirouter.html#globals" class="tsd-kind-icon">globals</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="core.uirouter.html#locationconfig" class="tsd-kind-icon">location<wbr>Config</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="core.uirouter.html#locationservice" class="tsd-kind-icon">location<wbr>Service</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="core.uirouter.html#stateregistry" class="tsd-kind-icon">state<wbr>Registry</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="core.uirouter.html#stateservice" class="tsd-kind-icon">state<wbr>Service</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="core.uirouter.html#trace" class="tsd-kind-icon">trace</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="core.uirouter.html#transitionservice" class="tsd-kind-icon">transition<wbr>Service</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="core.uirouter.html#urlmatcherfactory" class="tsd-kind-icon">url<wbr>Matcher<wbr>Factory</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="core.uirouter.html#urlrouter" class="tsd-kind-icon">url<wbr>Router</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="core.uirouter.html#urlrouterprovider" class="tsd-kind-icon">url<wbr>Router<wbr>Provider</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="core.uirouter.html#urlservice" class="tsd-kind-icon">url<wbr>Service</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="core.uirouter.html#viewservice" class="tsd-kind-icon">view<wbr>Service</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="core.uirouter.html#disposable" class="tsd-kind-icon">disposable</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="core.uirouter.html#dispose" class="tsd-kind-icon">dispose</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="core.uirouter.html#getplugin" class="tsd-kind-icon">get<wbr>Plugin</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter"><a href="core.uirouter.html#plugin" class="tsd-kind-icon">plugin</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group ">
+			<section class="tsd-panel-group tsd-member-group tsd-is-external">
 				<h2>Constructors</h2>
-				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class tsd-is-external">
 					<a name="constructor" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>constructor</h3>-->
-					<!---->
-					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new UIRouter<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="core.uirouter.html" class="tsd-signature-type">UIRouter</a></li>
+					<!--
+        <h3>constructor</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">new UIRouter<span class="tsd-signature-symbol">(</span>locationService<span class="tsd-signature-symbol">?: </span><a href="../interfaces/common.locationservices.html" class="tsd-signature-type">LocationServices</a>, locationConfig<span class="tsd-signature-symbol">?: </span><a href="../interfaces/common.locationconfig.html" class="tsd-signature-type">LocationConfig</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="core.uirouter.html" class="tsd-signature-type">UIRouter</a></li>
+						<li class="tsd-header">
+							<p> Creates a new <code>UIRouter</code> object </p>
+						</li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Creates a new <code>UIRouter</code> object</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>locationService: <span class="tsd-flag ts-flagDefault value">Default value</span>&nbsp; <a href="../interfaces/common.locationservices.html" class="tsd-signature-type">LocationServices</a><span class="tsd-signature-symbol"> =&nbsp;UrlService.locationServiceStub</span></h5>
+									:         <div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>a <a href="../interfaces/common.locationservices.html">LocationServices</a> implementation</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5>locationConfig: <span class="tsd-flag ts-flagDefault value">Default value</span>&nbsp; <a href="../interfaces/common.locationconfig.html" class="tsd-signature-type">LocationConfig</a><span class="tsd-signature-symbol"> =&nbsp;UrlService.locationConfigStub</span></h5>
+									:         <div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>a <a href="../interfaces/common.locationconfig.html">LocationConfig</a> implementation</p>
+										</div>
+									</div>
+								</li>
+							</ul>
 							<div class="tsd-returns">
 								<h4 class="tsd-returns-title">Returns <a href="core.uirouter.html" class="tsd-signature-type">UIRouter</a></h4>
 							</div>
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/router.ts#L35">router.ts:35</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/router.ts#L104">ui-router-core/src/router.ts:104</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
@@ -147,115 +195,692 @@ redirect_from: /docs/latest/classes/core.uirouter.html
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="globals" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>globals</h3>-->
-					<!---->
-					<div class="tsd-signature tsd-kind-icon">globals<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">UIRouterGlobals</span></div>
+					<!--
+        <h3>globals</h3>
+    -->
+					<div class="tsd-signature tsd-kind-icon">globals<span class="tsd-signature-symbol">:</span> <a href="../interfaces/core.uirouterglobals.html" class="tsd-signature-type">UIRouterGlobals</a><span class="tsd-signature-symbol"> =&nbsp;new Globals(this.transitionService)</span>    <div class="tsd-header">
+							<p> Global router state </p>
+						</div>
+					</div>
 					<div class="tsd-declaration">
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Global router state</p>
+							</div>
+						</div>
 					</div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/router.ts#L25">router.ts:25</a></li>
+							<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/router.ts#L51">ui-router-core/src/router.ts:51</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="locationconfig" class="tsd-anchor"></a>
+					<!--
+        <h3>location<wbr>Config</h3>
+    -->
+					<div class="tsd-signature tsd-kind-icon">location<wbr>Config<span class="tsd-signature-symbol">:</span> <a href="../interfaces/common.locationconfig.html" class="tsd-signature-type">LocationConfig</a>    <div class="tsd-header">
+							<p> a <a href="../interfaces/common.locationconfig.html">LocationConfig</a> implementation </p>
+						</div>
+					</div>
+					<div class="tsd-declaration">
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>a <a href="../interfaces/common.locationconfig.html">LocationConfig</a> implementation</p>
+							</div>
+						</div>
+					</div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/router.ts#L115">ui-router-core/src/router.ts:115</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="locationservice" class="tsd-anchor"></a>
+					<!--
+        <h3>location<wbr>Service</h3>
+    -->
+					<div class="tsd-signature tsd-kind-icon">location<wbr>Service<span class="tsd-signature-symbol">:</span> <a href="../interfaces/common.locationservices.html" class="tsd-signature-type">LocationServices</a>    <div class="tsd-header">
+							<p> a <a href="../interfaces/common.locationservices.html">LocationServices</a> implementation </p>
+						</div>
+					</div>
+					<div class="tsd-declaration">
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>a <a href="../interfaces/common.locationservices.html">LocationServices</a> implementation</p>
+							</div>
+						</div>
+					</div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/router.ts#L114">ui-router-core/src/router.ts:114</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="stateregistry" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>state<wbr>Registry</h3>-->
-					<!---->
-					<div class="tsd-signature tsd-kind-icon">state<wbr>Registry<span class="tsd-signature-symbol">:</span> <a href="state.stateregistry.html" class="tsd-signature-type">StateRegistry</a></div>
+					<!--
+        <h3>state<wbr>Registry</h3>
+    -->
+					<div class="tsd-signature tsd-kind-icon">state<wbr>Registry<span class="tsd-signature-symbol">:</span> <a href="state.stateregistry.html" class="tsd-signature-type">StateRegistry</a><span class="tsd-signature-symbol"> =&nbsp;new StateRegistry(this)</span>    <div class="tsd-header">
+							<p> Provides a registry for states, and related registration services </p>
+						</div>
+					</div>
 					<div class="tsd-declaration">
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Provides a registry for states, and related registration services</p>
+							</div>
+						</div>
 					</div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/router.ts#L33">router.ts:33</a></li>
+							<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/router.ts#L66">ui-router-core/src/router.ts:66</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="stateservice" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>state<wbr>Service</h3>-->
-					<!---->
-					<div class="tsd-signature tsd-kind-icon">state<wbr>Service<span class="tsd-signature-symbol">:</span> <a href="state.stateservice.html" class="tsd-signature-type">StateService</a></div>
+					<!--
+        <h3>state<wbr>Service</h3>
+    -->
+					<div class="tsd-signature tsd-kind-icon">state<wbr>Service<span class="tsd-signature-symbol">:</span> <a href="state.stateservice.html" class="tsd-signature-type">StateService</a><span class="tsd-signature-symbol"> =&nbsp;new StateService(this)</span>    <div class="tsd-header">
+							<p> Provides services related to states </p>
+						</div>
+					</div>
 					<div class="tsd-declaration">
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Provides services related to states</p>
+							</div>
+						</div>
 					</div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/router.ts#L35">router.ts:35</a></li>
+							<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/router.ts#L69">ui-router-core/src/router.ts:69</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="trace" class="tsd-anchor"></a>
+					<!--
+        <h3>trace</h3>
+    -->
+					<div class="tsd-signature tsd-kind-icon">trace<span class="tsd-signature-symbol">:</span> <a href="trace.trace-1.html" class="tsd-signature-type">Trace</a><span class="tsd-signature-symbol"> =&nbsp;trace</span>    <div class="tsd-header">
+							<p> Provides trace information to the console </p>
+						</div>
+					</div>
+					<div class="tsd-declaration">
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Provides trace information to the console</p>
+							</div>
+						</div>
+					</div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/router.ts#L42">ui-router-core/src/router.ts:42</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="transitionservice" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>transition<wbr>Service</h3>-->
-					<!---->
-					<div class="tsd-signature tsd-kind-icon">transition<wbr>Service<span class="tsd-signature-symbol">:</span> <a href="transition.transitionservice.html" class="tsd-signature-type">TransitionService</a></div>
+					<!--
+        <h3>transition<wbr>Service</h3>
+    -->
+					<div class="tsd-signature tsd-kind-icon">transition<wbr>Service<span class="tsd-signature-symbol">:</span> <a href="transition.transitionservice.html" class="tsd-signature-type">TransitionService</a><span class="tsd-signature-symbol"> =&nbsp;new TransitionService(this)</span>    <div class="tsd-header">
+							<p> Provides services related to Transitions </p>
+						</div>
+					</div>
 					<div class="tsd-declaration">
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Provides services related to Transitions</p>
+							</div>
+						</div>
 					</div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/router.ts#L23">router.ts:23</a></li>
+							<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/router.ts#L48">ui-router-core/src/router.ts:48</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="urlmatcherfactory" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>url<wbr>Matcher<wbr>Factory</h3>-->
-					<!---->
-					<div class="tsd-signature tsd-kind-icon">url<wbr>Matcher<wbr>Factory<span class="tsd-signature-symbol">:</span> <a href="url.urlmatcherfactory.html" class="tsd-signature-type">UrlMatcherFactory</a></div>
+					<!--
+        <h3>url<wbr>Matcher<wbr>Factory</h3>
+    -->
+					<div class="tsd-signature tsd-kind-icon">url<wbr>Matcher<wbr>Factory<span class="tsd-signature-symbol">:</span> <a href="url.urlmatcherfactory.html" class="tsd-signature-type">UrlMatcherFactory</a><span class="tsd-signature-symbol"> =&nbsp;new UrlMatcherFactory()</span>    <div class="tsd-header">
+							<p> Deprecated for public use. Use <a href="core.uirouter.html#urlservice">urlService</a> instead. </p>
+						</div>
+					</div>
 					<div class="tsd-declaration">
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Deprecated for public use. Use <a href="core.uirouter.html#urlservice">urlService</a> instead.</p>
+							</div>
+							<dl class="tsd-comment-tags">
+								<dt>deprecated</dt>
+								<dd></dd>
+							</dl>
+						</div>
 					</div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/router.ts#L27">router.ts:27</a></li>
+							<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/router.ts#L57">ui-router-core/src/router.ts:57</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="urlrouter" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>url<wbr>Router</h3>-->
-					<!---->
-					<div class="tsd-signature tsd-kind-icon">url<wbr>Router<span class="tsd-signature-symbol">:</span> <a href="url.urlrouter.html" class="tsd-signature-type">UrlRouter</a></div>
+					<!--
+        <h3>url<wbr>Router</h3>
+    -->
+					<div class="tsd-signature tsd-kind-icon">url<wbr>Router<span class="tsd-signature-symbol">:</span> <a href="url.urlrouter.html" class="tsd-signature-type">UrlRouter</a><span class="tsd-signature-symbol"> =&nbsp;new UrlRouter(this)</span>    <div class="tsd-header">
+							<p> Deprecated for public use. Use <a href="core.uirouter.html#urlservice">urlService</a> instead. </p>
+						</div>
+					</div>
 					<div class="tsd-declaration">
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Deprecated for public use. Use <a href="core.uirouter.html#urlservice">urlService</a> instead.</p>
+							</div>
+							<dl class="tsd-comment-tags">
+								<dt>deprecated</dt>
+								<dd></dd>
+							</dl>
+						</div>
 					</div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/router.ts#L31">router.ts:31</a></li>
+							<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/router.ts#L63">ui-router-core/src/router.ts:63</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="urlrouterprovider" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>url<wbr>Router<wbr>Provider</h3>-->
-					<!---->
-					<div class="tsd-signature tsd-kind-icon">url<wbr>Router<wbr>Provider<span class="tsd-signature-symbol">:</span> <a href="url.urlrouterprovider.html" class="tsd-signature-type">UrlRouterProvider</a></div>
+					<a name="urlservice" class="tsd-anchor"></a>
+					<!--
+        <h3>url<wbr>Service</h3>
+    -->
+					<div class="tsd-signature tsd-kind-icon">url<wbr>Service<span class="tsd-signature-symbol">:</span> <a href="url.urlservice.html" class="tsd-signature-type">UrlService</a><span class="tsd-signature-symbol"> =&nbsp;new UrlService(this)</span>    <div class="tsd-header">
+							<p> Provides services related to the URL </p>
+						</div>
+					</div>
 					<div class="tsd-declaration">
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Provides services related to the URL</p>
+							</div>
+						</div>
 					</div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/router.ts#L29">router.ts:29</a></li>
+							<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/router.ts#L72">ui-router-core/src/router.ts:72</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="viewservice" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>view<wbr>Service</h3>-->
-					<!---->
-					<div class="tsd-signature tsd-kind-icon">view<wbr>Service<span class="tsd-signature-symbol">:</span> <a href="view.viewservice.html" class="tsd-signature-type">ViewService</a></div>
+					<!--
+        <h3>view<wbr>Service</h3>
+    -->
+					<div class="tsd-signature tsd-kind-icon">view<wbr>Service<span class="tsd-signature-symbol">:</span> <a href="view.viewservice.html" class="tsd-signature-type">ViewService</a><span class="tsd-signature-symbol"> =&nbsp;new ViewService()</span>    <div class="tsd-header">
+							<p> Provides services related to ui-view synchronization </p>
+						</div>
+					</div>
 					<div class="tsd-declaration">
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Provides services related to ui-view synchronization</p>
+							</div>
+						</div>
 					</div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/router.ts#L21">router.ts:21</a></li>
+							<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/router.ts#L45">ui-router-core/src/router.ts:45</a></li>
 						</ul>
 					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="disposable" class="tsd-anchor"></a>
+					<!--
+        <h3>disposable</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">disposable<span class="tsd-signature-symbol">(</span>disposable<span class="tsd-signature-symbol">: </span><a href="../interfaces/core.disposable.html" class="tsd-signature-type">Disposable</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-header">
+							<p> Registers an object to be notified when the router is disposed </p>
+						</li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Registers an object to be notified when the router is disposed</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>disposable <a href="../interfaces/core.disposable.html" class="tsd-signature-type">Disposable</a></h5>
+								</li>
+							</ul>
+							<div class="tsd-returns">
+								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							</div>
+							<hr>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/router.ts#L78">ui-router-core/src/router.ts:78</a></li>
+								</ul>
+						</aside>        </li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="dispose" class="tsd-anchor"></a>
+					<!--
+        <h3>dispose</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">dispose<span class="tsd-signature-symbol">(</span>disposable<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-header">
+							<p> Disposes this router instance </p>
+						</li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Disposes this router instance</p>
+								</div>
+								<p>When called, clears resources retained by the router by calling <code>dispose(this)</code> on all
+								registered <a href="core.uirouter.html#disposable">disposable</a> objects.</p>
+								<p>Or, if a <code>disposable</code> object is provided, calls <code>dispose(this)</code> on that object only.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>disposable: <span class="tsd-flag ts-flagOptional">Optional</span>&nbsp; <span class="tsd-signature-type">any</span></h5>
+									:         <div class="tsd-comment tsd-typography">
+										<p>(optional) the disposable to dispose</p>
+									</div>
+								</li>
+							</ul>
+							<div class="tsd-returns">
+								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							</div>
+							<hr>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/router.ts#L92">ui-router-core/src/router.ts:92</a></li>
+								</ul>
+						</aside>        </li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getplugin" class="tsd-anchor"></a>
+					<!--
+        <h3>get<wbr>Plugin</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Plugin<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/core.uirouterplugin.html" class="tsd-signature-type">UIRouterPlugin</a><span class="tsd-signature-symbol">[]</span></li>
+						<li class="tsd-header">
+							<p> Returns registered plugins </p>
+						</li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Plugin<span class="tsd-signature-symbol">(</span>pluginName<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/core.uirouterplugin.html" class="tsd-signature-type">UIRouterPlugin</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns registered plugins</p>
+								</div>
+								<p>Returns the registered plugin of the given <code>pluginName</code>.
+								If no <code>pluginName</code> is given, returns all registered plugins</p>
+							</div>
+							<div class="tsd-returns">
+								<h4 class="tsd-returns-title">Returns <a href="../interfaces/core.uirouterplugin.html" class="tsd-signature-type">UIRouterPlugin</a><span class="tsd-signature-symbol">[]</span></h4>
+								: <p>the named plugin (undefined if not found), or all plugins (if <code>pluginName</code> is omitted)</p>
+							</div>
+							<hr>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/router.ts#L207">ui-router-core/src/router.ts:207</a></li>
+								</ul>
+						</aside>        </li>
+						<li class="tsd-description">
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>pluginName: <span class="tsd-flag ts-flagOptional">Optional</span>&nbsp; <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<div class="tsd-returns">
+								<h4 class="tsd-returns-title">Returns <a href="../interfaces/core.uirouterplugin.html" class="tsd-signature-type">UIRouterPlugin</a></h4>
+							</div>
+							<hr>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/router.ts#L208">ui-router-core/src/router.ts:208</a></li>
+								</ul>
+						</aside>        </li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+					<a name="plugin" class="tsd-anchor"></a>
+					<!--
+        <h3>plugin</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">plugin&lt;T&gt;<span class="tsd-signature-symbol">(</span>plugin<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
+						<li class="tsd-header">
+							<p> Add plugin (as ES6 class) </p>
+						</li>
+						<li class="tsd-signature tsd-kind-icon">plugin&lt;T&gt;<span class="tsd-signature-symbol">(</span>plugin<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
+						<li class="tsd-header">
+							<p> Add plugin (as javascript constructor function) </p>
+						</li>
+						<li class="tsd-signature tsd-kind-icon">plugin&lt;T&gt;<span class="tsd-signature-symbol">(</span>plugin<span class="tsd-signature-symbol">: </span><a href="../modules/core.html#pluginfactory" class="tsd-signature-type">PluginFactory</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
+						<li class="tsd-header">
+							<p> Add plugin (as javascript factory function) </p>
+						</li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Add plugin (as ES6 class)</p>
+								</div>
+								<p>This method adds a UI-Router Plugin.
+								A plugin can enhance or change UI-Router behavior using any public API.</p>
+								<h4 id="example-">Example:</h4>
+								<pre><code class="lang-js"><span class="hljs-keyword">import</span> { MyCoolPlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">"ui-router-cool-plugin"</span>;
+
+<span class="hljs-keyword">var</span> plugin = router.addPlugin(MyCoolPlugin);
+</code></pre>
+								<h3 id="plugin-authoring">Plugin authoring</h3>
+								<p>A plugin is simply a class (or constructor function) which accepts a <a href="core.uirouter.html">UIRouter</a> instance and (optionally) an options object.</p>
+								<p>The plugin can implement its functionality using any of the public APIs of <a href="core.uirouter.html">UIRouter</a>.
+								For example, it may configure router options or add a Transition Hook.</p>
+								<p>The plugin can then be published as a separate module.</p>
+								<h4 id="example-">Example:</h4>
+								<pre><code class="lang-js"><span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyAuthPlugin</span> <span class="hljs-title">implements</span> <span class="hljs-title">UIRouterPlugin</span> </span>{
+  <span class="hljs-keyword">constructor</span>(router: UIRouter, options: any) {
+    <span class="hljs-keyword">this</span>.name = <span class="hljs-string">"MyAuthPlugin"</span>;
+    <span class="hljs-keyword">let</span> $transitions = router.transitionService;
+    <span class="hljs-keyword">let</span> $state = router.stateService;
+
+    <span class="hljs-keyword">let</span> authCriteria = {
+      <span class="hljs-attr">to</span>: <span class="hljs-function">(<span class="hljs-params">state</span>) =&gt;</span> state.data &amp;&amp; state.data.requiresAuth
+    };
+
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">authHook</span>(<span class="hljs-params">transition: Transition</span>) </span>{
+      <span class="hljs-keyword">let</span> authService = transition.injector().get(<span class="hljs-string">'AuthService'</span>);
+      <span class="hljs-keyword">if</span> (!authService.isAuthenticated()) {
+        <span class="hljs-keyword">return</span> $state.target(<span class="hljs-string">'login'</span>);
+      }
+    }
+
+    $transitions.onStart(authCriteria, authHook);
+  }
+}
+</code></pre>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T<span class="tsd-signature-symbol">: </span><a href="../interfaces/core.uirouterplugin.html" class="tsd-signature-type">UIRouterPlugin</a></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>plugin <span class="tsd-signature-type">object</span></h5>
+									:         <div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>one of:</p>
+											<pre><code>   - <span class="hljs-selector-tag">a</span> plugin class which implements &lt;<span class="hljs-selector-tag">a</span> href=<span class="hljs-string">"../interfaces/core.uirouterplugin.html"</span>&gt;UIRouterPlugin&lt;/a&gt;
+   - <span class="hljs-selector-tag">a</span> constructor function <span class="hljs-keyword">for</span> <span class="hljs-selector-tag">a</span> &lt;<span class="hljs-selector-tag">a</span> href=<span class="hljs-string">"../interfaces/core.uirouterplugin.html"</span>&gt;UIRouterPlugin&lt;/a&gt; which accepts <span class="hljs-selector-tag">a</span> &lt;<span class="hljs-selector-tag">a</span> href=<span class="hljs-string">"core.uirouter.html"</span>&gt;UIRouter&lt;/a&gt; instance
+   - <span class="hljs-selector-tag">a</span> factory function which accepts <span class="hljs-selector-tag">a</span> &lt;<span class="hljs-selector-tag">a</span> href=<span class="hljs-string">"core.uirouter.html"</span>&gt;UIRouter&lt;/a&gt; instance and returns <span class="hljs-selector-tag">a</span> &lt;<span class="hljs-selector-tag">a</span> href=<span class="hljs-string">"../interfaces/core.uirouterplugin.html"</span>&gt;UIRouterPlugin&lt;/a&gt; instance
+</code></pre>
+										</div>
+									</div>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter">
+											<h5>constructor<span class="tsd-signature-symbol">: </span>function</h5>
+											<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-type-literal tsd-is-not-exported">
+												<li class="tsd-signature tsd-kind-icon">new __type<span class="tsd-signature-symbol">(</span>router<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">UIRouter</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="" class="tsd-signature-type">__type</a></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>router <span class="tsd-signature-type">UIRouter</span></h5>
+														</li>
+														<li>
+															<h5>options: <span class="tsd-flag ts-flagOptional">Optional</span>&nbsp; <span class="tsd-signature-type">any</span></h5>
+														</li>
+													</ul>
+													<div class="tsd-returns">
+														<h4 class="tsd-returns-title">Returns <a href="" class="tsd-signature-type">__type</a></h4>
+													</div>
+													<hr>
+													<aside class="tsd-sources">
+														<ul>
+															<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/router.ts#L133">ui-router-core/src/router.ts:133</a></li>
+														</ul>
+												</aside>        </li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h5>options: <span class="tsd-flag ts-flagOptional">Optional</span>&nbsp; <span class="tsd-signature-type">any</span></h5>
+									:         <div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>options to pass to the plugin class/factory</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<div class="tsd-returns">
+								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span></h4>
+								: <p>the registered plugin instance</p>
+							</div>
+							<hr>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/router.ts#L133">ui-router-core/src/router.ts:133</a></li>
+								</ul>
+						</aside>        </li>
+						<li class="tsd-description">
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Add plugin (as javascript constructor function)</p>
+								</div>
+								<p>This method adds a UI-Router Plugin.
+								A plugin can enhance or change UI-Router behavior using any public API.</p>
+								<h4 id="example-">Example:</h4>
+								<pre><code class="lang-js"><span class="hljs-keyword">import</span> { MyCoolPlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">"ui-router-cool-plugin"</span>;
+
+<span class="hljs-keyword">var</span> plugin = router.addPlugin(MyCoolPlugin);
+</code></pre>
+								<h3 id="plugin-authoring">Plugin authoring</h3>
+								<p>A plugin is simply a class (or constructor function) which accepts a <a href="core.uirouter.html">UIRouter</a> instance and (optionally) an options object.</p>
+								<p>The plugin can implement its functionality using any of the public APIs of <a href="core.uirouter.html">UIRouter</a>.
+								For example, it may configure router options or add a Transition Hook.</p>
+								<p>The plugin can then be published as a separate module.</p>
+								<h4 id="example-">Example:</h4>
+								<pre><code class="lang-js"><span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyAuthPlugin</span> <span class="hljs-title">implements</span> <span class="hljs-title">UIRouterPlugin</span> </span>{
+  <span class="hljs-keyword">constructor</span>(router: UIRouter, options: any) {
+    <span class="hljs-keyword">this</span>.name = <span class="hljs-string">"MyAuthPlugin"</span>;
+    <span class="hljs-keyword">let</span> $transitions = router.transitionService;
+    <span class="hljs-keyword">let</span> $state = router.stateService;
+
+    <span class="hljs-keyword">let</span> authCriteria = {
+      <span class="hljs-attr">to</span>: <span class="hljs-function">(<span class="hljs-params">state</span>) =&gt;</span> state.data &amp;&amp; state.data.requiresAuth
+    };
+
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">authHook</span>(<span class="hljs-params">transition: Transition</span>) </span>{
+      <span class="hljs-keyword">let</span> authService = transition.injector().get(<span class="hljs-string">'AuthService'</span>);
+      <span class="hljs-keyword">if</span> (!authService.isAuthenticated()) {
+        <span class="hljs-keyword">return</span> $state.target(<span class="hljs-string">'login'</span>);
+      }
+    }
+
+    $transitions.onStart(authCriteria, authHook);
+  }
+}
+</code></pre>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T<span class="tsd-signature-symbol">: </span><a href="../interfaces/core.uirouterplugin.html" class="tsd-signature-type">UIRouterPlugin</a></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>plugin <span class="tsd-signature-type">function</span></h5>
+									:         <div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>one of:</p>
+											<pre><code>   - <span class="hljs-selector-tag">a</span> plugin class which implements &lt;<span class="hljs-selector-tag">a</span> href=<span class="hljs-string">"../interfaces/core.uirouterplugin.html"</span>&gt;UIRouterPlugin&lt;/a&gt;
+   - <span class="hljs-selector-tag">a</span> constructor function <span class="hljs-keyword">for</span> <span class="hljs-selector-tag">a</span> &lt;<span class="hljs-selector-tag">a</span> href=<span class="hljs-string">"../interfaces/core.uirouterplugin.html"</span>&gt;UIRouterPlugin&lt;/a&gt; which accepts <span class="hljs-selector-tag">a</span> &lt;<span class="hljs-selector-tag">a</span> href=<span class="hljs-string">"core.uirouter.html"</span>&gt;UIRouter&lt;/a&gt; instance
+   - <span class="hljs-selector-tag">a</span> factory function which accepts <span class="hljs-selector-tag">a</span> &lt;<span class="hljs-selector-tag">a</span> href=<span class="hljs-string">"core.uirouter.html"</span>&gt;UIRouter&lt;/a&gt; instance and returns <span class="hljs-selector-tag">a</span> &lt;<span class="hljs-selector-tag">a</span> href=<span class="hljs-string">"../interfaces/core.uirouterplugin.html"</span>&gt;UIRouterPlugin&lt;/a&gt; instance
+</code></pre>
+										</div>
+									</div>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>router<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">UIRouter</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>router <span class="tsd-signature-type">UIRouter</span></h5>
+														</li>
+														<li>
+															<h5>options: <span class="tsd-flag ts-flagOptional">Optional</span>&nbsp; <span class="tsd-signature-type">any</span></h5>
+														</li>
+													</ul>
+													<div class="tsd-returns">
+														<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+													</div>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h5>options: <span class="tsd-flag ts-flagOptional">Optional</span>&nbsp; <span class="tsd-signature-type">any</span></h5>
+									:         <div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>options to pass to the plugin class/factory</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<div class="tsd-returns">
+								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span></h4>
+								: <p>the registered plugin instance</p>
+							</div>
+							<hr>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/router.ts#L135">ui-router-core/src/router.ts:135</a></li>
+								</ul>
+						</aside>        </li>
+						<li class="tsd-description">
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Add plugin (as javascript factory function)</p>
+								</div>
+								<p>This method adds a UI-Router Plugin.
+								A plugin can enhance or change UI-Router behavior using any public API.</p>
+								<h4 id="example-">Example:</h4>
+								<pre><code class="lang-js"><span class="hljs-keyword">import</span> { MyCoolPlugin } <span class="hljs-keyword">from</span> <span class="hljs-string">"ui-router-cool-plugin"</span>;
+
+<span class="hljs-keyword">var</span> plugin = router.addPlugin(MyCoolPlugin);
+</code></pre>
+								<h3 id="plugin-authoring">Plugin authoring</h3>
+								<p>A plugin is simply a class (or constructor function) which accepts a <a href="core.uirouter.html">UIRouter</a> instance and (optionally) an options object.</p>
+								<p>The plugin can implement its functionality using any of the public APIs of <a href="core.uirouter.html">UIRouter</a>.
+								For example, it may configure router options or add a Transition Hook.</p>
+								<p>The plugin can then be published as a separate module.</p>
+								<h4 id="example-">Example:</h4>
+								<pre><code class="lang-js"><span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyAuthPlugin</span> <span class="hljs-title">implements</span> <span class="hljs-title">UIRouterPlugin</span> </span>{
+  <span class="hljs-keyword">constructor</span>(router: UIRouter, options: any) {
+    <span class="hljs-keyword">this</span>.name = <span class="hljs-string">"MyAuthPlugin"</span>;
+    <span class="hljs-keyword">let</span> $transitions = router.transitionService;
+    <span class="hljs-keyword">let</span> $state = router.stateService;
+
+    <span class="hljs-keyword">let</span> authCriteria = {
+      <span class="hljs-attr">to</span>: <span class="hljs-function">(<span class="hljs-params">state</span>) =&gt;</span> state.data &amp;&amp; state.data.requiresAuth
+    };
+
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">authHook</span>(<span class="hljs-params">transition: Transition</span>) </span>{
+      <span class="hljs-keyword">let</span> authService = transition.injector().get(<span class="hljs-string">'AuthService'</span>);
+      <span class="hljs-keyword">if</span> (!authService.isAuthenticated()) {
+        <span class="hljs-keyword">return</span> $state.target(<span class="hljs-string">'login'</span>);
+      }
+    }
+
+    $transitions.onStart(authCriteria, authHook);
+  }
+}
+</code></pre>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T<span class="tsd-signature-symbol">: </span><a href="../interfaces/core.uirouterplugin.html" class="tsd-signature-type">UIRouterPlugin</a></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>plugin <a href="../modules/core.html#pluginfactory" class="tsd-signature-type">PluginFactory</a></h5>
+									:         <div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>one of:</p>
+											<pre><code>   - <span class="hljs-selector-tag">a</span> plugin class which implements &lt;<span class="hljs-selector-tag">a</span> href=<span class="hljs-string">"../interfaces/core.uirouterplugin.html"</span>&gt;UIRouterPlugin&lt;/a&gt;
+   - <span class="hljs-selector-tag">a</span> constructor function <span class="hljs-keyword">for</span> <span class="hljs-selector-tag">a</span> &lt;<span class="hljs-selector-tag">a</span> href=<span class="hljs-string">"../interfaces/core.uirouterplugin.html"</span>&gt;UIRouterPlugin&lt;/a&gt; which accepts <span class="hljs-selector-tag">a</span> &lt;<span class="hljs-selector-tag">a</span> href=<span class="hljs-string">"core.uirouter.html"</span>&gt;UIRouter&lt;/a&gt; instance
+   - <span class="hljs-selector-tag">a</span> factory function which accepts <span class="hljs-selector-tag">a</span> &lt;<span class="hljs-selector-tag">a</span> href=<span class="hljs-string">"core.uirouter.html"</span>&gt;UIRouter&lt;/a&gt; instance and returns <span class="hljs-selector-tag">a</span> &lt;<span class="hljs-selector-tag">a</span> href=<span class="hljs-string">"../interfaces/core.uirouterplugin.html"</span>&gt;UIRouterPlugin&lt;/a&gt; instance
+</code></pre>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5>options: <span class="tsd-flag ts-flagOptional">Optional</span>&nbsp; <span class="tsd-signature-type">any</span></h5>
+									:         <div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>options to pass to the plugin class/factory</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<div class="tsd-returns">
+								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span></h4>
+								: <p>the registered plugin instance</p>
+							</div>
+							<hr>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/router.ts#L137">ui-router-core/src/router.ts:137</a></li>
+								</ul>
+						</aside>        </li>
+					</ul>
 				</section>
 			</section>
 		</div>
@@ -263,49 +888,25 @@ redirect_from: /docs/latest/classes/core.uirouter.html
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../globals.html"><em>Globals</em></a>
+						<a href="../index.html"><em>angular-<wbr>ui-<wbr>router</em></a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/common.html">common</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/common_hof.html">common_<wbr>hof</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/common_predicates.html">common_<wbr>predicates</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/common_strings.html">common_<wbr>strings</a>
+					<li class="label tsd-is-external">
+						<span>Public API</span>
 					</li>
 					<li class="current tsd-kind-external-module">
 						<a href="../modules/core.html">core</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/hooks.html">hooks</a>
+						<a href="../modules/directives.html">directives</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/justjs.html">justjs</a>
+						<a href="../modules/injectables.html">injectables</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/ng1.html">ng1</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/ng1_directives.html">ng1_<wbr>directives</a>
-					</li>
-					<li class=" tsd-kind-external-module">
 						<a href="../modules/ng1_state_events.html">ng1_<wbr>state_<wbr>events</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/ng2.html">ng2</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/ng2_directives.html">ng2_<wbr>directives</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/params.html">params</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/path.html">path</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/resolve.html">resolve</a>
@@ -322,13 +923,40 @@ redirect_from: /docs/latest/classes/core.uirouter.html
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/url.html">url</a>
 					</li>
-					<li class=" tsd-kind-external-module">
+					<li class="label tsd-is-external">
+						<span>Internal UI-<wbr><wbr>Router API</span>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/common.html">common</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/common_hof.html">common_<wbr>hof</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/common_predicates.html">common_<wbr>predicates</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/common_strings.html">common_<wbr>strings</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/hooks.html">hooks</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/params.html">params</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/path.html">path</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
 						<a href="../modules/view.html">view</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-class tsd-parent-kind-external-module">
+						<a href="core.glob.html" class="tsd-kind-icon">Glob</a>
+					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-external-module">
 						<a href="core.globals.html" class="tsd-kind-icon">Globals</a>
 					</li>
@@ -337,17 +965,26 @@ redirect_from: /docs/latest/classes/core.uirouter.html
 					<li class="current tsd-kind-class tsd-parent-kind-external-module">
 						<a href="core.uirouter.html" class="tsd-kind-icon">UIRouter</a>
 						<ul>
-							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-external">
 								<a href="core.uirouter.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="core.uirouter.html#globals" class="tsd-kind-icon">globals</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="core.uirouter.html#locationconfig" class="tsd-kind-icon">location<wbr>Config</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="core.uirouter.html#locationservice" class="tsd-kind-icon">location<wbr>Service</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="core.uirouter.html#stateregistry" class="tsd-kind-icon">state<wbr>Registry</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="core.uirouter.html#stateservice" class="tsd-kind-icon">state<wbr>Service</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="core.uirouter.html#trace" class="tsd-kind-icon">trace</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="core.uirouter.html#transitionservice" class="tsd-kind-icon">transition<wbr>Service</a>
@@ -359,17 +996,44 @@ redirect_from: /docs/latest/classes/core.uirouter.html
 								<a href="core.uirouter.html#urlrouter" class="tsd-kind-icon">url<wbr>Router</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="core.uirouter.html#urlrouterprovider" class="tsd-kind-icon">url<wbr>Router<wbr>Provider</a>
+								<a href="core.uirouter.html#urlservice" class="tsd-kind-icon">url<wbr>Service</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="core.uirouter.html#viewservice" class="tsd-kind-icon">view<wbr>Service</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="core.uirouter.html#disposable" class="tsd-kind-icon">disposable</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="core.uirouter.html#dispose" class="tsd-kind-icon">dispose</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="core.uirouter.html#getplugin" class="tsd-kind-icon">get<wbr>Plugin</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+								<a href="core.uirouter.html#plugin" class="tsd-kind-icon">plugin</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-class tsd-parent-kind-external-module tsd-is-external">
+						<a href="core.uirouterpluginbase.html" class="tsd-kind-icon">UIRouter<wbr>Plugin<wbr>Base</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-external">
+						<a href="../interfaces/core.disposable.html" class="tsd-kind-icon">Disposable</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="../interfaces/core.uiinjector.html" class="tsd-kind-icon">UIInjector</a>
+					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
 						<a href="../interfaces/core.uirouterglobals.html" class="tsd-kind-icon">UIRouter<wbr>Globals</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-external">
+						<a href="../interfaces/core.uirouterplugin.html" class="tsd-kind-icon">UIRouter<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-external">
+						<a href="../modules/core.html#pluginfactory" class="tsd-kind-icon">Plugin<wbr>Factory</a>
 					</li>
 				</ul>
 			</nav>

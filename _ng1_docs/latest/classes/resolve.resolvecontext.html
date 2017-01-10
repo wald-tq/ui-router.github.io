@@ -1,17 +1,17 @@
 ---
-redirect_from: /docs/latest/classes/resolve.resolvecontext.html
 ---
 <!doctype html>
 <html class="default no-js">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>ResolveContext | UI-Router</title>
+	<title>ResolveContext | angular-ui-router</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
-	<link rel="stylesheet" href="../assets/css/typedoctheme.css">
+	<link rel="stylesheet" href="../assets/css/uirouter.css">
 	<script src="../assets/js/modernizr.js"></script>
+	<script src="../assets/js/reset.js"></script>
 </head>
 <body>
 <header>
@@ -27,26 +27,31 @@ redirect_from: /docs/latest/classes/resolve.resolvecontext.html
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">UI-Router</a>
+					<a href="../index.html" class="title">angular-ui-router</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
 						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
 						<div class="tsd-filter-group">
-							<div class="tsd-select" id="tsd-filter-visibility">
-								<span class="tsd-select-label">All</span>
-								<ul class="tsd-select-list">
-									<li data-value="public">Public</li>
-									<li data-value="protected">Public/Protected</li>
-									<li data-value="private" class="selected">All</li>
-								</ul>
-							</div>
-							<input type="checkbox" id="tsd-filter-inherited" checked />
-							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<!--
+                            <div class="tsd-select" id="tsd-filter-visibility">
+                                <span class="tsd-select-label">All</span>
+                                <ul class="tsd-select-list">
+                                    <li data-value="public">Public</li>
+                                    <li data-value="protected">Public/Protected</li>
+                                    <li data-value="private" class="selected">All</li>
+                                </ul>
+                            </div>
+
+                            <input type="checkbox" id="tsd-filter-inherited" checked />
+                            <label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+                            -->
 							<input type="checkbox" id="tsd-filter-externals" checked />
-							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
-							<input type="checkbox" id="tsd-filter-only-exported" />
-							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+							<label class="tsd-widget" for="tsd-filter-externals">Internal UI-Router API</label>
+							<!--
+                                <input type="checkbox" id="tsd-filter-only-exported" />
+                                <label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+                            -->
 						</div>
 					</div>
 					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
@@ -58,7 +63,7 @@ redirect_from: /docs/latest/classes/resolve.resolvecontext.html
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../globals.html">Globals</a>
+					<a href="../index.html">angular-ui-router</a>
 				</li>
 				<li>
 					<a href="../modules/resolve.html">resolve</a>
@@ -98,43 +103,44 @@ redirect_from: /docs/latest/classes/resolve.resolvecontext.html
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
-						<section class="tsd-index-section ">
+						<section class="tsd-index-section tsd-is-external">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="resolve.resolvecontext.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-external"><a href="resolve.resolvecontext.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
-						<section class="tsd-index-section ">
+						<section class="tsd-index-section tsd-is-external">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="resolve.resolvecontext.html#_injector" class="tsd-kind-icon">_injector</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="resolve.resolvecontext.html#_path" class="tsd-kind-icon">_path</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-external"><a href="resolve.resolvecontext.html#_injector" class="tsd-kind-icon">_injector</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-external"><a href="resolve.resolvecontext.html#_path" class="tsd-kind-icon">_path</a></li>
 							</ul>
 						</section>
-						<section class="tsd-index-section ">
+						<section class="tsd-index-section tsd-is-external">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="resolve.resolvecontext.html#addresolvables" class="tsd-kind-icon">add<wbr>Resolvables</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="resolve.resolvecontext.html#findnode" class="tsd-kind-icon">find<wbr>Node</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="resolve.resolvecontext.html#getdependencies" class="tsd-kind-icon">get<wbr>Dependencies</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="resolve.resolvecontext.html#getresolvable" class="tsd-kind-icon">get<wbr>Resolvable</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="resolve.resolvecontext.html#gettokens" class="tsd-kind-icon">get<wbr>Tokens</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="resolve.resolvecontext.html#injector" class="tsd-kind-icon">injector</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="resolve.resolvecontext.html#resolvepath" class="tsd-kind-icon">resolve<wbr>Path</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="resolve.resolvecontext.html#subcontext" class="tsd-kind-icon">sub<wbr>Context</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="resolve.resolvecontext.html#addresolvables" class="tsd-kind-icon">add<wbr>Resolvables</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="resolve.resolvecontext.html#findnode" class="tsd-kind-icon">find<wbr>Node</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="resolve.resolvecontext.html#getdependencies" class="tsd-kind-icon">get<wbr>Dependencies</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="resolve.resolvecontext.html#getpolicy" class="tsd-kind-icon">get<wbr>Policy</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="resolve.resolvecontext.html#getresolvable" class="tsd-kind-icon">get<wbr>Resolvable</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="resolve.resolvecontext.html#gettokens" class="tsd-kind-icon">get<wbr>Tokens</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="resolve.resolvecontext.html#injector" class="tsd-kind-icon">injector</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="resolve.resolvecontext.html#resolvepath" class="tsd-kind-icon">resolve<wbr>Path</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="resolve.resolvecontext.html#subcontext" class="tsd-kind-icon">sub<wbr>Context</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group ">
+			<section class="tsd-panel-group tsd-member-group tsd-is-external">
 				<h2>Constructors</h2>
-				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class tsd-is-external">
 					<a name="constructor" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>constructor</h3>-->
-					<!---->
-					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+					<!--
+        <h3>constructor</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-external">
 						<li class="tsd-signature tsd-kind-icon">new <wbr>Resolve<wbr>Context<span class="tsd-signature-symbol">(</span>_path<span class="tsd-signature-symbol">: </span><a href="path.pathnode.html" class="tsd-signature-type">PathNode</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="resolve.resolvecontext.html" class="tsd-signature-type">ResolveContext</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
@@ -142,7 +148,7 @@ redirect_from: /docs/latest/classes/resolve.resolvecontext.html
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>_path: <a href="path.pathnode.html" class="tsd-signature-type">PathNode</a><span class="tsd-signature-symbol">[]</span></h5>
+									<h5>_path <a href="path.pathnode.html" class="tsd-signature-type">PathNode</a><span class="tsd-signature-symbol">[]</span></h5>
 								</li>
 							</ul>
 							<div class="tsd-returns">
@@ -151,51 +157,51 @@ redirect_from: /docs/latest/classes/resolve.resolvecontext.html
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/resolve/resolveContext.ts#L33">resolve/resolveContext.ts:33</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/resolve/resolveContext.ts#L33">ui-router-core/src/resolve/resolveContext.ts:33</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group ">
+			<section class="tsd-panel-group tsd-member-group tsd-is-external">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
 					<a name="_injector" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>_injector</h3>-->
-					<!---->
-					<div class="tsd-signature tsd-kind-icon">_injector<span class="tsd-signature-symbol">:</span> <a href="../interfaces/common.uiinjector.html" class="tsd-signature-type">UIInjector</a></div>
+					<!--
+        <h3>_injector</h3>
+    -->
+					<div class="tsd-signature tsd-kind-icon">_injector<span class="tsd-signature-symbol">:</span> <a href="../interfaces/core.uiinjector.html" class="tsd-signature-type">UIInjector</a></div>
 					<div class="tsd-declaration">
 					</div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/resolve/resolveContext.ts#L33">resolve/resolveContext.ts:33</a></li>
+							<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/resolve/resolveContext.ts#L33">ui-router-core/src/resolve/resolveContext.ts:33</a></li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-external">
 					<a name="_path" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3><span class="tsd-flag ts-flagPrivate">Private</span> _path</h3>-->
-					<!---->
+					<!--
+        <h3><span class="tsd-flag ts-flagPrivate">Private</span> _path</h3>
+    -->
 					<div class="tsd-signature tsd-kind-icon">_path<span class="tsd-signature-symbol">:</span> <a href="path.pathnode.html" class="tsd-signature-type">PathNode</a><span class="tsd-signature-symbol">[]</span></div>
 					<div class="tsd-declaration">
 					</div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/resolve/resolveContext.ts#L35">resolve/resolveContext.ts:35</a></li>
+							<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/resolve/resolveContext.ts#L35">ui-router-core/src/resolve/resolveContext.ts:35</a></li>
 						</ul>
 					</aside>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group ">
+			<section class="tsd-panel-group tsd-member-group tsd-is-external">
 				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
 					<a name="addresolvables" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>add<wbr>Resolvables</h3>-->
-					<!---->
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<!--
+        <h3>add<wbr>Resolvables</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
 						<li class="tsd-signature tsd-kind-icon">add<wbr>Resolvables<span class="tsd-signature-symbol">(</span>newResolvables<span class="tsd-signature-symbol">: </span><a href="resolve.resolvable.html" class="tsd-signature-type">Resolvable</a><span class="tsd-signature-symbol">[]</span>, state<span class="tsd-signature-symbol">: </span><a href="state.state-1.html" class="tsd-signature-type">State</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 						<li class="tsd-header">
 							<p> Adds Resolvables to the node that matches the state </p>
@@ -217,13 +223,13 @@ redirect_from: /docs/latest/classes/resolve.resolvecontext.html
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>newResolvables: <a href="resolve.resolvable.html" class="tsd-signature-type">Resolvable</a><span class="tsd-signature-symbol">[]</span></h5>
+									<h5>newResolvables <a href="resolve.resolvable.html" class="tsd-signature-type">Resolvable</a><span class="tsd-signature-symbol">[]</span></h5>
 									:         <div class="tsd-comment tsd-typography">
 										<p>the new Resolvables</p>
 									</div>
 								</li>
 								<li>
-									<h5>state: <a href="state.state-1.html" class="tsd-signature-type">State</a></h5>
+									<h5>state <a href="state.state-1.html" class="tsd-signature-type">State</a></h5>
 									:         <div class="tsd-comment tsd-typography">
 										<p>Used to find the node to put the resolvable on</p>
 									</div>
@@ -235,17 +241,17 @@ redirect_from: /docs/latest/classes/resolve.resolvecontext.html
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/resolve/resolveContext.ts#L97">resolve/resolveContext.ts:97</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/resolve/resolveContext.ts#L103">ui-router-core/src/resolve/resolveContext.ts:103</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
 					<a name="findnode" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>find<wbr>Node</h3>-->
-					<!---->
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<!--
+        <h3>find<wbr>Node</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
 						<li class="tsd-signature tsd-kind-icon">find<wbr>Node<span class="tsd-signature-symbol">(</span>resolvable<span class="tsd-signature-symbol">: </span><a href="resolve.resolvable.html" class="tsd-signature-type">Resolvable</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="path.pathnode.html" class="tsd-signature-type">PathNode</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
@@ -253,7 +259,7 @@ redirect_from: /docs/latest/classes/resolve.resolvecontext.html
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>resolvable: <a href="resolve.resolvable.html" class="tsd-signature-type">Resolvable</a></h5>
+									<h5>resolvable <a href="resolve.resolvable.html" class="tsd-signature-type">Resolvable</a></h5>
 								</li>
 							</ul>
 							<div class="tsd-returns">
@@ -262,17 +268,17 @@ redirect_from: /docs/latest/classes/resolve.resolvecontext.html
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/resolve/resolveContext.ts#L140">resolve/resolveContext.ts:140</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/resolve/resolveContext.ts#L154">ui-router-core/src/resolve/resolveContext.ts:154</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
 					<a name="getdependencies" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>get<wbr>Dependencies</h3>-->
-					<!---->
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<!--
+        <h3>get<wbr>Dependencies</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
 						<li class="tsd-signature tsd-kind-icon">get<wbr>Dependencies<span class="tsd-signature-symbol">(</span>resolvable<span class="tsd-signature-symbol">: </span><a href="resolve.resolvable.html" class="tsd-signature-type">Resolvable</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="resolve.resolvable.html" class="tsd-signature-type">Resolvable</a><span class="tsd-signature-symbol">[]</span></li>
 						<li class="tsd-header">
 							<p> Gets the async dependencies of a Resolvable </p>
@@ -289,7 +295,7 @@ redirect_from: /docs/latest/classes/resolve.resolvecontext.html
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>resolvable: <a href="resolve.resolvable.html" class="tsd-signature-type">Resolvable</a></h5>
+									<h5>resolvable <a href="resolve.resolvable.html" class="tsd-signature-type">Resolvable</a></h5>
 								</li>
 							</ul>
 							<div class="tsd-returns">
@@ -298,17 +304,52 @@ redirect_from: /docs/latest/classes/resolve.resolvecontext.html
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/resolve/resolveContext.ts#L149">resolve/resolveContext.ts:149</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/resolve/resolveContext.ts#L163">ui-router-core/src/resolve/resolveContext.ts:163</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<a name="getpolicy" class="tsd-anchor"></a>
+					<!--
+        <h3>get<wbr>Policy</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Policy<span class="tsd-signature-symbol">(</span>resolvable<span class="tsd-signature-symbol">: </span><a href="resolve.resolvable.html" class="tsd-signature-type">Resolvable</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/resolve.resolvepolicy.html" class="tsd-signature-type">ResolvePolicy</a></li>
+						<li class="tsd-header">
+							<p> Returns the <a href="../interfaces/resolve.resolvepolicy.html">ResolvePolicy</a> for the given <a href="resolve.resolvable.html">Resolvable</a> </p>
+						</li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the <a href="../interfaces/resolve.resolvepolicy.html">ResolvePolicy</a> for the given <a href="resolve.resolvable.html">Resolvable</a></p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>resolvable <a href="resolve.resolvable.html" class="tsd-signature-type">Resolvable</a></h5>
+								</li>
+							</ul>
+							<div class="tsd-returns">
+								<h4 class="tsd-returns-title">Returns <a href="../interfaces/resolve.resolvepolicy.html" class="tsd-signature-type">ResolvePolicy</a></h4>
+							</div>
+							<hr>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/resolve/resolveContext.ts#L56">ui-router-core/src/resolve/resolveContext.ts:56</a></li>
+								</ul>
+						</aside>        </li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
 					<a name="getresolvable" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>get<wbr>Resolvable</h3>-->
-					<!---->
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<!--
+        <h3>get<wbr>Resolvable</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
 						<li class="tsd-signature tsd-kind-icon">get<wbr>Resolvable<span class="tsd-signature-symbol">(</span>token<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="resolve.resolvable.html" class="tsd-signature-type">Resolvable</a></li>
 						<li class="tsd-header">
 							<p> Gets the Resolvable that matches the token </p>
@@ -326,7 +367,7 @@ redirect_from: /docs/latest/classes/resolve.resolvecontext.html
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>token: <span class="tsd-signature-type">any</span></h5>
+									<h5>token <span class="tsd-signature-type">any</span></h5>
 								</li>
 							</ul>
 							<div class="tsd-returns">
@@ -335,17 +376,17 @@ redirect_from: /docs/latest/classes/resolve.resolvecontext.html
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/resolve/resolveContext.ts#L48">resolve/resolveContext.ts:48</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/resolve/resolveContext.ts#L48">ui-router-core/src/resolve/resolveContext.ts:48</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
 					<a name="gettokens" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>get<wbr>Tokens</h3>-->
-					<!---->
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<!--
+        <h3>get<wbr>Tokens</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
 						<li class="tsd-signature tsd-kind-icon">get<wbr>Tokens<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></li>
 						<li class="tsd-header">
 							<p> Gets all the tokens found in the resolve context, de-duplicated </p>
@@ -364,38 +405,38 @@ redirect_from: /docs/latest/classes/resolve.resolvecontext.html
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/resolve/resolveContext.ts#L38">resolve/resolveContext.ts:38</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/resolve/resolveContext.ts#L38">ui-router-core/src/resolve/resolveContext.ts:38</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
 					<a name="injector" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>injector</h3>-->
-					<!---->
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">injector<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/common.uiinjector.html" class="tsd-signature-type">UIInjector</a></li>
+					<!--
+        <h3>injector</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">injector<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/core.uiinjector.html" class="tsd-signature-type">UIInjector</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<div class="tsd-returns">
-								<h4 class="tsd-returns-title">Returns <a href="../interfaces/common.uiinjector.html" class="tsd-signature-type">UIInjector</a></h4>
+								<h4 class="tsd-returns-title">Returns <a href="../interfaces/core.uiinjector.html" class="tsd-signature-type">UIInjector</a></h4>
 							</div>
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/resolve/resolveContext.ts#L136">resolve/resolveContext.ts:136</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/resolve/resolveContext.ts#L150">ui-router-core/src/resolve/resolveContext.ts:150</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
 					<a name="resolvepath" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>resolve<wbr>Path</h3>-->
-					<!---->
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<!--
+        <h3>resolve<wbr>Path</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
 						<li class="tsd-signature tsd-kind-icon">resolve<wbr>Path<span class="tsd-signature-symbol">(</span>when<span class="tsd-signature-symbol">?: </span><a href="../modules/resolve.html#policywhen" class="tsd-signature-type">PolicyWhen</a>, trans<span class="tsd-signature-symbol">?: </span><a href="transition.transition-1.html" class="tsd-signature-type">Transition</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
 						<li class="tsd-header">
 							<p> Returns a promise for an array of resolved path Element promises </p>
@@ -411,11 +452,11 @@ redirect_from: /docs/latest/classes/resolve.resolvecontext.html
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>when <span class="tsd-flag ts-flagDefault value">Default value</span>: <a href="../modules/resolve.html#policywhen" class="tsd-signature-type">PolicyWhen</a><span class="tsd-signature-symbol"> =&nbsp;&quot;LAZY&quot;</span></h5>
+									<h5>when: <span class="tsd-flag ts-flagDefault value">Default value</span>&nbsp; <a href="../modules/resolve.html#policywhen" class="tsd-signature-type">PolicyWhen</a><span class="tsd-signature-symbol"> =&nbsp;&quot;LAZY&quot;</span></h5>
 									:
 								</li>
 								<li>
-									<h5>trans <span class="tsd-flag ts-flagOptional">Optional</span>: <a href="transition.transition-1.html" class="tsd-signature-type">Transition</a></h5>
+									<h5>trans: <span class="tsd-flag ts-flagOptional">Optional</span>&nbsp; <a href="transition.transition-1.html" class="tsd-signature-type">Transition</a></h5>
 									:
 								</li>
 							</ul>
@@ -426,17 +467,17 @@ redirect_from: /docs/latest/classes/resolve.resolvecontext.html
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/resolve/resolveContext.ts#L110">resolve/resolveContext.ts:110</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/resolve/resolveContext.ts#L116">ui-router-core/src/resolve/resolveContext.ts:116</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
 					<a name="subcontext" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>sub<wbr>Context</h3>-->
-					<!---->
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<!--
+        <h3>sub<wbr>Context</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
 						<li class="tsd-signature tsd-kind-icon">sub<wbr>Context<span class="tsd-signature-symbol">(</span>state<span class="tsd-signature-symbol">: </span><a href="state.state-1.html" class="tsd-signature-type">State</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="resolve.resolvecontext.html" class="tsd-signature-type">ResolveContext</a></li>
 						<li class="tsd-header">
 							<p> Returns a ResolveContext that includes a portion of this one </p>
@@ -469,7 +510,7 @@ redirect_from: /docs/latest/classes/resolve.resolvecontext.html
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>state: <a href="state.state-1.html" class="tsd-signature-type">State</a></h5>
+									<h5>state <a href="state.state-1.html" class="tsd-signature-type">State</a></h5>
 								</li>
 							</ul>
 							<div class="tsd-returns">
@@ -478,7 +519,7 @@ redirect_from: /docs/latest/classes/resolve.resolvecontext.html
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/resolve/resolveContext.ts#L78">resolve/resolveContext.ts:78</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/resolve/resolveContext.ts#L84">ui-router-core/src/resolve/resolveContext.ts:84</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
@@ -489,49 +530,25 @@ redirect_from: /docs/latest/classes/resolve.resolvecontext.html
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../globals.html"><em>Globals</em></a>
+						<a href="../index.html"><em>angular-<wbr>ui-<wbr>router</em></a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/common.html">common</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/common_hof.html">common_<wbr>hof</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/common_predicates.html">common_<wbr>predicates</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/common_strings.html">common_<wbr>strings</a>
+					<li class="label tsd-is-external">
+						<span>Public API</span>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/core.html">core</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/hooks.html">hooks</a>
+						<a href="../modules/directives.html">directives</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/justjs.html">justjs</a>
+						<a href="../modules/injectables.html">injectables</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/ng1.html">ng1</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/ng1_directives.html">ng1_<wbr>directives</a>
-					</li>
-					<li class=" tsd-kind-external-module">
 						<a href="../modules/ng1_state_events.html">ng1_<wbr>state_<wbr>events</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/ng2.html">ng2</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/ng2_directives.html">ng2_<wbr>directives</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/params.html">params</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/path.html">path</a>
 					</li>
 					<li class="current tsd-kind-external-module">
 						<a href="../modules/resolve.html">resolve</a>
@@ -548,7 +565,31 @@ redirect_from: /docs/latest/classes/resolve.resolvecontext.html
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/url.html">url</a>
 					</li>
-					<li class=" tsd-kind-external-module">
+					<li class="label tsd-is-external">
+						<span>Internal UI-<wbr><wbr>Router API</span>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/common.html">common</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/common_hof.html">common_<wbr>hof</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/common_predicates.html">common_<wbr>predicates</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/common_strings.html">common_<wbr>strings</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/hooks.html">hooks</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/params.html">params</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/path.html">path</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
 						<a href="../modules/view.html">view</a>
 					</li>
 				</ul>
@@ -560,54 +601,57 @@ redirect_from: /docs/latest/classes/resolve.resolvecontext.html
 					</li>
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-class tsd-parent-kind-external-module">
+					<li class="current tsd-kind-class tsd-parent-kind-external-module tsd-is-external">
 						<a href="resolve.resolvecontext.html" class="tsd-kind-icon">Resolve<wbr>Context</a>
 						<ul>
-							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-external">
 								<a href="resolve.resolvecontext.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-external">
 								<a href="resolve.resolvecontext.html#_injector" class="tsd-kind-icon">_injector</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-external">
 								<a href="resolve.resolvecontext.html#_path" class="tsd-kind-icon">_path</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
 								<a href="resolve.resolvecontext.html#addresolvables" class="tsd-kind-icon">add<wbr>Resolvables</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
 								<a href="resolve.resolvecontext.html#findnode" class="tsd-kind-icon">find<wbr>Node</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
 								<a href="resolve.resolvecontext.html#getdependencies" class="tsd-kind-icon">get<wbr>Dependencies</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
+								<a href="resolve.resolvecontext.html#getpolicy" class="tsd-kind-icon">get<wbr>Policy</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
 								<a href="resolve.resolvecontext.html#getresolvable" class="tsd-kind-icon">get<wbr>Resolvable</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
 								<a href="resolve.resolvecontext.html#gettokens" class="tsd-kind-icon">get<wbr>Tokens</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
 								<a href="resolve.resolvecontext.html#injector" class="tsd-kind-icon">injector</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
 								<a href="resolve.resolvecontext.html#resolvepath" class="tsd-kind-icon">resolve<wbr>Path</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
 								<a href="resolve.resolvecontext.html#subcontext" class="tsd-kind-icon">sub<wbr>Context</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-class tsd-parent-kind-external-module tsd-is-not-exported">
+					<li class=" tsd-kind-class tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
 						<a href="resolve.uiinjectorimpl.html" class="tsd-kind-icon">UIInjector<wbr>Impl</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="../interfaces/resolve.resolvableliteral.html" class="tsd-kind-icon">Resolvable<wbr>Literal</a>
+						<a href="../interfaces/resolve.providerlike.html" class="tsd-kind-icon">Provider<wbr>Like</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="../interfaces/resolve.resolvables.html" class="tsd-kind-icon">Resolvables</a>
+						<a href="../interfaces/resolve.resolvableliteral.html" class="tsd-kind-icon">Resolvable<wbr>Literal</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
 						<a href="../interfaces/resolve.resolvepolicy.html" class="tsd-kind-icon">Resolve<wbr>Policy</a>
@@ -618,22 +662,22 @@ redirect_from: /docs/latest/classes/resolve.resolvecontext.html
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
 						<a href="../modules/resolve.html#policywhen" class="tsd-kind-icon">Policy<wbr>When</a>
 					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
 						<a href="../modules/resolve.html#all_whens" class="tsd-kind-icon">ALL_<wbr>WHENS</a>
 					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
 						<a href="../modules/resolve.html#eager_whens" class="tsd-kind-icon">EAGER_<wbr>WHENS</a>
 					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-external">
 						<a href="../modules/resolve.html#native_injector_token" class="tsd-kind-icon">NATIVE_<wbr>INJECTOR_<wbr>TOKEN</a>
 					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
 						<a href="../modules/resolve.html#when" class="tsd-kind-icon">when</a>
 					</li>
 					<li class=" tsd-kind-object-literal tsd-parent-kind-external-module">
 						<a href="../modules/resolve.html#defaultresolvepolicy" class="tsd-kind-icon">default<wbr>Resolve<wbr>Policy</a>
 					</li>
-					<li class=" tsd-kind-object-literal tsd-parent-kind-external-module">
+					<li class=" tsd-kind-object-literal tsd-parent-kind-external-module tsd-is-external">
 						<a href="../modules/resolve.html#resolvepolicies" class="tsd-kind-icon">resolve<wbr>Policies</a>
 					</li>
 				</ul>

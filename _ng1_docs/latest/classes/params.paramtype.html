@@ -1,17 +1,17 @@
 ---
-redirect_from: /docs/latest/classes/params.paramtype.html
 ---
 <!doctype html>
 <html class="default no-js">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>ParamType | UI-Router</title>
+	<title>ParamType | angular-ui-router</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
-	<link rel="stylesheet" href="../assets/css/typedoctheme.css">
+	<link rel="stylesheet" href="../assets/css/uirouter.css">
 	<script src="../assets/js/modernizr.js"></script>
+	<script src="../assets/js/reset.js"></script>
 </head>
 <body>
 <header>
@@ -27,26 +27,31 @@ redirect_from: /docs/latest/classes/params.paramtype.html
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">UI-Router</a>
+					<a href="../index.html" class="title">angular-ui-router</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
 						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
 						<div class="tsd-filter-group">
-							<div class="tsd-select" id="tsd-filter-visibility">
-								<span class="tsd-select-label">All</span>
-								<ul class="tsd-select-list">
-									<li data-value="public">Public</li>
-									<li data-value="protected">Public/Protected</li>
-									<li data-value="private" class="selected">All</li>
-								</ul>
-							</div>
-							<input type="checkbox" id="tsd-filter-inherited" checked />
-							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<!--
+                            <div class="tsd-select" id="tsd-filter-visibility">
+                                <span class="tsd-select-label">All</span>
+                                <ul class="tsd-select-list">
+                                    <li data-value="public">Public</li>
+                                    <li data-value="protected">Public/Protected</li>
+                                    <li data-value="private" class="selected">All</li>
+                                </ul>
+                            </div>
+
+                            <input type="checkbox" id="tsd-filter-inherited" checked />
+                            <label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+                            -->
 							<input type="checkbox" id="tsd-filter-externals" checked />
-							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
-							<input type="checkbox" id="tsd-filter-only-exported" />
-							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+							<label class="tsd-widget" for="tsd-filter-externals">Internal UI-Router API</label>
+							<!--
+                                <input type="checkbox" id="tsd-filter-only-exported" />
+                                <label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+                            -->
 						</div>
 					</div>
 					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
@@ -58,7 +63,7 @@ redirect_from: /docs/latest/classes/params.paramtype.html
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../globals.html">Globals</a>
+					<a href="../index.html">angular-ui-router</a>
 				</li>
 				<li>
 					<a href="../modules/params.html">params</a>
@@ -77,23 +82,23 @@ redirect_from: /docs/latest/classes/params.paramtype.html
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>A class that implements Custom Parameter Type functionality.</p>
+						<p>An internal class which implements <a href="../interfaces/params.paramtypedefinition.html">ParamTypeDefinition</a>.</p>
 					</div>
+					<p>A <a href="../interfaces/params.paramtypedefinition.html">ParamTypeDefinition</a> is a plain javascript object used to register custom parameter types.
+					When a param type definition is registered, an instance of this class is created internally.</p>
 					<p>This class has naive implementations for all the <a href="../interfaces/params.paramtypedefinition.html">ParamTypeDefinition</a> methods.</p>
-					<p>An instance of this class is created when a custom <a href="../interfaces/params.paramtypedefinition.html">ParamTypeDefinition</a> object is registered with the <a href="url.urlmatcherfactory.html#type">UrlMatcherFactory.type</a>.</p>
 					<p>Used by <a href="url.urlmatcher.html">UrlMatcher</a> when matching or formatting URLs, or comparing and validating parameter values.</p>
-					<dl class="tsd-comment-tags">
-						<dt>example</dt>
-						<dd><pre><code>
-{
-  decode: function(<span class="hljs-name"><span class="hljs-builtin-name">val</span></span>) { return parseInt(<span class="hljs-name"><span class="hljs-builtin-name">val</span></span>, <span class="hljs-number">10</span>)<span class="hljs-comment">; },</span>
-  encode: function(<span class="hljs-name"><span class="hljs-builtin-name">val</span></span>) { return val &amp;&amp; val.toString()<span class="hljs-comment">; },</span>
-  equals: function(<span class="hljs-name">a</span>, b) { return this.is(<span class="hljs-name">a</span>) &amp;&amp; a === b; },
-  is: function(<span class="hljs-name"><span class="hljs-builtin-name">val</span></span>) { return angular.isNumber(<span class="hljs-name"><span class="hljs-builtin-name">val</span></span>) &amp;&amp; isFinite(<span class="hljs-name"><span class="hljs-builtin-name">val</span></span>) &amp;&amp; val % <span class="hljs-number">1</span> === <span class="hljs-number">0</span><span class="hljs-comment">; },</span>
-  pattern: /\d+/
+					<h4 id="example-">Example:</h4>
+					<pre><code class="lang-js"><span class="hljs-keyword">var</span> paramTypeDef = {
+  <span class="hljs-attr">decode</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">val</span>) </span>{ <span class="hljs-keyword">return</span> <span class="hljs-built_in">parseInt</span>(val, <span class="hljs-number">10</span>); },
+  <span class="hljs-attr">encode</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">val</span>) </span>{ <span class="hljs-keyword">return</span> val &amp;&amp; val.toString(); },
+  <span class="hljs-attr">equals</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a, b</span>) </span>{ <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.is(a) &amp;&amp; a === b; },
+  <span class="hljs-attr">is</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">val</span>) </span>{ <span class="hljs-keyword">return</span> angular.isNumber(val) &amp;&amp; <span class="hljs-built_in">isFinite</span>(val) &amp;&amp; val % <span class="hljs-number">1</span> === <span class="hljs-number">0</span>; },
+  <span class="hljs-attr">pattern</span>: <span class="hljs-regexp">/\d+/</span>
 }
-</code></pre></dd>
-					</dl>
+
+<span class="hljs-keyword">var</span> paramType = <span class="hljs-keyword">new</span> ParamType(paramTypeDef);
+</code></pre>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -114,45 +119,46 @@ redirect_from: /docs/latest/classes/params.paramtype.html
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
-						<section class="tsd-index-section ">
+						<section class="tsd-index-section tsd-is-external">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="params.paramtype.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-external"><a href="params.paramtype.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
-						<section class="tsd-index-section ">
+						<section class="tsd-index-section tsd-is-external">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="params.paramtype.html#dynamic" class="tsd-kind-icon">dynamic</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="params.paramtype.html#name" class="tsd-kind-icon">name</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="params.paramtype.html#pattern" class="tsd-kind-icon">pattern</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="params.paramtype.html#raw" class="tsd-kind-icon">raw</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-external"><a href="params.paramtype.html#dynamic" class="tsd-kind-icon">dynamic</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-external"><a href="params.paramtype.html#inherit" class="tsd-kind-icon">inherit</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-external"><a href="params.paramtype.html#name" class="tsd-kind-icon">name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-external"><a href="params.paramtype.html#pattern" class="tsd-kind-icon">pattern</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-external"><a href="params.paramtype.html#raw" class="tsd-kind-icon">raw</a></li>
 							</ul>
 						</section>
-						<section class="tsd-index-section ">
+						<section class="tsd-index-section tsd-is-external">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="params.paramtype.html#_asarray" class="tsd-kind-icon">$as<wbr>Array</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="params.paramtype.html#_normalize" class="tsd-kind-icon">$normalize</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="params.paramtype.html#_subpattern" class="tsd-kind-icon">$sub<wbr>Pattern</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="params.paramtype.html#decode" class="tsd-kind-icon">decode</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="params.paramtype.html#encode" class="tsd-kind-icon">encode</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="params.paramtype.html#equals" class="tsd-kind-icon">equals</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="params.paramtype.html#is" class="tsd-kind-icon">is</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="params.paramtype.html#tostring" class="tsd-kind-icon">to<wbr>String</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="params.paramtype.html#_asarray" class="tsd-kind-icon">$as<wbr>Array</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="params.paramtype.html#_normalize" class="tsd-kind-icon">$normalize</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="params.paramtype.html#_subpattern" class="tsd-kind-icon">$sub<wbr>Pattern</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="params.paramtype.html#decode" class="tsd-kind-icon">decode</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="params.paramtype.html#encode" class="tsd-kind-icon">encode</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="params.paramtype.html#equals" class="tsd-kind-icon">equals</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="params.paramtype.html#is" class="tsd-kind-icon">is</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="params.paramtype.html#tostring" class="tsd-kind-icon">to<wbr>String</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group ">
+			<section class="tsd-panel-group tsd-member-group tsd-is-external">
 				<h2>Constructors</h2>
-				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class tsd-is-external">
 					<a name="constructor" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>constructor</h3>-->
-					<!---->
-					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+					<!--
+        <h3>constructor</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-external">
 						<li class="tsd-signature tsd-kind-icon">new <wbr>Param<wbr>Type<span class="tsd-signature-symbol">(</span>def<span class="tsd-signature-symbol">: </span><a href="../interfaces/params.paramtypedefinition.html" class="tsd-signature-type">ParamTypeDefinition</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="params.paramtype.html" class="tsd-signature-type">ParamType</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
@@ -162,7 +168,7 @@ redirect_from: /docs/latest/classes/params.paramtype.html
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>def: <a href="../interfaces/params.paramtypedefinition.html" class="tsd-signature-type">ParamTypeDefinition</a></h5>
+									<h5>def <a href="../interfaces/params.paramtypedefinition.html" class="tsd-signature-type">ParamTypeDefinition</a></h5>
 									:         <div class="tsd-comment tsd-typography">
 										<div class="lead">
 											<p>A configuration object which contains the custom type definition.  The object&#39;s
@@ -178,81 +184,168 @@ redirect_from: /docs/latest/classes/params.paramtype.html
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/params/type.ts#L86">params/type.ts:86</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/params/paramType.ts#L40">ui-router-core/src/params/paramType.ts:40</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group ">
+			<section class="tsd-panel-group tsd-member-group tsd-is-external">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
 					<a name="dynamic" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>dynamic</h3>-->
-					<!---->
-					<div class="tsd-signature tsd-kind-icon">dynamic<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<!--
+        <h3>dynamic</h3>
+    -->
+					<div class="tsd-signature tsd-kind-icon">dynamic<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span>    <div class="tsd-header">
+							<p> Dynamic flag </p>
+						</div>
+					</div>
 					<div class="tsd-declaration">
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Dynamic flag</p>
+							</div>
+							<p>When <code>dynamic</code> is <code>true</code>, changes to the parameter value will not cause the state to be entered/exited.</p>
+							<p>Normally, if a parameter value changes, the state which declared that the parameter will be reloaded (entered/exited).
+							When a parameter is <code>dynamic</code>, a transition still occurs, but it does not cause the state to exit/enter.</p>
+							<p>Default: <code>false</code></p>
+						</div>
 					</div>
 					<aside class="tsd-sources">
+						<p>Implementation of <a href="../interfaces/params.paramtypedefinition.html">ParamTypeDefinition</a>.<a href="../interfaces/params.paramtypedefinition.html#dynamic">dynamic</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/params/type.ts#L86">params/type.ts:86</a></li>
+							<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/params/paramType.ts#L38">ui-router-core/src/params/paramType.ts:38</a></li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
+					<a name="inherit" class="tsd-anchor"></a>
+					<!--
+        <h3>inherit</h3>
+    -->
+					<div class="tsd-signature tsd-kind-icon">inherit<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;true</span>    <div class="tsd-header">
+							<p> Enables/disables inheriting of parameter values (of this type) </p>
+						</div>
+					</div>
+					<div class="tsd-declaration">
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Enables/disables inheriting of parameter values (of this type)</p>
+							</div>
+							<p>When a transition is run with <a href="../interfaces/transition.transitionoptions.html#inherit">TransitionOptions.inherit</a> set to <code>true</code>, the current param values are inherited.
+							Param values whose type has <code>inherit: false</code> will not be inherited.</p>
+							<p>The internal parameter type of <code>hash</code> has <code>inherit: false</code>.
+							This is used to disable inheriting of the hash value (<code>#</code>) on subsequent transitions.</p>
+							<h4 id="example-">Example:</h4>
+							<pre><code class="lang-js">$state.go(<span class="hljs-string">'home'</span>, { <span class="hljs-string">'#'</span>: <span class="hljs-string">'inboxAnchor'</span> });
+...
+<span class="hljs-comment">// "#" is not inherited.</span>
+<span class="hljs-comment">// The value of the "#" parameter will be `null`</span>
+<span class="hljs-comment">// The url's hash will be cleared.</span>
+$state.go(<span class="hljs-string">'home.nest'</span>);
+</code></pre>
+						</div>
+					</div>
+					<aside class="tsd-sources">
+						<p>Implementation of <a href="../interfaces/params.paramtypedefinition.html">ParamTypeDefinition</a>.<a href="../interfaces/params.paramtypedefinition.html#inherit">inherit</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/params/paramType.ts#L40">ui-router-core/src/params/paramType.ts:40</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
 					<a name="name" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>name</h3>-->
-					<!---->
-					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<!--
+        <h3>name</h3>
+    -->
+					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span>    <div class="tsd-header">
+							<p> The name/id of the parameter type </p>
+						</div>
+					</div>
 					<div class="tsd-declaration">
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>The name/id of the parameter type</p>
+							</div>
+						</div>
 					</div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/params/type.ts#L84">params/type.ts:84</a></li>
+							<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/params/paramType.ts#L34">ui-router-core/src/params/paramType.ts:34</a></li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
 					<a name="pattern" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>pattern</h3>-->
-					<!---->
-					<div class="tsd-signature tsd-kind-icon">pattern<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span></div>
+					<!--
+        <h3>pattern</h3>
+    -->
+					<div class="tsd-signature tsd-kind-icon">pattern<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> =&nbsp;/.*/</span>    <div class="tsd-header">
+							<p> A regular expression that matches the encoded parameter type </p>
+						</div>
+					</div>
 					<div class="tsd-declaration">
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>A regular expression that matches the encoded parameter type</p>
+							</div>
+							<p>This regular expression is used to match an encoded parameter value <strong>in the URL</strong>.</p>
+							<p>For example, if your type encodes as a dash-separated numbers, match that here:
+							<code>new RegExp(&quot;[0-9]+(?:-[0-9]+)*&quot;)</code>.</p>
+							<p>There are some limitations to these regexps:</p>
+							<ul>
+								<li>No capturing groups are allowed (use non-capturing groups: <code>(?: )</code>)</li>
+								<li>No pattern modifiers like case insensitive</li>
+								<li>No start-of-string or end-of-string: <code>/^foo$/</code></li>
+							</ul>
+						</div>
 					</div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/params.paramtypedefinition.html">ParamTypeDefinition</a>.<a href="../interfaces/params.paramtypedefinition.html#pattern">pattern</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/params/type.ts#L83">params/type.ts:83</a></li>
+							<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/params/paramType.ts#L32">ui-router-core/src/params/paramType.ts:32</a></li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
 					<a name="raw" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>raw</h3>-->
-					<!---->
-					<div class="tsd-signature tsd-kind-icon">raw<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<!--
+        <h3>raw</h3>
+    -->
+					<div class="tsd-signature tsd-kind-icon">raw<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span>    <div class="tsd-header">
+							<p> Disables url-encoding of parameter values </p>
+						</div>
+					</div>
 					<div class="tsd-declaration">
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Disables url-encoding of parameter values</p>
+							</div>
+							<p>If a parameter type is declared <code>raw</code>, it will not be url-encoded.
+							Custom encoding can still be applied in the <a href="params.paramtype.html#encode">encode</a> function.</p>
+							<h3 id="decoding-warning">Decoding warning</h3>
+							<p>The decoding behavior of raw parameters is not defined.
+							See: <a href="../interfaces/params.paramdeclaration.html#raw">ParamDeclaration.raw</a> for details</p>
+						</div>
 					</div>
 					<aside class="tsd-sources">
+						<p>Implementation of <a href="../interfaces/params.paramtypedefinition.html">ParamTypeDefinition</a>.<a href="../interfaces/params.paramtypedefinition.html#raw">raw</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/params/type.ts#L85">params/type.ts:85</a></li>
+							<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/params/paramType.ts#L36">ui-router-core/src/params/paramType.ts:36</a></li>
 						</ul>
 					</aside>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group ">
+			<section class="tsd-panel-group tsd-member-group tsd-is-external">
 				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
 					<a name="_asarray" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>$as<wbr>Array</h3>-->
-					<!---->
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">$as<wbr>Array<span class="tsd-signature-symbol">(</span>mode<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"auto"</span>, isSearch<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					<!--
+        <h3>$as<wbr>Array</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">$as<wbr>Array<span class="tsd-signature-symbol">(</span>mode<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"auto"</span>, isSearch<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 						<li class="tsd-header">
 							<p> Wraps an existing custom ParamType as an array of ParamType, depending on &#39;mode&#39;.
 							e.g.:</p>
@@ -285,10 +378,10 @@ redirect_from: /docs/latest/classes/params.paramtype.html
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>mode: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"auto"</span></h5>
+									<h5>mode <span class="tsd-signature-type">true</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"auto"</span></h5>
 								</li>
 								<li>
-									<h5>isSearch: <span class="tsd-signature-type">boolean</span></h5>
+									<h5>isSearch <span class="tsd-signature-type">boolean</span></h5>
 								</li>
 							</ul>
 							<div class="tsd-returns">
@@ -297,17 +390,17 @@ redirect_from: /docs/latest/classes/params.paramtype.html
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/params/type.ts#L133">params/type.ts:133</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/params/paramType.ts#L87">ui-router-core/src/params/paramType.ts:87</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
 					<a name="_normalize" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>$normalize</h3>-->
-					<!---->
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<!--
+        <h3>$normalize</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
 						<li class="tsd-signature tsd-kind-icon">$normalize<span class="tsd-signature-symbol">(</span>val<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 						<li class="tsd-header">
 							<p> Given an encoded string, or a decoded object, returns a decoded object </p>
@@ -323,7 +416,7 @@ redirect_from: /docs/latest/classes/params.paramtype.html
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>val: <span class="tsd-signature-type">any</span></h5>
+									<h5>val <span class="tsd-signature-type">any</span></h5>
 								</li>
 							</ul>
 							<div class="tsd-returns">
@@ -332,17 +425,17 @@ redirect_from: /docs/latest/classes/params.paramtype.html
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/params/type.ts#L119">params/type.ts:119</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/params/paramType.ts#L73">ui-router-core/src/params/paramType.ts:73</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
 					<a name="_subpattern" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>$sub<wbr>Pattern</h3>-->
-					<!---->
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<!--
+        <h3>$sub<wbr>Pattern</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
 						<li class="tsd-signature tsd-kind-icon">$sub<wbr>Pattern<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
@@ -353,17 +446,17 @@ redirect_from: /docs/latest/classes/params.paramtype.html
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/params/type.ts#L109">params/type.ts:109</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/params/paramType.ts#L63">ui-router-core/src/params/paramType.ts:63</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
 					<a name="decode" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>decode</h3>-->
-					<!---->
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<!--
+        <h3>decode</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
 						<li class="tsd-signature tsd-kind-icon">decode<span class="tsd-signature-symbol">(</span>val<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, key<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 						<li class="tsd-header">
 							<p> Decodes a parameter value string (from URL string or transition param) to a custom/native value. </p>
@@ -375,17 +468,18 @@ redirect_from: /docs/latest/classes/params.paramtype.html
 								<div class="lead">
 									<p>Decodes a parameter value string (from URL string or transition param) to a custom/native value.</p>
 								</div>
-								<p>For example, if your type decodes to an array of ints, then decode the string as an array of ints here:
-								<code>(str) =&gt; str.split(&quot;-&quot;).map(str =&gt; parseInt(str, 10))</code></p>
+								<p>For example, if your type decodes to an array of ints, then decode the string as an array of ints here:</p>
+								<pre><code class="lang-js">decode: <span class="hljs-function">(<span class="hljs-params">str</span>) =&gt;</span> str.split(<span class="hljs-string">"-"</span>).map(<span class="hljs-function"><span class="hljs-params">str</span> =&gt;</span> <span class="hljs-built_in">parseInt</span>(str, <span class="hljs-number">10</span>))
+</code></pre>
 								<p>Note: in general, <a href="params.paramtype.html#encode">encode</a> and <a href="params.paramtype.html#decode">decode</a> should be symmetrical.  That is, <code>encode(decode(str)) === str</code></p>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>val: <span class="tsd-signature-type">string</span></h5>
+									<h5>val <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5>key <span class="tsd-flag ts-flagOptional">Optional</span>: <span class="tsd-signature-type">string</span></h5>
+									<h5>key: <span class="tsd-flag ts-flagOptional">Optional</span>&nbsp; <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
 							<div class="tsd-returns">
@@ -396,17 +490,17 @@ redirect_from: /docs/latest/classes/params.paramtype.html
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/params.paramtypedefinition.html">ParamTypeDefinition</a>.<a href="../interfaces/params.paramtypedefinition.html#decode">decode</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/params/type.ts#L104">params/type.ts:104</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/params/paramType.ts#L58">ui-router-core/src/params/paramType.ts:58</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
 					<a name="encode" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>encode</h3>-->
-					<!---->
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<!--
+        <h3>encode</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
 						<li class="tsd-signature tsd-kind-icon">encode<span class="tsd-signature-symbol">(</span>val<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, key<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
 						<li class="tsd-header">
 							<p> Encodes a custom/native type value to a string that can be embedded in a URL. </p>
@@ -418,19 +512,20 @@ redirect_from: /docs/latest/classes/params.paramtype.html
 								<div class="lead">
 									<p>Encodes a custom/native type value to a string that can be embedded in a URL.</p>
 								</div>
-								<p>Note that the return value does <em>not</em> need to be URL-safe (i.e. passed through <code>encodeURIComponent()</code>), it
-								only needs to be a representation of <code>val</code> that has been encoded as a string.</p>
-								<p>For example, if your type decodes to an array of ints, then encode the array of ints as a string here:
-								<code>(intarray) =&gt; intarray.join(&quot;-&quot;)</code></p>
+								<p>Note that the return value does <em>not</em> need to be URL-safe (i.e. passed through <code>encodeURIComponent()</code>).
+								It only needs to be a representation of <code>val</code> that has been encoded as a string.</p>
+								<p>For example, if your custom type decodes to an array of ints, then encode the array of ints to a string here:</p>
+								<pre><code class="lang-js">encode: <span class="hljs-function">(<span class="hljs-params">intarray</span>) =&gt;</span> intarray.join(<span class="hljs-string">"-"</span>)
+</code></pre>
 								<p>Note: in general, <a href="params.paramtype.html#encode">encode</a> and <a href="params.paramtype.html#decode">decode</a> should be symmetrical.  That is, <code>encode(decode(str)) === str</code></p>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>val: <span class="tsd-signature-type">any</span></h5>
+									<h5>val <span class="tsd-signature-type">any</span></h5>
 								</li>
 								<li>
-									<h5>key <span class="tsd-flag ts-flagOptional">Optional</span>: <span class="tsd-signature-type">string</span></h5>
+									<h5>key: <span class="tsd-flag ts-flagOptional">Optional</span>&nbsp; <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
 							<div class="tsd-returns">
@@ -444,17 +539,17 @@ redirect_from: /docs/latest/classes/params.paramtype.html
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/params.paramtypedefinition.html">ParamTypeDefinition</a>.<a href="../interfaces/params.paramtypedefinition.html#encode">encode</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/params/type.ts#L102">params/type.ts:102</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/params/paramType.ts#L56">ui-router-core/src/params/paramType.ts:56</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
 					<a name="equals" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>equals</h3>-->
-					<!---->
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<!--
+        <h3>equals</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
 						<li class="tsd-signature tsd-kind-icon">equals<span class="tsd-signature-symbol">(</span>a<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, b<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 						<li class="tsd-header">
 							<p> Determines whether two decoded values are equivalent. </p>
@@ -466,16 +561,17 @@ redirect_from: /docs/latest/classes/params.paramtype.html
 								<div class="lead">
 									<p>Determines whether two decoded values are equivalent.</p>
 								</div>
-								<p>For example, if your type decodes to an array of ints, then check if the arrays are equal:
-								<code>(a, b) =&gt; a.length === b.length &amp;&amp; a.reduce((acc, x, idx) =&gt; acc &amp;&amp; x === b[idx], true)</code></p>
+								<p>For example, if your type decodes to an array of ints, then check if the arrays are equal:</p>
+								<pre><code class="lang-js">equals: <span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span> a.length === b.length &amp;&amp; a.reduce(<span class="hljs-function">(<span class="hljs-params">acc, x, idx</span>) =&gt;</span> acc &amp;&amp; x === b[idx], <span class="hljs-literal">true</span>)
+</code></pre>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>a: <span class="tsd-signature-type">any</span></h5>
+									<h5>a <span class="tsd-signature-type">any</span></h5>
 								</li>
 								<li>
-									<h5>b: <span class="tsd-signature-type">any</span></h5>
+									<h5>b <span class="tsd-signature-type">any</span></h5>
 								</li>
 							</ul>
 							<div class="tsd-returns">
@@ -486,17 +582,17 @@ redirect_from: /docs/latest/classes/params.paramtype.html
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/params.paramtypedefinition.html">ParamTypeDefinition</a>.<a href="../interfaces/params.paramtypedefinition.html#equals">equals</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/params/type.ts#L106">params/type.ts:106</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/params/paramType.ts#L60">ui-router-core/src/params/paramType.ts:60</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
 					<a name="is" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>is</h3>-->
-					<!---->
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<!--
+        <h3>is</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
 						<li class="tsd-signature tsd-kind-icon">is<span class="tsd-signature-symbol">(</span>val<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, key<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 						<li class="tsd-header">
 							<p> Tests if some object type is compatible with this parameter type </p>
@@ -512,21 +608,21 @@ redirect_from: /docs/latest/classes/params.paramtype.html
 								Accepts a decoded value and determines whether it matches this <code>ParamType</code> object.</p>
 								<p>If your custom type encodes the parameter to a specific type, check for that type here.
 									For example, if your custom type decodes the URL parameter value as an array of ints, return true if the
-									input is an array of ints:
-									<code>(val) =&gt; Array.isArray(val) &amp;&amp; array.reduce((acc, x) =&gt; acc &amp;&amp; parseInt(val, 10) === val, true)</code>.
-									If your type decodes the URL parameter value to a custom string, check that the string matches
+								input is an array of ints:</p>
+								<pre><code>is: (<span class="hljs-keyword">val</span>) =&gt; <span class="hljs-type">Array</span>.isArray(<span class="hljs-keyword">val</span>) &amp;&amp; <span class="hljs-built_in">array</span>.reduce((acc, x) =&gt; acc &amp;&amp; parseInt(<span class="hljs-keyword">val</span>, <span class="hljs-number">10</span>) === <span class="hljs-keyword">val</span>, <span class="hljs-literal">true</span>)
+</code></pre><p>If your type decodes the URL parameter value to a custom string, check that the string matches
 								the pattern (don&#39;t use an arrow fn if you need <code>this</code>): <code>function (val) { return !!this.pattern.exec(val) }</code></p>
 								<p>Note: This method is <em>not used to check if the URL matches</em>.
-									It&#39;s used to check if a <em>decoded value is this type</em>.
-								Use <a href="params.paramtype.html#pattern">pattern</a> to check the URL.</p>
+									It&#39;s used to check if a <em>decoded value <em>is</em> this type</em>.
+								Use <a href="params.paramtype.html#pattern">pattern</a> to check the encoded value in the URL.</p>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>val: <span class="tsd-signature-type">any</span></h5>
+									<h5>val <span class="tsd-signature-type">any</span></h5>
 								</li>
 								<li>
-									<h5>key <span class="tsd-flag ts-flagOptional">Optional</span>: <span class="tsd-signature-type">string</span></h5>
+									<h5>key: <span class="tsd-flag ts-flagOptional">Optional</span>&nbsp; <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
 							<div class="tsd-returns">
@@ -537,17 +633,17 @@ redirect_from: /docs/latest/classes/params.paramtype.html
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/params.paramtypedefinition.html">ParamTypeDefinition</a>.<a href="../interfaces/params.paramtypedefinition.html#is">is</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/params/type.ts#L100">params/type.ts:100</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/params/paramType.ts#L54">ui-router-core/src/params/paramType.ts:54</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
 					<a name="tostring" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>to<wbr>String</h3>-->
-					<!---->
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<!--
+        <h3>to<wbr>String</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
 						<li class="tsd-signature tsd-kind-icon">to<wbr>String<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
@@ -558,7 +654,7 @@ redirect_from: /docs/latest/classes/params.paramtype.html
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/params/type.ts#L114">params/type.ts:114</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/params/paramType.ts#L68">ui-router-core/src/params/paramType.ts:68</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
@@ -569,49 +665,25 @@ redirect_from: /docs/latest/classes/params.paramtype.html
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../globals.html"><em>Globals</em></a>
+						<a href="../index.html"><em>angular-<wbr>ui-<wbr>router</em></a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/common.html">common</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/common_hof.html">common_<wbr>hof</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/common_predicates.html">common_<wbr>predicates</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/common_strings.html">common_<wbr>strings</a>
+					<li class="label tsd-is-external">
+						<span>Public API</span>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/core.html">core</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/hooks.html">hooks</a>
+						<a href="../modules/directives.html">directives</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/justjs.html">justjs</a>
+						<a href="../modules/injectables.html">injectables</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/ng1.html">ng1</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/ng1_directives.html">ng1_<wbr>directives</a>
-					</li>
-					<li class=" tsd-kind-external-module">
 						<a href="../modules/ng1_state_events.html">ng1_<wbr>state_<wbr>events</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/ng2.html">ng2</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/ng2_directives.html">ng2_<wbr>directives</a>
-					</li>
-					<li class="current tsd-kind-external-module">
-						<a href="../modules/params.html">params</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/path.html">path</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/resolve.html">resolve</a>
@@ -628,61 +700,88 @@ redirect_from: /docs/latest/classes/params.paramtype.html
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/url.html">url</a>
 					</li>
-					<li class=" tsd-kind-external-module">
+					<li class="label tsd-is-external">
+						<span>Internal UI-<wbr><wbr>Router API</span>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/common.html">common</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/common_hof.html">common_<wbr>hof</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/common_predicates.html">common_<wbr>predicates</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/common_strings.html">common_<wbr>strings</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/hooks.html">hooks</a>
+					</li>
+					<li class="current tsd-kind-external-module tsd-is-external">
+						<a href="../modules/params.html">params</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/path.html">path</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
 						<a href="../modules/view.html">view</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-enum tsd-parent-kind-external-module">
+					<li class=" tsd-kind-enum tsd-parent-kind-external-module tsd-is-external">
 						<a href="../enums/params.deftype.html" class="tsd-kind-icon">Def<wbr>Type</a>
 					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-external-module">
+					<li class=" tsd-kind-class tsd-parent-kind-external-module tsd-is-external">
 						<a href="params.param.html" class="tsd-kind-icon">Param</a>
 					</li>
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-class tsd-parent-kind-external-module">
+					<li class="current tsd-kind-class tsd-parent-kind-external-module tsd-is-external">
 						<a href="params.paramtype.html" class="tsd-kind-icon">Param<wbr>Type</a>
 						<ul>
-							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-external">
 								<a href="params.paramtype.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-external">
 								<a href="params.paramtype.html#dynamic" class="tsd-kind-icon">dynamic</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-external">
+								<a href="params.paramtype.html#inherit" class="tsd-kind-icon">inherit</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-external">
 								<a href="params.paramtype.html#name" class="tsd-kind-icon">name</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-external">
 								<a href="params.paramtype.html#pattern" class="tsd-kind-icon">pattern</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-external">
 								<a href="params.paramtype.html#raw" class="tsd-kind-icon">raw</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
 								<a href="params.paramtype.html#_asarray" class="tsd-kind-icon">$as<wbr>Array</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
 								<a href="params.paramtype.html#_normalize" class="tsd-kind-icon">$normalize</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
 								<a href="params.paramtype.html#_subpattern" class="tsd-kind-icon">$sub<wbr>Pattern</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
 								<a href="params.paramtype.html#decode" class="tsd-kind-icon">decode</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
 								<a href="params.paramtype.html#encode" class="tsd-kind-icon">encode</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
 								<a href="params.paramtype.html#equals" class="tsd-kind-icon">equals</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
 								<a href="params.paramtype.html#is" class="tsd-kind-icon">is</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
 								<a href="params.paramtype.html#tostring" class="tsd-kind-icon">to<wbr>String</a>
 							</li>
 						</ul>
@@ -692,7 +791,7 @@ redirect_from: /docs/latest/classes/params.paramtype.html
 					<li class=" tsd-kind-class tsd-parent-kind-external-module">
 						<a href="params.paramtypes.html" class="tsd-kind-icon">Param<wbr>Types</a>
 					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-external-module">
+					<li class=" tsd-kind-class tsd-parent-kind-external-module tsd-is-external">
 						<a href="params.stateparams.html" class="tsd-kind-icon">State<wbr>Params</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
@@ -704,38 +803,32 @@ redirect_from: /docs/latest/classes/params.paramtype.html
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
 						<a href="../interfaces/params.rawparams.html" class="tsd-kind-icon">Raw<wbr>Params</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-external">
 						<a href="../interfaces/params.replace.html" class="tsd-kind-icon">Replace</a>
 					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-external">
 						<a href="../modules/params.html#paramsorarray" class="tsd-kind-icon">Params<wbr>OrArray</a>
 					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
 						<a href="../modules/params.html#hasown" class="tsd-kind-icon">has<wbr>Own</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
 						<a href="../modules/params.html#arraytype" class="tsd-kind-icon">Array<wbr>Type</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
 						<a href="../modules/params.html#getreplace" class="tsd-kind-icon">get<wbr>Replace</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
 						<a href="../modules/params.html#getsquashpolicy" class="tsd-kind-icon">get<wbr>Squash<wbr>Policy</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
 						<a href="../modules/params.html#gettype" class="tsd-kind-icon">get<wbr>Type</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
 						<a href="../modules/params.html#isshorthand" class="tsd-kind-icon">is<wbr>Shorthand</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
 						<a href="../modules/params.html#unwrapshorthand" class="tsd-kind-icon">unwrap<wbr>Shorthand</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="../modules/params.html#valfromstring" class="tsd-kind-icon">val<wbr>From<wbr>String</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="../modules/params.html#valtostring" class="tsd-kind-icon">val<wbr>ToString</a>
 					</li>
 				</ul>
 			</nav>

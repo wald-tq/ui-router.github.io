@@ -1,17 +1,17 @@
 ---
-redirect_from: /docs/latest/classes/resolve.uiinjectorimpl.html
 ---
 <!doctype html>
 <html class="default no-js">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>UIInjectorImpl | UI-Router</title>
+	<title>UIInjectorImpl | angular-ui-router</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
-	<link rel="stylesheet" href="../assets/css/typedoctheme.css">
+	<link rel="stylesheet" href="../assets/css/uirouter.css">
 	<script src="../assets/js/modernizr.js"></script>
+	<script src="../assets/js/reset.js"></script>
 </head>
 <body>
 <header>
@@ -27,26 +27,31 @@ redirect_from: /docs/latest/classes/resolve.uiinjectorimpl.html
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">UI-Router</a>
+					<a href="../index.html" class="title">angular-ui-router</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
 						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
 						<div class="tsd-filter-group">
-							<div class="tsd-select" id="tsd-filter-visibility">
-								<span class="tsd-select-label">All</span>
-								<ul class="tsd-select-list">
-									<li data-value="public">Public</li>
-									<li data-value="protected">Public/Protected</li>
-									<li data-value="private" class="selected">All</li>
-								</ul>
-							</div>
-							<input type="checkbox" id="tsd-filter-inherited" checked />
-							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<!--
+                            <div class="tsd-select" id="tsd-filter-visibility">
+                                <span class="tsd-select-label">All</span>
+                                <ul class="tsd-select-list">
+                                    <li data-value="public">Public</li>
+                                    <li data-value="protected">Public/Protected</li>
+                                    <li data-value="private" class="selected">All</li>
+                                </ul>
+                            </div>
+
+                            <input type="checkbox" id="tsd-filter-inherited" checked />
+                            <label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+                            -->
 							<input type="checkbox" id="tsd-filter-externals" checked />
-							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
-							<input type="checkbox" id="tsd-filter-only-exported" />
-							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+							<label class="tsd-widget" for="tsd-filter-externals">Internal UI-Router API</label>
+							<!--
+                                <input type="checkbox" id="tsd-filter-only-exported" />
+                                <label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+                            -->
 						</div>
 					</div>
 					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
@@ -58,7 +63,7 @@ redirect_from: /docs/latest/classes/resolve.uiinjectorimpl.html
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../globals.html">Globals</a>
+					<a href="../index.html">angular-ui-router</a>
 				</li>
 				<li>
 					<a href="../modules/resolve.html">resolve</a>
@@ -85,45 +90,45 @@ redirect_from: /docs/latest/classes/resolve.uiinjectorimpl.html
 			<section class="tsd-panel">
 				<h3>Implements</h3>
 				<ul class="tsd-hierarchy">
-					<li><a href="../interfaces/common.uiinjector.html" class="tsd-signature-type">UIInjector</a></li>
+					<li><a href="../interfaces/core.uiinjector.html" class="tsd-signature-type">UIInjector</a></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
-						<section class="tsd-index-section tsd-is-not-exported">
+						<section class="tsd-index-section tsd-is-external tsd-is-not-exported">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-not-exported"><a href="resolve.uiinjectorimpl.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-external tsd-is-not-exported"><a href="resolve.uiinjectorimpl.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
-						<section class="tsd-index-section tsd-is-not-exported">
+						<section class="tsd-index-section tsd-is-external tsd-is-not-exported">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-not-exported"><a href="resolve.uiinjectorimpl.html#context" class="tsd-kind-icon">context</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-not-exported"><a href="resolve.uiinjectorimpl.html#native" class="tsd-kind-icon">native</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-external tsd-is-not-exported"><a href="resolve.uiinjectorimpl.html#context" class="tsd-kind-icon">context</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-external tsd-is-not-exported"><a href="resolve.uiinjectorimpl.html#native" class="tsd-kind-icon">native</a></li>
 							</ul>
 						</section>
-						<section class="tsd-index-section tsd-is-not-exported">
+						<section class="tsd-index-section tsd-is-external tsd-is-not-exported">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="resolve.uiinjectorimpl.html#get" class="tsd-kind-icon">get</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="resolve.uiinjectorimpl.html#getasync" class="tsd-kind-icon">get<wbr>Async</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="resolve.uiinjectorimpl.html#getnative" class="tsd-kind-icon">get<wbr>Native</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external tsd-is-not-exported"><a href="resolve.uiinjectorimpl.html#get" class="tsd-kind-icon">get</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external tsd-is-not-exported"><a href="resolve.uiinjectorimpl.html#getasync" class="tsd-kind-icon">get<wbr>Async</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external tsd-is-not-exported"><a href="resolve.uiinjectorimpl.html#getnative" class="tsd-kind-icon">get<wbr>Native</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
+			<section class="tsd-panel-group tsd-member-group tsd-is-external tsd-is-not-exported">
 				<h2>Constructors</h2>
-				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class tsd-is-external tsd-is-not-exported">
 					<a name="constructor" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>constructor</h3>-->
-					<!---->
-					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-not-exported">
+					<!--
+        <h3>constructor</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-external tsd-is-not-exported">
 						<li class="tsd-signature tsd-kind-icon">new UIInjector<wbr>Impl<span class="tsd-signature-symbol">(</span>context<span class="tsd-signature-symbol">: </span><a href="resolve.resolvecontext.html" class="tsd-signature-type">ResolveContext</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="resolve.uiinjectorimpl.html" class="tsd-signature-type">UIInjectorImpl</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
@@ -131,7 +136,7 @@ redirect_from: /docs/latest/classes/resolve.uiinjectorimpl.html
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>context: <a href="resolve.resolvecontext.html" class="tsd-signature-type">ResolveContext</a></h5>
+									<h5>context <a href="resolve.resolvecontext.html" class="tsd-signature-type">ResolveContext</a></h5>
 								</li>
 							</ul>
 							<div class="tsd-returns">
@@ -140,51 +145,51 @@ redirect_from: /docs/latest/classes/resolve.uiinjectorimpl.html
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/resolve/resolveContext.ts#L175">resolve/resolveContext.ts:175</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/resolve/resolveContext.ts#L189">ui-router-core/src/resolve/resolveContext.ts:189</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
+			<section class="tsd-panel-group tsd-member-group tsd-is-external tsd-is-not-exported">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external tsd-is-not-exported">
 					<a name="context" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>context</h3>-->
-					<!---->
+					<!--
+        <h3>context</h3>
+    -->
 					<div class="tsd-signature tsd-kind-icon">context<span class="tsd-signature-symbol">:</span> <a href="resolve.resolvecontext.html" class="tsd-signature-type">ResolveContext</a></div>
 					<div class="tsd-declaration">
 					</div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/resolve/resolveContext.ts#L177">resolve/resolveContext.ts:177</a></li>
+							<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/resolve/resolveContext.ts#L191">ui-router-core/src/resolve/resolveContext.ts:191</a></li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external tsd-is-not-exported">
 					<a name="native" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>native</h3>-->
-					<!---->
+					<!--
+        <h3>native</h3>
+    -->
 					<div class="tsd-signature tsd-kind-icon">native<span class="tsd-signature-symbol">:</span> <a href="../interfaces/common._injectorlike.html" class="tsd-signature-type">$InjectorLike</a></div>
 					<div class="tsd-declaration">
 					</div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/resolve/resolveContext.ts#L175">resolve/resolveContext.ts:175</a></li>
+							<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/resolve/resolveContext.ts#L189">ui-router-core/src/resolve/resolveContext.ts:189</a></li>
 						</ul>
 					</aside>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
+			<section class="tsd-panel-group tsd-member-group tsd-is-external tsd-is-not-exported">
 				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external tsd-is-not-exported">
 					<a name="get" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>get</h3>-->
-					<!---->
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<!--
+        <h3>get</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external tsd-is-not-exported">
 						<li class="tsd-signature tsd-kind-icon">get<span class="tsd-signature-symbol">(</span>token<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
@@ -192,7 +197,7 @@ redirect_from: /docs/latest/classes/resolve.uiinjectorimpl.html
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>token: <span class="tsd-signature-type">any</span></h5>
+									<h5>token <span class="tsd-signature-type">any</span></h5>
 								</li>
 							</ul>
 							<div class="tsd-returns">
@@ -200,19 +205,19 @@ redirect_from: /docs/latest/classes/resolve.uiinjectorimpl.html
 							</div>
 							<hr>
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/common.uiinjector.html">UIInjector</a>.<a href="../interfaces/common.uiinjector.html#get">get</a></p>
+								<p>Implementation of <a href="../interfaces/core.uiinjector.html">UIInjector</a>.<a href="../interfaces/core.uiinjector.html#get">get</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/resolve/resolveContext.ts#L181">resolve/resolveContext.ts:181</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/resolve/resolveContext.ts#L195">ui-router-core/src/resolve/resolveContext.ts:195</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external tsd-is-not-exported">
 					<a name="getasync" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>get<wbr>Async</h3>-->
-					<!---->
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<!--
+        <h3>get<wbr>Async</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external tsd-is-not-exported">
 						<li class="tsd-signature tsd-kind-icon">get<wbr>Async<span class="tsd-signature-symbol">(</span>token<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
@@ -220,7 +225,7 @@ redirect_from: /docs/latest/classes/resolve.uiinjectorimpl.html
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>token: <span class="tsd-signature-type">any</span></h5>
+									<h5>token <span class="tsd-signature-type">any</span></h5>
 								</li>
 							</ul>
 							<div class="tsd-returns">
@@ -228,19 +233,19 @@ redirect_from: /docs/latest/classes/resolve.uiinjectorimpl.html
 							</div>
 							<hr>
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/common.uiinjector.html">UIInjector</a>.<a href="../interfaces/common.uiinjector.html#getasync">getAsync</a></p>
+								<p>Implementation of <a href="../interfaces/core.uiinjector.html">UIInjector</a>.<a href="../interfaces/core.uiinjector.html#getasync">getAsync</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/resolve/resolveContext.ts#L192">resolve/resolveContext.ts:192</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/resolve/resolveContext.ts#L210">ui-router-core/src/resolve/resolveContext.ts:210</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external tsd-is-not-exported">
 					<a name="getnative" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>get<wbr>Native</h3>-->
-					<!---->
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<!--
+        <h3>get<wbr>Native</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external tsd-is-not-exported">
 						<li class="tsd-signature tsd-kind-icon">get<wbr>Native<span class="tsd-signature-symbol">(</span>token<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
@@ -248,7 +253,7 @@ redirect_from: /docs/latest/classes/resolve.uiinjectorimpl.html
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>token: <span class="tsd-signature-type">any</span></h5>
+									<h5>token <span class="tsd-signature-type">any</span></h5>
 								</li>
 							</ul>
 							<div class="tsd-returns">
@@ -256,9 +261,9 @@ redirect_from: /docs/latest/classes/resolve.uiinjectorimpl.html
 							</div>
 							<hr>
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/common.uiinjector.html">UIInjector</a>.<a href="../interfaces/common.uiinjector.html#getnative">getNative</a></p>
+								<p>Implementation of <a href="../interfaces/core.uiinjector.html">UIInjector</a>.<a href="../interfaces/core.uiinjector.html#getnative">getNative</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/resolve/resolveContext.ts#L198">resolve/resolveContext.ts:198</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/resolve/resolveContext.ts#L216">ui-router-core/src/resolve/resolveContext.ts:216</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
@@ -269,49 +274,25 @@ redirect_from: /docs/latest/classes/resolve.uiinjectorimpl.html
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../globals.html"><em>Globals</em></a>
+						<a href="../index.html"><em>angular-<wbr>ui-<wbr>router</em></a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/common.html">common</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/common_hof.html">common_<wbr>hof</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/common_predicates.html">common_<wbr>predicates</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/common_strings.html">common_<wbr>strings</a>
+					<li class="label tsd-is-external">
+						<span>Public API</span>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/core.html">core</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/hooks.html">hooks</a>
+						<a href="../modules/directives.html">directives</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/justjs.html">justjs</a>
+						<a href="../modules/injectables.html">injectables</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/ng1.html">ng1</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/ng1_directives.html">ng1_<wbr>directives</a>
-					</li>
-					<li class=" tsd-kind-external-module">
 						<a href="../modules/ng1_state_events.html">ng1_<wbr>state_<wbr>events</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/ng2.html">ng2</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/ng2_directives.html">ng2_<wbr>directives</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/params.html">params</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/path.html">path</a>
 					</li>
 					<li class="current tsd-kind-external-module">
 						<a href="../modules/resolve.html">resolve</a>
@@ -328,7 +309,31 @@ redirect_from: /docs/latest/classes/resolve.uiinjectorimpl.html
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/url.html">url</a>
 					</li>
-					<li class=" tsd-kind-external-module">
+					<li class="label tsd-is-external">
+						<span>Internal UI-<wbr><wbr>Router API</span>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/common.html">common</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/common_hof.html">common_<wbr>hof</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/common_predicates.html">common_<wbr>predicates</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/common_strings.html">common_<wbr>strings</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/hooks.html">hooks</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/params.html">params</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/path.html">path</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
 						<a href="../modules/view.html">view</a>
 					</li>
 				</ul>
@@ -338,30 +343,30 @@ redirect_from: /docs/latest/classes/resolve.uiinjectorimpl.html
 					<li class=" tsd-kind-class tsd-parent-kind-external-module">
 						<a href="resolve.resolvable.html" class="tsd-kind-icon">Resolvable</a>
 					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-external-module">
+					<li class=" tsd-kind-class tsd-parent-kind-external-module tsd-is-external">
 						<a href="resolve.resolvecontext.html" class="tsd-kind-icon">Resolve<wbr>Context</a>
 					</li>
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-class tsd-parent-kind-external-module tsd-is-not-exported">
+					<li class="current tsd-kind-class tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
 						<a href="resolve.uiinjectorimpl.html" class="tsd-kind-icon">UIInjector<wbr>Impl</a>
 						<ul>
-							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-not-exported">
+							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-external tsd-is-not-exported">
 								<a href="resolve.uiinjectorimpl.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-not-exported">
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-external tsd-is-not-exported">
 								<a href="resolve.uiinjectorimpl.html#context" class="tsd-kind-icon">context</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-not-exported">
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-external tsd-is-not-exported">
 								<a href="resolve.uiinjectorimpl.html#native" class="tsd-kind-icon">native</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external tsd-is-not-exported">
 								<a href="resolve.uiinjectorimpl.html#get" class="tsd-kind-icon">get</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external tsd-is-not-exported">
 								<a href="resolve.uiinjectorimpl.html#getasync" class="tsd-kind-icon">get<wbr>Async</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external tsd-is-not-exported">
 								<a href="resolve.uiinjectorimpl.html#getnative" class="tsd-kind-icon">get<wbr>Native</a>
 							</li>
 						</ul>
@@ -369,10 +374,10 @@ redirect_from: /docs/latest/classes/resolve.uiinjectorimpl.html
 				</ul>
 				<ul class="after-current">
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="../interfaces/resolve.resolvableliteral.html" class="tsd-kind-icon">Resolvable<wbr>Literal</a>
+						<a href="../interfaces/resolve.providerlike.html" class="tsd-kind-icon">Provider<wbr>Like</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="../interfaces/resolve.resolvables.html" class="tsd-kind-icon">Resolvables</a>
+						<a href="../interfaces/resolve.resolvableliteral.html" class="tsd-kind-icon">Resolvable<wbr>Literal</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
 						<a href="../interfaces/resolve.resolvepolicy.html" class="tsd-kind-icon">Resolve<wbr>Policy</a>
@@ -383,22 +388,22 @@ redirect_from: /docs/latest/classes/resolve.uiinjectorimpl.html
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
 						<a href="../modules/resolve.html#policywhen" class="tsd-kind-icon">Policy<wbr>When</a>
 					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
 						<a href="../modules/resolve.html#all_whens" class="tsd-kind-icon">ALL_<wbr>WHENS</a>
 					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
 						<a href="../modules/resolve.html#eager_whens" class="tsd-kind-icon">EAGER_<wbr>WHENS</a>
 					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-external">
 						<a href="../modules/resolve.html#native_injector_token" class="tsd-kind-icon">NATIVE_<wbr>INJECTOR_<wbr>TOKEN</a>
 					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
 						<a href="../modules/resolve.html#when" class="tsd-kind-icon">when</a>
 					</li>
 					<li class=" tsd-kind-object-literal tsd-parent-kind-external-module">
 						<a href="../modules/resolve.html#defaultresolvepolicy" class="tsd-kind-icon">default<wbr>Resolve<wbr>Policy</a>
 					</li>
-					<li class=" tsd-kind-object-literal tsd-parent-kind-external-module">
+					<li class=" tsd-kind-object-literal tsd-parent-kind-external-module tsd-is-external">
 						<a href="../modules/resolve.html#resolvepolicies" class="tsd-kind-icon">resolve<wbr>Policies</a>
 					</li>
 				</ul>

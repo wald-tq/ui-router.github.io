@@ -1,17 +1,17 @@
 ---
-redirect_from: /docs/latest/interfaces/view.viewconfig.html
 ---
 <!doctype html>
 <html class="default no-js">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>ViewConfig | UI-Router</title>
+	<title>ViewConfig | angular-ui-router</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
-	<link rel="stylesheet" href="../assets/css/typedoctheme.css">
+	<link rel="stylesheet" href="../assets/css/uirouter.css">
 	<script src="../assets/js/modernizr.js"></script>
+	<script src="../assets/js/reset.js"></script>
 </head>
 <body>
 <header>
@@ -27,26 +27,31 @@ redirect_from: /docs/latest/interfaces/view.viewconfig.html
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">UI-Router</a>
+					<a href="../index.html" class="title">angular-ui-router</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
 						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
 						<div class="tsd-filter-group">
-							<div class="tsd-select" id="tsd-filter-visibility">
-								<span class="tsd-select-label">All</span>
-								<ul class="tsd-select-list">
-									<li data-value="public">Public</li>
-									<li data-value="protected">Public/Protected</li>
-									<li data-value="private" class="selected">All</li>
-								</ul>
-							</div>
-							<input type="checkbox" id="tsd-filter-inherited" checked />
-							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<!--
+                            <div class="tsd-select" id="tsd-filter-visibility">
+                                <span class="tsd-select-label">All</span>
+                                <ul class="tsd-select-list">
+                                    <li data-value="public">Public</li>
+                                    <li data-value="protected">Public/Protected</li>
+                                    <li data-value="private" class="selected">All</li>
+                                </ul>
+                            </div>
+
+                            <input type="checkbox" id="tsd-filter-inherited" checked />
+                            <label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+                            -->
 							<input type="checkbox" id="tsd-filter-externals" checked />
-							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
-							<input type="checkbox" id="tsd-filter-only-exported" />
-							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+							<label class="tsd-widget" for="tsd-filter-externals">Internal UI-Router API</label>
+							<!--
+                                <input type="checkbox" id="tsd-filter-only-exported" />
+                                <label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+                            -->
 						</div>
 					</div>
 					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
@@ -58,7 +63,7 @@ redirect_from: /docs/latest/interfaces/view.viewconfig.html
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../globals.html">Globals</a>
+					<a href="../index.html">angular-ui-router</a>
 				</li>
 				<li>
 					<a href="../modules/view.html">view</a>
@@ -77,10 +82,10 @@ redirect_from: /docs/latest/interfaces/view.viewconfig.html
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>This interface represents a [[ViewDeclaration]] that is bound to a <a href="../classes/path.pathnode.html">PathNode</a>.</p>
+						<p>This interface represents a <a href="state._viewdeclaration.html">_ViewDeclaration</a> that is bound to a <a href="../classes/path.pathnode.html">PathNode</a>.</p>
 					</div>
 					<p>A <code>ViewConfig</code> is the runtime definition of a single view.</p>
-					<p>During a transition, <code>ViewConfig</code>s are created for each [[ViewDeclaration]] defined on each &quot;entering&quot; <a href="../classes/state.state-1.html">State</a>.
+					<p>During a transition, <code>ViewConfig</code>s are created for each <a href="state._viewdeclaration.html">_ViewDeclaration</a> defined on each &quot;entering&quot; <a href="../classes/state.state-1.html">State</a>.
 						Then, the <a href="../classes/view.viewservice.html">ViewService</a> finds any matching <code>ui-view</code>(s) in the DOM, and supplies the ui-view
 					with the <code>ViewConfig</code>.  The <code>ui-view</code> then loads itself using the information found in the <code>ViewConfig</code>.</p>
 					<p>A <code>ViewConfig</code> if matched with a <code>ui-view</code> by finding all <code>ui-view</code>s which were created in the
@@ -100,67 +105,66 @@ redirect_from: /docs/latest/interfaces/view.viewconfig.html
 				<h3>Implemented by</h3>
 				<ul class="tsd-hierarchy">
 					<li><a href="../classes/ng1.ng1viewconfig.html" class="tsd-signature-type">Ng1ViewConfig</a></li>
-					<li><a href="../classes/ng2.ng2viewconfig.html" class="tsd-signature-type">Ng2ViewConfig</a></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
-						<section class="tsd-index-section ">
+						<section class="tsd-index-section tsd-is-external">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="view.viewconfig.html#_id" class="tsd-kind-icon">$id</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="view.viewconfig.html#loaded" class="tsd-kind-icon">loaded</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="view.viewconfig.html#path" class="tsd-kind-icon">path</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="view.viewconfig.html#viewdecl" class="tsd-kind-icon">view<wbr>Decl</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="view.viewconfig.html#_id" class="tsd-kind-icon">$id</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="view.viewconfig.html#loaded" class="tsd-kind-icon">loaded</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="view.viewconfig.html#path" class="tsd-kind-icon">path</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="view.viewconfig.html#viewdecl" class="tsd-kind-icon">view<wbr>Decl</a></li>
 							</ul>
 						</section>
-						<section class="tsd-index-section ">
+						<section class="tsd-index-section tsd-is-external">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="view.viewconfig.html#load" class="tsd-kind-icon">load</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="view.viewconfig.html#load" class="tsd-kind-icon">load</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group ">
+			<section class="tsd-panel-group tsd-member-group tsd-is-external">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
 					<a name="_id" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>$id</h3>-->
-					<!---->
+					<!--
+        <h3>$id</h3>
+    -->
 					<div class="tsd-signature tsd-kind-icon">$id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<div class="tsd-declaration">
 					</div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/view/interface.ts#L46">view/interface.ts:46</a></li>
+							<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/view/interface.ts#L46">ui-router-core/src/view/interface.ts:46</a></li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
 					<a name="loaded" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>loaded</h3>-->
-					<!---->
+					<!--
+        <h3>loaded</h3>
+    -->
 					<div class="tsd-signature tsd-kind-icon">loaded<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<div class="tsd-declaration">
 					</div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/view/interface.ts#L56">view/interface.ts:56</a></li>
+							<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/view/interface.ts#L56">ui-router-core/src/view/interface.ts:56</a></li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
 					<a name="path" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>path</h3>-->
-					<!---->
-					<div class="tsd-signature tsd-kind-icon">path<span class="tsd-signature-symbol">:</span> <a href="../classes/path.pathnode.html" class="tsd-signature-type">PathNode</a><span class="tsd-signature-symbol">[]</span>        <div class="tsd-header">
+					<!--
+        <h3>path</h3>
+    -->
+					<div class="tsd-signature tsd-kind-icon">path<span class="tsd-signature-symbol">:</span> <a href="../classes/path.pathnode.html" class="tsd-signature-type">PathNode</a><span class="tsd-signature-symbol">[]</span>    <div class="tsd-header">
 							<p> The node the ViewConfig is bound to </p>
 						</div>
 					</div>
@@ -173,16 +177,16 @@ redirect_from: /docs/latest/interfaces/view.viewconfig.html
 					</div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/view/interface.ts#L51">view/interface.ts:51</a></li>
+							<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/view/interface.ts#L51">ui-router-core/src/view/interface.ts:51</a></li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
 					<a name="viewdecl" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>view<wbr>Decl</h3>-->
-					<!---->
-					<div class="tsd-signature tsd-kind-icon">view<wbr>Decl<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">_ViewDeclaration</span>        <div class="tsd-header">
+					<!--
+        <h3>view<wbr>Decl</h3>
+    -->
+					<div class="tsd-signature tsd-kind-icon">view<wbr>Decl<span class="tsd-signature-symbol">:</span> <a href="state._viewdeclaration.html" class="tsd-signature-type">_ViewDeclaration</a>    <div class="tsd-header">
 							<p> The normalized view declaration from <a href="../classes/state.state-1.html#views">State.views</a> </p>
 						</div>
 					</div>
@@ -195,19 +199,19 @@ redirect_from: /docs/latest/interfaces/view.viewconfig.html
 					</div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/view/interface.ts#L48">view/interface.ts:48</a></li>
+							<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/view/interface.ts#L48">ui-router-core/src/view/interface.ts:48</a></li>
 						</ul>
 					</aside>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group ">
+			<section class="tsd-panel-group tsd-member-group tsd-is-external">
 				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-external">
 					<a name="load" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>load</h3>-->
-					<!---->
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+					<!--
+        <h3>load</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external">
 						<li class="tsd-signature tsd-kind-icon">load<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="view.viewconfig.html" class="tsd-signature-type">ViewConfig</a><span class="tsd-signature-symbol">&gt;</span></li>
 						<li class="tsd-header">
 							<p> Fetches templates, runs dynamic (controller|template)Provider code, lazy loads Components, etc </p>
@@ -226,7 +230,7 @@ redirect_from: /docs/latest/interfaces/view.viewconfig.html
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/view/interface.ts#L54">view/interface.ts:54</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/view/interface.ts#L54">ui-router-core/src/view/interface.ts:54</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
@@ -237,49 +241,25 @@ redirect_from: /docs/latest/interfaces/view.viewconfig.html
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../globals.html"><em>Globals</em></a>
+						<a href="../index.html"><em>angular-<wbr>ui-<wbr>router</em></a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/common.html">common</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/common_hof.html">common_<wbr>hof</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/common_predicates.html">common_<wbr>predicates</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/common_strings.html">common_<wbr>strings</a>
+					<li class="label tsd-is-external">
+						<span>Public API</span>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/core.html">core</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/hooks.html">hooks</a>
+						<a href="../modules/directives.html">directives</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/justjs.html">justjs</a>
+						<a href="../modules/injectables.html">injectables</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/ng1.html">ng1</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/ng1_directives.html">ng1_<wbr>directives</a>
-					</li>
-					<li class=" tsd-kind-external-module">
 						<a href="../modules/ng1_state_events.html">ng1_<wbr>state_<wbr>events</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/ng2.html">ng2</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/ng2_directives.html">ng2_<wbr>directives</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/params.html">params</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/path.html">path</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/resolve.html">resolve</a>
@@ -296,48 +276,90 @@ redirect_from: /docs/latest/interfaces/view.viewconfig.html
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/url.html">url</a>
 					</li>
-					<li class="current tsd-kind-external-module">
+					<li class="label tsd-is-external">
+						<span>Internal UI-<wbr><wbr>Router API</span>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/common.html">common</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/common_hof.html">common_<wbr>hof</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/common_predicates.html">common_<wbr>predicates</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/common_strings.html">common_<wbr>strings</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/hooks.html">hooks</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/params.html">params</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/path.html">path</a>
+					</li>
+					<li class="current tsd-kind-external-module tsd-is-external">
 						<a href="../modules/view.html">view</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-class tsd-parent-kind-external-module">
+					<li class=" tsd-kind-class tsd-parent-kind-external-module tsd-is-external">
 						<a href="../classes/view.templatefactory.html" class="tsd-kind-icon">Template<wbr>Factory</a>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-external-module">
 						<a href="../classes/view.viewservice.html" class="tsd-kind-icon">View<wbr>Service</a>
 					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-external">
+						<a href="view.activeuiview.html" class="tsd-kind-icon">ActiveUIView</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
+						<a href="view.bindingtuple.html" class="tsd-kind-icon">Binding<wbr>Tuple</a>
+					</li>
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-interface tsd-parent-kind-external-module">
+					<li class="current tsd-kind-interface tsd-parent-kind-external-module tsd-is-external">
 						<a href="view.viewconfig.html" class="tsd-kind-icon">View<wbr>Config</a>
 						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
 								<a href="view.viewconfig.html#_id" class="tsd-kind-icon">$id</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
 								<a href="view.viewconfig.html#loaded" class="tsd-kind-icon">loaded</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
 								<a href="view.viewconfig.html#path" class="tsd-kind-icon">path</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
 								<a href="view.viewconfig.html#viewdecl" class="tsd-kind-icon">view<wbr>Decl</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-interface">
+							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-external">
 								<a href="view.viewconfig.html#load" class="tsd-kind-icon">load</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-external">
 						<a href="view.viewcontext.html" class="tsd-kind-icon">View<wbr>Context</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="view.viewservicepluginapi.html" class="tsd-kind-icon">View<wbr>Service<wbr>PluginAPI</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
 						<a href="../modules/view.html#viewconfigfactory" class="tsd-kind-icon">View<wbr>Config<wbr>Factory</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
+						<a href="../modules/view.html#getbindings" class="tsd-kind-icon">get<wbr>Bindings</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
+						<a href="../modules/view.html#getcomponentbindings" class="tsd-kind-icon">get<wbr>Component<wbr>Bindings</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
+						<a href="../modules/view.html#scopebindings" class="tsd-kind-icon">scope<wbr>Bindings</a>
 					</li>
 				</ul>
 			</nav>

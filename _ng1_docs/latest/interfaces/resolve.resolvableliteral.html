@@ -1,17 +1,17 @@
 ---
-redirect_from: /docs/latest/interfaces/resolve.resolvableliteral.html
 ---
 <!doctype html>
 <html class="default no-js">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>ResolvableLiteral | UI-Router</title>
+	<title>ResolvableLiteral | angular-ui-router</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
-	<link rel="stylesheet" href="../assets/css/typedoctheme.css">
+	<link rel="stylesheet" href="../assets/css/uirouter.css">
 	<script src="../assets/js/modernizr.js"></script>
+	<script src="../assets/js/reset.js"></script>
 </head>
 <body>
 <header>
@@ -27,26 +27,31 @@ redirect_from: /docs/latest/interfaces/resolve.resolvableliteral.html
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">UI-Router</a>
+					<a href="../index.html" class="title">angular-ui-router</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
 						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
 						<div class="tsd-filter-group">
-							<div class="tsd-select" id="tsd-filter-visibility">
-								<span class="tsd-select-label">All</span>
-								<ul class="tsd-select-list">
-									<li data-value="public">Public</li>
-									<li data-value="protected">Public/Protected</li>
-									<li data-value="private" class="selected">All</li>
-								</ul>
-							</div>
-							<input type="checkbox" id="tsd-filter-inherited" checked />
-							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<!--
+                            <div class="tsd-select" id="tsd-filter-visibility">
+                                <span class="tsd-select-label">All</span>
+                                <ul class="tsd-select-list">
+                                    <li data-value="public">Public</li>
+                                    <li data-value="protected">Public/Protected</li>
+                                    <li data-value="private" class="selected">All</li>
+                                </ul>
+                            </div>
+
+                            <input type="checkbox" id="tsd-filter-inherited" checked />
+                            <label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+                            -->
 							<input type="checkbox" id="tsd-filter-externals" checked />
-							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
-							<input type="checkbox" id="tsd-filter-only-exported" />
-							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+							<label class="tsd-widget" for="tsd-filter-externals">Internal UI-Router API</label>
+							<!--
+                                <input type="checkbox" id="tsd-filter-only-exported" />
+                                <label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+                            -->
 						</div>
 					</div>
 					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
@@ -58,7 +63,7 @@ redirect_from: /docs/latest/interfaces/resolve.resolvableliteral.html
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../globals.html">Globals</a>
+					<a href="../index.html">angular-ui-router</a>
 				</li>
 				<li>
 					<a href="../modules/resolve.html">resolve</a>
@@ -79,7 +84,7 @@ redirect_from: /docs/latest/interfaces/resolve.resolvableliteral.html
 					<div class="lead">
 						<p>A plain object used to describe a <a href="../classes/resolve.resolvable.html">Resolvable</a></p>
 					</div>
-					<p>These objects may be defined in [[StateDefinition.resolve]] blocks to declare
+					<p>These objects may be defined in <a href="state.statedeclaration.html#resolve">StateDeclaration.resolve</a> blocks to declare
 					async data that the state or substates require.</p>
 				</div>
 			</section>
@@ -118,86 +123,90 @@ redirect_from: /docs/latest/interfaces/resolve.resolvableliteral.html
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="data" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3><span class="tsd-flag ts-flagOptional">Optional</span> data</h3>-->
-					<!---->
-					<div class="tsd-signature tsd-kind-icon">data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span>        <div class="tsd-header">
-							<p> Pre-resolved value. </p>
+					<!--
+        <h3><span class="tsd-flag ts-flagOptional">Optional</span> data</h3>
+    -->
+					<div class="tsd-signature tsd-kind-icon">data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span>    <div class="tsd-header">
+							<p> Pre-resolved data. </p>
 						</div>
 					</div>
 					<div class="tsd-declaration">
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
-								<p>Pre-resolved value.</p>
+								<p>Pre-resolved data.</p>
 							</div>
 						</div>
 					</div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/resolve/interface.ts#L40">resolve/interface.ts:40</a></li>
+							<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/resolve/interface.ts#L73">ui-router-core/src/resolve/interface.ts:73</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="deps" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3><span class="tsd-flag ts-flagOptional">Optional</span> deps</h3>-->
-					<!---->
-					<div class="tsd-signature tsd-kind-icon">deps<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span>        <div class="tsd-header">
-							<p> The Dependency Injection tokens for dependencies of the <a href="resolve.resolvableliteral.html#resolvefn">resolveFn</a>.
-							The DI tokens are references to other <code>Resolvables</code>, or to global services. </p>
+					<!--
+        <h3><span class="tsd-flag ts-flagOptional">Optional</span> deps</h3>
+    -->
+					<div class="tsd-signature tsd-kind-icon">deps<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span>    <div class="tsd-header">
+							<p> The Dependency Injection tokens </p>
 						</div>
 					</div>
 					<div class="tsd-declaration">
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
-								<p>The Dependency Injection tokens for dependencies of the <a href="resolve.resolvableliteral.html#resolvefn">resolveFn</a>.
-								The DI tokens are references to other <code>Resolvables</code>, or to global services.</p>
+								<p>The Dependency Injection tokens</p>
 							</div>
+							<p>This is an array of Dependency Injection tokens for the dependencies of the <a href="resolve.resolvableliteral.html#resolvefn">resolveFn</a>.</p>
+							<p>The DI tokens are references to other <code>Resolvables</code>, or to other
+							services from the native DI system.</p>
 						</div>
 					</div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/resolve/interface.ts#L37">resolve/interface.ts:37</a></li>
+							<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/resolve/interface.ts#L70">ui-router-core/src/resolve/interface.ts:70</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="policy" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3><span class="tsd-flag ts-flagOptional">Optional</span> policy</h3>-->
-					<!---->
-					<div class="tsd-signature tsd-kind-icon">policy<span class="tsd-signature-symbol">:</span> <a href="resolve.resolvepolicy.html" class="tsd-signature-type">ResolvePolicy</a>        <div class="tsd-header">
-							<p> A policy that defines when to invoke the resolve, and whether to wait for async and unwrap the data </p>
+					<!--
+        <h3><span class="tsd-flag ts-flagOptional">Optional</span> policy</h3>
+    -->
+					<div class="tsd-signature tsd-kind-icon">policy<span class="tsd-signature-symbol">:</span> <a href="resolve.resolvepolicy.html" class="tsd-signature-type">ResolvePolicy</a>    <div class="tsd-header">
+							<p> Defines the Resolve Policy </p>
 						</div>
 					</div>
 					<div class="tsd-declaration">
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
-								<p>A policy that defines when to invoke the resolve, and whether to wait for async and unwrap the data</p>
+								<p>Defines the Resolve Policy</p>
 							</div>
+							<p>A policy that defines when to invoke the resolve,
+							and whether to wait for async and unwrap the data</p>
 						</div>
 					</div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/resolve/interface.ts#L31">resolve/interface.ts:31</a></li>
+							<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/resolve/interface.ts#L60">ui-router-core/src/resolve/interface.ts:60</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="resolvefn" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>resolve<wbr>Fn</h3>-->
-					<!---->
-					<div class="tsd-signature tsd-kind-icon">resolve<wbr>Fn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Function</span>        <div class="tsd-header">
-							<p> The function that returns one of: </p>
+					<!--
+        <h3>resolve<wbr>Fn</h3>
+    -->
+					<div class="tsd-signature tsd-kind-icon">resolve<wbr>Fn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Function</span>    <div class="tsd-header">
+							<p> A function which fetches the Resolvable&#39;s data </p>
 						</div>
 					</div>
 					<div class="tsd-declaration">
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
-								<p>The function that returns one of:</p>
+								<p>A function which fetches the Resolvable&#39;s data</p>
 							</div>
+							<p>A function which returns one of:</p>
 							<ul>
 								<li>The resolved value (synchronously)</li>
 								<li>A promise for the resolved value</li>
@@ -209,29 +218,31 @@ redirect_from: /docs/latest/interfaces/resolve.resolvableliteral.html
 					</div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/resolve/interface.ts#L28">resolve/interface.ts:28</a></li>
+							<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/resolve/interface.ts#L52">ui-router-core/src/resolve/interface.ts:52</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="token" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>token</h3>-->
-					<!---->
-					<div class="tsd-signature tsd-kind-icon">token<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span>        <div class="tsd-header">
-							<p> The Dependency Injection token that will be used to inject/access the resolvable </p>
+					<!--
+        <h3>token</h3>
+    -->
+					<div class="tsd-signature tsd-kind-icon">token<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span>    <div class="tsd-header">
+							<p> A Dependency Injection token </p>
 						</div>
 					</div>
 					<div class="tsd-declaration">
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
-								<p>The Dependency Injection token that will be used to inject/access the resolvable</p>
+								<p>A Dependency Injection token</p>
 							</div>
+							<p>This Resolvable&#39;s DI token.
+							The Resolvable will be injectable elsewhere using the token.</p>
 						</div>
 					</div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/resolve/interface.ts#L16">resolve/interface.ts:16</a></li>
+							<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/resolve/interface.ts#L38">ui-router-core/src/resolve/interface.ts:38</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -241,49 +252,25 @@ redirect_from: /docs/latest/interfaces/resolve.resolvableliteral.html
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../globals.html"><em>Globals</em></a>
+						<a href="../index.html"><em>angular-<wbr>ui-<wbr>router</em></a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/common.html">common</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/common_hof.html">common_<wbr>hof</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/common_predicates.html">common_<wbr>predicates</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/common_strings.html">common_<wbr>strings</a>
+					<li class="label tsd-is-external">
+						<span>Public API</span>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/core.html">core</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/hooks.html">hooks</a>
+						<a href="../modules/directives.html">directives</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/justjs.html">justjs</a>
+						<a href="../modules/injectables.html">injectables</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/ng1.html">ng1</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/ng1_directives.html">ng1_<wbr>directives</a>
-					</li>
-					<li class=" tsd-kind-external-module">
 						<a href="../modules/ng1_state_events.html">ng1_<wbr>state_<wbr>events</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/ng2.html">ng2</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/ng2_directives.html">ng2_<wbr>directives</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/params.html">params</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/path.html">path</a>
 					</li>
 					<li class="current tsd-kind-external-module">
 						<a href="../modules/resolve.html">resolve</a>
@@ -300,7 +287,31 @@ redirect_from: /docs/latest/interfaces/resolve.resolvableliteral.html
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/url.html">url</a>
 					</li>
-					<li class=" tsd-kind-external-module">
+					<li class="label tsd-is-external">
+						<span>Internal UI-<wbr><wbr>Router API</span>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/common.html">common</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/common_hof.html">common_<wbr>hof</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/common_predicates.html">common_<wbr>predicates</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/common_strings.html">common_<wbr>strings</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/hooks.html">hooks</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/params.html">params</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/path.html">path</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
 						<a href="../modules/view.html">view</a>
 					</li>
 				</ul>
@@ -310,11 +321,14 @@ redirect_from: /docs/latest/interfaces/resolve.resolvableliteral.html
 					<li class=" tsd-kind-class tsd-parent-kind-external-module">
 						<a href="../classes/resolve.resolvable.html" class="tsd-kind-icon">Resolvable</a>
 					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-external-module">
+					<li class=" tsd-kind-class tsd-parent-kind-external-module tsd-is-external">
 						<a href="../classes/resolve.resolvecontext.html" class="tsd-kind-icon">Resolve<wbr>Context</a>
 					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-external-module tsd-is-not-exported">
+					<li class=" tsd-kind-class tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
 						<a href="../classes/resolve.uiinjectorimpl.html" class="tsd-kind-icon">UIInjector<wbr>Impl</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="resolve.providerlike.html" class="tsd-kind-icon">Provider<wbr>Like</a>
 					</li>
 				</ul>
 				<ul class="current">
@@ -341,9 +355,6 @@ redirect_from: /docs/latest/interfaces/resolve.resolvableliteral.html
 				</ul>
 				<ul class="after-current">
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="resolve.resolvables.html" class="tsd-kind-icon">Resolvables</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
 						<a href="resolve.resolvepolicy.html" class="tsd-kind-icon">Resolve<wbr>Policy</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
@@ -352,22 +363,22 @@ redirect_from: /docs/latest/interfaces/resolve.resolvableliteral.html
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
 						<a href="../modules/resolve.html#policywhen" class="tsd-kind-icon">Policy<wbr>When</a>
 					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
 						<a href="../modules/resolve.html#all_whens" class="tsd-kind-icon">ALL_<wbr>WHENS</a>
 					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
 						<a href="../modules/resolve.html#eager_whens" class="tsd-kind-icon">EAGER_<wbr>WHENS</a>
 					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-external">
 						<a href="../modules/resolve.html#native_injector_token" class="tsd-kind-icon">NATIVE_<wbr>INJECTOR_<wbr>TOKEN</a>
 					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
 						<a href="../modules/resolve.html#when" class="tsd-kind-icon">when</a>
 					</li>
 					<li class=" tsd-kind-object-literal tsd-parent-kind-external-module">
 						<a href="../modules/resolve.html#defaultresolvepolicy" class="tsd-kind-icon">default<wbr>Resolve<wbr>Policy</a>
 					</li>
-					<li class=" tsd-kind-object-literal tsd-parent-kind-external-module">
+					<li class=" tsd-kind-object-literal tsd-parent-kind-external-module tsd-is-external">
 						<a href="../modules/resolve.html#resolvepolicies" class="tsd-kind-icon">resolve<wbr>Policies</a>
 					</li>
 				</ul>

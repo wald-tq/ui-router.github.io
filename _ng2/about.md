@@ -9,6 +9,7 @@ permalink: /ng2/
 
 <center>
 <img src="/images/logos/angular2.png">
+<br /><iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=ui-router&repo=ng2&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe><iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=ui-router&repo=ng2&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
 </center>
 
 UI-Router provides extremely flexible, state based routing to the Angular 2 ecosystem.

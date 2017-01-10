@@ -1,17 +1,17 @@
 ---
-redirect_from: /docs/latest/modules/ng1_state_events.html
 ---
 <!doctype html>
 <html class="default no-js">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>ng1_state_events | UI-Router</title>
+	<title>ng1_state_events | angular-ui-router</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
-	<link rel="stylesheet" href="../assets/css/typedoctheme.css">
+	<link rel="stylesheet" href="../assets/css/uirouter.css">
 	<script src="../assets/js/modernizr.js"></script>
+	<script src="../assets/js/reset.js"></script>
 </head>
 <body>
 <header>
@@ -27,26 +27,31 @@ redirect_from: /docs/latest/modules/ng1_state_events.html
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">UI-Router</a>
+					<a href="../index.html" class="title">angular-ui-router</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
 						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
 						<div class="tsd-filter-group">
-							<div class="tsd-select" id="tsd-filter-visibility">
-								<span class="tsd-select-label">All</span>
-								<ul class="tsd-select-list">
-									<li data-value="public">Public</li>
-									<li data-value="protected">Public/Protected</li>
-									<li data-value="private" class="selected">All</li>
-								</ul>
-							</div>
-							<input type="checkbox" id="tsd-filter-inherited" checked />
-							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<!--
+                            <div class="tsd-select" id="tsd-filter-visibility">
+                                <span class="tsd-select-label">All</span>
+                                <ul class="tsd-select-list">
+                                    <li data-value="public">Public</li>
+                                    <li data-value="protected">Public/Protected</li>
+                                    <li data-value="private" class="selected">All</li>
+                                </ul>
+                            </div>
+
+                            <input type="checkbox" id="tsd-filter-inherited" checked />
+                            <label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+                            -->
 							<input type="checkbox" id="tsd-filter-externals" checked />
-							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
-							<input type="checkbox" id="tsd-filter-only-exported" />
-							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+							<label class="tsd-widget" for="tsd-filter-externals">Internal UI-Router API</label>
+							<!--
+                                <input type="checkbox" id="tsd-filter-only-exported" />
+                                <label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+                            -->
 						</div>
 					</div>
 					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
@@ -58,13 +63,13 @@ redirect_from: /docs/latest/modules/ng1_state_events.html
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../globals.html">Globals</a>
+					<a href="../index.html">angular-ui-router</a>
 				</li>
 				<li>
 					<a href="ng1_state_events.html">ng1_state_events</a>
 				</li>
 			</ul>
-			<h1>External module ng1_state_events</h1>
+			<h1>Module ng1_state_events</h1>
 		</div>
 	</div>
 </header>
@@ -74,8 +79,9 @@ redirect_from: /docs/latest/modules/ng1_state_events.html
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Provides implementation of the UI-Router 0.2.x state events.</p>
+						<h1 id="legacy-state-events">Legacy state events</h1>
 					</div>
+					<p>Polyfill implementation of the UI-Router 0.2.x state events.</p>
 					<p>The 0.2.x state events are deprecated.  We recommend moving to Transition Hooks instead, as they
 						provide much more flexibility, support async, and provide the context (the Transition, etc) necessary
 					to implement meaningful application behaviors.</p>
@@ -84,11 +90,6 @@ redirect_from: /docs/latest/modules/ng1_state_events.html
 </code></pre><p>and also make sure you depend on the <code>ui.router.state.events</code> angular module, e.g.,</p>
 					<pre><code>angular.module(<span class="hljs-string">"myApplication"</span>, ['ui.router', 'ui.router.<span class="hljs-keyword">state</span>.events']
 </code></pre>
-					<dl class="tsd-comment-tags">
-						<dt>module</dt>
-						<dd><p>ng1_state_events</p>
-						</dd>
-					</dl>
 				</div>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
@@ -112,10 +113,10 @@ redirect_from: /docs/latest/modules/ng1_state_events.html
 				<h2>Events</h2>
 				<section class="tsd-panel tsd-member tsd-kind-event tsd-parent-kind-external-module">
 					<a name="_statechangecancel" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>$state<wbr>Change<wbr>Cancel</h3>-->
-					<!---->
-					<div class="tsd-signature tsd-kind-icon">$state<wbr>Change<wbr>Cancel<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">IAngularEvent</span>        <div class="tsd-header">
+					<!--
+        <h3>$state<wbr>Change<wbr>Cancel</h3>
+    -->
+					<div class="tsd-signature tsd-kind-icon">$state<wbr>Change<wbr>Cancel<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">IAngularEvent</span>    <div class="tsd-header">
 							<p> An event broadcast on <code>$rootScope</code> if a transition is <strong>cancelled</strong>. </p>
 						</div>
 					</div>
@@ -124,6 +125,7 @@ redirect_from: /docs/latest/modules/ng1_state_events.html
 							<div class="lead">
 								<p>An event broadcast on <code>$rootScope</code> if a transition is <strong>cancelled</strong>.</p>
 							</div>
+							<h3 id="deprecation-warning-use-a-href-classes-transition-transitionservice-html-onstart-transitionservice-onstart-a-instead">Deprecation warning: use <a href="../classes/transition.transitionservice.html#onstart">TransitionService.onStart</a> instead</h3>
 							<p>Additional arguments to the event handler are provided:</p>
 							<ul>
 								<li><code>toState</code>: the Transition Target state</li>
@@ -141,16 +143,16 @@ redirect_from: /docs/latest/modules/ng1_state_events.html
 					</div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/ng1/legacy/stateEvents.ts#L77">ng1/legacy/stateEvents.ts:77</a></li>
+							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/53c7da8/src/legacy/stateEvents.ts#L75">ui-router/src/legacy/stateEvents.ts:75</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-event tsd-parent-kind-external-module">
 					<a name="_statechangeerror" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>$state<wbr>Change<wbr>Error</h3>-->
-					<!---->
-					<div class="tsd-signature tsd-kind-icon">$state<wbr>Change<wbr>Error<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">IAngularEvent</span>        <div class="tsd-header">
+					<!--
+        <h3>$state<wbr>Change<wbr>Error</h3>
+    -->
+					<div class="tsd-signature tsd-kind-icon">$state<wbr>Change<wbr>Error<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">IAngularEvent</span>    <div class="tsd-header">
 							<p> An event broadcast on <code>$rootScope</code> when an <strong>error occurs</strong> during transition. </p>
 						</div>
 					</div>
@@ -159,6 +161,7 @@ redirect_from: /docs/latest/modules/ng1_state_events.html
 							<div class="lead">
 								<p>An event broadcast on <code>$rootScope</code> when an <strong>error occurs</strong> during transition.</p>
 							</div>
+							<h3 id="deprecation-warning-use-a-href-classes-transition-transitionservice-html-onstart-transitionservice-onstart-a-and-a-href-classes-transition-transition-1-html-promise-transition-promise-a-or-a-href-classes-transition-transition-1-html-onerror-transition-onerror-a-">Deprecation warning: use <a href="../classes/transition.transitionservice.html#onstart">TransitionService.onStart</a> and <a href="../classes/transition.transition-1.html#promise">Transition.promise</a>, or <a href="../classes/transition.transition-1.html#onerror">Transition.onError</a></h3>
 							<p>It&#39;s important to note that if you
 								have any errors in your resolve functions (javascript errors, non-existent services, etc)
 								they will not throw traditionally. You must listen for this $stateChangeError event to
@@ -175,23 +178,22 @@ redirect_from: /docs/latest/modules/ng1_state_events.html
 							</ul>
 							<dl class="tsd-comment-tags">
 								<dt>deprecated</dt>
-								<dd><p>use <a href="../classes/transition.transitionservice.html#onstart">TransitionService.onStart</a> and <a href="../classes/transition.transition-1.html#promise">Transition.promise</a>, or <a href="../classes/transition.transition-1.html#onerror">Transition.onError</a></p>
-								</dd>
+								<dd></dd>
 							</dl>
 						</div>
 					</div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/ng1/legacy/stateEvents.ts#L116">ng1/legacy/stateEvents.ts:116</a></li>
+							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/53c7da8/src/legacy/stateEvents.ts#L117">ui-router/src/legacy/stateEvents.ts:117</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-event tsd-parent-kind-external-module">
 					<a name="_statechangestart" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>$state<wbr>Change<wbr>Start</h3>-->
-					<!---->
-					<div class="tsd-signature tsd-kind-icon">$state<wbr>Change<wbr>Start<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">IAngularEvent</span>        <div class="tsd-header">
+					<!--
+        <h3>$state<wbr>Change<wbr>Start</h3>
+    -->
+					<div class="tsd-signature tsd-kind-icon">$state<wbr>Change<wbr>Start<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">IAngularEvent</span>    <div class="tsd-header">
 							<p> An event broadcast on <code>$rootScope</code> when the state transition <strong>begins</strong>. </p>
 						</div>
 					</div>
@@ -200,6 +202,7 @@ redirect_from: /docs/latest/modules/ng1_state_events.html
 							<div class="lead">
 								<p>An event broadcast on <code>$rootScope</code> when the state transition <strong>begins</strong>.</p>
 							</div>
+							<h3 id="deprecation-warning-use-a-href-classes-transition-transitionservice-html-onstart-transitionservice-onstart-a-instead">Deprecation warning: use <a href="../classes/transition.transitionservice.html#onstart">TransitionService.onStart</a> instead</h3>
 							<p>You can use <code>event.preventDefault()</code>
 								to prevent the transition from happening and then the transition promise will be
 							rejected with a <code>&#39;transition prevented&#39;</code> value.</p>
@@ -212,33 +215,31 @@ redirect_from: /docs/latest/modules/ng1_state_events.html
 								<li><code>options</code>: any Transition Options</li>
 								<li><code>$transition$</code>: the <a href="../classes/transition.transition-1.html">Transition</a></li>
 							</ul>
-							<dl class="tsd-comment-tags">
-								<dt>example</dt>
-								<dd><pre><code>
-$rootScope.$on(<span class="hljs-string">'$stateChangeStart'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(event, transition)</span> </span>{
+							<h4 id="example-">Example:</h4>
+							<pre><code class="lang-js">$rootScope.$on(<span class="hljs-string">'$stateChangeStart'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event, transition</span>) </span>{
   event.preventDefault();
   <span class="hljs-comment">// transitionTo() promise will be rejected with</span>
   <span class="hljs-comment">// a 'transition prevented' error</span>
 })
-</code></pre></dd>
+</code></pre>
+							<dl class="tsd-comment-tags">
 								<dt>deprecated</dt>
-								<dd><p>use <a href="../classes/transition.transitionservice.html#onstart">TransitionService.onStart</a></p>
-								</dd>
+								<dd></dd>
 							</dl>
 						</div>
 					</div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/ng1/legacy/stateEvents.ts#L61">ng1/legacy/stateEvents.ts:61</a></li>
+							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/53c7da8/src/legacy/stateEvents.ts#L57">ui-router/src/legacy/stateEvents.ts:57</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-event tsd-parent-kind-external-module">
 					<a name="_statechangesuccess" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>$state<wbr>Change<wbr>Success</h3>-->
-					<!---->
-					<div class="tsd-signature tsd-kind-icon">$state<wbr>Change<wbr>Success<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">IAngularEvent</span>        <div class="tsd-header">
+					<!--
+        <h3>$state<wbr>Change<wbr>Success</h3>
+    -->
+					<div class="tsd-signature tsd-kind-icon">$state<wbr>Change<wbr>Success<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">IAngularEvent</span>    <div class="tsd-header">
 							<p> An event broadcast on <code>$rootScope</code> once the state transition is <strong>complete</strong>. </p>
 						</div>
 					</div>
@@ -247,6 +248,7 @@ $rootScope.$on(<span class="hljs-string">'$stateChangeStart'</span>, <span class
 							<div class="lead">
 								<p>An event broadcast on <code>$rootScope</code> once the state transition is <strong>complete</strong>.</p>
 							</div>
+							<h3 id="deprecation-warning-use-a-href-classes-transition-transitionservice-html-onstart-transitionservice-onstart-a-and-a-href-classes-transition-transition-1-html-promise-transition-promise-a-or-a-href-classes-transition-transition-1-html-onsuccess-transition-onsuccess-a-">Deprecation warning: use <a href="../classes/transition.transitionservice.html#onstart">TransitionService.onStart</a> and <a href="../classes/transition.transition-1.html#promise">Transition.promise</a>, or <a href="../classes/transition.transition-1.html#onsuccess">Transition.onSuccess</a></h3>
 							<p>Additional arguments to the event handler are provided:</p>
 							<ul>
 								<li><code>toState</code>: the Transition Target state</li>
@@ -258,23 +260,22 @@ $rootScope.$on(<span class="hljs-string">'$stateChangeStart'</span>, <span class
 							</ul>
 							<dl class="tsd-comment-tags">
 								<dt>deprecated</dt>
-								<dd><p>use <a href="../classes/transition.transitionservice.html#onstart">TransitionService.onStart</a> and <a href="../classes/transition.transition-1.html#promise">Transition.promise</a>, or <a href="../classes/transition.transition-1.html#onsuccess">Transition.onSuccess</a></p>
-								</dd>
+								<dd></dd>
 							</dl>
 						</div>
 					</div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/ng1/legacy/stateEvents.ts#L94">ng1/legacy/stateEvents.ts:94</a></li>
+							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/53c7da8/src/legacy/stateEvents.ts#L93">ui-router/src/legacy/stateEvents.ts:93</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-event tsd-parent-kind-external-module">
 					<a name="_statenotfound" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>$state<wbr>Not<wbr>Found</h3>-->
-					<!---->
-					<div class="tsd-signature tsd-kind-icon">$state<wbr>Not<wbr>Found<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">IAngularEvent</span>        <div class="tsd-header">
+					<!--
+        <h3>$state<wbr>Not<wbr>Found</h3>
+    -->
+					<div class="tsd-signature tsd-kind-icon">$state<wbr>Not<wbr>Found<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">IAngularEvent</span>    <div class="tsd-header">
 							<p> An event broadcast on <code>$rootScope</code> when a requested state <strong>cannot be found</strong> using the provided state name. </p>
 						</div>
 					</div>
@@ -283,6 +284,7 @@ $rootScope.$on(<span class="hljs-string">'$stateChangeStart'</span>, <span class
 							<div class="lead">
 								<p>An event broadcast on <code>$rootScope</code> when a requested state <strong>cannot be found</strong> using the provided state name.</p>
 							</div>
+							<h3 id="deprecation-warning-use-a-href-classes-state-stateservice-html-oninvalid-stateservice-oninvalid-a-instead">Deprecation warning: use <a href="../classes/state.stateservice.html#oninvalid">StateService.onInvalid</a> instead</h3>
 							<p>The event is broadcast allowing any handlers a single chance to deal with the error (usually by
 								lazy-loading the unfound state). A <code>TargetState</code> object is passed to the listener handler,
 								you can see its properties in the example. You can use <code>event.preventDefault()</code> to abort the
@@ -295,30 +297,27 @@ $rootScope.$on(<span class="hljs-string">'$stateChangeStart'</span>, <span class
 								<li><code>fromParams</code>: the parameters from the state the transition is coming from</li>
 								<li><code>options</code>: any Transition Options</li>
 							</ul>
-							<dl class="tsd-comment-tags">
-								<dt>example</dt>
-								<dd><pre>
-// somewhere, assume lazy.state has not been defined
-$state.go("lazy.state", { a: 1, b: 2 }, { inherit: false });
+							<h4 id="example-">Example:</h4>
+							<pre><code class="lang-js"><span class="hljs-comment">// somewhere, assume lazy.state has not been defined</span>
+$state.go(<span class="hljs-string">"lazy.state"</span>, { <span class="hljs-attr">a</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">b</span>: <span class="hljs-number">2</span> }, { <span class="hljs-attr">inherit</span>: <span class="hljs-literal">false</span> });
 
-// somewhere else
-$scope.$on('$stateNotFound', function(event, transition) {
-function(event, unfoundState, fromState, fromParams){
-    console.log(unfoundState.to); // "lazy.state"
-    console.log(unfoundState.toParams); // {a:1, b:2}
-    console.log(unfoundState.options); // {inherit:false} + default options
+<span class="hljs-comment">// somewhere else</span>
+$scope.$on(<span class="hljs-string">'$stateNotFound'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event, transition</span>) </span>{
+<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event, unfoundState, fromState, fromParams</span>)</span>{
+    <span class="hljs-built_in">console</span>.log(unfoundState.to); <span class="hljs-comment">// "lazy.state"</span>
+    <span class="hljs-built_in">console</span>.log(unfoundState.toParams); <span class="hljs-comment">// {a:1, b:2}</span>
+    <span class="hljs-built_in">console</span>.log(unfoundState.options); <span class="hljs-comment">// {inherit:false} + default options</span>
 });
-</pre>
-								</dd>
+</code></pre>
+							<dl class="tsd-comment-tags">
 								<dt>deprecated</dt>
-								<dd><p>use <a href="../classes/ng1.stateprovider.html#oninvalid">StateProvider.onInvalid</a> // TODO: Move to <a href="../classes/state.stateservice.html#oninvalid">StateService.onInvalid</a></p>
-								</dd>
+								<dd></dd>
 							</dl>
 						</div>
 					</div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/ng1/legacy/stateEvents.ts#L150">ng1/legacy/stateEvents.ts:150</a></li>
+							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/53c7da8/src/legacy/stateEvents.ts#L153">ui-router/src/legacy/stateEvents.ts:153</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -328,49 +327,25 @@ function(event, unfoundState, fromState, fromParams){
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../globals.html"><em>Globals</em></a>
+						<a href="../index.html"><em>angular-<wbr>ui-<wbr>router</em></a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="common.html">common</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="common_hof.html">common_<wbr>hof</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="common_predicates.html">common_<wbr>predicates</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="common_strings.html">common_<wbr>strings</a>
+					<li class="label tsd-is-external">
+						<span>Public API</span>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="core.html">core</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="hooks.html">hooks</a>
+						<a href="directives.html">directives</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="justjs.html">justjs</a>
+						<a href="injectables.html">injectables</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="ng1.html">ng1</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="ng1_directives.html">ng1_<wbr>directives</a>
-					</li>
 					<li class="current tsd-kind-external-module">
 						<a href="ng1_state_events.html">ng1_<wbr>state_<wbr>events</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="ng2.html">ng2</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="ng2_directives.html">ng2_<wbr>directives</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="params.html">params</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="path.html">path</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="resolve.html">resolve</a>
@@ -387,7 +362,31 @@ function(event, unfoundState, fromState, fromParams){
 					<li class=" tsd-kind-external-module">
 						<a href="url.html">url</a>
 					</li>
-					<li class=" tsd-kind-external-module">
+					<li class="label tsd-is-external">
+						<span>Internal UI-<wbr><wbr>Router API</span>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="common.html">common</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="common_hof.html">common_<wbr>hof</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="common_predicates.html">common_<wbr>predicates</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="common_strings.html">common_<wbr>strings</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="hooks.html">hooks</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="params.html">params</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="path.html">path</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
 						<a href="view.html">view</a>
 					</li>
 				</ul>

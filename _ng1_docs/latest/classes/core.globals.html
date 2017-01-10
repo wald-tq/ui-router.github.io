@@ -1,17 +1,17 @@
 ---
-redirect_from: /docs/latest/classes/core.globals.html
 ---
 <!doctype html>
 <html class="default no-js">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Globals | UI-Router</title>
+	<title>Globals | angular-ui-router</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
-	<link rel="stylesheet" href="../assets/css/typedoctheme.css">
+	<link rel="stylesheet" href="../assets/css/uirouter.css">
 	<script src="../assets/js/modernizr.js"></script>
+	<script src="../assets/js/reset.js"></script>
 </head>
 <body>
 <header>
@@ -27,26 +27,31 @@ redirect_from: /docs/latest/classes/core.globals.html
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">UI-Router</a>
+					<a href="../index.html" class="title">angular-ui-router</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
 						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
 						<div class="tsd-filter-group">
-							<div class="tsd-select" id="tsd-filter-visibility">
-								<span class="tsd-select-label">All</span>
-								<ul class="tsd-select-list">
-									<li data-value="public">Public</li>
-									<li data-value="protected">Public/Protected</li>
-									<li data-value="private" class="selected">All</li>
-								</ul>
-							</div>
-							<input type="checkbox" id="tsd-filter-inherited" checked />
-							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<!--
+                            <div class="tsd-select" id="tsd-filter-visibility">
+                                <span class="tsd-select-label">All</span>
+                                <ul class="tsd-select-list">
+                                    <li data-value="public">Public</li>
+                                    <li data-value="protected">Public/Protected</li>
+                                    <li data-value="private" class="selected">All</li>
+                                </ul>
+                            </div>
+
+                            <input type="checkbox" id="tsd-filter-inherited" checked />
+                            <label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+                            -->
 							<input type="checkbox" id="tsd-filter-externals" checked />
-							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
-							<input type="checkbox" id="tsd-filter-only-exported" />
-							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+							<label class="tsd-widget" for="tsd-filter-externals">Internal UI-Router API</label>
+							<!--
+                                <input type="checkbox" id="tsd-filter-only-exported" />
+                                <label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+                            -->
 						</div>
 					</div>
 					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
@@ -58,7 +63,7 @@ redirect_from: /docs/latest/classes/core.globals.html
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../globals.html">Globals</a>
+					<a href="../index.html">angular-ui-router</a>
 				</li>
 				<li>
 					<a href="../modules/core.html">core</a>
@@ -77,8 +82,10 @@ redirect_from: /docs/latest/classes/core.globals.html
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Global mutable state</p>
+						<p>Global router state</p>
 					</div>
+					<p>This is where we hold the global mutable state such as current state, current
+					params, current transition, etc.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -92,7 +99,7 @@ redirect_from: /docs/latest/classes/core.globals.html
 			<section class="tsd-panel">
 				<h3>Implements</h3>
 				<ul class="tsd-hierarchy">
-					<li><span class="tsd-signature-type">UIRouterGlobals</span></li>
+					<li><a href="../interfaces/core.uirouterglobals.html" class="tsd-signature-type">UIRouterGlobals</a></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
@@ -100,138 +107,145 @@ redirect_from: /docs/latest/classes/core.globals.html
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Constructors</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="core.globals.html#constructor" class="tsd-kind-icon">constructor</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="core.globals.html#_current" class="tsd-kind-icon">$current</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="core.globals.html#current" class="tsd-kind-icon">current</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="core.globals.html#params" class="tsd-kind-icon">params</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="core.globals.html#successfultransitions" class="tsd-kind-icon">successful<wbr>Transitions</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-external"><a href="core.globals.html#successfultransitions" class="tsd-kind-icon">successful<wbr>Transitions</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="core.globals.html#transition" class="tsd-kind-icon">transition</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="core.globals.html#transitionhistory" class="tsd-kind-icon">transition<wbr>History</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-external"><a href="core.globals.html#transitionhistory" class="tsd-kind-icon">transition<wbr>History</a></li>
 							</ul>
 						</section>
 					</div>
-				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Constructors</h2>
-				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
-					<a name="constructor" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>constructor</h3>-->
-					<!---->
-					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Globals<span class="tsd-signature-symbol">(</span>transitionService<span class="tsd-signature-symbol">: </span><a href="transition.transitionservice.html" class="tsd-signature-type">TransitionService</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="core.globals.html" class="tsd-signature-type">Globals</a></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>transitionService: <a href="transition.transitionservice.html" class="tsd-signature-type">TransitionService</a></h5>
-								</li>
-							</ul>
-							<div class="tsd-returns">
-								<h4 class="tsd-returns-title">Returns <a href="core.globals.html" class="tsd-signature-type">Globals</a></h4>
-							</div>
-							<hr>
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/globals.ts#L52">globals.ts:52</a></li>
-								</ul>
-						</aside>        </li>
-					</ul>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="_current" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>$current</h3>-->
-					<!---->
-					<div class="tsd-signature tsd-kind-icon">$current<span class="tsd-signature-symbol">:</span> <a href="state.state-1.html" class="tsd-signature-type">State</a></div>
+					<!--
+        <h3>$current</h3>
+    -->
+					<div class="tsd-signature tsd-kind-icon">$current<span class="tsd-signature-symbol">:</span> <a href="state.state-1.html" class="tsd-signature-type">State</a>    <div class="tsd-header">
+							<p> Current state </p>
+						</div>
+					</div>
 					<div class="tsd-declaration">
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Current state</p>
+							</div>
+							<p>The to-state from the latest successful transition</p>
+						</div>
 					</div>
 					<aside class="tsd-sources">
+						<p>Implementation of <a href="../interfaces/core.uirouterglobals.html">UIRouterGlobals</a>.<a href="../interfaces/core.uirouterglobals.html#_current">$current</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/globals.ts#L49">globals.ts:49</a></li>
+							<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/globals.ts#L57">ui-router-core/src/globals.ts:57</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="current" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>current</h3>-->
-					<!---->
-					<div class="tsd-signature tsd-kind-icon">current<span class="tsd-signature-symbol">:</span> <a href="../interfaces/state.statedeclaration.html" class="tsd-signature-type">StateDeclaration</a></div>
+					<!--
+        <h3>current</h3>
+    -->
+					<div class="tsd-signature tsd-kind-icon">current<span class="tsd-signature-symbol">:</span> <a href="../interfaces/state.statedeclaration.html" class="tsd-signature-type">StateDeclaration</a>    <div class="tsd-header">
+							<p> Current state </p>
+						</div>
+					</div>
 					<div class="tsd-declaration">
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Current state</p>
+							</div>
+							<p>The to-state from the latest successful transition</p>
+						</div>
 					</div>
 					<aside class="tsd-sources">
+						<p>Implementation of <a href="../interfaces/core.uirouterglobals.html">UIRouterGlobals</a>.<a href="../interfaces/core.uirouterglobals.html#current">current</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/globals.ts#L48">globals.ts:48</a></li>
+							<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/globals.ts#L55">ui-router-core/src/globals.ts:55</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="params" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>params</h3>-->
-					<!---->
-					<div class="tsd-signature tsd-kind-icon">params<span class="tsd-signature-symbol">:</span> <a href="params.stateparams.html" class="tsd-signature-type">StateParams</a></div>
+					<!--
+        <h3>params</h3>
+    -->
+					<div class="tsd-signature tsd-kind-icon">params<span class="tsd-signature-symbol">:</span> <a href="params.stateparams.html" class="tsd-signature-type">StateParams</a><span class="tsd-signature-symbol"> =&nbsp;new StateParams()</span>    <div class="tsd-header">
+							<p> Current parameter values </p>
+						</div>
+					</div>
 					<div class="tsd-declaration">
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Current parameter values</p>
+							</div>
+							<p>The parameter values from the latest successful transition</p>
+						</div>
 					</div>
 					<aside class="tsd-sources">
+						<p>Implementation of <a href="../interfaces/core.uirouterglobals.html">UIRouterGlobals</a>.<a href="../interfaces/core.uirouterglobals.html#params">params</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/globals.ts#L47">globals.ts:47</a></li>
+							<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/globals.ts#L53">ui-router-core/src/globals.ts:53</a></li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
 					<a name="successfultransitions" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>successful<wbr>Transitions</h3>-->
-					<!---->
-					<div class="tsd-signature tsd-kind-icon">successful<wbr>Transitions<span class="tsd-signature-symbol">:</span> <a href="common.queue.html" class="tsd-signature-type">Queue</a><span class="tsd-signature-symbol">&lt;</span><a href="transition.transition-1.html" class="tsd-signature-type">Transition</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<!--
+        <h3>successful<wbr>Transitions</h3>
+    -->
+					<div class="tsd-signature tsd-kind-icon">successful<wbr>Transitions<span class="tsd-signature-symbol">:</span> <a href="common.queue.html" class="tsd-signature-type">Queue</a><span class="tsd-signature-symbol">&lt;</span><a href="transition.transition-1.html" class="tsd-signature-type">Transition</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> =&nbsp;new Queue&lt;Transition&gt;([], 1)</span></div>
 					<div class="tsd-declaration">
+						<div class="tsd-comment tsd-typography">
+						</div>
 					</div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/globals.ts#L52">globals.ts:52</a></li>
+							<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/globals.ts#L65">ui-router-core/src/globals.ts:65</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="transition" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>transition</h3>-->
-					<!---->
-					<div class="tsd-signature tsd-kind-icon">transition<span class="tsd-signature-symbol">:</span> <a href="transition.transition-1.html" class="tsd-signature-type">Transition</a></div>
+					<!--
+        <h3>transition</h3>
+    -->
+					<div class="tsd-signature tsd-kind-icon">transition<span class="tsd-signature-symbol">:</span> <a href="transition.transition-1.html" class="tsd-signature-type">Transition</a>    <div class="tsd-header">
+							<p> The current transition (in progress) </p>
+						</div>
+					</div>
 					<div class="tsd-declaration">
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>The current transition (in progress)</p>
+							</div>
+						</div>
 					</div>
 					<aside class="tsd-sources">
+						<p>Implementation of <a href="../interfaces/core.uirouterglobals.html">UIRouterGlobals</a>.<a href="../interfaces/core.uirouterglobals.html#transition">transition</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/globals.ts#L50">globals.ts:50</a></li>
+							<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/globals.ts#L59">ui-router-core/src/globals.ts:59</a></li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
 					<a name="transitionhistory" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>transition<wbr>History</h3>-->
-					<!---->
-					<div class="tsd-signature tsd-kind-icon">transition<wbr>History<span class="tsd-signature-symbol">:</span> <a href="common.queue.html" class="tsd-signature-type">Queue</a><span class="tsd-signature-symbol">&lt;</span><a href="transition.transition-1.html" class="tsd-signature-type">Transition</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<!--
+        <h3>transition<wbr>History</h3>
+    -->
+					<div class="tsd-signature tsd-kind-icon">transition<wbr>History<span class="tsd-signature-symbol">:</span> <a href="common.queue.html" class="tsd-signature-type">Queue</a><span class="tsd-signature-symbol">&lt;</span><a href="transition.transition-1.html" class="tsd-signature-type">Transition</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> =&nbsp;new Queue&lt;Transition&gt;([], 1)</span></div>
 					<div class="tsd-declaration">
+						<div class="tsd-comment tsd-typography">
+						</div>
 					</div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/globals.ts#L51">globals.ts:51</a></li>
+							<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/globals.ts#L62">ui-router-core/src/globals.ts:62</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -241,49 +255,25 @@ redirect_from: /docs/latest/classes/core.globals.html
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../globals.html"><em>Globals</em></a>
+						<a href="../index.html"><em>angular-<wbr>ui-<wbr>router</em></a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/common.html">common</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/common_hof.html">common_<wbr>hof</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/common_predicates.html">common_<wbr>predicates</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/common_strings.html">common_<wbr>strings</a>
+					<li class="label tsd-is-external">
+						<span>Public API</span>
 					</li>
 					<li class="current tsd-kind-external-module">
 						<a href="../modules/core.html">core</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/hooks.html">hooks</a>
+						<a href="../modules/directives.html">directives</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/justjs.html">justjs</a>
+						<a href="../modules/injectables.html">injectables</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/ng1.html">ng1</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/ng1_directives.html">ng1_<wbr>directives</a>
-					</li>
-					<li class=" tsd-kind-external-module">
 						<a href="../modules/ng1_state_events.html">ng1_<wbr>state_<wbr>events</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/ng2.html">ng2</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/ng2_directives.html">ng2_<wbr>directives</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/params.html">params</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/path.html">path</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/resolve.html">resolve</a>
@@ -300,21 +290,45 @@ redirect_from: /docs/latest/classes/core.globals.html
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/url.html">url</a>
 					</li>
-					<li class=" tsd-kind-external-module">
+					<li class="label tsd-is-external">
+						<span>Internal UI-<wbr><wbr>Router API</span>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/common.html">common</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/common_hof.html">common_<wbr>hof</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/common_predicates.html">common_<wbr>predicates</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/common_strings.html">common_<wbr>strings</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/hooks.html">hooks</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/params.html">params</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/path.html">path</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
 						<a href="../modules/view.html">view</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-class tsd-parent-kind-external-module">
+						<a href="core.glob.html" class="tsd-kind-icon">Glob</a>
+					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class tsd-parent-kind-external-module">
 						<a href="core.globals.html" class="tsd-kind-icon">Globals</a>
 						<ul>
-							<li class=" tsd-kind-constructor tsd-parent-kind-class">
-								<a href="core.globals.html#constructor" class="tsd-kind-icon">constructor</a>
-							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="core.globals.html#_current" class="tsd-kind-icon">$current</a>
 							</li>
@@ -324,13 +338,13 @@ redirect_from: /docs/latest/classes/core.globals.html
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="core.globals.html#params" class="tsd-kind-icon">params</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-external">
 								<a href="core.globals.html#successfultransitions" class="tsd-kind-icon">successful<wbr>Transitions</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="core.globals.html#transition" class="tsd-kind-icon">transition</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-external">
 								<a href="core.globals.html#transitionhistory" class="tsd-kind-icon">transition<wbr>History</a>
 							</li>
 						</ul>
@@ -340,8 +354,23 @@ redirect_from: /docs/latest/classes/core.globals.html
 					<li class=" tsd-kind-class tsd-parent-kind-external-module">
 						<a href="core.uirouter.html" class="tsd-kind-icon">UIRouter</a>
 					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-external-module tsd-is-external">
+						<a href="core.uirouterpluginbase.html" class="tsd-kind-icon">UIRouter<wbr>Plugin<wbr>Base</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-external">
+						<a href="../interfaces/core.disposable.html" class="tsd-kind-icon">Disposable</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="../interfaces/core.uiinjector.html" class="tsd-kind-icon">UIInjector</a>
+					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
 						<a href="../interfaces/core.uirouterglobals.html" class="tsd-kind-icon">UIRouter<wbr>Globals</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-external">
+						<a href="../interfaces/core.uirouterplugin.html" class="tsd-kind-icon">UIRouter<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-external">
+						<a href="../modules/core.html#pluginfactory" class="tsd-kind-icon">Plugin<wbr>Factory</a>
 					</li>
 				</ul>
 			</nav>

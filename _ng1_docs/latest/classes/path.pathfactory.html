@@ -1,17 +1,17 @@
 ---
-redirect_from: /docs/latest/classes/path.pathfactory.html
 ---
 <!doctype html>
 <html class="default no-js">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>PathFactory | UI-Router</title>
+	<title>PathFactory | angular-ui-router</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
-	<link rel="stylesheet" href="../assets/css/typedoctheme.css">
+	<link rel="stylesheet" href="../assets/css/uirouter.css">
 	<script src="../assets/js/modernizr.js"></script>
+	<script src="../assets/js/reset.js"></script>
 </head>
 <body>
 <header>
@@ -27,26 +27,31 @@ redirect_from: /docs/latest/classes/path.pathfactory.html
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">UI-Router</a>
+					<a href="../index.html" class="title">angular-ui-router</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
 						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
 						<div class="tsd-filter-group">
-							<div class="tsd-select" id="tsd-filter-visibility">
-								<span class="tsd-select-label">All</span>
-								<ul class="tsd-select-list">
-									<li data-value="public">Public</li>
-									<li data-value="protected">Public/Protected</li>
-									<li data-value="private" class="selected">All</li>
-								</ul>
-							</div>
-							<input type="checkbox" id="tsd-filter-inherited" checked />
-							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<!--
+                            <div class="tsd-select" id="tsd-filter-visibility">
+                                <span class="tsd-select-label">All</span>
+                                <ul class="tsd-select-list">
+                                    <li data-value="public">Public</li>
+                                    <li data-value="protected">Public/Protected</li>
+                                    <li data-value="private" class="selected">All</li>
+                                </ul>
+                            </div>
+
+                            <input type="checkbox" id="tsd-filter-inherited" checked />
+                            <label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+                            -->
 							<input type="checkbox" id="tsd-filter-externals" checked />
-							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
-							<input type="checkbox" id="tsd-filter-only-exported" />
-							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+							<label class="tsd-widget" for="tsd-filter-externals">Internal UI-Router API</label>
+							<!--
+                                <input type="checkbox" id="tsd-filter-only-exported" />
+                                <label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+                            -->
 						</div>
 					</div>
 					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
@@ -58,7 +63,7 @@ redirect_from: /docs/latest/classes/path.pathfactory.html
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../globals.html">Globals</a>
+					<a href="../index.html">angular-ui-router</a>
 				</li>
 				<li>
 					<a href="../modules/path.html">path</a>
@@ -93,36 +98,36 @@ redirect_from: /docs/latest/classes/path.pathfactory.html
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
-						<section class="tsd-index-section ">
+						<section class="tsd-index-section tsd-is-external">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="path.pathfactory.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-external"><a href="path.pathfactory.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
-						<section class="tsd-index-section ">
+						<section class="tsd-index-section tsd-is-external">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="path.pathfactory.html#applyviewconfigs" class="tsd-kind-icon">apply<wbr>View<wbr>Configs</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="path.pathfactory.html#buildpath" class="tsd-kind-icon">build<wbr>Path</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="path.pathfactory.html#buildtopath" class="tsd-kind-icon">build<wbr>ToPath</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="path.pathfactory.html#inheritparams" class="tsd-kind-icon">inherit<wbr>Params</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="path.pathfactory.html#maketargetstate" class="tsd-kind-icon">make<wbr>Target<wbr>State</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="path.pathfactory.html#paramvalues" class="tsd-kind-icon">param<wbr>Values</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="path.pathfactory.html#subpath" class="tsd-kind-icon">sub<wbr>Path</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="path.pathfactory.html#treechanges" class="tsd-kind-icon">tree<wbr>Changes</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-external"><a href="path.pathfactory.html#applyviewconfigs" class="tsd-kind-icon">apply<wbr>View<wbr>Configs</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-external"><a href="path.pathfactory.html#buildpath" class="tsd-kind-icon">build<wbr>Path</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-external"><a href="path.pathfactory.html#buildtopath" class="tsd-kind-icon">build<wbr>ToPath</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-external"><a href="path.pathfactory.html#inheritparams" class="tsd-kind-icon">inherit<wbr>Params</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-external"><a href="path.pathfactory.html#maketargetstate" class="tsd-kind-icon">make<wbr>Target<wbr>State</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-external"><a href="path.pathfactory.html#paramvalues" class="tsd-kind-icon">param<wbr>Values</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-external"><a href="path.pathfactory.html#subpath" class="tsd-kind-icon">sub<wbr>Path</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-external"><a href="path.pathfactory.html#treechanges" class="tsd-kind-icon">tree<wbr>Changes</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group ">
+			<section class="tsd-panel-group tsd-member-group tsd-is-external">
 				<h2>Constructors</h2>
-				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class tsd-is-external">
 					<a name="constructor" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3>constructor</h3>-->
-					<!---->
-					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+					<!--
+        <h3>constructor</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-external">
 						<li class="tsd-signature tsd-kind-icon">new <wbr>Path<wbr>Factory<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="path.pathfactory.html" class="tsd-signature-type">PathFactory</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
@@ -133,20 +138,20 @@ redirect_from: /docs/latest/classes/path.pathfactory.html
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/path/pathFactory.ts#L19">path/pathFactory.ts:19</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/path/pathFactory.ts#L19">ui-router-core/src/path/pathFactory.ts:19</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group ">
+			<section class="tsd-panel-group tsd-member-group tsd-is-external">
 				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-external">
 					<a name="applyviewconfigs" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3><span class="tsd-flag ts-flagStatic">Static</span> apply<wbr>View<wbr>Configs</h3>-->
-					<!---->
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<!--
+        <h3><span class="tsd-flag ts-flagStatic">Static</span> apply<wbr>View<wbr>Configs</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-external">
 						<li class="tsd-signature tsd-kind-icon">apply<wbr>View<wbr>Configs<span class="tsd-signature-symbol">(</span>$view<span class="tsd-signature-symbol">: </span><a href="view.viewservice.html" class="tsd-signature-type">ViewService</a>, path<span class="tsd-signature-symbol">: </span><a href="path.pathnode.html" class="tsd-signature-type">PathNode</a><span class="tsd-signature-symbol">[]</span>, states<span class="tsd-signature-symbol">: </span><a href="state.state-1.html" class="tsd-signature-type">State</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 						<li class="tsd-header">
 							<p> Creates ViewConfig objects and adds to nodes. </p>
@@ -163,13 +168,13 @@ redirect_from: /docs/latest/classes/path.pathfactory.html
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>$view: <a href="view.viewservice.html" class="tsd-signature-type">ViewService</a></h5>
+									<h5>$view <a href="view.viewservice.html" class="tsd-signature-type">ViewService</a></h5>
 								</li>
 								<li>
-									<h5>path: <a href="path.pathnode.html" class="tsd-signature-type">PathNode</a><span class="tsd-signature-symbol">[]</span></h5>
+									<h5>path <a href="path.pathnode.html" class="tsd-signature-type">PathNode</a><span class="tsd-signature-symbol">[]</span></h5>
 								</li>
 								<li>
-									<h5>states: <a href="state.state-1.html" class="tsd-signature-type">State</a><span class="tsd-signature-symbol">[]</span></h5>
+									<h5>states <a href="state.state-1.html" class="tsd-signature-type">State</a><span class="tsd-signature-symbol">[]</span></h5>
 								</li>
 							</ul>
 							<div class="tsd-returns">
@@ -178,17 +183,17 @@ redirect_from: /docs/latest/classes/path.pathfactory.html
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/path/pathFactory.ts#L48">path/pathFactory.ts:48</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/path/pathFactory.ts#L48">ui-router-core/src/path/pathFactory.ts:48</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-external">
 					<a name="buildpath" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3><span class="tsd-flag ts-flagStatic">Static</span> build<wbr>Path</h3>-->
-					<!---->
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<!--
+        <h3><span class="tsd-flag ts-flagStatic">Static</span> build<wbr>Path</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-external">
 						<li class="tsd-signature tsd-kind-icon">build<wbr>Path<span class="tsd-signature-symbol">(</span>targetState<span class="tsd-signature-symbol">: </span><a href="state.targetstate.html" class="tsd-signature-type">TargetState</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="path.pathnode.html" class="tsd-signature-type">PathNode</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
@@ -196,7 +201,7 @@ redirect_from: /docs/latest/classes/path.pathfactory.html
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>targetState: <a href="state.targetstate.html" class="tsd-signature-type">TargetState</a></h5>
+									<h5>targetState <a href="state.targetstate.html" class="tsd-signature-type">TargetState</a></h5>
 								</li>
 							</ul>
 							<div class="tsd-returns">
@@ -205,17 +210,17 @@ redirect_from: /docs/latest/classes/path.pathfactory.html
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/path/pathFactory.ts#L29">path/pathFactory.ts:29</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/path/pathFactory.ts#L29">ui-router-core/src/path/pathFactory.ts:29</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-external">
 					<a name="buildtopath" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3><span class="tsd-flag ts-flagStatic">Static</span> build<wbr>ToPath</h3>-->
-					<!---->
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<!--
+        <h3><span class="tsd-flag ts-flagStatic">Static</span> build<wbr>ToPath</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-external">
 						<li class="tsd-signature tsd-kind-icon">build<wbr>ToPath<span class="tsd-signature-symbol">(</span>fromPath<span class="tsd-signature-symbol">: </span><a href="path.pathnode.html" class="tsd-signature-type">PathNode</a><span class="tsd-signature-symbol">[]</span>, targetState<span class="tsd-signature-symbol">: </span><a href="state.targetstate.html" class="tsd-signature-type">TargetState</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="path.pathnode.html" class="tsd-signature-type">PathNode</a><span class="tsd-signature-symbol">[]</span></li>
 						<li class="tsd-header">
 							<p> Given a fromPath: PathNode[] and a TargetState, builds a toPath: PathNode[] </p>
@@ -231,10 +236,10 @@ redirect_from: /docs/latest/classes/path.pathfactory.html
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>fromPath: <a href="path.pathnode.html" class="tsd-signature-type">PathNode</a><span class="tsd-signature-symbol">[]</span></h5>
+									<h5>fromPath <a href="path.pathnode.html" class="tsd-signature-type">PathNode</a><span class="tsd-signature-symbol">[]</span></h5>
 								</li>
 								<li>
-									<h5>targetState: <a href="state.targetstate.html" class="tsd-signature-type">TargetState</a></h5>
+									<h5>targetState <a href="state.targetstate.html" class="tsd-signature-type">TargetState</a></h5>
 								</li>
 							</ul>
 							<div class="tsd-returns">
@@ -243,17 +248,17 @@ redirect_from: /docs/latest/classes/path.pathfactory.html
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/path/pathFactory.ts#L35">path/pathFactory.ts:35</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/path/pathFactory.ts#L35">ui-router-core/src/path/pathFactory.ts:35</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-external">
 					<a name="inheritparams" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3><span class="tsd-flag ts-flagStatic">Static</span> inherit<wbr>Params</h3>-->
-					<!---->
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<!--
+        <h3><span class="tsd-flag ts-flagStatic">Static</span> inherit<wbr>Params</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-external">
 						<li class="tsd-signature tsd-kind-icon">inherit<wbr>Params<span class="tsd-signature-symbol">(</span>fromPath<span class="tsd-signature-symbol">: </span><a href="path.pathnode.html" class="tsd-signature-type">PathNode</a><span class="tsd-signature-symbol">[]</span>, toPath<span class="tsd-signature-symbol">: </span><a href="path.pathnode.html" class="tsd-signature-type">PathNode</a><span class="tsd-signature-symbol">[]</span>, toKeys<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="path.pathnode.html" class="tsd-signature-type">PathNode</a><span class="tsd-signature-symbol">[]</span></li>
 						<li class="tsd-header">
 							<p> Given a fromPath and a toPath, returns a new to path which inherits parameters from the fromPath </p>
@@ -277,13 +282,13 @@ redirect_from: /docs/latest/classes/path.pathfactory.html
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>fromPath: <a href="path.pathnode.html" class="tsd-signature-type">PathNode</a><span class="tsd-signature-symbol">[]</span></h5>
+									<h5>fromPath <a href="path.pathnode.html" class="tsd-signature-type">PathNode</a><span class="tsd-signature-symbol">[]</span></h5>
 								</li>
 								<li>
-									<h5>toPath: <a href="path.pathnode.html" class="tsd-signature-type">PathNode</a><span class="tsd-signature-symbol">[]</span></h5>
+									<h5>toPath <a href="path.pathnode.html" class="tsd-signature-type">PathNode</a><span class="tsd-signature-symbol">[]</span></h5>
 								</li>
 								<li>
-									<h5>toKeys <span class="tsd-flag ts-flagDefault value">Default value</span>: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[]</span></h5>
+									<h5>toKeys: <span class="tsd-flag ts-flagDefault value">Default value</span>&nbsp; <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[]</span></h5>
 								</li>
 							</ul>
 							<div class="tsd-returns">
@@ -292,17 +297,17 @@ redirect_from: /docs/latest/classes/path.pathfactory.html
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/path/pathFactory.ts#L69">path/pathFactory.ts:69</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/path/pathFactory.ts#L69">ui-router-core/src/path/pathFactory.ts:69</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-external">
 					<a name="maketargetstate" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3><span class="tsd-flag ts-flagStatic">Static</span> make<wbr>Target<wbr>State</h3>-->
-					<!---->
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<!--
+        <h3><span class="tsd-flag ts-flagStatic">Static</span> make<wbr>Target<wbr>State</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-external">
 						<li class="tsd-signature tsd-kind-icon">make<wbr>Target<wbr>State<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><a href="path.pathnode.html" class="tsd-signature-type">PathNode</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="state.targetstate.html" class="tsd-signature-type">TargetState</a></li>
 						<li class="tsd-header">
 							<p> Given a PathNode[], create an TargetState </p>
@@ -318,7 +323,7 @@ redirect_from: /docs/latest/classes/path.pathfactory.html
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>path: <a href="path.pathnode.html" class="tsd-signature-type">PathNode</a><span class="tsd-signature-symbol">[]</span></h5>
+									<h5>path <a href="path.pathnode.html" class="tsd-signature-type">PathNode</a><span class="tsd-signature-symbol">[]</span></h5>
 								</li>
 							</ul>
 							<div class="tsd-returns">
@@ -327,17 +332,17 @@ redirect_from: /docs/latest/classes/path.pathfactory.html
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/path/pathFactory.ts#L24">path/pathFactory.ts:24</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/path/pathFactory.ts#L24">ui-router-core/src/path/pathFactory.ts:24</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-external">
 					<a name="paramvalues" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3><span class="tsd-flag ts-flagStatic">Static</span> param<wbr>Values</h3>-->
-					<!---->
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<!--
+        <h3><span class="tsd-flag ts-flagStatic">Static</span> param<wbr>Values</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-external">
 						<li class="tsd-signature tsd-kind-icon">param<wbr>Values<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><a href="path.pathnode.html" class="tsd-signature-type">PathNode</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></li>
 						<li class="tsd-header">
 							<p> Gets the raw parameter values from a path </p>
@@ -353,7 +358,7 @@ redirect_from: /docs/latest/classes/path.pathfactory.html
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>path: <a href="path.pathnode.html" class="tsd-signature-type">PathNode</a><span class="tsd-signature-symbol">[]</span></h5>
+									<h5>path <a href="path.pathnode.html" class="tsd-signature-type">PathNode</a><span class="tsd-signature-symbol">[]</span></h5>
 								</li>
 							</ul>
 							<div class="tsd-returns">
@@ -364,17 +369,17 @@ redirect_from: /docs/latest/classes/path.pathfactory.html
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/path/pathFactory.ts#L147">path/pathFactory.ts:147</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/path/pathFactory.ts#L152">ui-router-core/src/path/pathFactory.ts:152</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-external">
 					<a name="subpath" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3><span class="tsd-flag ts-flagStatic">Static</span> sub<wbr>Path</h3>-->
-					<!---->
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<!--
+        <h3><span class="tsd-flag ts-flagStatic">Static</span> sub<wbr>Path</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-external">
 						<li class="tsd-signature tsd-kind-icon">sub<wbr>Path<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><a href="path.pathnode.html" class="tsd-signature-type">PathNode</a><span class="tsd-signature-symbol">[]</span>, predicate<span class="tsd-signature-symbol">: </span><a href="../modules/common.html#predicate" class="tsd-signature-type">Predicate</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="path.pathnode.html" class="tsd-signature-type">PathNode</a><span class="tsd-signature-symbol">[]</span></li>
 						<li class="tsd-header">
 							<p> Return a subpath of a path, which stops at the first matching node </p>
@@ -392,13 +397,13 @@ redirect_from: /docs/latest/classes/path.pathfactory.html
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>path: <a href="path.pathnode.html" class="tsd-signature-type">PathNode</a><span class="tsd-signature-symbol">[]</span></h5>
+									<h5>path <a href="path.pathnode.html" class="tsd-signature-type">PathNode</a><span class="tsd-signature-symbol">[]</span></h5>
 									:         <div class="tsd-comment tsd-typography">
 										<p>a path of <a href="path.pathnode.html">PathNode</a>s</p>
 									</div>
 								</li>
 								<li>
-									<h5>predicate: <a href="../modules/common.html#predicate" class="tsd-signature-type">Predicate</a></h5>
+									<h5>predicate <a href="../modules/common.html#predicate" class="tsd-signature-type">Predicate</a></h5>
 									:         <div class="tsd-comment tsd-typography">
 										<p>a <a href="../modules/common.html#predicate">Predicate</a> fn that matches <a href="path.pathnode.html">PathNode</a>s</p>
 									</div>
@@ -411,17 +416,17 @@ redirect_from: /docs/latest/classes/path.pathfactory.html
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/path/pathFactory.ts#L140">path/pathFactory.ts:140</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/path/pathFactory.ts#L145">ui-router-core/src/path/pathFactory.ts:145</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-external">
 					<a name="treechanges" class="tsd-anchor"></a>
-					<!---->
-					<!--<h3><span class="tsd-flag ts-flagStatic">Static</span> tree<wbr>Changes</h3>-->
-					<!---->
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<!--
+        <h3><span class="tsd-flag ts-flagStatic">Static</span> tree<wbr>Changes</h3>
+    -->
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-external">
 						<li class="tsd-signature tsd-kind-icon">tree<wbr>Changes<span class="tsd-signature-symbol">(</span>fromPath<span class="tsd-signature-symbol">: </span><a href="path.pathnode.html" class="tsd-signature-type">PathNode</a><span class="tsd-signature-symbol">[]</span>, toPath<span class="tsd-signature-symbol">: </span><a href="path.pathnode.html" class="tsd-signature-type">PathNode</a><span class="tsd-signature-symbol">[]</span>, reloadState<span class="tsd-signature-symbol">: </span><a href="state.state-1.html" class="tsd-signature-type">State</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/transition.treechanges.html" class="tsd-signature-type">TreeChanges</a></li>
 						<li class="tsd-header">
 							<p> Computes the tree changes (entering, exiting) between a fromPath and toPath. </p>
@@ -437,13 +442,13 @@ redirect_from: /docs/latest/classes/path.pathfactory.html
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>fromPath: <a href="path.pathnode.html" class="tsd-signature-type">PathNode</a><span class="tsd-signature-symbol">[]</span></h5>
+									<h5>fromPath <a href="path.pathnode.html" class="tsd-signature-type">PathNode</a><span class="tsd-signature-symbol">[]</span></h5>
 								</li>
 								<li>
-									<h5>toPath: <a href="path.pathnode.html" class="tsd-signature-type">PathNode</a><span class="tsd-signature-symbol">[]</span></h5>
+									<h5>toPath <a href="path.pathnode.html" class="tsd-signature-type">PathNode</a><span class="tsd-signature-symbol">[]</span></h5>
 								</li>
 								<li>
-									<h5>reloadState: <a href="state.state-1.html" class="tsd-signature-type">State</a></h5>
+									<h5>reloadState <a href="state.state-1.html" class="tsd-signature-type">State</a></h5>
 								</li>
 							</ul>
 							<div class="tsd-returns">
@@ -452,7 +457,7 @@ redirect_from: /docs/latest/classes/path.pathfactory.html
 							<hr>
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/angular-ui/ui-router/blob/b1e6337/src/path/pathFactory.ts#L98">path/pathFactory.ts:98</a></li>
+									<li>Defined in <a href="https://github.com/ui-router/core/blob/48c5af6/src/path/pathFactory.ts#L103">ui-router-core/src/path/pathFactory.ts:103</a></li>
 								</ul>
 						</aside>        </li>
 					</ul>
@@ -463,49 +468,25 @@ redirect_from: /docs/latest/classes/path.pathfactory.html
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../globals.html"><em>Globals</em></a>
+						<a href="../index.html"><em>angular-<wbr>ui-<wbr>router</em></a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/common.html">common</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/common_hof.html">common_<wbr>hof</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/common_predicates.html">common_<wbr>predicates</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/common_strings.html">common_<wbr>strings</a>
+					<li class="label tsd-is-external">
+						<span>Public API</span>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/core.html">core</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/hooks.html">hooks</a>
+						<a href="../modules/directives.html">directives</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/justjs.html">justjs</a>
+						<a href="../modules/injectables.html">injectables</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/ng1.html">ng1</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/ng1_directives.html">ng1_<wbr>directives</a>
-					</li>
-					<li class=" tsd-kind-external-module">
 						<a href="../modules/ng1_state_events.html">ng1_<wbr>state_<wbr>events</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/ng2.html">ng2</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/ng2_directives.html">ng2_<wbr>directives</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/params.html">params</a>
-					</li>
-					<li class="current tsd-kind-external-module">
-						<a href="../modules/path.html">path</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/resolve.html">resolve</a>
@@ -522,7 +503,31 @@ redirect_from: /docs/latest/classes/path.pathfactory.html
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/url.html">url</a>
 					</li>
-					<li class=" tsd-kind-external-module">
+					<li class="label tsd-is-external">
+						<span>Internal UI-<wbr><wbr>Router API</span>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/common.html">common</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/common_hof.html">common_<wbr>hof</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/common_predicates.html">common_<wbr>predicates</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/common_strings.html">common_<wbr>strings</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/hooks.html">hooks</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/params.html">params</a>
+					</li>
+					<li class="current tsd-kind-external-module tsd-is-external">
+						<a href="../modules/path.html">path</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
 						<a href="../modules/view.html">view</a>
 					</li>
 				</ul>
@@ -531,41 +536,41 @@ redirect_from: /docs/latest/classes/path.pathfactory.html
 				<ul class="before-current">
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-class tsd-parent-kind-external-module">
+					<li class="current tsd-kind-class tsd-parent-kind-external-module tsd-is-external">
 						<a href="path.pathfactory.html" class="tsd-kind-icon">Path<wbr>Factory</a>
 						<ul>
-							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-external">
 								<a href="path.pathfactory.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-external">
 								<a href="path.pathfactory.html#applyviewconfigs" class="tsd-kind-icon">apply<wbr>View<wbr>Configs</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-external">
 								<a href="path.pathfactory.html#buildpath" class="tsd-kind-icon">build<wbr>Path</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-external">
 								<a href="path.pathfactory.html#buildtopath" class="tsd-kind-icon">build<wbr>ToPath</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-external">
 								<a href="path.pathfactory.html#inheritparams" class="tsd-kind-icon">inherit<wbr>Params</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-external">
 								<a href="path.pathfactory.html#maketargetstate" class="tsd-kind-icon">make<wbr>Target<wbr>State</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-external">
 								<a href="path.pathfactory.html#paramvalues" class="tsd-kind-icon">param<wbr>Values</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-external">
 								<a href="path.pathfactory.html#subpath" class="tsd-kind-icon">sub<wbr>Path</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-external">
 								<a href="path.pathfactory.html#treechanges" class="tsd-kind-icon">tree<wbr>Changes</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-class tsd-parent-kind-external-module">
+					<li class=" tsd-kind-class tsd-parent-kind-external-module tsd-is-external">
 						<a href="path.pathnode.html" class="tsd-kind-icon">Path<wbr>Node</a>
 					</li>
 				</ul>

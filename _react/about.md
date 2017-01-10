@@ -10,6 +10,7 @@ permalink: /react/
 
 <center>
 <img src="/images/logos/react.png" width="150">
+<br /><iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=ui-router&repo=react&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe><iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=ui-router&repo=react&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
 </center>
 
 UI-Router provides extremely flexible, state based routing to the React ecosystem.

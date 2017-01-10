@@ -197,6 +197,7 @@ figure {
   }
 
   &.half {
+    > div,
     > a,
     > img {
       @include breakpoint($small) {
@@ -210,6 +211,7 @@ figure {
   }
 
   &.third {
+    > div,
     > a,
     > img {
       @include breakpoint($small) {
