@@ -4,7 +4,7 @@ main:
     url: /about/
 
   - title: "Tutorials"
-    url: /tutori/als/
+    url: /tutorials/
 
   - title: "Guide"
     url: /guide/
@@ -63,6 +63,10 @@ guide:
         url: /guide/states
       - title: "Views"
         url: /guide/views
+      - title: "Transitions"
+        url: /guide/transitions
+      - title: "Lazy Loading"
+        url: /guide/lazyloading
   - title: "Angular 1"
     children:
       - title: "UI-Router 1.0 Migration"
