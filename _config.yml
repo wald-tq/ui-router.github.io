@@ -237,6 +237,9 @@ collections:
   ng2_docs:
     output: true
     permalink: /ng2/docs/:path:output_ext
+  react_docs:
+    output: true
+    permalink: /react/docs/:path:output_ext
   resources:
     output: true
     permalink: /resources/:path:output_ext
@@ -315,6 +318,12 @@ defaults:
   - scope:
       path: ""
       type: ng2_docs
+    values:
+      sitemap: true
+      layout: docs
+  - scope:
+      path: ""
+      type: react_docs
     values:
       sitemap: true
       layout: docs

@@ -34,13 +34,18 @@ Learn UI-Router by following our tutorials.
 ## Sample application
 
 The [UI-Router Sample App](/resources/sampleapp) is a non-trivial UI-Router application.
+
+## [API Docs](/react/docs/latest)
+
+UI-Router is written in [Typescript](typescriptlang.org).
+We generate [detailed API docs](/react/docs/latest) from the typescript code and comments.
  
 ## Development
 
 To fix a UI-Router bug, or create an enhancement, follow these steps: 
 
 The Typescript source code for UI-Router for React can be found at <https://github.com/ui-router/react>
-The react code depends on the UI-Router Core code, found at <https://github.com/ui-router/core>
+The React code depends on on UI-Router Core, which is found at <https://github.com/ui-router/core>
 
 To get started you will need to clone the UI-Router Core and UI-Router React repositories.
 

@@ -11,6 +11,6 @@ permalink: /docs/
     <a href="/ng1/docs/0.3.1">v0.3.1 (legacy)</a>
   </div>
   <div><a href="/ng2/docs/latest"><img src="/images/logos/angular2.png"><div>Angular 2</div></a></div>
-  <!-- <div><a href="/react/tutorial/helloworld"><img src="/images/logos/react.png"><div>React</div></a></div> -->
+  <div><a href="/react/docs/latest"><img src="/images/logos/react.png"><div>React</div></a></div>
 </div>
 
