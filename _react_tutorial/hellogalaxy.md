@@ -123,8 +123,8 @@ However, the parent state's `People` component has changed a bit.
 render () {
   let {people} = this.props.resolves;
   
-  let list = people.map((person, index) => (
-    <li key={index}>
+  let list = people.map(person => (
+    <li key={person.id}>
       <UISref to=".person" params={{personId:person.id}}>
         <a>{person.name}</a>
       </UISref>
