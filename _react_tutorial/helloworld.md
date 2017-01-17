@@ -44,10 +44,7 @@ Start by looking over the complete source code (ignoring SystemJS `config.js`) f
 ```javascript
 import React from 'react';
 import ReactDOM from 'react-dom';
-import UIRouterReact, {UIView, UISref, UISrefActive} from 'ui-router-react';
-
-
-const router = new UIRouterReact();
+import {UIRouter, UIView, UISref, UISrefActive, pushStateLocationPlugin} from 'ui-router-react';
 
 var helloState = {
   name: 'hello',
@@ -61,22 +58,19 @@ var aboutState = {
   component: () => <h3>Its the UI-Router hello world app!</h3>
 }
 
-router.stateRegistry.register(helloState);
-router.stateRegistry.register(aboutState);
-
-router.start();
-
 ReactDOM.render(
-  <div>
-    <UISrefActive class="active">
-      <UISref to="hello"><a>Hello</a></UISref>
-    </UISrefActive>
-    <UISrefActive class="active">
-      <UISref to="about"><a>About</a></UISref>
-    </UISrefActive>
+  <UIRouter plugins={[pushStateLocationPlugin]} states={[helloState, aboutState]}>
+    <div>
+      <UISrefActive class="active">
+        <UISref to="hello"><a>Hello</a></UISref>
+      </UISrefActive>
+      <UISrefActive class="active">
+        <UISref to="about"><a>About</a></UISref>
+      </UISrefActive>
 
-    <UIView/>
-  </div>,
+      <UIView/>
+    </div>
+  </UIRouter>,
   document.getElementById('react-app')
 );
 ```
@@ -174,7 +168,7 @@ In order to access the code required to bootstrap React and UI-Router, we need t
 ```js
 import React from 'react';
 import ReactDOM from 'react-dom';
-import UIRouterReact, {UIView, UISref, UISrefActive} from 'ui-router-react';
+import {UIRouter, UIView, UISref, UISrefActive, pushStateLocationPlugin} from 'ui-router-react';
 ```
 
 ## Creating the components
@@ -253,19 +247,20 @@ let aboutState = { name: 'about', url: '/about',  component: About };
 
 ## Configure and start UIRouter
 
-We can create a new instance of the router and configure it with our states.
+The `<UIRouter>` component takes care of initializing the router for us, but we have to provide some basic configuration.
 
 ```js
-const router = new UIRouterReact();
-
-router.stateRegistry.register(helloState);
-router.stateRegistry.register(aboutState);
-
-router.start();
+<UIRouter plugins={[pushStateLocationPlugin]} states={[helloState, aboutState]}>
+  •••
+</UIRouter>
 ```
 
-The `.stateRegistry.register()` method takes care of registering our states.
-The `.start()` method tells the Router to activate, listen for url changes and handle view changes.
+The `plugins` prop lets us extend UI-Router basic functionalities.
+Providing a *location plugin* is necessary in order for the router to work.
+In this case `pushStateLocationPlugin` tells the router to interact with the browser url via the `pushState` API.
+
+The `states` prop is a handy way to quickly register router states right after it has been initialized.
+It's not the only way to register states, but it's the easiest and preferred one.
 
 ## Bootstrapping React
 
@@ -273,16 +268,18 @@ Bootstrap React.
 
 ```js
 ReactDOM.render(
-  <div>
-    <UISrefActive class="active">
-      <UISref to="hello"><a>Hello</a></UISref>
-    </UISrefActive>{' '}
-    <UISrefActive class="active">
-      <UISref to="about"><a>About</a></UISref>
-    </UISrefActive>
+  <UIRouter plugins={[pushStateLocationPlugin]} states={[helloState, aboutState]}>
+    <div>
+      <UISrefActive class="active">
+        <UISref to="hello"><a>Hello</a></UISref>
+      </UISrefActive>{' '}
+      <UISrefActive class="active">
+        <UISref to="about"><a>About</a></UISref>
+      </UISrefActive>
 
-    <UIView/>
-  </div>,
+      <UIView/>
+    </div>
+  </UIRouter>,
   document.getElementById('react-app')
 );
 ```
