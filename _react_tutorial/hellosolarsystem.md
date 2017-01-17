@@ -97,7 +97,7 @@ People.propTypes = {
 
 ## State Parameters
 
-We also want to allow the user to be able view the details for a specific person.
+We also want to allow the user to be able to view the details for a specific person.
 The `person` state takes a `personId` parameter, and uses it to fetch that specific person's details.
 
 The parameter value is included as a part of the URL.
@@ -139,8 +139,8 @@ As we loop over each person object using `.map()`, we provide the `UISref` with 
 
 {% raw %}
 ```js
-let list = people.map((person, index) => (
-  <li key={index}>
+let list = people.map(person => (
+  <li key={person.id}>
     <UISref to="person" params={{personId:person.id}}>
       <a>{person.name}</a>
     </UISref>
