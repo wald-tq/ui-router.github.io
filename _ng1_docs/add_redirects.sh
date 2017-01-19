@@ -6,7 +6,7 @@ for file in `find . -name "*.html" | grep -v "/partials/"` ; do
     echo "processing $file";
     frompath=`echo $file | sed -e 's/^\.//' -e 's/index.html//'`;
     echo "redirect from /docs$frompath"
-    perl -i.bak -0 -pe "s|^---\n---|---\nredirect_from: /docs$frompath\n---|" $file
+    perl -i -0 -pe "s|^---\n---|---\nredirect_from: /docs$frompath\n---|" $file
   else
     echo "skipping $file";
   fi
