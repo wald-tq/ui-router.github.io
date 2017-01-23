@@ -42,7 +42,7 @@ the current state
 
 This app introduces some new concepts and UI-Router features.
 
-- [UIRouterConfig](#uirouter-config)
+- [UIRouter Config](#uirouter-config)
 - [Resolve data](#resolve-data)
 - [State Parameters](#state-parameters)
 - [Linking with params](#linking-with-params)
@@ -50,44 +50,42 @@ This app introduces some new concepts and UI-Router features.
 ## UIRouter Config
 
 You can perform imperative router configuration or run initialization code before the router starts.
-Supply a `configClass` to `UIRouterModule.forRoot()`.
+Supply a config function as `config` to `UIRouterModule.forRoot()`.
 
 ```js
-import {MyUIRouterConfig} from "./config/router.config.js";
+import {uiRouterConfigFn} from "./config/router.config.js";
 ...
   imports: [
     ...
     UIRouterModule.forRoot({
       states: INITIAL_STATES,
       useHash: true,
-      configClass: MyUIRouterConfig
+      config: uiRouterConfigFn
     })
   ]
 ```
 
-The class's constructor will be injected by the DI system (as an Angular 2 Service).
-Inject `UIRouter` (and any other necessary dependencies) and do imperative UI-Router or module configuration.
+The function is called with two parameters: the `UIRouter` instance and the Angular `Injector`.
 
 ```js
 /** UIRouter Config  */
-@Injectable()
-export class MyUIRouterConfig {
-  constructor(@Inject(PeopleService) peopleService, router: UIRouter) {
-    // Plunker embeds can time out.  
-    // Pre-load the people list at startup.
-    peopleService.getAllPeople();
-    
-    // If no URL matches, go to the `hello` state by default
-    router.urlRouterProvider.otherwise(() => router.stateService.go('hello'));
-    
-    // Use ui-router-visualizer to show the states as a tree
-    StateTree.create(router, document.getElementById('statetree'), { width: 200, height: 100 });
-  }
+export function uiRouterConfigFn(router: UIRouter, injector: Injector) {
+  const peopleService = injector.get(PeopleService);
+  
+  // Plunker embeds can time out.  
+  // Pre-load the people list at startup.
+  peopleService.getAllPeople();
+  
+  // If no URL matches, go to the `hello` state by default
+  router.urlService.rules.otherwise({ state: 'hello' });
+  
+  // Use ui-router-visualizer to show the states as a tree
+  StateTree.create(router, document.getElementById('statetree'), { width: 200, height: 100 });
 }
 ```
 
-You can also supply `UIRouterModule.forChild()` with a `configClass`.
-You can perform configuration or initialization specific to your feature or lazy loaded module. 
+You can also supply a config function to `UIRouterModule.forChild()`.
+You can perform configuration or initialization specific to each feature/lazy loaded module. 
 {: .notice--info }
 
 
