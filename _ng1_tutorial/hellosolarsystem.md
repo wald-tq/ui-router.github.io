@@ -1,5 +1,5 @@
 ---
-title: "UI-Router for Angular 1 - Hello Solar System!"
+title: "UI-Router for AngularJS (1.x) - Hello Solar System!"
 excerpt: "Learn about components, resolve data, and parameters"
 redirect_from: /tutorial/ng1/hellosolarsystem/
 ---
@@ -14,7 +14,7 @@ To accomplish this, we will create two new application states:
 - The `people` state will show a list of all the people.
 - The `person` state will show details for a specific person.
 
-Additionally, we will switch our views from templates to Angular 1.5 components.
+Additionally, we will switch our views from templates to AngularJS 1.5 components.
 
 At any time, the user can click "reload plunker", and the app will restart at the same URL.
 The URL contains the information necessary to restore the application's state.
@@ -54,10 +54,10 @@ This app introduces some new concepts and UI-Router features.
 Although UI-Router allows you to define your views using arbitrary `template` and `controller` combinations, we
 recommend instead that you adopt a component based architecture.
 
-Angular 1.5 introduced the `.component()`, which is a special class of directives.
+AngularJS 1.5 introduced the `.component()`, which is a special class of directives.
 A component encapsulates a template and a controller as a single unit, and also explicitly defines its
 inputs (data) and outputs (events).
-To learn more, read the official [Angular 1.5+ component docs](https://docs.angularjs.org/guide/component),
+To learn more, read the official [AngularJS 1.5+ component docs](https://docs.angularjs.org/guide/component),
 and explore a [blog](https://toddmotto.com/exploring-the-angular-1-5-component-method) or two.
 
 ---
@@ -108,7 +108,7 @@ A state can specify the data it requires by using a `resolve:` block.
 When the user tries to activate a state which has a `resolve:` block,
 UI-Router will fetch the required data *before activating the state*.
 
-An Angular 1 `resolve:` block is an object on a state definition.
+An AngularJS (1.x) `resolve:` block is an object on a state definition.
 Each key is the name of some data to load, and each value is a function which returns a promise for the data.  
 Resolve functions are injected using Angular's injector.
 {: .notice--info}

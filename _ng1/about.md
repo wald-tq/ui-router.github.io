@@ -1,11 +1,11 @@
 ---
-title: "UI-Router for Angular 1"
+title: "UI-Router for AngularJS (1.x)"
 layout: single
 excerpt: "The defacto standard for routing in AngularJS"
 sitemap: true
 permalink: /ng1/
 ---
-{% include toc icon="columns" title="Angular 1" %}
+{% include toc icon="columns" title="AngularJS (1.x)" %}
 
 <center>
 <img src="/images/logos/angular1.png">
@@ -16,7 +16,7 @@ permalink: /ng1/
 
 UI-Router is the defacto standard for routing in AngularJS.
 Influenced by the core angular router `$route` and the Ember Router, 
-UI-Router has become the standard choice for routing non-trivial apps in Angular 1.
+UI-Router has become the standard choice for routing non-trivial apps in AngularJS (1.x).
 
 ## Getting UI-Router
 
@@ -57,8 +57,8 @@ The [UI-Router Sample App](/resources/sampleapp) is a non-trivial UI-Router appl
 
 To fix a UI-Router bug, or create an enhancement, follow these steps: 
 
-The Typescript source code for UI-Router for Angular 2 can be found at <https://github.com/angular-ui/ui-router>
-UI-Router for Angular 1 depends on UI-Router Core, which can be found at <https://github.com/ui-router/core>
+The Typescript source code for UI-Router for Angular (2+) can be found at <https://github.com/angular-ui/ui-router>
+UI-Router for AngularJS (1.x) depends on UI-Router Core, which can be found at <https://github.com/ui-router/core>
 
 To get started:
 

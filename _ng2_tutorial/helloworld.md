@@ -1,22 +1,22 @@
 ---
-title: "UI-Router for Angular 2 - Hello World!"
+title: "UI-Router for Angular (2+) - Hello World!"
 layout: single
-excerpt: "Getting started with UI-Router for Angular 2"
+excerpt: "Getting started with UI-Router for Angular (2+)"
 sitemap: true
 redirect_from: /tutorial/ng2/helloworld/
 ---
 
 {% include toc classes="collapsible" icon="columns" title="Hello World!" %}
 
-Let's build a Hello World UI-Router application for Angular 2.
+Let's build a Hello World UI-Router application for Angular (2+).
 It will have two "pages" (`hello` and `about`), each one having its own URL.
 We can switch between pages by clicking on links.
 The link for the active page will be highlighted.
 
 # Full Source Code
 
-An Angular 2 Hello World app is a bit more complex to set up than an Angular 1 or React Hello World App.
-We're going to use the [Angular 2 Plunker template](http://plnkr.co/edit/tpl:AvJOMERrnz94ekVua0u5) as starting point.
+An Angular (2+) Hello World app is a bit more complex to set up than an AngularJS or React Hello World App.
+We're going to use the [Angular (2+) Plunker template](http://plnkr.co/edit/tpl:AvJOMERrnz94ekVua0u5) as starting point.
 
 Start by looking over the complete source code (ignoring SystemJS `config.js`) for the Hello World application.
 We will go over each part in more detail below.
@@ -99,7 +99,7 @@ let aboutState = { name: 'about', url: '/about',  component: About };
 })
 class RootAppModule {}
 
-/** Angular 2 bootstrap */
+/** Angular (2+) bootstrap */
 
 platformBrowserDynamic().bootstrapModule(RootAppModule);
 ```
@@ -121,7 +121,7 @@ Follow these steps to make your own copy of the Hello World app.
 
 ## Get UI-Router
 
-Get the UI-Router for Angular 2 code using npm
+Get the UI-Router for Angular (2+) code using npm
 
 ```
 npm install ui-router-ng2
@@ -133,8 +133,8 @@ You could alternatively refer to the
 
 ## Configure your module loader
 
-Angular 2 development requires a module loader and is best with a bundler, such as webpack.
-For these tutorials, however, we're going to use SystemJS and the individual UMD Angular 2 bundles.
+Angular (2+) development requires a module loader and is best with a bundler, such as webpack.
+For these tutorials, however, we're going to use SystemJS and the individual UMD Angular (2+) bundles.
 
 **SystemJS config.js**
 
@@ -187,7 +187,7 @@ This script tells the module loader to load `helloworld`, which is our applicati
 
 ## ES6 imports
 
-In order to access the code required to bootstrap Angular 2 and UI-Router, we need to import a bunch of things.
+In order to access the code required to bootstrap Angular (2+) and UI-Router, we need to import a bunch of things.
 
 ```js
 import {NgModule, Component} from '@angular/core';
@@ -198,7 +198,7 @@ import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 
 ## Creating the components
 
-Create the Angular 2 components that make up our application.
+Create the Angular (2+) components that make up our application.
 
 **The `hello` and `about` components**
 
@@ -222,7 +222,7 @@ One of these components will be shown, when its cooresponding state is active.
 **The root component**
 
 The `MyApp` component will be the root of the application component tree.
-This is the component that we will bootstrap with Angular 2 as the root of our application.
+This is the component that we will bootstrap with Angular (2+) as the root of our application.
 
 ```js
 @Component({
@@ -259,7 +259,7 @@ The addition of `uiSrefActive='active'` adds the `active` css class to the link 
 ## Instantiating the root component
 
 Inside the `<body>` tag, we add markup for our application's root Component.
-Angular 2 applications are a tree of components and `<my-app>` is the root of that tree.
+Angular (2+) applications are a tree of components and `<my-app>` is the root of that tree.
 
 ```html
   <body>
@@ -287,7 +287,7 @@ This simple state definition has three properties:
 :    When the state is active, the browser's url will be `/hello`.
 
 `component`
-:    The `component:` property value is the Angular 2 component class that will be loaded into the viewport when the state is active.  In this case, we will load the `Hello` component.
+:    The `component:` property value is the Angular (2+) component class that will be loaded into the viewport when the state is active.  In this case, we will load the `Hello` component.
 
 Add the 'about' state:
 
@@ -298,7 +298,7 @@ let aboutState = { name: 'about', url: '/about',  component: About };
 
 ## Create the root `NgModule`
 
-Angular 2 requires that you define a `NgModule` to bootstrap your application.
+Angular (2+) requires that you define a `NgModule` to bootstrap your application.
 
 ```js
 @NgModule({
@@ -315,17 +315,17 @@ class RootAppModule {}
 `imports: [ BrowserModule, UIRouterModule.forRoot({ ...`
 :   Allows your app's module to use code from another module.
     In this example, `UIRouterModule.forRoot` creates a UI-Router module, and registers the states listed.
-    The `BrowserModule` contains built-in Angular 2 directives like `ngFor`.
+    The `BrowserModule` contains built-in Angular (2+) directives like `ngFor`.
     
 `declarations: [ App, Hello, About ]`
 :   Declares all components used in the root module.
 
 `bootstrap: [ App ]`
-:   Tells Angular 2 to bootstrap the `App` component as the root of the application.
+:   Tells Angular (2+) to bootstrap the `App` component as the root of the application.
 
-## Bootstrapping Angular 2
+## Bootstrapping Angular (2+)
 
-Bootstrap Angular 2 with the `RootAppModule` NgModule.
+Bootstrap Angular (2+) with the `RootAppModule` NgModule.
 
 ```js
 platformBrowserDynamic().bootstrapModule(RootAppModule);

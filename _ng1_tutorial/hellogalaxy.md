@@ -1,5 +1,5 @@
 ---
-title: "UI-Router for Angular 1 - Hello Galaxy!"
+title: "UI-Router for AngularJS (1.x) - Hello Galaxy!"
 excerpt: "Learn about Nested States and Nested Views"
 redirect_from: /tutorial/ng1/hellogalaxy/
 ---

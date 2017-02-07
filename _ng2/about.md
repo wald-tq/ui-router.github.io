@@ -1,18 +1,18 @@
 ---
-title: "UI-Router for Angular 2"
+title: "UI-Router for Angular (2+)"
 layout: single
-excerpt: "State based routing for Angular 2"
+excerpt: "State based routing for Angular (2+)"
 sitemap: true
 permalink: /ng2/
 ---
-{% include toc icon="columns" title="Angular 2" %}
+{% include toc icon="columns" title="Angular (2+)" %}
 
 <center>
 <img src="/images/logos/angular2.png">
 <br /><iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=ui-router&repo=ng2&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe><iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=ui-router&repo=ng2&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
 </center>
 
-UI-Router provides extremely flexible, state based routing to the Angular 2 ecosystem.
+UI-Router provides extremely flexible, state based routing to the Angular (2+) ecosystem.
 
 ## Getting UI-Router
 
@@ -39,7 +39,7 @@ Learn UI-Router by following our tutorials.
  
 ## Quick Start
  
-The [UI-Router Ng2 QuickStart](https://github.com/ui-router/quickstart-ng2) is a minimalistic Angular 2 UI-Router app forked from 
+The [UI-Router Ng2 QuickStart](https://github.com/ui-router/quickstart-ng2) is a minimalistic Angular (2+) UI-Router app forked from 
 [the official Angular Quickstart](https://github.com/angular/quickstart).
 It demonstrates:
 
@@ -56,8 +56,8 @@ The [UI-Router Sample App](/resources/sampleapp) is a non-trivial UI-Router appl
 
 To fix a UI-Router bug, or create an enhancement, follow these steps: 
 
-The Typescript source code for UI-Router for Angular 2 can be found at <https://github.com/ui-router/ng2>
-UI-Router for Angular 2 depends on UI-Router Core, which can be found at <https://github.com/ui-router/core>
+The Typescript source code for UI-Router for Angular (2+) can be found at <https://github.com/ui-router/ng2>
+UI-Router for Angular (2+) depends on UI-Router Core, which can be found at <https://github.com/ui-router/core>
 
 To get started:
 

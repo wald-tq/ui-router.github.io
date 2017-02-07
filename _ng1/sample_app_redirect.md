@@ -1,5 +1,5 @@
 ---
-title: "Sample App - UI-Router for Angular 1"
+title: "Sample App - UI-Router for AngularJS (1.x)"
 permalink: /sample-app/
 ---
 

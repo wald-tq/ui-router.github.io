@@ -67,7 +67,7 @@ guide:
         url: /guide/transitions
       - title: "Lazy Loading"
         url: /guide/lazyloading
-  - title: "Angular 1"
+  - title: "AngularJS"
     children:
       - title: "UI-Router 1.0 Migration"
         url: /guide/ng1/migrate-to-1_0

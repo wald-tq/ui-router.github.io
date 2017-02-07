@@ -23,7 +23,7 @@ Please see the [release notes](https://github.com/angular-ui/ui-router/releases/
 
 ## Repository split
 
-During the 1.0 alpha phase, we made the UI-Router core agnostic to Angular 1.
+During the 1.0 alpha phase, we made the UI-Router core agnostic to AngularJS.
 This enabled us to create 
 [`ui-router-ng2`](https://ui-router.github.io/ng2/) and 
 [`ui-router-react`](https://ui-router.github.io/react/) 
@@ -42,8 +42,8 @@ So, we split the repositories into:
 
 This release is the first one built from the modular UI-Router repositories.
 
-This release (1.0.0-rc.1) of Angular UI-Router is *not accompanied by a release of UI-Router for Angular 2+*.
-Going forward, the release schedules for Angular 1 and Angular 2 will no longer coincide.
+This release (1.0.0-rc.1) of Angular UI-Router is *not accompanied by a release of UI-Router for Angular (2+)+*.
+Going forward, the release schedules for AngularJS and Angular (2+) will no longer coincide.
 
 
 #### Upgrading

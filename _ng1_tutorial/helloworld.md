@@ -1,14 +1,14 @@
 ---
-title: "UI-Router for Angular 1 - Hello World!"
+title: "UI-Router for AngularJS (1.x) - Hello World!"
 layout: single
-excerpt: "Getting started with UI-Router for Angular 1"
+excerpt: "Getting started with UI-Router for AngularJS (1.x)"
 sitemap: true
 redirect_from: /tutorial/ng1/helloworld/
 ---
 
 {% include toc icon="columns" title="Hello World!" %}
 
-Let's build a UI-Router for Angular 1 Hello World application.
+Let's build a UI-Router for AngularJS Hello World application.
 It will have two "pages" (`hello` and `about`), each one having its own URL.
 We can switch between pages by clicking on links.
 The link for the active page will be highlighted.
@@ -78,7 +78,7 @@ Follow these steps to make your own copy of the Hello World app.
 
 ## Get UI-Router
 
-Get the UI-Router for Angular 1 code using your preferred mechanism:
+Get the UI-Router for AngularJS code using your preferred mechanism:
 
   - Using npm: `npm install --save angular-ui-router@next`
   - Using bower: `bower install angular-ui-router@1.0.0-beta.3`
@@ -161,7 +161,7 @@ myApp.config(function($stateProvider) {
 
 Because `$stateProvider` is an [Angular Provider](https://docs.angularjs.org/guide/providers#provider-recipe),
 you must inject it into a [`.config()` block](https://docs.angularjs.org/guide/module#configuration-blocks)
-using [Angular 1 Dependency Injection](https://docs.angularjs.org/guide/di).
+using [AngularJS Dependency Injection](https://docs.angularjs.org/guide/di).
 {: .notice--info}
 
 
