@@ -47,5 +47,5 @@ This table shows the previous npm package names, and the new scoped package name
 |[UI-Router Visualizer](https://github.com/ui-router/visualizer)|`ui-router-visualizer`|`@uirouter/visualizer`|
 |[UI-Router Core](https://github.com/ui-router/core)|`ui-router-core`|`@uirouter/core`|
 |[UI-Router Reactive Extensions](https://github.com/ui-router/rx)|`ui-router-rx`|`@uirouter/rx`|
-|[UI-Router ng1-to-ng2 (hybrid support)](https://github.com/ui-router/ng1-to-ng2)|`ui-router-ng1-to-ng2`|`@uirouter/ng1-to-ng2`|
+|[UI-Router ng1-to-ng2 (hybrid support)](https://github.com/ui-router/ng1-to-ng2)|`ui-router-ng1-to-ng2`|`@uirouter/angular-hybrid`|
 |[Sticky States plugin](https://github.com/ui-router/sticky-states)|`ui-router-sticky-states`|`@uirouter/sticky-states`|
