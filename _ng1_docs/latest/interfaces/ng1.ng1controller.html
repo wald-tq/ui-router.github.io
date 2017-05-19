@@ -164,7 +164,7 @@ redirect_from: /docs/latest/interfaces/ng1.ng1controller.html
     <span class="hljs-keyword">this</span>.originalData = angular.copy(<span class="hljs-keyword">this</span>.data);
 
     <span class="hljs-keyword">this</span>.uiCanExit = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
-      <span class="hljs-keyword">if</span> (!angular.equals(<span class="hljs-keyword">this</span>.data, <span class="hljs-keyword">this</span>.originalData) {
+      <span class="hljs-keyword">if</span> (!angular.equals(<span class="hljs-keyword">this</span>.data, <span class="hljs-keyword">this</span>.originalData)) {
         <span class="hljs-comment">// Note: This could also return a Promise and request async</span>
         <span class="hljs-comment">// confirmation using something like ui-bootstrap $modal</span>
         <span class="hljs-keyword">return</span> <span class="hljs-built_in">window</span>.confirm(<span class="hljs-string">"Data has changed.  Exit anyway and lose changes?"</span>);
