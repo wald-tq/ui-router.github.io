@@ -1,11 +1,11 @@
 ---
 layout: post
-excerpt: Using plugins with UI-Router 1.0 for AngularJS
+excerpt: UMD Bundles and UI-Router 1.0 for AngularJS
 comments: true
 permalink: /blog/:title/
 ---
 
-This post describes how to use plugins when using UI-Router 1.0 for AngularJS and `<script>` tags.
+This post describes how UMD bundles have changed with UI-Router 1.0 for AngularJS.
 
 ### UI-Router Core
 
