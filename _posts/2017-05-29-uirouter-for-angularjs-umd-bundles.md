@@ -21,19 +21,43 @@ This core library has been used to create new routers for
 
 ### Plugins and UMD bundles
 
-When UI-Router for AngularJS 1.0 was released, we split the bundles into `ui-router-core.js` and `ui-router-angularjs.js`.
-This was necessary to support plugins which depend only on the framework-agnostic `ui-router-core.js`.
-Note: we also [renamed our NPM packages to scoped package names](/blog/uirouter-scoped-packages/).
+Previously, UI-Router was a single bundle: `angular-ui-router.js`.
 
-Users who formerly included only `angular-ui-router.js` should now include both bundles.
-Add [`ui-router-core.js`](https://unpkg.com/@uirouter/core/_bundles/) from the [`@uirouter/core` package](https://github.com/ui-router/core)
-as well as [`ui-router-angularjs.js`](https://unpkg.com/@uirouter/angularjs@1.0.3/release/) from the [`@uirouter/angularjs` package](https://github.com/angular-ui/ui-router).
+During the UI-Router for AngularJS 1.0 release, we split the code into two bundles:
+
+- `ui-router-core.js`: the core of UI-Router (State machine, etc)
+- `ui-router-angularjs.js`: the AngularJS bits (`$location`, `ui-sref` directives, etc)
+
+*Users who formerly included only `angular-ui-router.js` should now include both bundles.*
+
+This change was necessary to properly support dependencies to `@uirouter/core`.
+This enables (for example) router plugins which work with the framework-agnostic `ui-router-core.js`.
+
+Note: we also [renamed our NPM packages to scoped package names](/blog/uirouter-scoped-packages/).
+{: .notice--info }
+
+### Migration
+
+If you _formerly_ used `angular-ui-router.js`, e.g.:
+```js
+<script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+```js
+
+Instead, *use both new bundles from the scoped packages*.
+Include `ui-router-core` before including `ui-router-angularjs`:
+```js
+<script src="node_modules/@uirouter/core/_bundles/ui-router-core.js"></script>
+<script src="node_modules/@uirouter/angularjs/release/ui-router-angularjs.js"></script>
+```js
+
+{: .notice--info }
+Ensure the version of `@uirouter/core` matches [the dependency](https://unpkg.com/@uirouter/angularjs/package.json) in `@uirouter/angularjs`.
 
 ### Backward compatible mono-bundle
 
 For backwards compatibility, we will continue to publish a monolithic bundle as [`angular-ui-router.js`](https://unpkg.com/@uirouter/angularjs/release/).
 This bundle includes *both the core and angularjs code*.
-Existing users who rely on the `angular-ui-router.js` bundle do not have to change anything.
+Existing users who rely on the `angular-ui-router.js` bundle _do not have to change anything_.
 However, this bundle is not compatible with UI-Router plugins which depend on `@uirouter/core`.
 
 ### Webpack users
