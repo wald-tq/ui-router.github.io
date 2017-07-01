@@ -54,9 +54,9 @@ We will go over each part in more detail below.
 /** imports */
 
 import {NgModule, Component} from '@angular/core';
-import {UIRouterModule} from "ui-router-ng2";
 import {BrowserModule} from "@angular/platform-browser";
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+import {UIRouterModule} from "@uirouter/angular";
 
 /** Components */
 
@@ -107,8 +107,8 @@ platformBrowserDynamic().bootstrapModule(RootAppModule);
 
 # Live demo
 
-A live demo of the finished app can be seen below, in the [Plunker](https://plnkr.co/).  Navigate between the
-"Hello" and "About" links and watch the UI change.
+A live demo of the finished app can be seen below, in the [Plunker](https://plnkr.co/).
+Navigate between the "Hello" and "About" links and watch the UI change.
 
 <iframe class="plunker" style="height: 350px" 
   src="//embed.plnkr.co/emMpITE71x5kYrXmZ5Vw/?show=preview" 
@@ -124,11 +124,11 @@ Follow these steps to make your own copy of the Hello World app.
 Get the UI-Router for Angular (2+) code using npm
 
 ```
-npm install ui-router-ng2
+npm install @uirouter/angular
 ```
 
 You could alternatively refer to the 
-[copy distributed on unpkg.com](https://unpkg.com/ui-router-ng2@latest/_bundles/ui-router-ng2.js).
+[copy distributed on unpkg.com](https://unpkg.com/@uirouter/angular@latest/_bundles/ui-router-ng2.js).
 (This is how the live demo plunkers function)
 
 ## Configure your module loader
@@ -139,9 +139,9 @@ For these tutorials, however, we're going to use SystemJS and the individual UMD
 **SystemJS config.js**
 
 The `map` section of `config.js` tells the System loader where to look for things.
-Add an entry for `ui-router-ng2` in the `map:` section.
-This entry must allow us to `import from 'ui-router-ng2'` and get the `ui-router-ng2` 
-library entry point  (`main:` from `package.json`).
+Add an entry for `@uirouter/angular` nd `@uirouter/core` in the `map:` section.
+This entry must allow us to `import from '@uirouter/angular'` and get the `@uirouter/angular`
+library entry point (`main:` from `package.json`).
 
 Add a second second entry for `helloworld` which will get us the helloworld app entry point.
 
@@ -150,13 +150,15 @@ Add a second second entry for `helloworld` which will get us the helloworld app 
   map: {
     // ... angular 2 stuff
     'rxjs': 'https://unpkg.com/rxjs@5.0.0-beta.12',
-    'ui-router-ng2': 'https://unpkg.com/ui-router-ng2@1.0.0-beta.3/_bundles/ui-router-ng2.js',
+    '@uirouter/angular': 'https://unpkg.com/@uirouter/angular@1.0.0-beta.7/_bundles/ui-router-ng2.js',
+    '@uirouter/core': 'https://unpkg.com/@uirouter/core@5.0.5/_bundles/ui-router-core.js',
     'helloworld': "./helloworld.ts"
   },
 ...
 ```
 
 SystemJS is a complex, nuanced topic, but this is as far as we're going to discuss for this tutorial.
+For production, we recommend using a bundler such as webpack which understands node module resolution.
 
 ## Script tags
 
@@ -191,9 +193,9 @@ In order to access the code required to bootstrap Angular (2+) and UI-Router, we
 
 ```js
 import {NgModule, Component} from '@angular/core';
-import {UIRouterModule} from "ui-router-ng2";
 import {BrowserModule} from "@angular/platform-browser";
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+import {UIRouterModule} from "@uirouter/angular";
 ```
 
 ## Creating the components
