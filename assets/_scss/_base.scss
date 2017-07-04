@@ -180,6 +180,14 @@ figure {
   flex-wrap: wrap;
   margin: 2em 0;
 
+  &.half-center {
+    @include breakpoint($small) {
+      max-width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
   img,
   iframe,
   .fluid-width-video-wrapper {
@@ -194,6 +202,10 @@ figure {
 
   > a {
     display: block;
+  }
+
+  figcaption {
+    margin-bottom: 0.5em;
   }
 
   &.half {
@@ -233,7 +245,7 @@ video {
 /* Figure captions */
 
 figcaption {
-  margin-bottom: 0.5em;
+  margin-bottom: 1.5em;
   color: mix(#fff, $text-color, 25%);
   font-family: $caption-font-family;
   font-size: $type-size-6;
