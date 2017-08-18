@@ -8,16 +8,16 @@ Explore the Sample App for:
 
 <div class="about_frameworks">
   <div>
-    <a href="https://ui-router.github.io/sample-app-ng1"><img src="/images/logos/angular1.png"><div>AngularJS</div></a>
-    <a href="https://github.com/ui-router/sample-app-ng1">(src)</a>
+    <a href="https://ui-router.github.io/sample-app-angularjs"><img src="/images/logos/angular1.png"><div>AngularJS</div></a>
+    <a href="https://github.com/ui-router/sample-app-angularjs">(src)</a>
   </div>
   <div>
-    <a href="https://ui-router.github.io/sample-app-ng2"><img src="/images/logos/angular2.png"><div>Angular (2+)</div></a>
-    <a href="https://github.com/ui-router/sample-app-ng2">(src)</a>
+    <a href="https://ui-router.github.io/sample-app-angular"><img src="/images/logos/angular2.png"><div>Angular (2+)</div></a>
+    <a href="https://github.com/ui-router/sample-app-angular">(src)</a>
   </div>
   <div>
-    <a href="https://ui-router.github.io/sample-app-ng1-to-ng2"><img src="/images/logos/ng1-to-ng2.png"><div>AngularJS + Angular Hybrid (ng1/ng2)</div></a>
-    <a href="https://github.com/ui-router/sample-app-ng1-to-ng2">(src)</a>
+    <a href="https://ui-router.github.io/sample-app-angular-hybrid"><img src="/images/logos/ng1-to-ng2.png"><div>AngularJS + Angular Hybrid (ng1/ng2)</div></a>
+    <a href="https://github.com/ui-router/sample-app-angular-hybrid">(src)</a>
   </div>
   <div>
     <a href="https://ui-router.github.io/sample-app-react/"><img src="/images/logos/react.png"><div>React</div></a>
