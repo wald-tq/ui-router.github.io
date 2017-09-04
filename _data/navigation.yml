@@ -65,6 +65,8 @@ guide:
         url: /guide/views
       - title: "Transitions"
         url: /guide/transitions
+      - title: "Transition Hooks"
+        url: /guide/transitionhooks
       - title: "Lazy Loading"
         url: /guide/lazyloading
   - title: "AngularJS"
