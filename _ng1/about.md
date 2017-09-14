@@ -20,16 +20,16 @@ UI-Router has become the standard choice for routing non-trivial apps in Angular
 
 ## Getting UI-Router
 
-The UI-Router package is distributed using [npm](https://www.npmjs.com/), the node package manager.
+The UI-Router package is distributed using [npm](https://www.npmjs.com/), the node package manager. Note: the package has been renamed from angular-ui-router to @uirouter/angularjs.
 
 ```
-npm install --save angular-ui-router
+npm install --save @uirouter/angularjs
 ```
 
 Other examples:
 
 - Via command line
-  - Adding the latest prerelease to your project: `npm install --save angular-ui-router@next`
+  - Adding the latest prerelease to your project: `npm install --save @uirouter/angularjs@next`
   - Adding a specific version to your project: `npm install --save angular-ui-router@1.0.0-beta.1`
   
 - From <http://unpkg.com> via a `<script>` tag in your html: 
